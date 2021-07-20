@@ -554,7 +554,7 @@
     b: [200, 300],
     c: "javascript",
     d: function(){
-        document.write("자바스크립트가 실행되었습니다.);
+        document.write("javascript가 실행되었습니다.);
         },
     e: function(){
         document.write( obj.c + "가 실행되었습니다.");
@@ -571,6 +571,8 @@
     document.write(obj.b[1]);
     document.write(obj.c);
     obj.d();
+    obj.e();
+    obj.f();
 }
 
 </code></pre>
@@ -802,7 +804,7 @@
                 b: [200, 300],
                 c: "javascript",
                 d: function(){
-                    document.write("자바스크립트가 실행되었습니다.<br>");
+                    document.write("javascript가 실행되었습니다.<br>");
                 },
                 e: function(){
                     document.write( obj.c + "가 실행되었습니다. <br>");
@@ -820,6 +822,8 @@
             document.write(obj.b[1], "<br>");
             document.write(obj.c, "<br>");
             obj.d();
+            obj.e();
+            obj.f();
             
         }
     </script>

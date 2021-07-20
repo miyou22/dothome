@@ -254,10 +254,10 @@
 if(ture){
     document.write("*** 01. if문 ***");
     document.write("조건문이 실행되었습니다. (ture)");
-}  else {
+    } else {
     document.write("*** 01. if문 ***");
     document.write("조건문이 실행되었습니다. (false)");
-}  
+    }  
 }
 </code></pre>
         </div>
@@ -269,24 +269,24 @@ if(ture){
         <h2>02. 다중 if문 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-let num = 100;
-        
-if(num == 90){
-    document.write("*** 02. 다중 if문 ***");
-    document.write("조건문이 실행되었습니다. ( num == 90)");
-} else if( num == 100 ){
-    document.write("*** 02. 다중 if문 ***");
-    document.write("조건문이 실행되었습니다. ( num == 100)");
-} else if( num == 200 ){
-    document.write("*** 02. 다중 if문 ***");
-    document.write("조건문이 실행되었습니다. ( num == 200)");
-}    else if( num == 300 ){
-    document.write("*** 02. 다중 if문 ***");
-    document.write("조건문이 실행되었습니다. ( num == 300)");
-} else {
-    document.write("*** 02. 다중 if문 ***");
-    document.write("조건문이 실행되었습니다. ( num == XX)");
-}
+    let num = 100;
+    
+    if (num == 90) {
+        document.write("*** 02. 다중 if문 ***");
+        document.write("조건문이 실행되었습니다.(num == 90)");
+    } else if (num == 100) {
+        document.write("*** 02. 다중 if문 ***");
+        document.write("조건문이 실행되었습니다.(num == 100)");
+    } else if (num == 200) {
+        document.write("*** 02. 다중 if문 ***");
+        document.write("조건문이 실행되었습니다.(num == 200)");
+    } else if (num == 300) {
+        document.write("*** 02. 다중 if문 ***");
+        document.write("조건문이 실행되었습니다.(num == 300)");
+    } else {
+        document.write("*** 02. 다중 if문 ***");
+        document.write("조건문이 실행되었습니다.(num == XX)");
+    }
 }
 </code></pre>
         </div>
@@ -306,12 +306,12 @@ if( num == 100 ){
         document.write("조건문이 실행되었습니다.(2)");
         if( num == 100 ){
             document.write("조건문이 실행되었습니다.(3)");
-    }
-}
-} else{ 
+            }
+       }
+} else { 
     document.write("*** 03. 중첩 if문 ***");
     document.write("조건문이 실행되었습니다.(4)");
-}
+    }
 }
 </code></pre>
         </div>
@@ -327,22 +327,22 @@ let num = 100;
 
 switch( num ) {
     case 100 :
-    document.write("*** 04. switch문 ***");
-    document.write("조건문이 실행되었습니다.( num == 100 )");
+        document.write("*** 04. switch문 ***");
+        document.write("조건문이 실행되었습니다.( num == 100 )");
     break;
     case 200 :
-    document.write("*** 04. switch문 ***");
-    document.write("조건문이 실행되었습니다.( num == 200 )");
+        document.write("*** 04. switch문 ***");
+        document.write("조건문이 실행되었습니다.( num == 200 )");
     break;
     case 300 :
-    document.write("*** 04. switch문 ***");
-    document.write("조건문이 실행되었습니다.( num == 300 )");
+        document.write("*** 04. switch문 ***");
+        document.write("조건문이 실행되었습니다.( num == 300 )");
     break;
     default :
-    document.write("*** 04. switch문 ***");
-    document.write("조건문이 실행되었습니다.( num == 값이 없음 )");
+        document.write("*** 04. switch문 ***");
+        document.write("조건문이 실행되었습니다.( num == 값이 없음 )");
     break;
-}
+  }
 }
 </code></pre>
         </div>
@@ -375,7 +375,7 @@ switch( num ) {
         <h2>06. if문 생략 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-let num = 100;
+    let num = 100;
 
     document.write("*** 06. if문 생략 ***<br>");
     if( num == 100 ) document.write("true<br><br>");
