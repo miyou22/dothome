@@ -297,20 +297,20 @@ if(ture){
         <h2>03. 중첩 if문 <span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
-let num = 100;
+    let num = 100;
 
-if( num == 100 ){
-    document.write("*** 03. 중첩 if문 ***");
-    document.write("조건문이 실행되었습니다.(1)");
     if( num == 100 ){
-        document.write("조건문이 실행되었습니다.(2)");
+        document.write("*** 03. 중첩 if문 ***");
+        document.write("조건문이 실행되었습니다.(1)");
         if( num == 100 ){
-            document.write("조건문이 실행되었습니다.(3)");
-            }
-       }
-} else { 
-    document.write("*** 03. 중첩 if문 ***");
-    document.write("조건문이 실행되었습니다.(4)");
+            document.write("조건문이 실행되었습니다.(2)");
+            if( num == 100 ){
+                document.write("조건문이 실행되었습니다.(3)");
+                }
+        }
+    } else { 
+        document.write("*** 03. 중첩 if문 ***");
+        document.write("조건문이 실행되었습니다.(4)");
     }
 }
 </code></pre>
