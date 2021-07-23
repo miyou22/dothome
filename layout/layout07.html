@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습7</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'TmonMonsori';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+         }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #warp {
+        width: 100%;
+        font-family: 'TmonMonsori';
+        font-size:  50px;
+        color: #fff;
+        margin: 0 auto;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    #header {
+        height: 110px;
+        line-height: 110px;
+        background-color: #e1f5fe;
+    }
+    #banner {
+        height: 750px;
+        line-height: 750px;
+        background-color: #b3e5fc;
+    }
+    #content1 {
+        height: 2280px;
+        line-height: 2280px;
+        background-color: #81d4fa;
+    }
+    #content2 {
+        height: 1570px;
+        line-height: 1570px;
+        background-color: #4fc3f7;
+    }
+    #content3 {
+        height: 530px;
+        line-height: 530px;
+        background-color: #29b6f6;
+    }
+    #footer {
+        height: 270px;
+        line-height: 270px;
+        background-color: #03a9f4;
+    }
+    .header-innor {
+        width: 1200px;
+        height: 110px;
+        background-color: #ede7f6;
+        margin: 0 auto;
+    }
+    .banner-innor {
+        width: 1200px;
+        height: 750px;
+        background-color: #d1c4e9;
+        margin: 0 auto;
+    }
+    .content1-innor {
+        width: 1200px;
+        height: 2280px;
+        background-color: #b39ddb;
+        margin: 0 auto;
+    }
+    .content2-innor {
+        width: 1200px;
+        height: 1570px;
+        background-color: #9575cd;
+        margin: 0 auto;
+    }
+    .content3-innor {
+        width: 1200px;
+        height: 530px;
+        background-color: #7e57c2;
+        margin: 0 auto;
+    }
+    .footer-innor {
+        width: 1200px;
+        height: 270px;
+        background-color: #673ab7;
+        margin: 0 auto;
+        clear: both;
+    }
+    .title {
+        width: 1200px;
+        height: 200px;
+        line-height: 200px;
+        background-color: #000000;
+        margin: 0 auto;
+    }
+    .box1 {
+        width: 600px;
+        height: 300px;
+        line-height: 300px;
+        background-color: #8d6e63;
+        float: left;
+    }
+    .box2 {
+        width: 600px;
+        height: 300px;
+        line-height: 300px;
+        background-color: #ff7043;
+        margin: 0 auto;
+        float: left;
+    }
+
+</style>
+<body>
+    <div id="warp">
+        <div id="header">
+            <div class="header-innor">HEADER(1200px*110px)</div>
+        </div>
+        <div id="banner">
+            <div class="banner-innor">BANNER(1200*750px)</div>
+        </div>
+        <div id="content1">
+            <div class="content1-innor">
+                <div class="title">title(1200px*200px)</div>
+                CONTENT1(1200px*2280px)
+            </div>
+        </div>
+        <div id="content2">
+            <div class="content2-innor">
+                <div class="box1">box1(600px*300px)</div>
+                <div class="box2">box2(600px*300px)</div>
+                content2(1200px*1570px)
+            </div>
+        </div>
+        <div id="content3">
+            <div class="content3-innor">content3(1200px*1570px)</div>
+        </div>
+        <div id="footer">
+            <div class="footer-innor">footer(1200px*270px)</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -206,23 +206,42 @@
         .mt20 {
             margin-top: 20px;
         }
+   
+        .ol1::before {
+            content: "데이터 저장하기 : ";
+        }
+        .ol2::before {
+            content: "데이터 불러오기 : ";
+        }
+        .ol3::before {
+            content: "데이터 실행하기 : ";
+        }
+        .ol4::before {
+            content: "데이터 제어하기 : ";
+        }
     </style>
 </head>
 
 <body>
     <h1>Javascript 문법 정리</h1>
-    <ol>
+    <ol class="ol1">
         <li><a href="javascript100.html">변수</a></li>
         <li><a href="javascript100.html">상수</a></li>
         <li><a href="javascript100.html">배열(Array)</a></li>
         <li><a href="javascript100.html">객체(Object)</a></li>
     </ol>
-    <ol>
+    <ol class="ol2">
+        <li><a href="javascript500.html">데이터</a></li>
+    </ol>
+    <ol class="ol3">
         <li><a href="javascript300.html">함수(function)</a></li>
     </ol>
-    <ol>
+    <ol class="ol4">
         <li><a href="javascript200.html">조건문</a></li>
         <li><a href="javascript200.html">반복문</a></li>
+    </ol>
+    <ol class="ol5">
+        <li><a href="javascript400.html">알고리즘</a></li>
     </ol>
 
     <h2 class="mt20">데이터 저장하기</h2>
@@ -255,7 +274,7 @@
     var y = 200; //변수 y에 숫자 200를 저장
     var z = "javascript"; //변수 z에 문자 javascript를 저장
 
-    document.write("*** 01. 변수 ***");
+    document.write("*** 01. 변수 : 데이터 저장소 ***");
     document.write(x);
     document.write(y);
     document.write(z);
@@ -277,7 +296,7 @@
     y = 400;
     z = "jquery";
 
-    document.write("*** 02. 변수 ***");
+    document.write("*** 02. 변수 : 데이터 저장 + 데이터 변경 ***");
     document.write(x);
     document.write(y);
     document.write(z); 
@@ -594,7 +613,7 @@
             var y = 200; //변수 y에 숫자 200를 저장
             var z = "javascript"; //변수 z에 문자 javascript를 저장
 
-            document.write("*** 01. 변수 ***<br>");
+            document.write("*** 01. 변수: 데이터 저장소 ***<br>");
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
@@ -610,7 +629,7 @@
             y = 400;
             z = "jquery";
 
-            document.write("*** 02. 변수 ***<br>");
+            document.write("*** 02. 변수: 데이터 저장 + 데이터 변경 ***<br>");
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br><br>");
