@@ -224,7 +224,10 @@
         }
         .ol4::before {
             content: "데이터 제어하기 : ";
-        }   
+        }  
+        .ol5::before {
+            content: "데이터 연습하기 : ";
+        } 
     </style>
 </head>
 
@@ -237,7 +240,10 @@
         <li><a href="javascript100.html">객체(Object)</a></li>
     </ol>
     <ol class="ol2">
-        <li><a href="javascript500.html">데이터</a></li>
+        <li><a href="javascript500.html">변수</a></li>
+        <li><a href="javascript500.html">상수</a></li>
+        <li><a href="javascript500.html">배열</a></li>
+        <li><a href="javascript500.html">객체</a></li>
     </ol>
     <ol class="ol3">
         <li><a href="javascript300.html">함수(function)</a></li>
@@ -633,6 +639,21 @@
                 table +="</table>";
                 document.write(table,"<br>");
         }
+
+        //sample09
+        //09. 배열 : 데이터 불러오기 : 배열의 합
+        {
+            const arr=[100, 200, 300, 400, 500];
+            // sum=(arr[0]+arr[1]+arr[2]+arr[3]+arr[4]);
+            // document.write("*** 06. 배열 : 데이터 불러오기 : 배열의 합***<br>");
+            // document.write(sum);
+            document.write("*** 07. 배열 : 데이터 불러오기 : 배열의 합***<br>");
+
+            var sum = 0;
+            for(i=0; i<arr.length; i++){
+                sum += arr[i];
+            } document.write(sum, "<br><br>");
+        } 
 
 
         
