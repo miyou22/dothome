@@ -1,0 +1,8 @@
+/* container */
+.container {
+    max-width: 1200px;  /* @media와 같은 효과 */
+    width: 100%;        /* @media와 같은 효과 */
+    margin: 0 auto;   /* 박스를 가운데 오게 함 */
+    background-color: rgba(0,0,0,0.13);
+}
+

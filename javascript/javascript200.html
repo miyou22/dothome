@@ -259,6 +259,9 @@
         <li><a href="javascript604.html">날짜 매서드</a></li>
         <li><a href="javascript605.html">이벤트 매서드</a></li>
     </ol>
+    <ol class="ol7">
+        <li><a href="javascript606.html">샘플</a></li>
+    </ol>
 
     <h2 class="mt20">제어문</h2>
     <ul>
@@ -278,6 +281,7 @@
         <li><a href="#sample14">14. break문</a></li>
         <li><a href="#sample15">15. continue문</a></li>
     </ul>
+
     
 
     <hr>
@@ -973,11 +977,18 @@
 
        //forEach(element, index, array)
        num.forEach((element, index, array) => {
-           document.write(element, "<br>");
-           document.write(index, "<br>");
-           document.write(array, "<br><br>");
+           document.write(element, "<br>");  // 해당되는 값을 출력 
+           document.write(index, "<br>"); // 해당되는 값의 순서를 출력
+           document.write(array, "<br><br>"); //해당되는 값의 배열을 출력
        });
     }
+    //for문을 간략하게 생략하기 위해서 사용
+    //forEach의 사용법
+    //변수명.forEach(요소, 순서, 배열)
+    //요소: 해당되는 값
+    //순서: 해당되는 값의 번호(순서)
+    //배열: 전체 배열
+
 
         //sample12
         //12. for of문 : 배열에서 사용

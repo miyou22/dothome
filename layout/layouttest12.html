@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습12</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #fff8e1;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: #fff8e1;
+            margin: 0 auto;
+        }
+        main {
+            overflow: hidden;
+            margin: 0 auto;
+
+        }
+        nav {
+            width: 100%;
+            height: 100px;
+            background-color: #ffecb3;
+            margin: 0 auto;
+
+        }
+        aside {
+            width: 30%;
+            height: 900px;
+            background-color: #ffe082;
+            float: left;
+        }
+        article {
+            width: 70%;
+            height: 900px;
+            background-color: #ffd54f;
+            float: left;
+        }
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: #ffca28;
+            margin: 0 auto;
+
+        }
+        @media (max-width: 1200px){
+            nav {
+                width: 0;
+                height: 0;
+            }
+        }  
+        @media (max-width: 800px){
+            aside {
+                width: 100%;
+                float: none;
+            }
+            article {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+    <aside></aside>
+    <article></article>
+    </main>
+    <footer></footer>
+</body>
+</html>

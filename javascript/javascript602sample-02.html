@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find()을 이용한 CSS 속성 검색하기</title>
+    <style>
+        @font-face {
+            font-family: 'GyeonggiBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+        }
+        body {
+            background-image: url(img/search_bg.jpg);
+            background-size: cover;
+            background-position: center bottom;
+            background-attachment: fixed;
+        }
+        .girl {
+            width: 250px;
+            position: fixed;
+            bottom: -60px;
+            right: 5%;
+        }
+        .dog {
+            width: 150px;
+            position: fixed;
+            bottom: -40px;
+            left: 5%;
+        }
+        .board {
+            margin: 5vw 5vw 5vw 10vw;
+            width: 80vw;
+            background-color: #F1F3F6;
+            border: 2px solid #000;
+            padding: 3%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .board h1 {
+            font-family: 'TmonMonsori';
+            color: #223547;
+            font-size: 60px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .board span {
+            font-family: 'GyeonggiBatang';
+            color: #223547;
+            font-size: 20px;
+        }
+        .board .search label {
+            font-family: 'GyeonggiBatang';
+            background-color: #BFE6FE;
+            font-size: 26px;
+            padding: 10px 30px;
+            border: 1px solid #000;
+            border-radius: 40px;
+            display: none;
+        }
+        .board .search input {
+            font-family: 'GyeonggiBatang';
+            font-size: 24px;
+            border: 1px solid #000;
+            padding: 10px 10px 10px 30px;
+            border-radius: 40px;
+            outline: none;
+        }
+        .board .list {
+            text-align: left;
+            margin-top: 40px;
+        }
+        .board .list ul li {
+            font-family: 'GyeonggiBatang';
+            line-height: 1.6;
+            list-style: none;
+            background-color: #BDD6E6;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .board .list ul li.hide {
+            display: none;
+        }
+        @media (max-width: 800px){
+            .board {
+                width: 92vw;
+                padding: 6% 3% 3% 3%;
+                margin: 4vw;
+            }
+            .board h1 {
+                font-size: 30px;
+                margin-top: 5px;
+            }
+            .board span {
+                font-size: 12px;
+            }
+            .board .search input {
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 16px;
+                padding: 10px 10px 10px 20px;
+            }
+            .board .list {
+                margin-top: 20px;
+            }
+            .girl {
+                width: 200px;
+            }
+            .dog {
+                width: 100px;
+            }
+        }
+        .search-result {
+            padding: 20px;
+            font-family: 'GyeonggiBatang';
+            background-color: #bdd6e6;
+            margin: 10px 0;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="board">
+            <span>CSS 속성을 넣어주세요!!</span>
+            <h1>CSS 속성 검색하기</h1>
+            <div class="search">
+                <label for="search-box">검색하기</label>
+                <input id="search-box"  class="search-input" type="text">
+            </div>
+            <div class="search-result">
+
+            </div>
+            
+            </div>
+        </div>
+        <div class="girl">
+            <img src="img/search_girl.png" alt="">
+        </div>
+        <div class="dog">
+            <img src="img/search_dog.png" alt="">
+        </div>
+    </div>
+    <script>
+        const cssProp = [
+            { name: "align-content", desc: "콘텐츠의 상하관계 정렬 상태를 정의합니다." },
+            { name: "align-content", desc: "콘텐츠 내부의 정렬 상태를 정의합니다." },
+            { name: "align-content", desc: "콘텐츠의 정렬 상태를 정의합니다." },
+            { name: "all", desc: "요소의 속성을 초기화 또는 상속을 설정합니다." },
+            { name: "animation", desc: "애니메이션을 정의합니다." },
+            { name: "animation-delay", desc: "요소가 로드된 후 애니메이션이 시작될 때 까지의 시간을 나타냅니다." },
+            { name: "animation-direction", desc: "애니메이션 움직임 방향을 설정합니다." },
+            { name: "animation-duration", desc: "애니메이션 움직임 시간을 설정합니다." },
+            { name: "animation-fill-mode", desc: "애니메이션이 끝난 후의 상태를 설정합니다." },
+            { name: "animation-iteration-count", desc: "애니메이션 반복 횟수 설정합니다." },
+            { name: "animation-name", desc: "애니메이션 keyframe 이름을 설정합니다." },
+            { name: "animation-play-state", desc: "애니메이션 진행상태를 설정합니다." },
+            { name: "animation-timing-function", desc: "움직임의 속도를 정의합니다." },
+            { name: "backface-visibility", desc: "요소의 뒷면을 정의합니다." },
+            { name: "background", desc: "배경 속성 값을 정의합니다." },
+            { name: "background-attachment", desc: "배경이미지의 고정여부를 설정하기 위한 속성입니다." },
+            { name: "background-blend-mode", desc: "배경이미지의 고정여부를 설정하기 위한 속성입니다." },
+            { name: "background-clip", desc: "배경이미지의 고정여부를 설정하기 위한 속성입니다." },
+            { name: "background-color", desc: "백그라운 색을 설정합니다." },
+            { name: "background-image", desc: "백그라운 색을 설정합니다." },
+            { name: "background-origin", desc: "백그라운 색을 설정합니다." },
+            { name: "background-position", desc: "백그라운 이미지의 위치 영역을 설정합니다." },
+            { name: "background-repeat", desc: "백그라운 이미지 반복여부를 설정합니다." },
+            { name: "background-size", desc: "백그라운드 이미지 사이즈를 설정합니다." },
+            { name: "border", desc: "테두리 속성을 설정합니다." },
+            { name: "border-bottom", desc: "테두리 아래쪽 테두리 속성을 설정합니다." },
+            { name: "border-bottom-color", desc: "테두리 아래쪽 색 속성을 설정합니다." },
+            { name: "border-bottom-left-radius", desc: "아래부분 왼쪽 모서리 굴곡을 설정합니다." },
+            { name: "border-bottom-right-radius", desc: "아래부분 오른쪽 모서리 굴곡을 설정합니다." },
+            { name: "border-bottom-style", desc: "아래쪽 테두리 스타일 속성을 설정합니다." },
+            { name: "border-bottom-width", desc: "아래쪽 테두리 두께 속성을 설정합니다." },
+            { name: "border-collapse", desc: "테이블의 테두리 분리여부를 정의합니다." },
+            { name: "border-color", desc: "테두리 색 속성을 설정합니다." },
+            { name: "border-image", desc: "테두리 이미지 속성을 설정합니다." },
+            { name: "border-image-outset", desc: "테두리 이미지 간격 속성을 설정합니다." },
+            { name: "border-image-repeat", desc: "테두리 이미지 반복 속성을 설정합니다." },
+            { name: "border-image-slice", desc: "테두리 이미지 크기 속성을 설정합니다." },
+            { name: "border-image-source", desc: "테두리 이미지 경로 속성을 설정합니다." },
+            { name: "border-image-width", desc: "테두리 이미지 두께 속성을 설정합니다." },
+            { name: "border-left", desc: "왼쪽 테두리 속성을 설정합니다." },
+            { name: "border-left-color", desc: "왼쪽 테두리 색 속성을 설정합니다." },
+            { name: "border-left-style", desc: "왼쪽 테두리 스타일 속성을 설정합니다." },
+            { name: "border-left-width", desc: "왼쪽 테두리 두께 속성을 설정합니다." },
+            { name: "border-radius", desc: "모서리 굴곡을 설정합니다." },
+            { name: "border-right", desc: "오른쪽 테두리 속성을 설정합니다." },
+            { name: "border-right-color", desc: "오른쪽 테두리 색 속성을 설정합니다." },
+            { name: "border-right-style", desc: "오른쪽 테두리 스타일 속성을 설정합니다." },
+            { name: "border-right-width", desc: "오른쪽 테두리 두께 속성을 설정합니다." },
+            { name: "border-spacing", desc: "테이블의 테두리 간격을 설정합니다." },
+            { name: "border-style", desc: "테두리 스타일 속성을 설정합니다." },
+            { name: "border-top", desc: "위쪽 테두리 속성을 설정합니다." },
+            { name: "border-top-color", desc: "위쪽 테두리 색 속성을 설정합니다." },
+            { name: "border-top-left-radius", desc: "윗부분 왼쪽 모서리 굴곡을 설정합니다." },
+            { name: "border-top-right-radiu", desc: "윗부분 오른쪽 모서리 굴곡을 설정합니다." },
+            { name: "border-top-style", desc: "위쪽 테두리 스타일 속성을 설정합니다." },
+            { name: "border-top-width ", desc: "위쪽 테두리 두께 속성을 설정합니다." },
+            { name: "border-width", desc: "테두리 두께 속성을 설정합니다." },
+            { name: "bottom", desc: "위치 요소의 아래쪽 속성을 설정합니다." },
+            { name: "box-decoration-break", desc: "컬럼 및 줄바꿈시 테두리와 패딩의 방식을 설정합니다." },
+            { name: "box-shadow", desc: "박스 요소의 그림자를 설정합니다." },
+            { name: "box-sizing", desc: "크기 및 높이 여부의 포함을 설정합니다." },
+            { name: "caption-side", desc: "caption의 위치를 설정합니다." },
+            { name: "caret-color", desc: "input의 커서 색을 정의합니다." },
+            { name: "clear", desc: "float 요소의 성질을 차단합니다." },
+            { name: "clip", desc: "절대 요소의 위치 값을 지정합니다." },
+            { name: "color", desc: "글씨 색을 설정합니다." },
+            { name: "column-count", desc: "컬럼의 수를 정의합니다." },
+            { name: "column-fill", desc: "열의 지정방법을 정의합니다." },
+            { name: "column-gap", desc: "열의 간격을 정의합니다." },
+            { name: "column-rule ", desc: "컬럼 라인의 가로값, 스타일, 컬러를 정의합니다." },
+            { name: "column-rule-color", desc: "컬럼의 라인 색을 정의합니다." },
+            { name: "column-rule-style", desc: "컬럼 라인의 스타일을 정의합니다." },
+            { name: "column-rule-width", desc: "컬럼 라인의 가로값을 정의합니다." },
+            { name: "column-span", desc: "열의 속성을 정의합니다." },
+            { name: "column-width", desc: "컬럼의 가로 값을 정의합니다." },
+            { name: "columns", desc: "열의 폭과 열의 수를 정의합니다." },
+            { name: "content", desc: "콘텐츠 내용을 설정합니다." },
+            { name: "counter-increment", desc: "콘텐츠의 순서 상태를 정의합니다." },
+            { name: "counter-reset", desc: "콘텐츠의 숫자를 초기화합니다." },
+            { name: "cursor", desc: "마우스 오버시 마우스 포인터를 정의합니다." },
+            { name: "direction", desc: "문장의 방향을 설정합니다." },
+            { name: "display", desc: "요소의 성질을 정의합니다." },
+            { name: "empty-cells", desc: "테이블의 빈요소의 속성을 설정합니다." },
+            { name: "filter", desc: "이미지의 비쥬얼 효과를 정의합니다." },
+            { name: "flex", desc: "콘텐츠의 성질을 flex로 정의합니다." },
+            { name: "flex-basis", desc: "요소의 기본 단위를 정의합니다." },
+            { name: "flex-direction", desc: "요소의 정렬 방향을 정의합니다." },
+            { name: "flex-flow", desc: "요소의 정렬 방향과 줄 속성을 설정합니다." },
+            { name: "flex-grow", desc: "요소의 크기를 숫자를 통해 정의합니다." },
+            { name: "flex-shrink", desc: "요소의 크기를 숫자를 통해 줄여줍니다." },
+            { name: "flex-wrap", desc: "요소의 줄 속성을 설정합니다." },
+            { name: "float", desc: "블록요소의 정렬 상태를 설정합니다." },
+            { name: "font", desc: "폰트에 관한 설정을 정의합니다." },
+            { name: "font-family", desc: "폰트 종류를 설정합니다." },
+            { name: "font-size", desc: "폰트 사이즈 속성을 설정합니다." },
+            { name: "font-size-adjust", desc: "소문자를 기준으로 폰트 크기를 설정합니다." },
+            { name: "font-stretch", desc: "폰트의 굵기를 정의합니다." },
+            { name: "font-style", desc: "폰트의 스타일을 정의합니다." },
+            { name: "font-variant", desc: "글꼴의 변형을 정의합니다." },
+            { name: "font-weight", desc: "폰트의 두께를 정의합니다." },
+            { name: "grid", desc: "그리드 레이아웃을 정의합니다." },
+            { name: "grid-area", desc: "grid-area   grid-area" },
+            { name: "grid-auto-columns", desc: "grid-auto-columns" },
+            { name: "grid-auto-flow", desc: "grid-auto-flow" },
+            { name: "grid-auto-rows", desc: "grid-auto-rows" },
+            { name: "grid-column", desc: "grid-column" },
+            { name: "grid-column-end", desc: "grid-column-end" },
+            { name: "grid-column-gap", desc: "grid-column-gap" },
+            { name: "grid-column-start", desc: "grid-column-start" },
+            { name: "grid-gap", desc: "grid-ga" },
+            { name: "grid-row", desc: "grid-row" },
+            { name: "grid-row-end", desc: "grid-row-en" },
+            { name: "grid-row-gap", desc: "grid-row-gap" },
+            { name: "grid-row-start", desc: "grid-row-start" },
+            { name: "grid-template", desc: "grid-template" },
+            { name: "grid-template-areas", desc: "grid-template-areas" },
+            { name: "grid-template-columns", desc: "grid-template-columns" },
+            { name: "grid-template-rows", desc: "grid-template-rows" },
+            { name: "hanging-punctuation", desc: "글씨의 시작 및 끝의 위치 정의합니다." },
+            { name: "height", desc: "콘텐츠 요소의 세로값을 설정합니다." },
+            { name: "hyphens", desc: "텍스트의 하이픈 영역을 설정합니다." },
+            { name: "isolation", desc: "stacking context을 설정합니다." },
+            { name: "justify-content", desc: "콘텐츠의 좌우 관계 정렬 상태를 정의합니다." },
+            { name: "left", desc: "위치 요소의 왼쪽 속성을 설정합니다." },
+            { name: "letter-spacing", desc: "글자 사이의 간격을 설정합니다." },
+            { name: "line-height", desc: "문장과 문장 사이의 간격을 설정합니다." },
+            { name: "list-style", desc: "목록 스타일 속성을 설정합니다." },
+            { name: "list-style-image", desc: "목록 마커의 이미지를 설정합니다." },
+            { name: "list-style-position", desc: "목록 마커의 위치 속성을 설정합니다." },
+            { name: "list-style-type", desc: "목록 마커의 유형을 설정합니다." },
+            { name: "margin", desc: "요소의 바같쪽 여백을 설정합니다." },
+            { name: "margin-bottom", desc: "요소의 아래 바같쪽 여백을 설정합니다." },
+            { name: "margin-left", desc: "요소의 왼쪽 바같쪽 여백을 설정합니다." },
+            { name: "margin-right", desc: "요소의 오른쪽 바같쪽 여백을 설정합니다." },
+            { name: "margin-top", desc: "요소의 위부분 바같쪽 여백을 설정합니다." },
+            { name: "max-height", desc: "요소의 최대 세로값을 설정합니다." },
+            { name: "max-width ", desc: "요소의 최대 가로 값을 설정합니다." },
+            { name: "min-height", desc: "요소의 최소 세로 값을 설정합니다." },
+            { name: "min-width", desc: "요소의 최소 가로 값을 설정합니다." },
+            { name: "mix-blend-mode", desc: "배경의 혼합 상태를 정의합니다." },
+            { name: "object-fit", desc: "&lt;img&gt;, &lt;vid&gt;o> 태그의 크기를 정의합니다." },
+            { name: "object-position", desc: "&lt;img&gt;, &lt;vid&gt;o> 태그의 위치를 정의합니다." },
+            { name: "opacity", desc: "요소의 투명도를 설정합니다." },
+            { name: "order", desc: "flex 콘텐츠의 순서를 정의합니다." },
+            { name: "outline", desc: "아웃라인의 색, 스타일, 두께를 정의합니다." },
+            { name: "outline-color", desc: "아웃라인의 색을 정의합니다." },
+            { name: "outline-offset", desc: "아웃라인의 간격을 정의합니다." },
+            { name: "outline-style", desc: "아웃라인 스타일을 정의합니다." },
+            { name: "outline-width", desc: "아웃라인의 두께를 정의합니다." },
+            { name: "overflow", desc: "지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다." },
+            { name: "overflow-x", desc: "X축을 기준으로 지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다." },
+            { name: "overflow-y", desc: "Y축을 기준으로 지정한 영역에 요소들이 벗어났을 때 속성을 설정합니다." },
+            { name: "padding", desc: "요소의 안쪽 여백을 설정합니다." },
+            { name: "padding-bottom", desc: "요소의 아래쪽 여백을 설정합니다." },
+            { name: "padding-left", desc: "요소의 왼쪽 여백을 설정합니다." },
+            { name: "padding-right", desc: "요소의 오른쪽 여백을 설정합니다." },
+            { name: "padding-top", desc: "요소의 위쪽 여백을 설정합니다." },
+            { name: "page-break-after", desc: "페이지 인쇄시 분리에 관한 설정을 정의합니다." },
+            { name: "page-break-before", desc: "인쇄시 페이지 분리에 관한 설정을 정의합니다." },
+            { name: "page-break-inside", desc: "인쇄시 페이지 분리에 관한 설정을 정의합니다." },
+            { name: "perspective", desc: "3D를 표현할 때 원근점을 정의합니다." },
+            { name: "perspective-origin", desc: "3D를 표현할 때 원근점의 방향을 정의합니다." },
+            { name: "pointer-events", desc: "포인터 이벤트 반응을 정의합니다." },
+            { name: "position", desc: "요소의 위치를 설정합니다." },
+            { name: "quotes", desc: "인용 부호를 정의합니다." },
+            { name: "resize", desc: "요소의 사이즈를 정의합니다." },
+            { name: "right", desc: "위치 요소의 오른쪽 속성을 설정합니다." },
+            { name: "tab-size", desc: "글씨의 간격을 정의합니다." },
+            { name: "table-layout", desc: "표의 레이아웃 크기를 정의합니다." },
+            { name: "text-align", desc: "텍스트 정렬 방식을 설정합니다." },
+            { name: "text-align-last", desc: "문장의 마지막 텍스트 정렬 방식을 설정합니다." },
+            { name: "text-decoration", desc: "글자 라인 속성을 설정합니다." },
+            { name: "text-decoration-color ", desc: "글자 라인 색을 설정합니다." },
+            { name: "text-decoration-line", desc: "글자 라인 스타일을 설정합니다." },
+            { name: "text-decoration-style", desc: "글자 스타일을 정의합니다." },
+            { name: "text-indent", desc: "문단 들여쓰기 속성을 설정합니다." },
+            { name: "text-justify", desc: "텍스트의 간격을 정의합니다." },
+            { name: "text-overflow", desc: "문자열 영역 속성을 설정합니다." },
+            { name: "text-shadow", desc: "텍스트에 그림자를 설정합니다." },
+            { name: "text-transform", desc: "텍스트를 대문자나 소문자로 변경합니다." },
+            { name: "top", desc: "위치 요소의 위쪽 속성을 설정합니다." },
+            { name: "transform", desc: "요소의 움직임을 표현합니다." },
+            { name: "transform-origin", desc: "요소의 움직임 방향을 정의합니다." },
+            { name: "transform-style", desc: "요소의 움직임 스타일을 정의합니다." },
+            { name: "transition", desc: "요소의 움직임을 정의합니다." },
+            { name: "transition-delay", desc: "요소의 움직임 시간을 지연합니다." },
+            { name: "transition-duration", desc: "요소의 움직임 지속시간을 정의합니다." },
+            { name: "transition-property", desc: "transition의 적용 여부를 정의합니다." },
+            { name: "transition-timing-function", desc: "요소의 움직임 기능을 정의합니다." },
+            { name: "unicode-bidi", desc: "글자의 방향 속성을 설정합니다." },
+            { name: "user-select", desc: "요소의 텍스트를 선택할 지 정의합니다." },
+            { name: "vertical-align", desc: "텍스트의 상하 정렬 방식을 설정합니다." },
+            { name: "visibility", desc: "요소를 보이지 않게 정의합니다." },
+            { name: "white-space", desc: "줄바꿈, 공백, 줄 속성을 설정합니다." },
+            { name: "width", desc: "요소의 가로 값을 정의합니다." },
+            { name: "word-break", desc: "줄바꿈 속성을 설정합니다." },
+            { name: "word-spacing", desc: "단어 사이의 간격을 정의합니다." },
+            { name: "word-wrap", desc: "줄바꿈을 설정합니다." },
+            { name: "z-index", desc: "요소의 위치가 겹칠 경우 순서를 정의합니다." },
+        ];
+
+        const searchInput = document.querySelector(".search-input"); //search-input에 값이 searchBox에 저장됨
+        const searchRusult = document.querySelector(".search-result"); //search-result에 값을 searchRusult에 저장
+      
+
+        searchInput.addEventListener("keyup", () => { // 키보드 입력시 입력된 값을 저장 이후 배열안에 객체의 name과 비교해야 하니 이걸 불러와야 한다. 맞다면 옆에있는 desc를 출력한다.
+            const searchWord = searchInput.value;   // 어디에 저장?  searchWord에 저장. 
+            console.log(searchWord);
+            findDesc(searchWord);  //?????????????????????????????????????????????
+        });
+
+        function findDesc(searchWord){   //
+            const findData = cssProp.find((el)=>{
+                return el.name === searchWord;   //사용자 입력한 값, 데이터 값이 일치 여부
+            });
+            
+
+            //데이터가 없을때
+
+            //사용자가 쓴 데이터 값 = > searchWord에 저장
+           const searchResult = document.querySelector(".search-result");
+        }
+    </script>
+</body>
+</html>

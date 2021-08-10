@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습 12</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        #header {
+            height: 100px;
+            line-height: 100px;
+            background-color: #efebe9;
+            margin: 0 auto;
+        }
+        #banner {
+            height: 100px;
+            line-height: 100px;
+            background-color: #bcaaa4;
+            margin: 0 auto;
+
+        }
+        #contents {
+            height: 900px;
+            line-height: 900px;
+            background-color: #8d6e63;
+            overflow: hidden;
+            margin: 0 auto;
+
+        }
+        #footer {
+            height: 100px;
+            line-height: 100px;
+            background-color: #4e342e;
+            margin: 0 auto;
+
+        }
+        #contents1 {
+            width: 300px;
+            height: 500px;
+            float: left;
+            background-color: #795548;
+            margin: 0 auto;
+
+        }
+        #contents2 {
+            width: 900px;
+            height: 500px;
+            float: left;
+            background-color: #6d4c41;
+            margin: 0 auto;
+            
+        }
+        .container {
+            height: inherit;
+            width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(12, 11, 11, 0.13);
+        }
+        .content3 {
+            height: inherit;
+            width: 1200px;
+            margin: 0 auto;
+            background-color: #5D4038;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <!--header-->
+        <div id="banner">
+            <div class="container"></div>
+        </div>
+        <div id="contents">
+            <div class="content3">
+            <div id="contents1"></div>
+            <div id="contents2"></div>
+            </div>
+        </div>
+        <!-- //contents -->
+        <div id="footer">
+            <div class="container"></div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //warp -->
+    </div>
+</body>
+</html>
