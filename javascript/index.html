@@ -42,7 +42,7 @@
             border: 8px solid #50b5f9;
             border-radius: 12px;
             text-align: center;
-            padding: 2%;
+            padding: 5% 2%;
             height: 100%; /* 부모의 height값을 상속받음 */
             display: flex;
             align-items: center;
@@ -75,9 +75,19 @@
             display: inline-block;
             border-radius: 50px;
             font-size: 16px;
-            margin: 2px;
+            margin: 6px;
         }
         @media (max-width: 800px){
+            #wrap {
+                height: auto;
+                margin: 0;
+                border-width: 6px;
+                border-radius: 18px;
+
+            }
+            #contents {
+                border-width: 6px;
+            }
             #contents p,
             .menu li a {
                 font-size: 12px;
