@@ -77,6 +77,13 @@
             margin-bottom: 40px;
             color: #fff;
         }
+        .refer h3 a{
+          text-decoration: none;
+          color: #fff;
+        }
+        .refer h3.active a {
+          box-shadow: inset 3px 3px 0 3px #0bc56b;
+        }
         .refer table {
             width: 100%;
             border: 1px solid #aaa;
@@ -114,6 +121,20 @@
         }
         .link li a:hover {
           background: #00db72
+        }
+        .page {
+            text-align:  right;
+        }
+        .page li {
+            display: inline;
+            list-style: none;
+        }
+        .page li a {
+            text-decoration: none;
+            color: #222;
+        }
+        .page li a:hover {
+            color: #098a4c;
         }
         
         @media (max-width: 1220px){
@@ -169,11 +190,15 @@
 
     <main id = "contents">
         <h2>CSS <em>레퍼런스 북</em></h2>
-        <ul class="link">
-          <li><a href="../javascript/javascript602-sample01.html">CSS 속성 첫 글자 검색하기</a></li>
-        </ul>
+        <ul class="page">
+          <li><a href="../refer-html/index.html">HTML</a></li>
+          <li><a href="../refer-css/index.html">CSS</a></li>
+          <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
+      </ul>
+        
         <section class="refer">
-            <h3>Alphabet</h3>
+            <h3><a href="index.html">Alphabet</a></h3>
+            <h3 class="active"><a href="index2.html">Topics</a></h3>
             <table>
                 <colgroup>
                     <col style="width: 30%;">

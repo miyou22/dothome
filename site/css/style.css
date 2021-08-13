@@ -1,0 +1,92 @@
+
+
+
+/* Navigation */
+/*
+    네이게이션 유형1
+    1. 가운데 영역
+    2. 레이아웃 float (구 explorer 호환성)
+*/
+/* header-one*/
+.header-one{
+    text-align: center;
+}
+
+
+/* header-two */
+#header {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 1px solid #eee;
+}
+.header {
+    overflow: hidden;
+}
+.header h1 {
+    font-family: var(--fontNexon1B);
+    float: left;
+}
+.header .menu {
+    float: right;
+    font-family: var(--fontNexon1M);
+}
+
+.header .menu li {
+    display: inline; /*블록구조를 바꾸어줌-세로로 쌓는법에서 가로로)( */
+}
+
+.header .menu li a { /*a태그는 인라인 인라인 구조는 padding이 먹히지 않는다. 가로세로만 먹힌다*/
+    padding: 0 16px;
+    display: inline-block; /* 인라인구조면서 padding값을 적용될수 있도록 */
+}
+.header .menu li a:last-child { /*a태그는 인라인 인라인 구조는 padding이 먹히지 않는다. 가로세로만 먹힌다*/
+    padding-right: 0;  
+}
+/* header-three */ /* 큰박스 안에 3개의 작은 박스가 있을때.. (옛날)absoulte/(신규)display */
+.header-three {
+    text-align: center;
+}
+.header-three h1 {
+    font-family: var(--fontNexon1B);
+    position: absolute;
+    left: 2%;
+    top: 0;
+}
+.header-three .menu{
+    font-family: var(--fontNexon1M);
+}
+
+.header-three .menu li{
+    font-family: var(--fontNexon1M);
+    display: inline;
+}
+.header-three .menu a{
+    font-family: var(--fontNexon1M);
+    padding: 0 16px;
+}
+
+.header-three .member{
+    position: absolute;
+    right: 2%;
+    top: 0;
+}
+.header-three .member a {
+    margin-left: 10px;
+}
+
+/* 다크모드 */
+.dark #header {
+    background-color: #2e2e2e;
+}
+.dark #header h1 a {
+    color: #fff;
+}
+.dark .menu li a {
+    color: #fff;
+}
+.dark .member li a{
+    color: #fff;
+}
+
+
