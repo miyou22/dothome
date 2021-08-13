@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Reference</title>
-        <style>
-
+    <style>
         @font-face {
             font-family: 'NEXON Lv1 Gothic OTF';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
@@ -23,8 +22,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            /* width: margin + padding + border */
-            /*box-sizing: border-box는 border값을 뺀값 */
         }
         ul {
             list-style: none;
@@ -43,7 +40,7 @@
             border-radius: 12px;
             text-align: center;
             padding: 5% 2%;
-            height: 100%; /* 부모의 height값을 상속받음 */
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -52,7 +49,8 @@
         #contents h1 {
             font-family: 'TmonMonsori';
             color: #0e43f1;
-            font-size: 8vw; /*반응형 media쿼리와 비슷함 */
+            font-size: 8vw;
+            text-transform: uppercase;
         }
         #contents p {
             font-family: 'NEXON Lv1 Gothic OTF';
@@ -75,12 +73,13 @@
             display: inline-block;
             border-radius: 50px;
             font-size: 16px;
-            margin: 6px;
+            margin: 4px 1px;
             transition: all 0.4s;
         }
         .menu li a:hover {
             box-shadow: inset 0 -100px 0 #0e43f1;
             color: #fff;
+            border-style: solid;
         }
         @media (max-width: 800px){
             #wrap {
@@ -88,7 +87,6 @@
                 margin: 0;
                 border-width: 6px;
                 border-radius: 18px;
-
             }
             #contents {
                 border-width: 6px;
@@ -99,15 +97,15 @@
                 font-size: 12px;
                 padding: 5px 20px;
             }
-        } 
+        }
+
         /* dog */
-       
         .wrap {
             width: 300px;
             height: 300px;
-            background: #0066FF;
+            background: #0066ff;
             position: relative;
-            box-shadow: 0 -10px 0 0 #0057D9;
+            box-shadow: 0 -10px 0 0 #0057d9;
             border-radius: 50%;
         }
         .body {
@@ -155,7 +153,7 @@
             width: 45px;
             height: 40px;
             position: absolute;
-            background: #E6E6E6;
+            background: #e6e6e6;
             border-radius: 15px;
             bottom: 0px;
             overflow: hidden;
@@ -254,7 +252,7 @@
             left: auto;
             right: -10px;
             border-radius: 300px 100px 150px 50px/600px 100px 350px 50px;
-            background: #CCCCCC;
+            background: #cccccc;
             box-shadow: inset 5px 0 0 15px #fff;
             transform-origin: 0% 100%;
         }
@@ -319,7 +317,7 @@
             left: auto;
             right: 30px;
         }
-        .body .head .eyes:nth-of-type(2):before,
+        .body .head .eyes:nth-of-type(2):before, 
         .body .head .eyes:nth-of-type(2):after {
             background: #fff;
         }
@@ -362,9 +360,7 @@
             left: 15%;
             border-radius: 50%;
         }
-        
-        </style>
-    </title>
+    </style>
 </head>
 <body>
     <div id="wrap">
@@ -446,9 +442,9 @@
                     <li><a href="javascriptRefer13.html">알고리즘</a></li>
                 </ul>
             </nav>
-
         </main>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script>
@@ -466,22 +462,26 @@
             $outer = $('body'),
             container_w = $container.width(),
             container_h = $container.height();
+
         $('body').on('mousemove.parallax', function(event) {
             var pos_x = event.pageX,
                 pos_y = event.pageY,
                 left = 0,
                 bottom = 0,
                 top = 0;
+
                 left = container_w / 0.5 - pos_x;
                 top = container_h / 2 - pos_y;
                 bottom = container_h / 0.25 - (pos_y * 2.5);
+
             TweenMax.to(
                 $snout, 1, {
                     css: { transform: 'translateX(' + left / -32 + 'px) translateY(' + top / -26 + 'px) translateZ(1px)'
-                },
-                ease:Expo.easeOut,
+                }, 
+                ease:Expo.easeOut, 
                 overwrite: 'all'
             });
+
             TweenMax.to(
                 $spot, 1, {
                 css: {
@@ -553,7 +553,7 @@
                 overwrite: 'all'
             });
         });
+
     </script>
-   
 </body>
 </html>
