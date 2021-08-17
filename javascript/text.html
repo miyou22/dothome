@@ -10,297 +10,114 @@
     <script>
         //변수 : 데이터 저장소
         //100, 200, 300 변수에 저장을 출력을 해보세요
-       {
-           var a = 100;
-           var b = 200;
-           var c = 300;
-           document.write(a);
-           document.write(b);
-           document.write(c, "<br>");
-       }
+
      
         //배열
         //100, 200, 300 변수에 저장을 출력을 해보세요
-        {
-            let a = [100, 200, 300]
-
-            document.write(a[0]);
-            document.write(a[1]);
-            document.write(a[2], "<br>");
-        }
-     
+   
 
         //객체
         //100, 200, 300 변수에 저장을 출력을 해보세요
-        {
-            const sum = {a:100, b:200, c:300};
-
-            document.write(sum.a);
-            document.write(sum.b);
-            document.write(sum.c, "<br>");
-        }
+  
    
     
         //반복문
         //for문을 이용해서 1-50까지 출력
-        {
-            for( let i = 1; i<=50; i++){
-                document.write(i, "<br>");
-            }
-        }
-   
+     
 
         //반복문
         //for문을 이용해서 50-1까지 출력
-        {
-            for( let i = 50; i>=1; i--){
-                document.write(i, "<br>");
-            }
-        }
+       
   
         //반복문
         //for문을 이용해서 1-50 출력(짝수)을 해보세요
-        {
-            for( let i = 1; i<=50; i++){
-                if(i%2==0){
-                    document.write(i, "<br>");
-                }
-            }
-        }
-   
+     
      
         //반복문
         //for문을 이용해서 1-50까지 출력(홀수)을 해보세요
-        {
-            for( let i = 1; i<=50; i++){
-                if(i%2==1){
-                    document.write(i, "<br>");
-                }
-            }
-        }
+   
    
            
         //반복문
         //for문을 이용해서 구구단 8단만 출력을 해보세요.
-        {
-            let i = 8;
-            for( let j = 1; j<=9; j++){
-                document.write(i + "*" + j + "=" + i*j, "<br>");
-            }
-        }
-        
+       
         //반복문
         //for문을 이용해서 구구단 5~8단만 출력을 해보세요
-        {
-            for( let i = 5; i<=8; i++){
-                for( let j = 1; j<=9; j++){
-                    document.write(i + "*" + j + "=" + i*j, "<br>")
-                }
-            }
-        }
+       
   
         //배열의 갯수
-        {
-            const a = [100, 200, 300, 400, 500];
-
-            document.write(a.length, "<br>");
-        }
        
 
         //배열의 3번째 값만 출력
-        {
-            const a = [100, 200, 300, 400, 500];
-
-            document.write(a[2], "<br>");
-        }
-  
+      
 
         //for문을 이용하여 모든값을 출력
-        {
-            const a = [100, 200, 300, 400, 500];
-
-            for(i=0; i<a.length; i++){
-                document.write(a[i], "<br>");
-            }
-        }
+      
       
         //forEach을 이용해서 모든값을 출력
-        {
-            const a = [100, 200, 300, 400, 500];
-            
-            a.forEach((element, Index, Array) => {
-                document.write(element, "<br>");
-                document.write(Index, "<br>");
-                document.write(Array, "<br>");
-            });
-        }
-        
+      
       
         //for in문을 이용해서 모든값을 출력
-        {
-            const a = [100, 200, 300, 400, 500];
-
-            for( let i in a){
-                document.write(a[i],"<br>")
-            }
-        }
-      
+     
 
         //for of문을 이용해서 모든값을 출력
 
-        {
-            const a = [100, 200, 300, 400, 500];
-
-            for( let i of a){
-                document.write(i, "<br>");
-            }
-            for( let i of a) document.write(i, "<br>");
-               ;
-        }
+        
         //map()을 이용해서 모든값을 출력
-      {
-        const a = [100, 200, 300, 400, 500];
-
-        a.map((d) => {
-            document.write(d, "<br>");
-        })
-
-      }
+     
         //펼침연산자를 이용해서 모든 값을 출력
-        {
-        const a = [100, 200, 300, 400, 500];
-
-        document.write(...a, "<br><br>")
-
-        }
+      
 
         //for문을 이용해서 각 데이터를 출력
-        {
-            const arr= [100, 200, 300, 400, 500, "😂", "😂"];
-
-            for( let i=0; i<arr.length; i++){
-                document.write(arr[i],  "<br><br>");
-            }
-
-        }
+       
         //forEach를 이용해서 각 데이터를 출력(function을 이용해서)
-        {
-            const arr = [100, 200, 300, 400, 500];
-
-          
-            // arr.forEach(function(el){
-            //    documnet.write(el);
-            // });
-            // arr.forEach((el) =>{
-            //     document.write(el, "<br>");
-            // })
-            arr.forEach(el => document.write(el, "<br>"));
-            for( let el of arr ) document.write(el, "<Br>");
-            for( let el in arr ) document.write(el, "<Br>");
-            for( let el in arr ) document.write(arr[el], "<br>");
-        }
+      
         //배열에서 300찾은 다음 출력하세요
-        {
-            const arr = [100, 200, 300, 400, 500];
-            const find = arr.find(el => el ===300);
-            // const find = arr.find((el => {
-            //     el ===300;
-            // });
-            // const find = arr.find(function(){});
+      
 
-            document.write(find, "<br>");
-
-        }
+        
         // "함수가 실행되었습니."를 function을 이용해서 출력해주세요!(선언적함수)
-        {
-            function a(){
-                document.write("함수가 실행되었습니다.");
-            }
-            a();
-        }
+       
         // "함수가 실행되었습니."를 function을 이용해서 출력해주세요!(익명함수)
-        {
-            const func=function(){
-                document.write("함수가 실행되었습니다.", "<br>");
-            }
-            func();
-        }
+      
         // "함수가 실행되었습니."를 function을 이용해서 출력해주세요!(매개변수 함수)
-        {
-           const a = function(str){
-                document.write(str);
-            }
-            a("함수가 실행되었.");
-        }
+     
         // "함수가 실행되었습니."를 function을 이용해서 출력해주세요!(리턴값 함수)
-        {
-            function func3(){
-                const str = "함수가 실행되었습니다. <br>";
-                return str;
-            }
-            document.write(func3());
-        }
-        {
-            let num = 100;
-            if(num==100) document.write("true");
-        }
+       
 
   // forEach문 이용하기
-            //     arr.forEach(function(el){
-            //        document.write(el);
-            //    });
-            // arr.forEach((el) => {
-            //     document.write(el);
-            // });
+          
 
             
             //함수 안에 넣고 실행하세요! 선언적함수
-            function func(){
-                let x = 100;
-                let y = 200;
-                let z = "javascript";
-
-                document.write(x, "<br>");
-                document.write(y, "<br>");
-                document.write(z, "<br>");
-            }
-            func();
+         
             //익명함수
-            const func1 = function(){
-                let x = 100;
-                let y = 200;
-                let z = "javascript";
-                document.write(x, "<br>");
-                document.write(y, "<br>");
-                document.write(z, "<br>");
-            }
-            func1();
+           
+           
             //매개변수 함수
-            function func2(x, y, z) {
-                    document.write(x, "<br>");
-                    document.write(y, "<br>");
-                    document.write(z, "<br>");                  
-                }
-                func2(100, 200, "javascript")
+           
             //리턴값 함수
-            function func3(){
-                let x = "100";
-                let y = "200";
-                let z = "javascript";
-                return x + y + z;
-            }
-            document.write(func3());
+           
 
             //1. 선언적 함수로 실행해주세요
+     
         //2. 익명 함수로 실행해주세요
+       
         //3. 매개변수 함수로 실행해주세요
+      
         //4. 리턴값 함수로 실행해주세요
+      
         //5. 선언적함수를 즉시실행 함수로 실행해주세요
+       
         //6. 익명함수을 화살표 함수로 실행해주세요
+      
         //7. 매개변수 함수을 화샆료 함수로 실행해주세요
+      
         //8. 리턴값 함수를 화살표 함수로 실행해주세요
+       
 
-
+        //this.변수, map().. 사용법
+        //
     </script>   
 </body>
 </html>
