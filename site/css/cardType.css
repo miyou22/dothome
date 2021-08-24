@@ -1,0 +1,388 @@
+/* 카드 타입 유형 */
+body {
+    background-color: #f3f3f3;
+}
+
+.cardType {
+    margin: 100px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+/* cardType01 */
+.cardType01 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
+}
+.cardType01 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 7px;
+
+}
+.cardType01 p {
+    font-weight: 200;
+    font-size: 26px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+
+/* float을 이용한 레이아웃 */
+/* .cardType01 .card-wrap {
+    overflow: hidden;
+}
+.cardType01 .card-wrap > div {
+    float: left;
+    width: 387px;
+    margin-right: 19px;
+}
+.cardType01 .card-wrap > div:last-child {
+    margin-right: 0;
+}   */
+
+
+/* flex를 이용한 레이아웃 */
+.cardType01 .card-wrap {
+    display: flex;
+    justify-content: space-between; 
+}
+.cardType01 .card-wrap > div {
+    width: 255px;
+}
+
+.cardType01 .card {}
+.cardType01.card .card-img {}
+.cardType01 .card .card-title {
+    display: block;
+    font-size: 32px;
+    white-space: nowrap;  /*한줄효과 */
+    overflow: hidden;      /*한줄효과 */  
+    text-overflow: ellipsis; /*한줄효과 */
+}
+.cardType01 .card .card-desc {
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+    overflow: hidden;     /*두줄효과*/ 
+    display: -webkit-box; /*벤더 프리픽스*/
+    -webkit-line-clamp: 2;
+    -webkit-box-orent: vertical;
+
+}
+.cardType01 .card .card-keyword {
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.5;
+} 
+.cardType01 .card .card-keyword .site{
+    font-family: 'S-CoreDream';
+    padding: 4px 17px ;
+    font-size: 10px;
+    font-weight: 200;
+    color: #fff;
+    line-height: 10px;
+}
+
+/* cardType02 */
+.cardType02 {
+    font-family: 'S-CoreDream';
+    padding: 150px 0;
+    text-align: center;
+
+}
+.cardType02 h2 {
+    font-weight: 500;
+    font-size: 50px;
+    margin-bottom: 7px;
+
+}
+.cardType02 p {
+    font-weight: 200;
+    font-size: 26px;
+    line-height: 1.28;
+    margin-bottom: 40px;
+}
+.cardType02 .card-wrap {
+   display: grid;
+   grid-template-columns: repeat(4, 285px);
+   gap: 20px;
+}
+.cardType02 .card-wrap .card {
+    width: 285px;
+    height: 356px;
+    margin: 40px 20px 0 0;
+    padding: 15px 15px 16px 14px;
+    border-radius: 5px;
+    border: solid 1px #e6e6e6;
+    
+}
+.cardType02 .card-wrap .card .card-title {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+}
+.cardType02 .card-wrap .card .card-desc {
+    text-align: left;
+    display: block;
+
+}
+.cardType02 .card-wrap .card .card-keyword {
+
+}
+.cardType02 .card-wrap .card .card-keyword span {
+    width: 53px;
+    height: 21px;
+    margin: 6px 202px 0 1px;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
+    background-color: #000;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/*float: left;
+    box-sizing: border-box;
+}
+.cardType02 .card-wrap .card:last-child{
+    margin-right: 0; */
+
+    /*  display: flex; */
+
+    /* .cardType02 .card-wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 285px);
+        gap: 20px;
+     } */
+/* 카드타입 1 */
+.cardtype1 {
+    
+}
+.cardtype001 {
+    text-align: center;
+}
+.cardtype001 h2 {
+    margin: 97px;
+    font-family: 'S-CoreDream';
+    font-size: 50px;
+    font-weight: 500;
+}
+.cardtype001 p {
+    margin: 22px 0 40px 0;
+    font-family: 'S-CoreDream';
+    font-size: 26px;
+    font-weight: 300;
+}
+.cardtype001 .card-wrap1 {
+    display: flex;
+    justify-content: space-between; 
+}
+.cardtype001 .card-wrap1 .card1 {
+    width: 285px;
+    height: 356px;
+    margin: 40px 20px 0 0;
+    padding: 15px 15px 16px 14px;
+    border-radius: 5px;
+    border: solid 1px #e6e6e6;
+}
+
+.cardtype001 .card-wrap1 .card1 .title1 {
+    width: 222px;
+    height: 29px;
+    flex-grow: 0;
+    margin: 14px 34px 10px 0;
+    font-family: S-CoreDream;
+    font-size: 24px;
+    font-weight: 500;
+    display: inline-block;
+    text-align: left;
+}
+.cardtype001 .card-wrap1 .card1 .desc1 {
+    width: 255px;
+    height: 45px;
+    flex-grow: 0;
+    margin: 10px 0 6px 1px;
+    font-family: S-CoreDream;
+    font-size: 14px;
+    font-weight: 300;
+    display: inline-block;
+    text-align: left;
+}
+.cardtype001 .card-wrap1 .card1 .site1 {
+    display: block;
+    text-align: left;
+}
+.cardtype001 .card-wrap1 .card1 .site1 span {
+    font-family: S-CoreDream;
+    font-weight: 400;
+    font-size: 10px;
+    margin: 15px 0 30px 0;
+    padding: 4px 16px 3px;
+    border-radius: 20px;
+    border: solid 1px #000;
+    background-color: #000;
+    color: #fff;
+    font-weight: 300;
+    text-align: left;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* type3 */
+/* .cardtype2 {}
+.cardtype2 .cardtype002 {
+  text-align: left;
+}
+.cardtype2 .cardtype002 h2 {
+    flex-grow: 0;
+    margin: 96px 540px 22px 0;
+    font-family: 'S-CoreDream';
+    font-size: 50px;
+    font-weight: 800;
+}
+.cardtype2 .cardtype002 p {
+    flex-grow: 0;
+    margin: 22px 544px 47px 2px;
+    font-family: 'S-CoreDream';
+    font-size: 18px;
+    font-weight: 300;
+}
+.cardtype2 .card-wrap2 {}
+.cardtype2 .card-wrap2 .card2 {}
+.cardtype2 .card-img {
+    width: 285px;
+    height: 185px;
+    flex-grow: 0;
+    margin: 46px 19px 30px 2px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.cardtype2 .card-wrap2 .keyworkd10 {} 
+.cardtype2 .card-wrap2 .keyworkd10-1 {}
+.cardtype2 .card-wrap2 .keyworkd10-2 {}
+.cardtype2 .card-wrap2 .keyworkd10-3 {}
+.cardtype2 .card-wrap2 .title10 {}
+.cardtype2 .card-wrap2 .desc10 {} */
+
+/* card03 */
+.cardType03 {
+    padding: 100px 0;
+    font-family: "nanumsquare";
+}
+.cardType03 h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+.cardType03 p {
+    font: 18px;
+    font-weight: 400;
+    line-height: 1.28;
+    margin-bottom: 50px;
+}
+.cardType03 .popular {
+    font: 18px;
+    font-weight: 400;
+    line-height: 1.28;
+    position: absolute;
+    right: 0px; top: 180px;
+}
+.cardType03 .card-wrap {}
+.cardType03 .card-wrap ul{}
+.cardType03 .card-wrap .card{
+    margin-bottom: 28px;
+}
+
+.cardType03 .card-wrap .card .card-img {
+    width: 285px;
+    height: 185px;   
+    position: absolute; /* absolute는 영역이 사라짐 */
+}
+.cardType03 .card-wrap .card .right {
+    padding-left: 305px;
+}
+.cardType03 .card-wrap .card .card-cate {
+    font-size: 14px;
+    font-weight: 800;
+    background: #ff5151;
+    padding: 4px 14px 3px 15px;
+    color: #fff;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.cardType03 .card-wrap .card .card-cate.red {
+    background: #ff5151;
+}
+.cardType03 .card-wrap .card .card-cate.blue {
+    background:#5465ff;
+}
+.cardType03 .card-wrap .card .card-cate.green {
+    background: #11c865;
+}
+.cardType03 .card-wrap .card .card-tit {
+    display: block;
+    font-weight: bold;
+    font-size: 26px; 
+    
+}
+.cardType03 .card-wrap .card .card-desc {
+    font-size: 16px;
+    line-height: 1.53;
+    font-weight: 300;
+    margin-bottom: 10px;
+   
+}
+.cardType03 .card-wrap .card .card-date {
+    display: block;
+    color: #555;
+    font-size: bold;
+    line-height: 1.4;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+/*image type */
+.imgType {
+    padding: 100px 0;
+    font-family: "nanumsquare";
+}
+.imgType .h2{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+.imgType .wrap .card {
+    position: relative;
+}
+.imgType .wrap .card .card-img{
+    width: 590px;
+    height: 599px;
+    position: absolute;
+}
+.imgType .wrap .card .card-title {
+    font-size: 30px;
+    font-weight: 500;
+    position: absolute;
+    padding: 450px 45px;
+    
+}
+.imgType .wrap .card .card-desc {
+    font-size: 14px;
+    font-weight: 200;
+    position: absolute;
+    padding: 500px 45px;
+
+}
+.imgType .wrap .card .site {
+    font-size: 14px;
+    font-weight: 200;
+    position: absolute;
+    padding: 550px 45px 30px;
+    border: solid 1px #000;
+
+}
+
+
+
+

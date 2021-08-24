@@ -10,23 +10,51 @@
     
 </body>
 <script>
-    {
-        var i = prompt ( "제일 먼저 잡고 싶은 물건은 무엇인가요?( 1.과일, 2.떡, 3.수정구슬  4.현찰, 5. 반지 )", "" );
+    //자바스크립트가 실행되었습니다.
+    //선언적 함수
+    function f1(){
+        document.write("함수가 실행되었습니다.<br>");
+    }
+    f1();
+    //익명 함숙
+    let f2 = function(){
+        document.write("함수가 실행되었습니다.<br>");
+    }
+    f2();
+    //리턴값 함수
+    function f3(){
+        let ab = "함수가 실행되었습니다<br>";
+        return ab;
+    }
+    document.write(f3())
+    //매개변수 함수
+    function f4(abc){
+        document.write(abc);
+    }
+    f4("함수가 실행되었습니다.<br>");
 
-        if(i=="1"){
-            document.write("당신은 생각이 많고 진지해 보이는 연상 타입 입니다.");
-        } else if(i=="2") {
-            document.write("당신은 무드에 약해 화술과 매너가 좋은 타입 입니다.");
-        } else if(i=="3") {
-            document.write("당신은 정열적이고 열중하는 타입 입니다.");
-        } else if(i=="4") {
-            document.write("당신은 부드럽고 따뜻한 타입입니다.");
-        } else if(i=="5") {
-            document.write("당신은 자기를 보호해 줄 수 있는 이성 타입입니다.");
-        } else {
-            document.write("값을 입력해주세요");
+    //1-10 for문을 이용해서 출력
+    for(let i=1; i<=10; i++){
+        document.write(i,"<br>");
+    }
 
-        }  
-        }
+    
+    const num = [1,2,3,4,5];
+    //for 출력
+    for(i=0; i<num.length; i++){
+        document.write(num[i], "<br>");
+    }
+    //forEach출력
+    num.forEach(el => {
+        document.write(el, "<br>");
+    })
+    //for in출력
+    for(let z in num){
+        document.write(num[z], "<br>");
+    }
+    //for of출력
+    for(let s of num){
+        document.write(s, "<br>");
+    }
 </script>
 </html>

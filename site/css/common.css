@@ -1,27 +1,30 @@
 /* container */
-.container {
-    max-width: 1200px;  /* @media와 같은 효과 */
-    width: 100%;        /* @media와 같은 효과 */
-    margin: 0 auto;   /* 박스를 가운데 오게 함 */
-    position: relative;
-    /* background-color: rgba(0,0,0,0.13); */
-    
-}
 
-.container-fluid {
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    /* background-color: rgba(0,0,0,0.13); */
+  }
+  
+  .container-fluid {
     width: 96%;
     margin: 0 auto;
-}
-
-
-/* btn-style 버튼 스타일 */
-.btn-style1 {
-    border: 1px solid #000; /* 테두리 */
+  }
+  
+  /* btn-style */
+  .btn-style {
+    border: 1px solid #000;
     padding: 7px 30px;
-}
-.btn-style1.radius{ /* 메인메뉴에 btn-style1.radius를 입력하면 됨 */
-    border-radius: 30px; /* 테두리 구석을  둥굴게 */
-}
-.dark .btn-style1 {
+  }
+  
+  .btn-style.radius {
+    border-radius: 30px;
+  }
+  
+  /* dark mode */
+  .dark .btn-style{
     border-color: #fff;
-}
+  }
