@@ -18,18 +18,19 @@
 <body>
 
     <h1><a href="index.html">Javascript 레퍼런스</a></h1>
-
+<br>
     <ul class="page">
         <li><a href="../refer-html/index.html">HTML</a></li>
         <li><a href="../refer-css/index.html">CSS</a></li>
-        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
+        <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>
+        <li><a href="../refer-jquery/index2.html">JQUERY</a></li>
     </ul>
 
     <nav class="menu">
         <ul>
             <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
             <li><a href="javascriptRefer02.html">데이터 불러오기</a></li>
-            <li><a href="javascriptRefer03.html">데이터 실행하기</a></li>
+            <li class="active"><a href="javascriptRefer03.html">데이터 실행하기</a></li>
             <li><a href="javascriptRefer04.html">데이터 제어하기</a></li>
         </ul>
         <ul>
@@ -37,6 +38,7 @@
             <li><a href="javascriptRefer06.html">배열 객체</a></li>
             <li><a href="javascriptRefer07.html">날짜 객체</a></li>
             <li><a href="javascriptRefer08.html">수학 객체</a></li>
+            <li><a href="javascriptRefer14.html">숫자 객체</a></li>
             <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
             <li><a href="javascriptRefer10.html">요소 객체</a></li>
             <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
@@ -46,6 +48,7 @@
             <li><a href="javascriptRefer13.html">알고리즘</a></li>
         </ul>
     </nav>
+    <br><br><br>
     <h2 class="mt20">데이터 실행 : 함수</h2>
     <ul>
         <li><a href="#sample01">01. 선언적 함수</a></li>
@@ -79,19 +82,19 @@
         <li><a href="#sample29">29. 함수 유형 : 클래스</a></li>
         <li><a href="#sample30">30. 함수 유형 : 클래스 상속</a></li>       
     </ul>  
-    
+    <br><br>
     <h2 class="mt20">데이터 실행 : 메서드</h2>
     <ul>
-        <li><a href="#sample1">01. setInterval()</a></li>
-        <li><a href="#sample1">02. setTimeout()</a></li>
-        <li><a href="#sample1">03. clearInterval()</a></li>
-        <li><a href="#sample1">04. clearTimeout()</a></li>
+        <li><a href="#sample31">31. setInterval()</a></li>
+        <li><a href="#sample32">32. setTimeout()</a></li>
+        <li><a href="#sample33">33. clearInterval()</a></li>
+        <li><a href="#sample34">34. clearTimeout()</a></li>
        
     </ul>  
 
     <hr>
-  <!-- sample1 -->
-  <div id="sample1" class="sample">
+  <!-- sample01 -->
+  <div id="sample01" class="sample">
     <h2>01. 선언적 함수 <span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -105,10 +108,10 @@
     </div>
 </div>
 <hr>
-<!--sample1 -->
+<!--sample01 -->
 
-<!-- sample2 -->
-<div id="sample2" class="sample">
+<!-- sample02 -->
+<div id="sample02" class="sample">
     <h2>02. 익명 함수 <span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -122,10 +125,10 @@
     </div>
 </div>
 <hr>
-<!--sample2 -->
+<!--sample02 -->
 
-<!-- sample3 -->
-<div id="sample3" class="sample">
+<!-- sample03 -->
+<div id="sample03" class="sample">
     <h2>03. 매개변수 함수 <span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -143,10 +146,10 @@
     </div>
 </div>
 <hr>
-<!--sample3 -->
+<!--sample03 -->
 
-<!-- sample4 -->
-<div id="sample4" class="sample">
+<!-- sample04 -->
+<div id="sample04" class="sample">
     <h2>04. 리턴값 함수 <span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -161,10 +164,10 @@
     </div>
 </div>
 <hr>
-<!--sample4 --> 
+<!--sample04 --> 
 
-<!-- sample5 -->
-<div id="sample5" class="sample">
+<!-- sample05 -->
+<div id="sample05" class="sample">
     <h2>05. 화살표 함수 : 선언적 함수<span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -179,10 +182,10 @@
     </div>
 </div>
 <hr>
-<!--sample5 --> 
+<!--sample05 --> 
 
-<!-- sample6 -->
-<div id="sample6" class="sample">
+<!-- sample06 -->
+<div id="sample06" class="sample">
     <h2>06. 화살표 함수 : 익명 함수 <span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -196,10 +199,10 @@
     </div>
 </div>
 <hr>
-<!--sample6 --> 
+<!--sample06 --> 
 
-<!-- sample7 -->
-<div id="sample7" class="sample">
+<!-- sample07 -->
+<div id="sample07" class="sample">
     <h2>07. 화살표 함수 : 리턴값 함수 <span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -214,10 +217,10 @@
     </div>
 </div>
 <hr>
-<!--sample7 --> 
+<!--sample07 --> 
 
-<!-- sample8 -->
-<div id="sample8" class="sample">
+<!-- sample08 -->
+<div id="sample08" class="sample">
     <h2>08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 함수 <span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -232,10 +235,10 @@
     </div>
 </div>
 <hr>
-<!--sample8 --> 
+<!--sample08 --> 
 
-<!-- sample9 -->
-<div id="sample9" class="sample">
+<!-- sample09 -->
+<div id="sample09" class="sample">
     <h2>09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 함수 + 괄호 생략 <span class="dot"></span></h2>
     <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -250,7 +253,7 @@
     </div>
 </div>
 <hr>
-<!--sample9 --> 
+<!--sample09 --> 
 
 <!-- sample10 -->
 <div id="sample10" class="sample">

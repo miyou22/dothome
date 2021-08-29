@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--CSS-->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+  
+  <!--Card Type CSS-->
+  <link rel="stylesheet" href="css/hovereffecttype01.css">
+</head>
+<body>
+    <!--이미지를 표현하는 방법
+        1. 이미지를 img태그 : alt속성이 들어가야함 -> 의미가 있을 때 사용
+        2. 이미지를 background 속성  : alt속성 필요없음 -> 의미가 없을 때 사용(장식이나 배경으로 쓸때)
+     
+        3. 요즘에는 의미가 있는 이미지도 background로 사용 -> 이미지 스프라이트 기법
+        - 이미지 스프라이트를 사용하게 되면 접근성이 깨짐(alt속성 못씀) ->IR효과(alt효과를 임의로 만듬)
+        - 요즘에는 가장 많이 사용함
+
+        4. 이미지 해상도 -> 이미지 분류(애플사이트가 잘되어있음) => picture태그, figure태그
+    -->
+    
+    <!--hovereffecttype01-->
+    <section class="imageType">
+        <div class="container">
+            <div class="imageType01">
+                <h2>EPL 이야기</h2>
+                <div class="image-wrap">
+                    <div class="image">
+                        <img class="image-img" src="img/image01.jpg" alt="리버풀입니다.">
+                        <div class="image-cont">
+                            <h3 class="image-title">애교만점 웰시코기</h3>
+                            <p class="image-desc">포메라니안은 작고 귀여운 체구에 비해 대범한 성격을 가지고 있으며 호기심이 많은 견종입니다.</p>
+                            <a class="image-btn red" href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img class="image-img" src="img/image02.jpg" alt="맨시티입니다.">
+                        <div class="image-cont">
+                            <h3 class="image-title">강아지계의 연예인, 비숑프리제</h3>
+                            <p class="image-desc">최근 연예인들 사이에서 키우는 강아지로 유명해진 비숑프리제는 생김새가 아주 작은 바빗과 매우 흡사하여 바비숑이라는 이름....</p>
+                            <a class="image-btn yellow" href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//overeffecttype01-->
+  
+
+
+</div>
+</body>

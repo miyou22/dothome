@@ -18,11 +18,12 @@
 <body>
 
     <h1><a href="index.html">Javascript 레퍼런스</a></h1>
-
+<br>
     <ul class="page">
         <li><a href="../refer-html/index.html">HTML</a></li>
         <li><a href="../refer-css/index.html">CSS</a></li>
-        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
+        <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>
+        <li><a href="../refer-jquery/index2.html">JQUERY</a></li>
     </ul>
 
     <nav class="menu">
@@ -35,8 +36,9 @@
         <ul>
             <li><a href="javascriptRefer05.html">문자열 객체</a></li>
             <li><a href="javascriptRefer06.html">배열 객체</a></li>
-            <li><a href="javascriptRefer07.html">날짜 객체</a></li>
+            <li class="active"><a href="javascriptRefer07.html">날짜 객체</a></li>
             <li><a href="javascriptRefer08.html">수학 객체</a></li>
+            <li><a href="javascriptRefer14.html">숫자 객체</a></li>
             <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
             <li><a href="javascriptRefer10.html">요소 객체</a></li>
             <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
@@ -46,22 +48,22 @@
             <li><a href="javascriptRefer13.html">알고리즘</a></li>
         </ul>
     </nav>
+    <br><br><Br>
     <h2 class="mt20">날짜 객체</h2>
     <ul>
         
         <li><a href="#sample01">01. 날짜 메서드 : getFullYear() : 연도 불러오기 </a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getMonth() : 월 불러오기 </a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getDate() : 일 불러오기 </a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getHours() : 시간 불러오기 </a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getHours() : 시간 불러오기 </a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getMinutes() : 분 불러오기 </a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getSeconds() : 초 불러오기 </a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getMilliSeconds() : 밀리초 불러오기 </a></li>
-        <li><a href="#sample01">01. 날짜 메서드 : getDay() : 요일 불러오기 </a></li>
-        <li><a href="#sample02">02. 날짜 메서드 : toLocaleString() : 현재 날짜와 시각 문자열 불러오기 </a></li>
-        <li><a href="#sample02">02. 날짜 메서드 : toLocaleDateString() : 현재 날짜를 문자열 불러오기 </a></li>
-        <li><a href="#sample02">02. 날짜 메서드 : toLocaleTimeString() : 현재 시각를 문자열 불러오기 </a></li>
-        <li><a href="#sample03">03. 날짜 메서드 : Date.parse() : 날짜 문자열 타임스탬프 불러오기 </a></li>
+        <li><a href="#sample01">02. 날짜 메서드 : getMonth() : 월 불러오기 </a></li>
+        <li><a href="#sample01">03. 날짜 메서드 : getDate() : 일 불러오기 </a></li>
+        <li><a href="#sample01">04. 날짜 메서드 : getHours() : 시간 불러오기 </a></li>
+        <li><a href="#sample01">06. 날짜 메서드 : getMinutes() : 분 불러오기 </a></li>
+        <li><a href="#sample01">07. 날짜 메서드 : getSeconds() : 초 불러오기 </a></li>
+        <li><a href="#sample01">08. 날짜 메서드 : getMilliSeconds() : 밀리초 불러오기 </a></li>
+        <li><a href="#sample01">09. 날짜 메서드 : getDay() : 요일 불러오기 </a></li>
+        <li><a href="#sample02">10. 날짜 메서드 : toLocaleString() : 현재 날짜와 시각 문자열 불러오기 </a></li>
+        <li><a href="#sample02">11. 날짜 메서드 : toLocaleDateString() : 현재 날짜를 문자열 불러오기 </a></li>
+        <li><a href="#sample02">12. 날짜 메서드 : toLocaleTimeString() : 현재 시각를 문자열 불러오기 </a></li>
+        <li><a href="#sample03">13. 날짜 메서드 : Date.parse() : 날짜 문자열 타임스탬프 불러오기 </a></li>
         
   
     </ul>   
@@ -70,7 +72,7 @@
 
      <!--sample01 -->
      <div id="sample01" class="sample">
-        <h2> 01. 날짜 메서드 : getFullYear() : 연도 불러오기 <span class="dot"></span></h2>
+        <h2> 01. 날짜 메서드 : getFullYear() / getMonth() / getDate() / getHours() / getMinutes() / getSeconds() / getMilliseconds() / getDay() <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -177,7 +179,7 @@
 
           <!--sample02 -->
      <div id="sample02" class="sample">
-        <h2> 01. 날짜 메서드 : getFullYear() : 연도 불러오기 <span class="dot"></span></h2>
+        <h2> 02. 날짜 메서드 : toLocaleString() / toLocaleDateString() / toLocaleTimeString() <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>
@@ -231,20 +233,10 @@
     const localeDate = date.toLocaleDateString();
     const localeTime = date.toLocaleTimeString();
 
-
-    document.querySelector(".sample02_N1").innerHTML = "1";
-    document.querySelector(".sample02_Q1").innerHTML = "new Date()";
-    document.querySelector(".sample02_M1").innerHTML = "toLocaleString()";
     document.querySelector(".sample02_R1").innerHTML = locale;
 
-    document.querySelector(".sample02_N2").innerHTML = "2";
-    document.querySelector(".sample02_Q2").innerHTML = "new Date()";
-    document.querySelector(".sample02_M2").innerHTML = "toLocaleDateString()";
     document.querySelector(".sample02_R2").innerHTML = localeDate;
 
-    document.querySelector(".sample02_N3").innerHTML = "3";
-    document.querySelector(".sample02_Q3").innerHTML = "new Date()";
-    document.querySelector(".sample02_M3").innerHTML = "toLocaleTimeString()";
     document.querySelector(".sample02_R3").innerHTML = localeTime;
 }
     </code></pre>
@@ -255,7 +247,7 @@
 
             <!--sample03 -->
      <div id="sample03" class="sample">
-        <h2> 01. 날짜 메서드 : getFullYear() : 연도 불러오기 <span class="dot"></span></h2>
+        <h2> 03. 날짜 메서드 : Date.parse() <span class="dot"></span></h2>
         <div class="view">
             <table>
                 <colgroup>

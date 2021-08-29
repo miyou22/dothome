@@ -1,0 +1,53 @@
+/* 카드 타입 유형 */
+body {
+    background-color: #f3f3f3;
+}
+
+.cardType {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+
+/* ex-cardtype */
+.cardType .container .ex-cardType{
+    font-family: 'GmarketSans';
+
+}
+.cardType .container .ex-cardType h2{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 67px;
+    padding: 241px 0 0 0;
+
+}
+
+.cardType .container .ex-cardType .card-wrap{
+    display: flex;
+    justify-content: space-between; 
+}
+.cardType .container .ex-cardType .card-wrap .card{
+    background-color: #f2f2f2;
+    width: 387px;
+    height: 580px;
+    margin-bottom: 240px;
+}
+.cardType .container .ex-cardType .card-wrap .card .card-title{
+    font-size: 14px;
+    margin: 56px 0 0 46px;
+    display: block;
+
+}
+.cardType .container .ex-cardType .card-wrap .card .card-desc {
+    font-size: 24px;
+    margin: 22px 0 67px 46px;
+    display: block;
+}
+.cardType .container .ex-cardType .card-wrap .card .card-img {
+    display: block;
+    margin-left: 46px;
+}
+
+
+

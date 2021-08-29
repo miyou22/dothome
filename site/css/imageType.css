@@ -1,133 +1,148 @@
-/* imageType */
 body {
     background-color: #f3f3f3;
 }
 
-.imgtype {
-    margin: 150px 0;
+.imageType {
+    margin: 100px 0;
     background-color: #fff;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 50px rgba(0,0,0,0.1);
+}
+/* imgaetype01 */
+
+.imageType01 {
+    font-family: 'GmarketSans';
+    padding: 150px 0;
 }
 
-/* imageType */
-.imgtype01 {
-    padding: 100px 0;
- 
-}
-.imgtype01 h2{
-    font-family: 'S-CoreDream';
-    font-weight: 800;
+.imageType01 {}
+.imageType01 h2{
     font-size: 50px;
-    margin-bottom: 50px;
-}
-.imgtype01 .card-wrap {
-    display:flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-.imgtype01 .card-wrap .card{
-    position: relative
-   
-}
-.imgtype01 .card-wrap .card .card-img{
-   
-}
-.imgtype01 .card-wrap .card .card-text { 
-    position: absolute;
-    width: 458px;
-    bottom: 30px;
-    left: 30px;
- 
-}
-.imgtype01 .card-wrap .card .card-title {
-    padding: 15px 15px 0px 15px;
-    display: block;
-    font-size: 30px;
     font-weight: 500;
-    color: #fff;
+    margin-bottom: 36px;
 }
-.imgtype01 .card-wrap .card .card-desc {
-    padding: 10px 15px 0px 15px;
-    display: inline-block;
+
+.imageType01 .image-wrap{
+    overflow: hidden;
+}
+.imageType01 .image-wrap .image {
+    position: relative;
+    float: left;
+    width: 590px;
+    height: 385px;
+}
+.imageType01 .image-wrap .image .image:first-child {
+    margin-right: 30px;
+}
+.imageType01 .image-wrap .image .image-img {}
+.imageType01 .image .image-cont {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    color: #fff;
+    left: 30px;
+    right: 30px;
+}
+
+.imageType01 .image .image-title {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.imageType01 .image .image-desc {
     font-size: 14px;
-    font-weight: 200;
+    font-weight: 500px;
     line-height: 1.4;
-    color: #fff;    
+    padding-right: 30px;
+    word-break: break-all;
 }
-.imgtype01 .card-wrap .card .card-keyword {
-    padding: 10px 15px 15px 15px;
+.imageType01 .image .image-btn {
+    padding: 8px 18px;
+    background-color: #9a481d;
     display: inline-block;
-    font-size: 14px;
-    font-weight: 200;
-    color: #fff;
-    border: solid 1px #9A481D;
-    margin: 10px 15px;
+    background-color: #777;
+    margin-top: 10px;
 }
-.imgtype01 .card-wrap .card .card-title1 {
-    padding: 15px 15px 0px 15px;
+.imageType01 .image .image-btn.red {   
+    background-color: #9a481d;
+}
+.imageType01 .image .image-btn.yellow {
+    background-color: #b59140;
+}
+.imageType01 .image .image-cont.s2 {
+    background-color: #b59140e0;
+    width: 400px;
+    padding: 20px;
+}
+.imageType01 .image .image-cont.s2 .image-desc {
+    padding-right: 0;
+}
+.imageType01 .image .image-cont.s2 .image-btn {
+    padding: 0;
+    border-bottom: 1px solid #fff;
+}
+
+/*imageType02 */
+.imageType02 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType02 h2{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 36px;
+}
+.imageType02 .image-wrap {
+    display: flex;
+    justify-content: space-between; /* 가로정렬 */
+}
+.imageType02 .image{
+    width: 386px;
+    position: relative;
+    perspective: 800px;
+}
+.imageType02 .image::after {
+    content: '';
+    background: #fff;
     display: block;
+    position: absolute;
+    left: 30px; top: 30px; right: 30px; bottom: 30px;
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transition: all 0.4s ease-in-out;
+}
+.imageType02 .image:hover::after {
+    opacity: 0.9;
+    transform: rotateX(0deg);
+}
+.imageType02 .image .image-img{}
+.imageType02 .image .image-cont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-50%, 0%);
+    z-index: 1000;
+    transition: all 0.2s ease-out;
+
+}
+.imageType02 .image:hover .image-cont {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.imageType02 .image .image-title{
     font-size: 30px;
     font-weight: 500;
     color: #000;
 }
-.imgtype01 .card-wrap .card .card-desc1 {
-    padding: 10px 15px 0px 15px;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 1.4;
-    color: #000;    
-}
-/*imgtype02*/
-.imgtype02 {
-    padding: 100px 0;
- 
-}
-.imgtype02 h2{
-    font-family: 'S-CoreDream';
-    font-weight: 800;
-    font-size: 50px;
-    margin-bottom: 50px;
-}
-.imgtype02 .card-wrap {
-    display:flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-.imgtype02 .card-wrap .card{
-    position: relative
-   
-}
-.imgtype02 .card-wrap .card .card-img{
-   
-}
-.imgtype02 .card-wrap .card .card-text { 
-    white-space: nowrap;
-    position: absolute;
-    width: 285px;
-    height: 60px;
-    top: 150px;
-    left: 44px;
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-.imgtype02 .card-wrap .card .card-title {
-    padding: 15px 15px 0px 15px;
-    display: block;
-    font-size: 30px;
-    font-weight: 500;
-    color: #fff;
-    vertical-align: top;
-}
-.imgtype02 .card-wrap .card .card-keyword {
-    padding: 10px 15px 15px 15px;
-    display: block;
-    font-size: 15px;
-    font-weight: 200;
-    color: #fff;
-    width: 185px;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-    margin-left: 35px; 
+.imageType02 .image .image-btn{
+    color: #fff; /* a링크는 색을 적용시킬수 없음 */
+    padding: 7px 24px 5px 24px;
+    background: #000;
     border-radius: 40px;
+    font-weight: 300;
+    margin-top: 5px; /* 인라인구조는 마진값을 설정할수 없다. */
+    display: inline-block;
 }

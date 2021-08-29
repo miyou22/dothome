@@ -86,11 +86,12 @@
 <body>
 
     <h1><a href="index.html">Javascript 레퍼런스</a></h1>
-
+<br>
     <ul class="page">
         <li><a href="../refer-html/index.html">HTML</a></li>
         <li><a href="../refer-css/index.html">CSS</a></li>
-        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
+        <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>
+        <li><a href="../refer-jquery/index2.html">JQUERY</a></li>
     </ul>
 
     <nav class="menu">
@@ -105,8 +106,9 @@
             <li><a href="javascriptRefer06.html">배열 객체</a></li>
             <li><a href="javascriptRefer07.html">날짜 객체</a></li>
             <li><a href="javascriptRefer08.html">수학 객체</a></li>
+            <li><a href="javascriptRefer14.html">숫자 객체</a></li>
             <li><a href="javascriptRefer09.html">브라우저 객체</a></li>
-            <li><a href="javascriptRefer10.html">요소 객체</a></li>
+            <li class="active"><a href="javascriptRefer10.html">요소 객체</a></li>
             <li><a href="javascriptRefer11.html">이벤트 객체</a></li>
         </ul>
         <ul>
@@ -115,13 +117,27 @@
         </ul>
         
     </nav>
-
+<br><br><br>
+<h2 class="mt20">요소 객체</h2>
     <div class="list">
         <ol>
-            <li>요소 객체 : 클래스 매서드 : .classList.add()</li>
-            <li>요소 객체 : 클래스 매서드 : .classList.remove()</li>
-            <li>요소 객체 : 클래스 매서드 : .classList.toggle()</li>
-            <li>요소 객체 : 클래스 매서드 : .classList.contains()</li>
+            <li><a href="#c">01. 요소 객체 : 선택자 : querySelector() : 요소 선택하기</a></li>
+            <li><a href="#c">02. 요소 객체 : 선택자 : querySelectorAll() : 모든요소 선택하기</a></li>
+            <li><a href="#c">03. 요소 객체 : 선택자 : document.getElementById() : 아이디 요소 선택하기</a></li>
+            <li><a href="#c">04. 요소 객체 : 선택자 : document.getElementByClassName() : 클래스 요소 선택하기</a></li>
+            <br>
+            <li><a href="#c">05. 요소 객체 : 클래스 매서드 : classList.add() : 클래스 추가하기</a></li>
+            <li><a href="#c">06. 요소 객체 : 클래스 매서드 : classList.remove() : 클래스 삭제하기</a></li>
+            <li><a href="#c">07. 요소 객체 : 클래스 매서드 : classList.toggle() : 클래스 추가/삭제하기</a></li>
+            <li><a href="#c">08. 요소 객체 : 클래스 매서드 : classList.contains() : 클래스 존재 여부 확인하기</a></li>
+            <br>
+            <li><a href="#c">09. 요소 객체 : element 속성 : element.clientWidth : 요소의 가로값 : 가져오기(패딩포함)</a></li>
+            <li><a href="#c">10. 요소 객체 : element 속성 : element.clientHeight : 요소의 세로값 : 가져오기(패딩포함)</a></li>
+            <li><a href="#c">11. 요소 객체 : element 속성 : element.offsetWidth : 요소의 가로값 : 가져오기(패딩/보더 포함)</a></li>
+            <li><a href="#c">12. 요소 객체 : element 속성 : element.offsetHeight : 요소의 세로값 : 가져오기(패딩/보더 포함)</a></li>
+            <li><a href="#c">13. 요소 객체 : element 속성 : element.getBoundingClientReat : 요소의 정보값 : 가져오기</a></li>
+ 
+ 
         </ol>
     </div>
     
@@ -226,55 +242,157 @@
         </script>
         <!-- //sample02 -->
 
+            <!-- //sample03 -->
+            <div id="sample03" class="sample">
+                <h2>03. 속성 메서드 : hasClass()<span class="dot"></span></h2>
+                <div class="view ex3">
+                    <div><img src="img/image-11.jpg" alt="이미지3"></div>
+                    <div><img src="img/image-12.jpg" alt="이미지3"></div>
+                    <div class="active"><img src="img/image-13.jpg" alt="이미지3"></div>
+                    <div class="active"><img src="img/image-14.jpg" alt="이미지3"></div>
+                    <div><img src="img/image-15.jpg" alt="이미지3"></div>
+                </div>
+                <div class="btn">
+                    <a href="#c" class="btn3-0">리셋</a>
+                    <a href="#c" class="btn3-1">클릭하면 .active 클래스를 찾은 후에 클래스를 제거합니다.</a>
+                </div>
+                <div class="code">
+    <pre class="line-numbers"><code class="language-js">{
+    }
+    </code></pre>
+                </div>
+            </div>
+            <hr>
+            <script>
+                document.querySelector(".btn3-0").addEventListener("click", () => {
+                document.querySelector(".ex3 > div:nth-child(1)").classList.add("active")
+                document.querySelector(".ex3 > div:nth-child(4)").classList.add("active")
+            });
+                document.querySelector(".btn3-1").addEventListener("click", () => {
+                document.querySelectorAll(".ex3 > div").forEach(el => {
+                    if(el.classList.contains("active")){
+                        el.classList.remove("active");
+                    }
+                })
+            });
+            </script>
+            
+             <!--//sample03 -->
+
       
       
         <!-- //sample03 -->
-        <div id="sample03" class="sample">
-            <h2>03. 속성 메서드 : hasClass()<span class="dot"></span></h2>
-            <div class="view ex3">
-                <div><img src="img/image-11.jpg" alt="이미지3"></div>
-                <div><img src="img/image-12.jpg" alt="이미지3"></div>
-                <div class="active"><img src="img/image-13.jpg" alt="이미지3"></div>
-                <div class="active"><img src="img/image-14.jpg" alt="이미지3"></div>
-                <div><img src="img/image-15.jpg" alt="이미지3"></div>
+    <style>
+        .ex4 {
+            min-height: 300px;
+            position: relative;/* 가운데 정렬 */
+        }
+        .ex4 .circle{
+            display: block;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            /*margin: auto; 가운데 정렬 */
+            position:absolute;               /* 가운데 정렬 */
+            left: 50%;                       /* 가운데 정렬 */
+            top: 50%;                        /* 가운데 정렬 */
+            transform: translate(-50%, -50%);/* 가운데 정렬 */
+            padding: 10px;
+            margin: 10px;
+            border: 5px solid #ffe0f6;
+            box-sizing: content-box;
+            border-radius: 50%;
+            background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+        }
+    </style>
+        <div id="sample04" class="sample">
+            <h2>04. 속성 메서드 : hasClass()<span class="dot"></span></h2>
+            <div class="view ex4">
+                <span class="circle circle4"></span>
+
+                <p class="text4">여기는 텍스트 영역입니다.</p>
             </div>
             <div class="btn">
-                <a href="#c" class="btn3-0">리셋</a>
-                <a href="#c" class="btn3-1">클릭하면 .active 클래스를 찾은 후에 클래스를 제거합니다.</a>
+                <a href="#c" class="btn4-1">클릭하면 원의 가로값(clientWidth)을 구합니다.</a>
+                <a href="#c" class="btn4-2">클릭하면 원의 세로값을(clientHeight) 구합니다.</a>
+                <a href="#c" class="btn4-3">클릭하면 원의 가로값(offsetWidth)을 구합니다.</a>
+                <a href="#c" class="btn4-4">클릭하면 원의 세로값(offsetHeight)을 구합니다.</a>
+                <a href="#c" class="btn4-5">클릭하면 원의 정보값(getBoundingClientRect)을 구합니다.</a>
             </div>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".btn4-1").addEventListener("click", function(){
+        document.querySelector(".text4").innerHTML = "이 원의 가로 값은" + cw +"px 입니다."
+    });
+
+    document.querySelector(".btn4-2").addEventListener("click", function(){
+        document.querySelector(".text4").innerHTML = "이 원의 세로 값은" + ch +"px 입니다."
+    });
+
+    document.querySelector(".btn4-3").addEventListener("click", function(){
+        document.querySelector(".text4").innerHTML = "이 원의 가로 값은" + ow +"px 입니다."
+    });
+
+    document.querySelector(".btn4-4").addEventListener("click", function(){
+        document.querySelector(".text4").innerHTML = "이 원의 세로로 값은" + oh +"px 입니다."
+    });
+    document.querySelector(".btn4-5").addEventListener("click", function(){
+        document.querySelector(".text4").innerHTML = `
+          이 원의 x값은  ${parseInt(rect.x)}px 입니다.<br>
+          이 원의 y값은  ${parseInt(rect.y)}px 입니다.<br>
+          이 원의 top값은 ${parseInt(rect.top)}px 입니다.<br>
+          이 원의 left값은 ${parseInt(rect.left)}px 입니다.<br>
+          이 원의 bottom값은 ${parseInt(rect.bottom)}px 입니다.<br>
+          이 원의 right값은 ${parseInt(rect.right)}px 입니다.<br>
+          이 원의 width값은 ${parseInt(rect.width)}px 입니다.<br>
+          이 원의 height값은 ${parseInt(rect.height)}px 입니다.
+    `});
 }
 </code></pre>
             </div>
         </div>
         <hr>
         <script>
-            document.querySelector(".btn3-0").addEventListener("click", () => {
-                document.querySelector(".ex3 > div:nth-child(1)").classList.add("active")
-                document.querySelector(".ex3 > div:nth-child(4)").classList.add("active")
-            });
-            
+            const cw = document.querySelector(".circle4").clientWidth;
+            const ch = document.querySelector(".circle4").clientHeight;
+            const ow = document.querySelector(".circle4").offsetWidth;
+            const oh = document.querySelector(".circle4").offsetHeight;
+            const rect = document.querySelector(".circle4").getBoundingClientRect();
+            //const rect = document.querySelector(".circle4").getClientRect;
 
-            // document.querySelector(".btn3-1").addEventListener("click", () => {
-            //     if( document.querySelector(".ex3 > div").forEach(el=> {
-            //         if(el.classList.contains("active")){
-            //             el.classList.remove("active")
-            //         }
-            
-            //     })
-            //  });
-              
-                document.querySelector(".btn3-1").addEventListener("click", () => {
-                    if( document.querySelectorAll(".ex3 > div").forEach(el => {
-                        if( el.classList.contains("active") ) {
-                            el.classList.remove("active")
-                            }
-                        })
-                    });
-            
+            document.querySelector(".btn4-1").addEventListener("click", function(){
+                document.querySelector(".text4").innerHTML = "이 원의 가로 값은" + cw +"px 입니다."
+            });
+
+            document.querySelector(".btn4-2").addEventListener("click", function(){
+                document.querySelector(".text4").innerHTML = "이 원의 세로 값은" + ch +"px 입니다."
+            });
+
+            document.querySelector(".btn4-3").addEventListener("click", function(){
+                document.querySelector(".text4").innerHTML = "이 원의 가로 값은" + ow +"px 입니다."
+            });
+
+            document.querySelector(".btn4-4").addEventListener("click", function(){
+                document.querySelector(".text4").innerHTML = "이 원의 세로로 값은" + oh +"px 입니다."
+            });
+            document.querySelector(".btn4-5").addEventListener("click", function(){
+                document.querySelector(".text4").innerHTML = `
+                  이 원의 x값은  ${parseInt(rect.x)}px 입니다.<br>
+                  이 원의 y값은  ${parseInt(rect.y)}px 입니다.<br>
+                  이 원의 top값은 ${parseInt(rect.top)}px 입니다.<br>
+                  이 원의 left값은 ${parseInt(rect.left)}px 입니다.<br>
+                  이 원의 bottom값은 ${parseInt(rect.bottom)}px 입니다.<br>
+                  이 원의 right값은 ${parseInt(rect.right)}px 입니다.<br>
+                  이 원의 width값은 ${parseInt(rect.width)}px 입니다.<br>
+                  이 원의 height값은 ${parseInt(rect.height)}px 입니다.
+            `});
+            console.log(rect);
+
         </script>
-        <!-- //sample03 -->
+        
+         <!--//sample03 -->
+
+      
 ​
         
     </main>

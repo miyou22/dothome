@@ -84,8 +84,8 @@
           text-decoration: none;
           color: #fff;
         }
-        .refer h3.active a {
-          box-shadow: inset 0px -5px 0 3px #0bc56b;
+        .refer h3.active {
+            box-shadow: inset 0 -5px 0 0 #089450;
         }
         .refer table {
             width: 100%;
@@ -207,6 +207,8 @@
             <section class="refer">
                 <h3><a href="index.html">Alphabet</a></h3>
                 <h3 class="active"><a href="index2.html">Topics</a></h3>
+                <h3><a href="transform.html">transform</a></h3>
+
                
                 <ul class="link">
                     <li><a href="#sample01">기본 선택자</a></li>
@@ -351,6 +353,102 @@
                                 <td>a[href$="com"] </td>
                                 <td>a 태그 href 속성의 값이 'com'으로 끝나는 태그를 선택합니다. </td>
                             </tr>
+                            <tr>
+                                <th rowspan = "5">가상요소</th>  
+                                <td>::first-line</td>
+                                <td>p:first-line {color:#fff;}</td>
+                                <td>문단의 첫 줄에 컬러색을 하얀색으로 변경합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>::first-letter</td>
+                                <td>p:first-letter {color:#fff;}</td>
+                                <td>문단의 첫 글자에 컬러색을 하얀색으로 변경합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>::before</td>
+                                <td>p:before {content:"시작"}</td>
+                                <td>문단 시작 부분에 '시작'이라는 요소를 추가합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>::after</td>
+                                <td>p:after {content:"끝"} </td>
+                                <td>문단 끝 부분에 '끝'이라는 요소를 추가합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>::selection</td>
+                                <td>p:selection {color:#fff;} </td>
+                                <td>드래그로 선택하였을 경우 글씨 색을 하얀색으로 변경합니다. </td>
+                            </tr> 
+                            <tr>
+                                <th rowspan = "9">가상클래스</th>  
+                                <td>:first-child</td>
+                                <td>li:first-line {color:#fff;}</td>
+                                <td>문단의 첫 줄에 컬러색을 하얀색으로 변경합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>:last-child</td>
+                                <td>li:last-line {color:#fff;}</td>
+                                <td>문단의 첫 글자에 컬러색을 하얀색으로 변경합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>:first-of-type</td>
+                                <td>p:first-of-type {color:#fff;}</td>
+                                <td>문단 시작 부분에 '시작'이라는 요소를 추가합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>:last-of-type</td>
+                                <td>p:last-of-type {color:#fff;}</td>
+                                <td>문단 시작 부분에 '시작'이라는 요소를 추가합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>:nth-child</td>
+                                <td>li:nth-child(2) {color:#fff;}</td>
+                                <td>문단 시작 부분에 '시작'이라는 요소를 추가합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>:nth-last-child</td>
+                                <td>li:nth-last-child(2) {color:#fff;}</td>
+                                <td>문단 시작 부분에 '시작'이라는 요소를 추가합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>:nth-of-type</td>
+                                <td>p:nth-of-type(2) {color:#fff;}</td>
+                                <td>문단 시작 부분에 '시작'이라는 요소를 추가합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>:nth-last-of-type()</td>
+                                <td>p:nth-last-of-type(2) {color:#fff;}</td>
+                                <td>문단 끝 부분에 '끝'이라는 요소를 추가합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>:only-child</td>
+                                <td>:only-child {color:#fff;}</td>
+                                <td>드래그로 선택하였을 경우 글씨 색을 하얀색으로 변경합니다. </td>
+                            </tr>
+                            <tr>
+                                <td>:only-of-type</td>
+                                <td>p:only-of-type {color:#fff;} </td>
+                                <td>드래그로 선택하였을 경우 글씨 색을 하얀색으로 변경합니다. </td>
+                            </tr> 
+                            <tr>
+                                <td>:not</td>
+                                <td>li:not(:nth-child(2)) {color:#fff;} </td>
+                                <td>드래그로 선택하였을 경우 글씨 색을 하얀색으로 변경합니다. </td>
+                            </tr> 
+                            <tr>
+                                <td>:root</td>
+                                <td>:root {color:#fff;}</td>
+                                <td>드래그로 선택하였을 경우 글씨 색을 하얀색으로 변경합니다. </td>
+                            </tr>  
+                            <tr>
+                                <td>:empty</td>
+                                <td>:empty {color:#fff;} </td>
+                                <td>컨텐츠 요소가 없는 요소의 컬러를 하얀색으로 변경합니다.</td>
+                            </tr> 
+                            
+
+
+
                             <tr>
                                 <th rowspan = "5">가상요소</th>  
                                 <td>::first-line</td>
