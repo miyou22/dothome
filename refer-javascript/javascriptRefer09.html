@@ -17,15 +17,18 @@
 </head>
 
 <body>
-
-    <h1><a href="index.html">Javascript 레퍼런스</a></h1>
-<Br>
-    <ul class="page">
-        <li><a href="../refer-html/index.html">HTML</a></li>
-        <li><a href="../refer-css/index.html">CSS</a></li>
-        <li><a href="../javascript/javascript100.html">JAVASCRIPT</a></li>
-    </ul>
-
+    <div id="wrap">
+        <main id="contents">
+            <div class="title">
+                <h1><a href="index.html">브라우저 객체</a></h1>
+                <ul class="page">
+                    <li><a href="../refer-html/index.html">HTML</a></li>
+                    <li><a href="../refer-css/index.html">CSS</a></li>
+                    <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>
+                    <li><a href="../refer-jquery/index2.html">JQUERY</a></li>
+                    
+                </ul>
+            </div>
     <nav class="menu">
         <ul>
             <li><a href="javascriptRefer01.html">데이터 저장하기</a></li>
@@ -56,9 +59,9 @@
         <h2 class="mt20">브라우저 객체</h2>
         <ul>
             <li><a href="#sample01">01. 브라우저 객체 : window 객체 메서드 : window.alert() : 경고창 표시하기</a></li>
-            <li><a href="#sample01">02. 브라우저 객체 : window 객체 메서드 : window.confirm() : 확인창 표시하기</a></li>
-            <li><a href="#sample01">03. 브라우저 객체 : window 객체 메서드 : window.prompt() : 입력창 표시하기</a></li>
-            <li><a href="#sample01">04. 브라우저 객체 : window 객체 속성 : window.innerWidth : 브라우저 화면의 가로값을 가져옵니다.</a></li>
+            <li><a href="#sample02">02. 브라우저 객체 : window 객체 메서드 : window.confirm() : 확인창 표시하기</a></li>
+            <li><a href="#sample03">03. 브라우저 객체 : window 객체 메서드 : window.prompt() : 입력창 표시하기</a></li>
+            <li><a href="#sample04">04. 브라우저 객체 : window 객체 속성 : window.innerWidth : 브라우저 화면의 가로값을 가져옵니다.</a></li>
             <li><a href="#sample01">05. 브라우저 객체 : window 객체 속성 : window.innerHeight : 브라우저 화면의 세로값을 가져옵니다.</a></li>
             <li><a href="#sample01">06. 브라우저 객체 : window 객체 속성 : window.outerWidth : 브라우저 전체의 가로값을 가져옵니다.</a></li>
             <li><a href="#sample01">07. 브라우저 객체 : window 객체 속성 : window.outerHeight : 브라우저 전체의 세로값을 가져옵니다.</a></li>        
@@ -109,8 +112,8 @@
             <!-- //sample01 -->
 
             
-            <!-- sample01 -->
-            <div id="sample01" class="sample">
+            <!-- sample02 -->
+            <div id="sample02" class="sample">
                 <h2>02. 브라우저 객체 : window.confirm() : 확인창<span class="dot"></span></h2>
                 <div class="view ex2">
                    <p class="text text2">여기는 텍스트 영역입니다</p>
@@ -169,7 +172,10 @@
             </div>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    document.querySelector(".btn3-1").addEventListener("click", function(){
+        const test = prompt("오늘 공부할 준비가 되었나요?");
 
+        document.querySelector(".text3").innerHTML = test;
 }
 </code></pre>
             </div>
@@ -182,10 +188,10 @@
                 document.querySelector(".text3").innerHTML = test;
             });
         </script>
-        <!-- //sample01 -->
+        <!-- //sample03 -->
 
-         <!-- sample03 -->
-         <div id="sample03" class="sample">
+         <!-- sample04 -->
+         <div id="sample04" class="sample">
             <h2>04. 브라우저 객체 : windowWidth() / innerHeight<span class="dot"></span></h2>
                 <div class="view ex4">
                    <p class="text text4-1"></p>
@@ -196,6 +202,7 @@
                    <p class="text text4-6"></p>
                    <p class="text text4-7"></p>
                    <p class="text text4-8"></p>
+                   <p class="text text4">여기는 텍스트 영역입니다</p>
                 </div>
                 <div class="btn">
                     <a href="#c" class="btn4-1">클릭하면 브라우저 화면의 가로값(innerWidth)을 가져옵니다.</a>
@@ -316,7 +323,7 @@
                     document.querySelector(".text4-8").innerHTML = "당신이 보고 있는 브라우저의 왼쪽 위치 값(screenX)은 " + screenX + "px 입니다.";
                 })
         </script>
-        <!-- //sample01 -->
+        <!-- //sample04 -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>

@@ -12,6 +12,7 @@ body {
 .cardType01 {
     font-family: 'GmarketSans';
     padding: 150px 0;
+    margin-left: -125px;
 }
 .cardType01 h2 {
     font-weight: 500;
@@ -81,6 +82,7 @@ body {
     color: #fff;
     line-height: 10px;
 }
+
 
 /* cardType02 */
 .cardType02 {

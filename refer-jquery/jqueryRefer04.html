@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -50,16 +49,16 @@
         <table>
             <caption>기본 선택자</caption>
             <colgroup>
-                <col style = "width: 4%">
+                <col style = "width: 10%">
+                <col style = "width: 15%">
                 <col style = "width: 20%">
                 <col style = "width: 20%">
-                <col style = "width: 20%">
-                <col style = "width: 36%">
+                <col style = "width: 35%">
             </colgroup>
             <thead>
                 <tr>
-                    <th class="center">번호</th>
-                    <th>종류</th>
+                    <th class="center">종류</th>
+                    <th>jquery</th>
                     <th>예시</th>
                     <th>javascript</th>
                     <th>설명</th>
@@ -67,157 +66,138 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="center" rowspan="5"><a href="#sample01">1</a></td>
-                    <td>태그 선택자</td>
-                    <td>$("li")</td>
-                    <td>querySelector("li")</td>
-                    <td>기본 태그를 선택합니다.</td>
+                    <td class="center" rowspan="1">복사</a></td>
+                    <td>.clone()</td>
+                    <td>$("selector").clone</td>
+                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>클래스 선택자</td>
-                    <td>$(".class")</td>
-                    <td>querySelector(".class")</td>
-                    <td>클래스를 선택합니다.</td>
-                </tr>                
-                <tr>
-                    <td>아이디 선택자</td>
-                    <td>$("id")</td>
-                    <td>querySelector("#id")</td>
-                    <td>아이디를 선택합니다.</td>
+                    <td class="center" rowspan="13">추가</a></td>
+                    <td>.wrap()</td>
+                    <td>$("selector").wrap</td>
+                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>그룹 선택자</td>
-                    <td>$("#id, .class")</td>
-                    <td>-</td>
-                    <td>여러개를 선택합니다.</td>
+                    <td>.wrapAll()</td>
+                    <td>$("selector").wrapAll</td>
+                    <td> </td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>전체 선택자</td>
-                    <td>-</td>
-                    <td>querySelector("*")</td>
-                    <td>전체를 선택합니다.</td>
+                    <td>.wrapInner()</td>
+                    <td>$("selector").wrapInner</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.append()😍</td>
+                    <td>$("selector").append</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.appendTo()😍</td>
+                    <td>$("selector").appendTo</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.prepend()😍</td>
+                    <td>$("selector").prepend</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.prependTo😍</td>
+                    <td>$("selector").prependTo</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.after</td>
+                    <td>$("selector").after</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.before</td>
+                    <td>$("selector").before</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.insertAfter</td>
+                    <td>$("selector").insertAfter</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.insertbefore</td>
+                    <td>$("selector").insertbefore</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.html()😍</td>
+                    <td>$("selector").html</td>
+                    <td>innerHTML</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.text()😍</td>
+                    <td>$("selector").text</td>
+                    <td>innerText</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="center" rowspan="4">삭제</a></td>
+                    <td>.datach()</td>
+                    <td>$("selector").datach</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.empty())</td>
+                    <td>$("selector").empty()</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.remove()😍</td>
+                    <td>$("selector").remove()</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.unwrap()</td>
+                    <td>$("selector").unwrap()</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="center" rowspan="2">대체</a></td>
+                    <td>.replaceAll()</td>
+                    <td>$("selector").replaceAll()</td>
+                    <td> </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.replaceWidth()</td>
+                    <td>$("selector").replaceWidth()</td>
+                    <td> </td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
        
 
   
-         <table>
-            <caption>계층 선택자</caption>
-            <colgroup>
-                <col style = "width: 4%">
-                <col style = "width: 20%">
-                <col style = "width: 20%">
-                <col style = "width: 20%">
-                <col style = "width: 36%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th class="center">번호</th>
-                    <th>종류</th>
-                    <th>예시</th>
-                    <th>javascript</th>
-                    <th>설명</th>
-                </tr>
-            </thead>
-            <hr>
-            <tbody>
-                <tr>
-                    <td class="center" rowspan="5"><a href="#sample01">1</a></td>
-                    <td>하위 선택자</td>
-                    <td>$("div p")</td>
-                    <td>querySelectorAll("div p")</td>
-                    <td>div 태그의 모든 자식 중 p태그를 모두 선택합니다.</td>
-                </tr>
-                <tr>
-                    <td>자식 선택자</td>
-                    <td>$("div > p")</td>
-                    <td>-</td>
-                    <td>div 태그 모든 자식 중 첫번째 자식 p태그만 선택합니다.</td>
-                </tr>                
-                <tr>
-                    <td>형제 선택자</td>
-                    <td>$("div + p")</td>
-                    <td>-</td>
-                    <td>div 태그의 인접한 형제 p태그 중 첫번째 태그만 선택합니다.</td>
-                </tr>
-                <tr>
-                    <td>형제들 선택자</td>
-                    <td>$("div ~ p")</td>
-                    <td>-</td>
-                    <td>div 태그의 인접한 형제 p태그 중 모든 형제 태그를 선택합니다.</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
     <hr>
-<!--sample01-->
-    <div id="sample01" class="sample">
-        <h2>01. 기본 선택자<span class="dot"></span></h2>
-        <div class="view view1">
-            <ul>
-                <li>$("li")</li>
-                <li class="class">$(".class")</li>
-                <li id="id">$("#id")</li>
-                <li>$(".class, #id")</li>
-                <li>$("*")</li>
-            </ul>
-        </div>
-        <div class="btn btn1">
-            <a href="#c" class="reset1">리셋</a>
-            <a href="#c" class="btn1-1">클릭하면 클래스(.class)를 선택합니다.</a>
-            <a href="#c" class="btn1-2">클릭하면 아이디(#id)를 선택합니다.</a>
-            <a href="#c" class="btn1-3">클릭하면 기본(li) 태그를 선택합니다.</a>
-            <a href="#c" class="btn1-4">클릭하면 여러가지(#id, .class) 태그를 선택합니다.</a>
-            <a href="#c" class="btn1-5">클릭하면 전체 태그(*)를 선택합니다.</a>
-        </div>
-        <div class="code">
-<pre class="line-numbers"><code class="language-js">{
-    $(".reset1").click(function(){
-        $(".view li").removeClass("blue");
-    });
-    $(".btn1-1").click(function(){
-        $(".view .class").addClass("blue");
-    });
-    $(".btn1-2").click(function(){
-        $(".view #id").addClass("blue");
-    });
-    $(".btn1-3").click(function(){
-        $(".view li").addClass("blue");
-    });
-    $(".btn1-4").click(function(){
-        $(".view .class, .view #id").addClass("blue");
-    });
-    $(".btn1-5").click(function(){
-        $(".view *").addClass("blue");
-    });
-}
-</code></pre>
-        </div>
-    </div>
-    <hr>
-    <script>
-        $(".reset1").click(function(){
-            $(".view li").removeClass("blue");
-        });
-        $(".btn1-1").click(function(){
-            $(".view .class").addClass("blue");
-        });
-        $(".btn1-2").click(function(){
-            $(".view #id").addClass("blue");
-        });
-        $(".btn1-3").click(function(){
-            $(".view li").addClass("blue");
-        });
-        $(".btn1-4").click(function(){
-            $(".view .class, .view #id").addClass("blue");
-        });
-        $(".btn1-5").click(function(){
-            $(".view *").addClass("blue");
-        });
-    </script>
-    <!-- //sample01-->
-  
+
+
+
 
     
     </main>

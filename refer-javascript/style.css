@@ -324,13 +324,14 @@ hr {
 }
 .sample .result-btn {}
 .sample .result-btn h3 {
-    font-size: 15px;
-    margin-top: 8px;
-    background: #E6E6E6;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px 15px;
+    background-color: #f1f1f1;
     display: inline-block;
-    padding: 8px 10px 6px 10px;
+    border-radius: 4px;
     color: #000;
-    border-radius: 5px;
+    margin-top: 5px;
 }
 .sample .result-btn h3:hover {
     cursor: pointer;
@@ -341,12 +342,11 @@ hr {
     border-radius: 5px 5px 0 0;
 }
 .sample .result-btn div {
-    display: none;
-    color: #000;
-    padding: 10px 10px;
-    background-color: #000;
+    background-color: #272822;
     color: #fff;
-    border-radius: 0 5px 5px 5px;
+    padding: 15px 20px;
+    border-radius: 0 4px 4px 4px;
+    display: none;  
 }
 .sample .result-btn div.active {
     font-size: 13px;

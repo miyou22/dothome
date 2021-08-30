@@ -22,7 +22,7 @@
     <div id="wrap">
         <main id="contents">
             <div class="title">
-                <h1><a href="index.html">선택자</a></h1>
+                <h1><a href="index.html">애니메이션</a></h1>
             </div>
     <nav class="menu">
         <ul>
@@ -31,7 +31,7 @@
 
         </ul>
         <ul>
-            <li class="active"><a href="jqueryRefer03.html">속성 메서드</a></li>
+            <li><a href="jqueryRefer03.html">속성 메서드</a></li>
             <li><a href="jqueryRefer04.html">조작 메서드</a></li>
             <li><a href="jqueryRefer05.html">데이터 메서드</a></li>
             <li  class="active"><a href="jqueryRefer06.html">애니메이션 메서드</a></li>
@@ -50,16 +50,16 @@
         <table>
             <caption>기본 선택자</caption>
             <colgroup>
-                <col style = "width: 4%">
+                <col style = "width: 10%">
+                <col style = "width: 15%">
                 <col style = "width: 20%">
                 <col style = "width: 20%">
-                <col style = "width: 20%">
-                <col style = "width: 36%">
+                <col style = "width: 35%">
             </colgroup>
             <thead>
                 <tr>
-                    <th class="center">번호</th>
-                    <th>종류</th>
+                    <th class="center">종류</th>
+                    <th>jquery</th>
                     <th>예시</th>
                     <th>javascript</th>
                     <th>설명</th>
@@ -67,88 +67,114 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="center" rowspan="5"><a href="#sample01">1</a></td>
-                    <td>태그 선택자</td>
-                    <td>$("li")</td>
-                    <td>querySelector("li")</td>
-                    <td>기본 태그를 선택합니다.</td>
+                    <td class="center" rowspan="3">기본</a></td>
+                    <td>.hide()😍</td>
+                    <td>$("selector").hide()</td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>클래스 선택자</td>
-                    <td>$(".class")</td>
-                    <td>querySelector(".class")</td>
-                    <td>클래스를 선택합니다.</td>
-                </tr>                
-                <tr>
-                    <td>아이디 선택자</td>
-                    <td>$("id")</td>
-                    <td>querySelector("#id")</td>
-                    <td>아이디를 선택합니다.</td>
+                    <td>.show()😍</td>
+                    <td>$("selector").show()</td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>그룹 선택자</td>
-                    <td>$("#id, .class")</td>
-                    <td>-</td>
-                    <td>여러개를 선택합니다.</td>
+                    <td>.toggle()😍</td>
+                    <td>$("selector").toggle()</td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>전체 선택자</td>
-                    <td>-</td>
-                    <td>querySelector("*")</td>
-                    <td>전체를 선택합니다.</td>
+                    <td class="center" rowspan="4">페이드</a></td>
+                    <td>.fadeIn()</td>
+                    <td>$("selector").fadeIn()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.fadeOut()</td>
+                    <td>$("selector").fadeOut()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.fadeTo()</td>
+                    <td>$("selector").fadeTo()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.fadeToggle()</td>
+                    <td>$("selector").fadeToggle()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="center" rowspan="3">슬라이드</a></td>
+                    <td>.slideDown()</td>
+                    <td>$("selector").slideDown()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.slideUp()</td>
+                    <td>$("selector").slideUp()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.slideToggle()</td>
+                    <td>$("selector").slideToggle()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="center" rowspan="7">커스텀</a></td>
+                    <td>.animate()😍</td>
+                    <td>$("selector").slideDown()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.delay()</td>
+                    <td>$("selector").delay()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.finish()</td>
+                    <td>$("selector").finish()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.stop()</td>
+                    <td>$("selector").stop()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.queue()</td>
+                    <td>$("selector").queue()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.clearQueue()</td>
+                    <td>$("selector").clearQueue()</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>.dequeue()</td>
+                    <td>$("selector").dequeue()</td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
        
-
-  
-         <table>
-            <caption>계층 선택자</caption>
-            <colgroup>
-                <col style = "width: 4%">
-                <col style = "width: 20%">
-                <col style = "width: 20%">
-                <col style = "width: 20%">
-                <col style = "width: 36%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th class="center">번호</th>
-                    <th>종류</th>
-                    <th>예시</th>
-                    <th>javascript</th>
-                    <th>설명</th>
-                </tr>
-            </thead>
-            <hr>
-            <tbody>
-                <tr>
-                    <td class="center" rowspan="5"><a href="#sample01">1</a></td>
-                    <td>하위 선택자</td>
-                    <td>$("div p")</td>
-                    <td>querySelectorAll("div p")</td>
-                    <td>div 태그의 모든 자식 중 p태그를 모두 선택합니다.</td>
-                </tr>
-                <tr>
-                    <td>자식 선택자</td>
-                    <td>$("div > p")</td>
-                    <td>-</td>
-                    <td>div 태그 모든 자식 중 첫번째 자식 p태그만 선택합니다.</td>
-                </tr>                
-                <tr>
-                    <td>형제 선택자</td>
-                    <td>$("div + p")</td>
-                    <td>-</td>
-                    <td>div 태그의 인접한 형제 p태그 중 첫번째 태그만 선택합니다.</td>
-                </tr>
-                <tr>
-                    <td>형제들 선택자</td>
-                    <td>$("div ~ p")</td>
-                    <td>-</td>
-                    <td>div 태그의 인접한 형제 p태그 중 모든 형제 태그를 선택합니다.</td>
-                </tr>
-            </tbody>
-        </table>
     </div>
     <hr>
 <!--sample01-->
@@ -173,48 +199,14 @@
         </div>
         <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    $(".reset1").click(function(){
-        $(".view li").removeClass("blue");
-    });
-    $(".btn1-1").click(function(){
-        $(".view .class").addClass("blue");
-    });
-    $(".btn1-2").click(function(){
-        $(".view #id").addClass("blue");
-    });
-    $(".btn1-3").click(function(){
-        $(".view li").addClass("blue");
-    });
-    $(".btn1-4").click(function(){
-        $(".view .class, .view #id").addClass("blue");
-    });
-    $(".btn1-5").click(function(){
-        $(".view *").addClass("blue");
-    });
+   
 }
 </code></pre>
         </div>
     </div>
     <hr>
     <script>
-        $(".reset1").click(function(){
-            $(".view li").removeClass("blue");
-        });
-        $(".btn1-1").click(function(){
-            $(".view .class").addClass("blue");
-        });
-        $(".btn1-2").click(function(){
-            $(".view #id").addClass("blue");
-        });
-        $(".btn1-3").click(function(){
-            $(".view li").addClass("blue");
-        });
-        $(".btn1-4").click(function(){
-            $(".view .class, .view #id").addClass("blue");
-        });
-        $(".btn1-5").click(function(){
-            $(".view *").addClass("blue");
-        });
+
     </script>
     <!-- //sample01-->
 

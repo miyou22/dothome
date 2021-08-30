@@ -48,6 +48,35 @@ body {
     display: block;
     margin-left: 46px;
 }
+/* ex-cardtype2 */
+.ex-cardType2 {}
+.ex-cardType2 h2{
+   font-size: 54px;
+   font-weight: 700;
+   padding: 150px 0 0 0;
+   text-align: center;
+}
+.ex-cardType2 p{
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 90px;
+ }
+.ex-cardType2 .card-wrap{}
+.ex-cardType2 .card-wrap .card{
+    width: 464px;
+    height: 680px;
+    border-radius: 5px;
+    border: solid 1px #e6e6e6;
+}
+.ex-cardType2 .card-wrap .card .card-title{}
+.ex-cardType2 .card-wrap .card .btn{}
+.ex-cardType2 .card-wrap .card .card-desc{}
+.ex-cardType2 .card-wrap .card .card-keyword{}
+.ex-cardType2 .card-wrap .card .card-keyword .green{}
+.ex-cardType2 .card-wrap .card .card-keyword .white{}
+
+
 
 
 

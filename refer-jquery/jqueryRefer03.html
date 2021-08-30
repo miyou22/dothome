@@ -442,7 +442,43 @@
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-   
+    function demension(name, size){
+        $(".text4").text("이 원의 " + name + " 값은" + size + "px 입니다.");
+    }
+    $(".btn4-1").click(function(){
+        demension("가로(width)", $(".circle4").width());
+    });
+    $(".btn4-2").click(function(){
+       demension("가로(innerWidth)", $(".circle4").innerWidth());
+    });
+    $(".btn4-3").click(function(){
+       demension("가로(outerWidth)", $(".circle4").outerWidth());
+    });
+    $(".btn4-4").click(function(){
+       demension("가로(outerWidth)", $(".circle4").outerWidth(true));
+    });
+    $(".btn4-5").click(function(){
+      demension("세로(height)", $(".circle4").height());
+    });
+    $(".btn4-6").click(function(){
+      demension("세로(innerHeight)", $(".circle4").innerHeight());
+    });
+    $(".btn4-7").click(function(){
+        demension("세로(outerHeight)", $(".circle4").outerHeight());
+    });
+    $(".btn4-8").click(function(){
+        demension("세로(outerHeight)", $(".circle4").outerHeight(true));
+    });
+    $(".btn4-9").click(function(){
+        $(".text4").html("이 샘플 박스의 가로 값은" + $("#sample04").width() + "px 입니다.<br>  이 문서의 세로 값은" + $("#sample04").height() + "px 입니다.");    
+    });
+    $(".btn4-10").click(function(){
+        $(".text4").html("이 문서의 가로 값은" + $(document).width() + "px 입니다. <br> 이 문서의 세로 값은" + $(document).height() + "px 입니다. ");    
+    });
+    $(".btn4-11").click(function(){
+        $(".text4").html("이 샘플 박스의 가로 값은" + $(window).width() + "px 입니다. <br> 이 문서의 세로 값은" + $(window).height() + "px 입니다.");    
+    });
+
 }
 </code></pre>
                 </div>
@@ -507,8 +543,8 @@
                     height: 100px;
                     width: 100px;
                     padding: 10px;
-                    margin: 10px;
-                    border: 5px solid #ffe0f6;
+                    margin: 20px;
+                    border: 10px solid #ffe0f6;
                     border-radius: 50px;
                     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
                 }
@@ -588,7 +624,7 @@
 
     
             <div id="sample06" class="sample">
-                <h2>06. <span class="dot"></span></h2>
+                <h2>06. 속성 메소드 : offset() / position() <span class="dot"></span></h2>
                 <div class="view ex6">
                     <span class="circle circle6"></span>
 
@@ -662,7 +698,7 @@
 
 
         <div id="sample07" class="sample">
-            <h2>07. <span class="dot"></span></h2>
+            <h2>07. 속성 메소드 : offset() / position() <span class="dot"></span></h2>
             <div class="view ex7">
                 <span class="circle circle7"></span>
                 <div class="text text7">
@@ -678,7 +714,20 @@
             </div>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-
+    $(".circle7").draggable( {
+        start: function() {
+            $(".text7-5").text("드래그가 시작되었습니다.");
+        },
+        drag: function() {
+            $(".text7-1 span").text(parseInt( $(".circle7").offset().left) + "px");
+            $(".text7-2 span").text(parseInt( $(".circle7").offset().top) + "px");
+            $(".text7-3 span").text(parseInt( $(".circle7").position().left) + "px");
+            $(".text7-4 span").text(parseInt( $(".circle7").position().top) + "px");
+        },
+        stop: function (){
+            $(".text7-5").text("드래그가 끝났습니다.");
+        }
+  });
 }
 </code></pre>
             </div>

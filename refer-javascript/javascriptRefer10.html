@@ -85,14 +85,18 @@
 
 <body>
 
-    <h1><a href="index.html">Javascript 레퍼런스</a></h1>
-<br>
-    <ul class="page">
-        <li><a href="../refer-html/index.html">HTML</a></li>
-        <li><a href="../refer-css/index.html">CSS</a></li>
-        <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>
-        <li><a href="../refer-jquery/index2.html">JQUERY</a></li>
-    </ul>
+    <div id="wrap">
+        <main id="contents">
+            <div class="title">
+                <h1><a href="index.html">요소 객체</a></h1>
+                <ul class="page">
+                    <li><a href="../refer-html/index.html">HTML</a></li>
+                    <li><a href="../refer-css/index.html">CSS</a></li>
+                    <li><a href="../refer-javascript/index.html">JAVASCRIPT</a></li>
+                    <li><a href="../refer-jquery/index2.html">JQUERY</a></li>
+                    
+                </ul>
+            </div>
 
     <nav class="menu">
         <ul>
@@ -120,16 +124,16 @@
 <br><br><br>
 <h2 class="mt20">요소 객체</h2>
     <div class="list">
-        <ol>
+        <ul>
             <li><a href="#c">01. 요소 객체 : 선택자 : querySelector() : 요소 선택하기</a></li>
             <li><a href="#c">02. 요소 객체 : 선택자 : querySelectorAll() : 모든요소 선택하기</a></li>
             <li><a href="#c">03. 요소 객체 : 선택자 : document.getElementById() : 아이디 요소 선택하기</a></li>
             <li><a href="#c">04. 요소 객체 : 선택자 : document.getElementByClassName() : 클래스 요소 선택하기</a></li>
             <br>
-            <li><a href="#c">05. 요소 객체 : 클래스 매서드 : classList.add() : 클래스 추가하기</a></li>
-            <li><a href="#c">06. 요소 객체 : 클래스 매서드 : classList.remove() : 클래스 삭제하기</a></li>
-            <li><a href="#c">07. 요소 객체 : 클래스 매서드 : classList.toggle() : 클래스 추가/삭제하기</a></li>
-            <li><a href="#c">08. 요소 객체 : 클래스 매서드 : classList.contains() : 클래스 존재 여부 확인하기</a></li>
+            <li><a href="#sample01">05. 요소 객체 : 클래스 매서드 : classList.add() : 클래스 추가하기</a></li>
+            <li><a href="#sample01">06. 요소 객체 : 클래스 매서드 : classList.remove() : 클래스 삭제하기</a></li>
+            <li><a href="#sample02">07. 요소 객체 : 클래스 매서드 : classList.toggle() : 클래스 추가/삭제하기</a></li>
+            <li><a href="#sample03">08. 요소 객체 : 클래스 매서드 : classList.contains() : 클래스 존재 여부 확인하기</a></li>
             <br>
             <li><a href="#c">09. 요소 객체 : element 속성 : element.clientWidth : 요소의 가로값 : 가져오기(패딩포함)</a></li>
             <li><a href="#c">10. 요소 객체 : element 속성 : element.clientHeight : 요소의 세로값 : 가져오기(패딩포함)</a></li>
@@ -138,7 +142,7 @@
             <li><a href="#c">13. 요소 객체 : element 속성 : element.getBoundingClientReat : 요소의 정보값 : 가져오기</a></li>
  
  
-        </ol>
+        </ul>
     </div>
     
     <hr>
@@ -160,7 +164,10 @@
             </div>
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-
+    document.querySelector(".btn1-2").addEventListener("click", function(){
+        document.querySelectorAll(".ex1 div").forEach(el => {
+            el.classList.remove("active");
+        })
 }
 </code></pre>
             </div>
@@ -258,6 +265,16 @@
                 </div>
                 <div class="code">
     <pre class="line-numbers"><code class="language-js">{
+        document.querySelector(".btn3-0").addEventListener("click", () => {
+            document.querySelector(".ex3 > div:nth-child(1)").classList.add("active")
+            document.querySelector(".ex3 > div:nth-child(4)").classList.add("active")
+        });
+            document.querySelector(".btn3-1").addEventListener("click", () => {
+            document.querySelectorAll(".ex3 > div").forEach(el => {
+                if(el.classList.contains("active")){
+                    el.classList.remove("active");
+                }
+            })
     }
     </code></pre>
                 </div>
