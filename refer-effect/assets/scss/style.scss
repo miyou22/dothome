@@ -1,0 +1,304 @@
+@charset  "utf-8";
+
+//webfonts
+/* 넥슨 */
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 200;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 700;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  font-weight: 200;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  font-weight: 400;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  font-weight: 700;
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+  font-style: normal;
+}
+
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button, 
+figure,
+figcaption {
+  margin: 0;
+  padding: 0
+}
+
+//variable
+$font-Six: 'Six Caps';
+$font-NEXON1: 'NEXON Lv1 Gothic OTF';
+$font-NEXON2: 'NEXON Lv2 Gothic';
+
+$gradient1: linear-gradient(to bottom,  #11e8bb 0%,#8200c9 100%);
+$gradient2: linear-gradient(to bottom,  #cd9cf2 0%,#f6f3ff 100%);
+$gradient3: linear-gradient(to bottom,  #c471f5 0%,#fa71cd 100%);
+$gradient4: linear-gradient(to bottom,  #e9defa 0%,#fbfcdb 100%);
+$gradient5: linear-gradient(to bottom,  #f43b47 0%,#453a94 100%);
+$gradient6: linear-gradient(to bottom,  #0fd850 0%,#f9f047 100%);
+
+$font-gradient1: linear-gradient(to bottom,  #11e8bb 50%,#8200c9);
+$font-gradient2: linear-gradient(to bottom,  #cd9cf2 50%,#f6f3ff);
+$font-gradient3: linear-gradient(to bottom,  #c471f5 50%,#fa71cd);
+$font-gradient4: linear-gradient(to bottom,  #e9defa 50%,#fbfcdb);
+$font-gradient5: linear-gradient(to bottom,  #f43b47 50%,#453a94);
+$font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
+
+
+
+//maxin
+@mixin positionCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin content {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+//bg1
+.bg {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &::before {
+    @include content;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255,255,255,0.6);
+    z-index: -1;
+  }
+}
+
+@for $i from 1 through 20 {
+  .bg#{$i} {
+      background-image: url(../img/bg#{$i}.jpg);  
+  }
+}
+
+//main
+#main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #11e8bb; /* Old browsers */
+    background: $gradient1;
+
+    &.game{
+      background: $gradient2;
+      #contents {
+        h1 {
+             background-image: $font-gradient3;
+        }
+      }
+    }
+    &.menu{
+      background: $gradient3;
+      #contents {
+        h1 {
+             background-image: $font-gradient2;
+        }
+      }
+    }
+    &.mouse{
+      background: $gradient4;
+      #contents {
+        h1 {
+             background-image: $font-gradient6;
+        }
+      }
+    }
+    &.parallax{
+      #contents {
+        h1 {
+             background-image: $font-gradient5;
+        }
+      }
+      background: $gradient5;
+    }
+    &.slider{
+      #contents {
+        h1 {
+             background-image: $font-gradient4;
+        }
+      }
+      background: $gradient6;
+    }
+  }
+#contents {
+  h1 {
+   @include positionCenter;
+   font-size: 10vw;
+   white-space: nowrap;
+   font-family: $font-Six, sans-serif;
+   font-weight: normal;
+   text-transform: uppercase;
+   letter-spacing: 1vw;
+   -webkit-text-fill-color: transparent;
+   -webkit-background-clip: text;
+   background-image: linear-gradient(to bottom, #8200c9 50%, #11e8bb);
+
+
+  }
+}  
+#nav {
+  @include positionCenter;
+  bottom: 10px;
+  top: auto;
+  li {
+      list-style: none;
+      display: inline;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #fff;
+    display: inline-block;
+    border-radius: 50px;
+    font-size: 14px;
+    text-align: center;
+    margin: 4px;
+    font-family: $font-NEXON1;
+    box-shadow: inset 0 0 0 #fff;
+    transition: all 0.4s;
+    
+    &:hover{
+      box-shadow: inset 0 -100px 0 #fff;
+      color: #6c4a70;
+  }
+  
+  }
+}
+
+
+// info
+.info {
+  color: #000;
+  font-family: $font-NEXON1;
+  padding: 20px;
+
+  &.right {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  &.bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  h1{
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.6;
+    border-bottom: 1px dashed #000;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  p {
+    font-weight: 30px;
+  }
+  li {
+    list-style: none;
+    display: inline;
+  
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px dashed #000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  &.active {
+    a {
+      background: #000;
+      color: #fff;
+    }
+  }
+}
+  button {
+    background: transparent;
+    border: 1px solid #000;
+    padding: 5px 20px;
+    color: #000;
+    border-radius: 50px;
+    box-shadow: 0 0 0 #000 inset;
+    transition: all 0.4s;
+    cursor: pointer;
+
+
+    &:hover {
+      box-shadow: 0 -50px 0 #000 inset;
+      color: #fff;
+    }
+  } 
+}
+

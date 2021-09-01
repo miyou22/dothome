@@ -1,0 +1,368 @@
+@charset "UTF-8";
+/* 넥슨 */
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 200;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  font-weight: 200;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  font-weight: 400;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  font-weight: 700;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff") format("woff");
+  font-style: normal;
+}
+
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+.bg {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bg::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.6);
+  z-index: -1;
+}
+
+.bg1 {
+  background-image: url(../img/bg1.jpg);
+}
+
+.bg2 {
+  background-image: url(../img/bg2.jpg);
+}
+
+.bg3 {
+  background-image: url(../img/bg3.jpg);
+}
+
+.bg4 {
+  background-image: url(../img/bg4.jpg);
+}
+
+.bg5 {
+  background-image: url(../img/bg5.jpg);
+}
+
+.bg6 {
+  background-image: url(../img/bg6.jpg);
+}
+
+.bg7 {
+  background-image: url(../img/bg7.jpg);
+}
+
+.bg8 {
+  background-image: url(../img/bg8.jpg);
+}
+
+.bg9 {
+  background-image: url(../img/bg9.jpg);
+}
+
+.bg10 {
+  background-image: url(../img/bg10.jpg);
+}
+
+.bg11 {
+  background-image: url(../img/bg11.jpg);
+}
+
+.bg12 {
+  background-image: url(../img/bg12.jpg);
+}
+
+.bg13 {
+  background-image: url(../img/bg13.jpg);
+}
+
+.bg14 {
+  background-image: url(../img/bg14.jpg);
+}
+
+.bg15 {
+  background-image: url(../img/bg15.jpg);
+}
+
+.bg16 {
+  background-image: url(../img/bg16.jpg);
+}
+
+.bg17 {
+  background-image: url(../img/bg17.jpg);
+}
+
+.bg18 {
+  background-image: url(../img/bg18.jpg);
+}
+
+.bg19 {
+  background-image: url(../img/bg19.jpg);
+}
+
+.bg20 {
+  background-image: url(../img/bg20.jpg);
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #11e8bb;
+  /* Old browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from(#11e8bb), to(#8200c9));
+  background: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
+}
+
+#main.game {
+  background: -webkit-gradient(linear, left top, left bottom, from(#cd9cf2), to(#f6f3ff));
+  background: linear-gradient(to bottom, #cd9cf2 0%, #f6f3ff 100%);
+}
+
+#main.game #contents h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #c471f5), to(#fa71cd));
+  background-image: linear-gradient(to bottom, #c471f5 50%, #fa71cd);
+}
+
+#main.menu {
+  background: -webkit-gradient(linear, left top, left bottom, from(#c471f5), to(#fa71cd));
+  background: linear-gradient(to bottom, #c471f5 0%, #fa71cd 100%);
+}
+
+#main.menu #contents h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #cd9cf2), to(#f6f3ff));
+  background-image: linear-gradient(to bottom, #cd9cf2 50%, #f6f3ff);
+}
+
+#main.mouse {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9defa), to(#fbfcdb));
+  background: linear-gradient(to bottom, #e9defa 0%, #fbfcdb 100%);
+}
+
+#main.mouse #contents h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #0fd850), to(#f9f047));
+  background-image: linear-gradient(to bottom, #0fd850 50%, #f9f047);
+}
+
+#main.parallax {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f43b47), to(#453a94));
+  background: linear-gradient(to bottom, #f43b47 0%, #453a94 100%);
+}
+
+#main.parallax #contents h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f43b47), to(#453a94));
+  background-image: linear-gradient(to bottom, #f43b47 50%, #453a94);
+}
+
+#main.slider {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0fd850), to(#f9f047));
+  background: linear-gradient(to bottom, #0fd850 0%, #f9f047 100%);
+}
+
+#main.slider #contents h1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9defa), to(#fbfcdb));
+  background-image: linear-gradient(to bottom, #e9defa 50%, #fbfcdb);
+}
+
+#contents h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 10vw;
+  white-space: nowrap;
+  font-family: "Six Caps", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #8200c9), to(#11e8bb));
+  background-image: linear-gradient(to bottom, #8200c9 50%, #11e8bb);
+}
+
+#nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  bottom: 10px;
+  top: auto;
+}
+
+#nav li {
+  list-style: none;
+  display: inline;
+}
+
+#nav a {
+  color: #fff;
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #fff;
+  display: inline-block;
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: center;
+  margin: 4px;
+  font-family: "NEXON Lv1 Gothic OTF";
+  -webkit-box-shadow: inset 0 0 0 #fff;
+          box-shadow: inset 0 0 0 #fff;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+#nav a:hover {
+  -webkit-box-shadow: inset 0 -100px 0 #fff;
+          box-shadow: inset 0 -100px 0 #fff;
+  color: #6c4a70;
+}
+
+.info {
+  color: #000;
+  font-family: "NEXON Lv1 Gothic OTF";
+  padding: 20px;
+}
+
+.info.right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.info.bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.info h1 {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.6;
+  border-bottom: 1px dashed #000;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.info p {
+  font-weight: 30px;
+}
+
+.info li {
+  list-style: none;
+  display: inline;
+}
+
+.info li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px dashed #000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.info li.active a {
+  background: #000;
+  color: #fff;
+}
+
+.info button {
+  background: transparent;
+  border: 1px solid #000;
+  padding: 5px 20px;
+  color: #000;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 0 #000 inset;
+          box-shadow: 0 0 0 #000 inset;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.info button:hover {
+  -webkit-box-shadow: 0 -50px 0 #000 inset;
+          box-shadow: 0 -50px 0 #000 inset;
+  color: #fff;
+}
