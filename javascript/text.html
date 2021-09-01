@@ -117,14 +117,66 @@
        
 
         //this.변수, map().. 사용법
+        // {
+        //     const num = [1, 2, 3, 4, 5];
+        //     let sum = 0;
+        //     num.forEach((el) => {
+        //         sum = sum + el;
+        //     })
+        //     document.write(sum);
+        // }
+
         {
-            const num = [1, 2, 3, 4, 5];
-            let sum = 0;
-            num.forEach((el) => {
-                sum = sum + el;
-            })
-            document.write(sum);
+            const num = [100, 200, 300, 400, 500];
+
+            //for문 출력
+          //  for(i=0; i<num.length; i++){
+          //      document.write(num[i], "🤣<br>")
+         //   }
+            //forEach문 출력
+        //   num.forEach((el,ine,ab) => {
+        //    document.write(el,"<br>",ine,"<br>",ab, "<br>")
+      //  });
+            //300만빼고 출력
+            for(let i=0;i<num.length;i++){
+                if(i == 2){
+                    continue;
+                } if (i>num.length){
+                    break;
+                }
+                document.write(num[i]);
+            }
         }
+        //100 200 300불러오기
+        {
+        const obj = [
+            {a:100},
+            {a:200},
+            {a:300}
+        ]
+        document.write(obj[0].a)
+        document.write(obj[1].a)
+        document.write(obj[2].a)
+        obj.map((el)=>{
+            document.write(el.a);
+        });
+        obj.map(el => document.write(el.a));
+    }
+    {
+        function func(num, name, job){
+            this.num = num;
+            this.name = name;
+            this.job = job;
+
+            this.result = function(){
+                document.write(`${num}. 내 이름은 ${name}이며 직업은 ${job}입니다.`);
+            }
+        }
+        const info = new func("1", "seob", "웹 퍼블리셔")
+
+        //1. 내이름은 seobi이며 직업은 웹퍼블리셔입니다.
+
+    }
     </script>   
 </body>
 </html>

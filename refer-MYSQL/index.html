@@ -130,6 +130,205 @@
                 </div>
                 <!-- //Intro2 -->
 
+                  <!-- Intro3 -->
+                  <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">데이터베이스</h2>
+                   
+                    <h3 id="intro3-1" class="pt30">데이터베이스 만들기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        create database 데이터베이스 이름
+                    </div>
+<pre class="language-js"><code>
+mysql> create database text02;
+Query OK, 1 row affected (0.00 sec)
+</code> </pre>
+                    <h3 id="intro3-2" class="pt30">데이터베이스 보기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        show databases;
+                    </div>
+<pre class="language-js"><code>
+    mysql> show databases;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | mysql              |
+    | performance_schema |
+    | sys                |
+    | text01             |
+    +--------------------+
+    5 rows in set (0.01 sec)
+</code> </pre>
+                    <h3 id="intro3-3" class="pt30">데이터베이스 사용</h3>
+                    <div class="bs-callout bs-callout-info">
+                        use 데이터베이스 이름
+                    </div>
+<pre class="language-js"><code>
+mysql> use text01;
+Database changed
+</code> </pre>
+                    <h3 id="intro3-4" class="pt30">데이터베이스 삭제</h3>
+                    <div class="bs-callout bs-callout-info">
+                        drop databases 삭제할 데이터베이스 이름
+                    </div>
+                   </div>
+                <!-- //Intro3 -->
+
+                  <!-- Intro4 -->
+                  <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">테이블</h2>
+
+                    <h2 id="intro4-1" class="page-header">테이블 만들기</h2>
+                    <div class="bs-callout bs-callout-info">
+                        CREATE TABLE 테이블 이름
+                    </div>
+                    <!--
+                        맴버 아이디
+                        회원 아이디
+                        이름
+                        메일
+                        패스워드
+                        생일
+                        가입한 시간
+                    -->
+<pre class="language-js"><code>CREATE TABLE myMember (
+    myMemberID int(10) unsigned auto_increment comment "회원의 고유번호", 
+    youEmail varchar(40) NOT NULL comment "회원 아이디",
+    youName varchar(12) NOT NULL comment "회원 이름",
+    youPassword varchar(20) NOT NULL comment "회원 비밀번호",
+    youBirth varchar(11) NOT NULL comment "회원생일",
+    regTime int(11) NOT NULL comment "회원 가입 시간",
+    PRIMARY KEY (myMemberID)) 
+    charset=utf8 comment ="회원 정보 테이블";
+</code> </pre>
+                    <h2 id="intro4-2" class="page-header">테이블 전체보기</h2>
+                    <div class="bs-callout bs-callout-info">
+                        SHOW TABLES 테이블 이름
+                    </div>
+<pre class="language-js"><code> 
+show tables;
++------------------+
+| Tables_in_text01 |
++------------------+
+| mymember         |
++------------------+
+1 row in set (0.01 sec)
+</code></pre>
+                    <h2 id="intro4-3" class="page-header">테이블 보기</h2>
+                    <div class="bs-callout bs-callout-info">
+                        DESC 테이블 이름
+                    </div>
+<pre class="language-js"><code>
+desc myMember;
++-------------+------------------+------+-----+---------+----------------+
+| Field       | Type             | Null | Key | Default | Extra          |
++-------------+------------------+------+-----+---------+----------------+
+| myMemberID  | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| youEmail    | varchar(40)      | NO   |     | NULL    |                |
+| youName     | varchar(12)      | NO   |     | NULL    |                |
+| youPassword | varchar(20)      | NO   |     | NULL    |                |
+| youBirth    | varchar(11)      | NO   |     | NULL    |                |
+| regTime     | int(11)          | NO   |     | NULL    |                |
++-------------+------------------+------+-----+---------+----------------+
+6 rows in set (0.02 sec)
+</code></pre>
+                    <h2 id="intro4-4" class="page-header">테이블 삭제</h2>
+                    <div class="bs-callout bs-callout-info">
+                        DROP TABLE 테이블 이름
+                    </div>
+<pre class="language-js"><code>
+drop table myMember;
+Query OK, 0 rows affected (0.05 sec)
+</code> </pre>
+                    </div>
+
+                <!-- //Intro4 -->
+
+                   <!-- Intro5 -->
+                   <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">테이블 수정하기</h2>
+                   
+                    <h3 id="intro5-1" class="pt30">필드 추가하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE 테이블명 ADD 추가할 필드명, AFTER 필드위치
+                    </div>
+<pre class="language-js"><code>
+ALTER TABLE myMember2 ADD youAge int(3) NOT NULL comment "회원의 나이" AFTER youBirth;
+Query OK, 0 rows affected (0.12 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+ALTER TABLE myMember2 ADD youPhone int(11) NOT NULL comment "회원의 전화번호" AFTER youAge;
+Query OK, 0 rows affected (0.11 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+ALTER TABLE myMember2 ADD youGender enum('m','w','x') default 'x' comment "남성은 m 여성은 w" after youPhone;
+Query OK, 0 rows affected (0.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code> </pre>
+                    <h3 id="intro5-2" class="pt30">필드 수정하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE 테이블명 MODIFY 수정할 필드명
+                    </div>
+<pre class="language-js"><code>
+ALTER TABLE myMember2 MODIFY youGender enum('m','w');
+Query OK, 0 rows affected (0.14 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code> </pre>
+                    <h3 id="intro5-3" class="pt30">필드 삭제하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        ALTER TABLE 테이블명 DROP 삭제할 필드명
+                    </div>
+<pre class="language-js"><code>
+ALTER TABLE myMember2 DROP youAge;
+Query OK, 0 rows affected (0.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code> </pre>
+                   </div>
+                <!-- //Intro5 -->
+
+                 <!-- Intro6 -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">테이블 데이터</h2>
+                   
+                    <h3 id="intro6-1" class="pt30">데이터 입력하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        
+                    </div>
+
+<pre class="language-js"><code>
+
+</code> </pre>
+                    <h3 id="intro6-2" class="pt30">데이터 불러오기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        show databases;
+                    </div>
+
+<pre class="language-js"><code>
+  
+</code> </pre>
+                    <h3 id="intro6-3" class="pt30">데이터 수정하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        use 데이터베이스 이름
+                    </div>
+
+<pre class="language-js"><code>
+
+</code> </pre>
+
+                    <h3 id="intro6-6" class="pt30">데이터 삭제하기</h3>
+                    <div class="bs-callout bs-callout-info">
+                        use 데이터베이스 이름
+                    </div>
+
+<pre class="language-js"><code>
+
+</code> </pre>
+                   </div>
+                <!-- //Intro5 -->
+
+              
+
+
                
             </div>
             <!-- //col-md-9 -->
@@ -141,6 +340,37 @@
                     <ul class="nav bs-sidenav">
                         <li><a href="#intro1">MYSQL</a></li>
                         <li><a href="#intro2">MYSQL 설치</a></li>
+                        <li><a href="#intro3">데이터베이스</a>
+                            <ul class="bs-docs-section">
+                                <li><a href="#intro3-1">데이터베이스 만들기 </li>
+                                <li><a href="#intro3-2">데이터베이스 보기 </li>
+                                <li><a href="#intro3-3">데이터베이스 사용 </li>
+                                <li><a href="#intro3-4">데이터베이스 삭제 </li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro4">테이블</a>
+                            <ul class="bs-docs-section">
+                                <li><a href="#intro4-1">테이블 만들기 </li>
+                                <li><a href="#intro4-2">테이블 전체보기 </li>
+                                <li><a href="#intro4-3">테이블 보기 </li>
+                                <li><a href="#intro4-4">테이블 삭제 </li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro5">테이블 수정</a>
+                            <ul class="bs-docs-section">
+                                <li><a href="#intro5-1">필드 추가하기 </li>
+                                <li><a href="#intro5-2">필드 수정하기 </li>
+                                <li><a href="#intro5-3">필드 삭제하기 </li>
+                            </ul>
+                        </li>
+                        <li><a href="#intro6">테이블 데이터</a>
+                            <ul class="bs-docs-section">
+                                <li><a href="#intro6-1">데이터 입력하기 </li>
+                                <li><a href="#intro6-2">데이터 불러오기 </li>
+                                <li><a href="#intro6-3">데이터 수정하기 </li>
+                                <li><a href="#intro6-4">데이터 삭제하기 </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

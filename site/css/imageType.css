@@ -146,3 +146,66 @@ body {
     margin-top: 5px; /* 인라인구조는 마진값을 설정할수 없다. */
     display: inline-block;
 }
+
+/* imageType03 */
+.imageType03 {
+    font-family: 'GmarketSans';
+    padding: 100px 0;
+}
+.imageType03 p{
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+.imageType03 .image-wrap{
+    display: grid;
+    grid-template-columns: repeat(4,285px);
+    grid-template-rows: 285px;
+    gap:20px
+}
+.imageType03 .image-wrap .image{
+    position: relative;
+}
+.imageType03 .image-wrap .image:first-child {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.imageType03 .image-wrap .image .img{
+ 
+}
+.imageType03 .image-wrap .image .image-cont0{
+    background: rgba(0,0,0,0.4);
+    width: 330px;
+    height: 110px;
+    position: absolute;
+    transform: translate(-167%, 415%);
+    display: inline-block;
+}
+.imageType03 .image-wrap .image .image-cont0 .image-title{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    margin: 7px 0 0 15px;
+}
+.imageType03 .image-wrap .image .image-cont0 .image-desc{
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin: 7px 0 0 15px;
+    display: block;
+}
+.imageType03 .image-wrap .image .image-cont{
+    background: rgba(0,0,0,0.4);
+    width: 225px;
+    height: 38px;
+    position: absolute;
+    transform: translate(15%, -170%);
+}
+.imageType03 .image-wrap .image .image-cont .image-title{
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+

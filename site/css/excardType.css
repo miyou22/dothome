@@ -48,33 +48,85 @@ body {
     display: block;
     margin-left: 46px;
 }
+
+
 /* ex-cardtype2 */
-.ex-cardType2 {}
+.ex-cardType2 {
+    font-family: 'NanumSquare';
+    padding: 241px 0;
+    color: #000;
+    text-align: center;
+}
 .ex-cardType2 h2{
-   font-size: 54px;
-   font-weight: 700;
-   padding: 150px 0 0 0;
-   text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
 }
 .ex-cardType2 p{
     font-size: 18px;
-    font-weight: 300;
     text-align: center;
-    margin-bottom: 90px;
- }
-.ex-cardType2 .card-wrap{}
-.ex-cardType2 .card-wrap .card{
-    width: 464px;
-    height: 680px;
-    border-radius: 5px;
-    border: solid 1px #e6e6e6;
+    margin-bottom: 110px;
 }
-.ex-cardType2 .card-wrap .card .card-title{}
-.ex-cardType2 .card-wrap .card .btn{}
-.ex-cardType2 .card-wrap .card .card-desc{}
-.ex-cardType2 .card-wrap .card .card-keyword{}
-.ex-cardType2 .card-wrap .card .card-keyword .green{}
-.ex-cardType2 .card-wrap .card .card-keyword .white{}
+.ex-cardType2 .card-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 241px;
+}
+.ex-cardType2 .card-wrap .card{
+    border-radius: 5px;
+    border: 1px solid #eeee;
+    text-align: left;
+}
+.ex-cardType2 .card-wrap .card .card-img{
+    width: 100%;
+    height: 377px;
+    display: block;
+}
+.ex-cardType2 .card-wrap .card .card-title{
+    font-size: 26px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: left;
+    margin-left: 45px; 
+    margin-bottom: 14px;
+    margin-top: 33px;
+    margin-right: 15px;
+}
+.ex-cardType2 .card-wrap .card .new{
+    background-color: #FA615B;
+    color: #fff;
+    border-radius: 50px;
+    padding: 5px 10px;
+}   
+.ex-cardType2 .card-wrap .card .card-desc{
+    font-size: 14px;
+    display: block;
+    text-align: left;
+    margin-left: 45px; 
+    margin-bottom: 14px;
+}
+.ex-cardType2 .card-wrap .card .btn {
+    display: inline-block; 
+    margin-left: 45px; 
+    padding-bottom: 30px;
+}
+.ex-cardType2 .card-wrap .card  .green{
+    background-color: #05D686;
+    color: #fff;
+    margin-right: 20px;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+.ex-cardType2 .card-wrap .card  .white {
+    border: 1px solid #eeee;
+    background-color: #fff;
+    color: #AEB7B5;
+    padding: 10px 20px;
+}
+
 
 
 
