@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../assets/css/highlight.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <style>
-    .tab-menu {
+    #tab-menu {
         max-width: 600px;
         background: #333;
         position: absolute;
@@ -38,13 +38,13 @@
         display: block;
     }
     .tab-btn li.active a{
-        border-bottom: 3px solid #fff;
-        color: rgb(238, 248, 91);
+        border-bottom: 3px solid rgb(43, 63, 151);
+        color: rgb(0, 255, 85);
     }
     .tab-cont {
-        background: rgb(255, 141, 141);
+        background: rgb(243, 87, 87);
         padding: 20px;
-        color: rgb(46, 6, 141);
+        color: rgb(0, 37, 138);
     }
     .tab-cont > div {
         display: none;
@@ -53,7 +53,7 @@
         display: block;
     }
     .tab-cont > div h2 {
-
+        margin-bottom: 10px;
     }
     .tab-cont > div p {
         line-height: 1.6;
@@ -65,7 +65,7 @@
 
     <!--contents-->
     <main>
-        <div class="tab-menu">
+        <div id="tab-menu">
             <div class="tab-btn">
                 <ul>
                     <li class="active"><a href="#">tap1</a></li>
@@ -104,20 +104,20 @@
 
     <!-- info -->
 <div class="info">
-    <h1>javascript Menu Effect01</h1>
+    <h1>jquery Menu Effect01</h1>
     <p>메뉴 이펙트 - 탭 메뉴</p>
 </div>
 
 <div class="info right">
     <ul>
-        <li class="active"><a href="javascriptME01.html">1</a></li>
+        <li><a href="javascriptME01.html">1</a></li>
         <li><a href="javascriptME02.html">2</a></li>
         <li><a href="javascriptME03.html">3</a></li>
         <li><a href="javascriptME04.html">4</a></li>
         <li><a href="javascriptME05.html">5</a></li>
     </ul>
     <ul>
-        <li><a href="jqueryMe01.html">1</a></li>
+        <li class="active"><a href="jqueryMe01.html">1</a></li>
         <li><a href="jqueryMe02.html">2</a></li>
         <li><a href="jqueryMe03.html">3</a></li>
         <li><a href="jqueryMe04.html">4</a></li>
@@ -150,114 +150,67 @@
                     <li><a href="#">Javascript</a></li>
                 </ul>
             </div>
-           
-            <div cLass="view-cont">
-               
+            <div class="view-cont">
                 <div class="html">
-<pre><code class="language-html">&ltdiv class="tab-cont"&gt
-    &ltdiv&gt
-        &lth2&gt1.내 체중을 정확히 파악하자&lt/h2&gt
-        &ltp&gt다이어트의 시작은 체중을 아는 것부터 시작합니다. 체중은 아침, 점심, 저녁 각 식사 후에 
-        마지막으로 잠자기 직전 이렇게 4번 재는 것이 좋습니다.&lt/p&gt
-    &lt/div&gt
-    &ltdiv&gt
-        &lth2&gt2.물을 자주 마시자&lt/h2&gt
-        &ltp&gt아침에 일어나면 우선 생수를 한잔 마십니다. 잠드렁 있는 동안 부족해진 수분을 보충해
-         줄 뿐 아니라 잠 들었떤 장기들을 깨워주는 효과도 있습니다. &lt/p&gt
-    &lt/div&gt
-    &ltdiv&gt
-        &lth2&gt3.저칼로리만 고집하지 말고 영양성분을 체크하자&lt/h2&gt
-        &ltp&gt다이어트를 할 때도 칼로이메나 집착할 것이 아니라 탄수화물과 지방의 섭취는 줄이고
-         단밸직, 비타민, 무기질 등의 섭취를 늘릴 수 있도록 음식을 선택 해야 합니다.&lt/p&gt
-    &lt/div&gt
-    &ltdiv&gt
-        &lth2&gt4.끼니마다 칼로리를 분배하자&lt/h2&gt
-        &ltp&gt너무 허기지다 보면 폭식을 불러올 수 있으므로 한끼만 먹는 것은 절대 금해야 합니다. &lt/p&gt
-    &lt/div&gt
-    &ltdiv&gt
-        &lth2&gt5.과식과 단음식은 피하자&lt/h2&gt
-        &ltp&gt과식은 피하지방으로 축적되어 비만의 원인이 됩니다. 단은ㅁ식은 열량만 높을 뿐 영양소는 부족하기 때문에
-         마찬가지로 다이어트와 건강에 해롭습니다. &lt/p&gt
-    &lt/div&gt
-&lt/div&gt
-&lt/div&gt</code></pre>
+<pre><code class="language-html"> &lt;!doctype html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+        &lt;link href=&quot;/path/to/tailwind.css&quot; rel=&quot;stylesheet&quot;&gt;
+        &lt;!-- ... --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+            &lt;!-- ... --&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre>
                 </div>
                 <div class="css">
-<pre><code class="language-html">   .view-title {
-    border-bottom: 1px solid #f2f2f2;
-    padding: 0 11px;
-
-    li {
-      display: inline;
-      list-style: none;
-
-      a{
-        font-family: $font-NEXON2;
-        text-decoration: none;
-        color: #cccccc;
-        padding: 10px 10px 12px;
-        margin: 0 5px;
-        display: inline-block;
-      }
-
-      &.active a{
-        border-top: 2px solid #667eea;
-        color: #4a5568;
-      }
-    }   
-  }
-  .view-cont{
-    height: 500px;
-    overflow-y: scroll;
-
-    > div {
-   
-
-    > div:nth-child(1) {
-      display: inline;
-      }
+<pre><code class="language-html">.view-title {
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 11px;
+    
+        li {
+            display: inline;
+            list-style: none;
+    
+            a{
+            font-family: $font-NEXON2;
+            text-decoration: none;
+            color: #cccccc;
+            padding: 10px 10px 12px;
+            margin: 0 5px;
+            display: inline-block;
+            }
+    
+            &.active a{
+            border-top: 2px solid #667eea;
+            color: #4a5568;
+            }
+        }   
+        }
+        .view-cont{
+        height: 500px;
+        overflow-y: scroll;
+    
+        > div {
+        
+    
+        > div:nth-child(1) {
+            display: inline;
+            }
+        }
+        }
     }
-  }
-}</code></pre>
+</code></pre>
                 </div>
-                <div class="javascript">
-<pre><code class="language-html"> 
-    const tabBtn = document.querySelectorAll(".tab-btn ul li"); 
+<div class="javascript"><pre><code class="language-html">const tabBtn = document.querySelectorAll(".tab-btn ul li"); 
     const tabCont = document.querySelectorAll(".tab-cont > div");
 
     tabBtn.forEach((btn, index) => {                  
         btn.addEventListener("click", function(){
-   
-            tabBtn.forEach( el => {
-                el.classList.remove("active");  
-            });
-            btn.classList.add("active"); 
-
-            tabCont.forEach( el => {
-                el.style.display = "none";
-            })
-            tabCont[index].style.display = "block";
-        })
-    }) </code></pre>
-                </div>
-            </div>
-        </div>
-       
-        <button>닫기</button>
-      </div>
-    </div>
-  </div>
-<!--//modal--> 
-<!--script-->
-<script src="../assets/js/custom.js"></script>
-<script src="../assets/js/highlight.min.js"></script>
-<script>
-    const tabBtn = document.querySelectorAll(".tab-btn ul li"); //자바스크립트는 다중선택이 안됨.
-    const tabCont = document.querySelectorAll(".tab-cont > div");
-
-    tabBtn.forEach((btn, index) => {                  
-        btn.addEventListener("click", function(){
-   
+    
             tabBtn.forEach( el => {
                 el.classList.remove("active");  
             });
@@ -269,12 +222,38 @@
             tabCont[index].style.display = "block";
         })
     })
-      //1. 버튼을 클릭하면 클릭한 버튼한테 active 추가
-  //2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
+</code></pre>
+                </div>
+            </div>
+    </div>
+    <button>닫기</button>
+  </div>
+  
+<!--//modal--> 
+<!--script-->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/custom.js"></script>
+<script src="../assets/js/highlight.min.js"></script>
+<script>
+   const tabBtn = $(".tab-btn ul li");   //5개의 버튼을 변수에 할당
+   const tabCont = $(".tab-cont > div");  //5개의 컨텐츠를 변수에 할당
+
+   //1. 버튼을 클릭하면 클릭한 버튼한테 active 추가
+   //2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
    //3. 버튼 인덱스 설정
    //4. 1번째 버튼은 1번째 컨텐츠 연결
    //5. 모든 컨텐츠를 안보이게 설정
    //6. 클릭한 버튼의 해당 컨텐츠만 보이게 설정
+
+   tabBtn.click(function(){
+       let target = $(this);
+       tabBtn.removeClass("active");
+       target.addClass("active");
+
+       let index = target.index();
+       tabCont.css("display", "none");
+       tabCont.eq(index).css("display", "block");
+   });
 </script>
   
 <!--//script-->
