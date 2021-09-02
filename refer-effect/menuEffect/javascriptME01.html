@@ -53,7 +53,7 @@
         display: block;
     }
     .tab-cont > div h2 {
-
+        margin-bottom: 10px;
     }
     .tab-cont > div p {
         line-height: 1.6;
@@ -151,9 +151,9 @@
                 </ul>
             </div>
            
-            <div cLass="view-cont">
+            <div class="view-cont">
                
-                <div class="html">
+                <div>
 <pre><code class="language-html">&ltdiv class="tab-cont"&gt
     &ltdiv&gt
         &lth2&gt1.내 체중을 정확히 파악하자&lt/h2&gt
@@ -180,9 +180,10 @@
          마찬가지로 다이어트와 건강에 해롭습니다. &lt/p&gt
     &lt/div&gt
 &lt/div&gt
-&lt/div&gt</code></pre>
+&lt/div&gt
+</code></pre>
                 </div>
-                <div class="css">
+                <div>
 <pre><code class="language-html">   .view-title {
     border-bottom: 1px solid #f2f2f2;
     padding: 0 11px;
@@ -220,9 +221,8 @@
   }
 }</code></pre>
                 </div>
-                <div class="javascript">
-<pre><code class="language-html"> 
-    const tabBtn = document.querySelectorAll(".tab-btn ul li"); 
+                <div>
+<pre><code class="language-html"> const tabBtn = document.querySelectorAll(".tab-btn ul li"); 
     const tabCont = document.querySelectorAll(".tab-cont > div");
 
     tabBtn.forEach((btn, index) => {                  

@@ -340,13 +340,13 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
         h2{
         font-weight: 400;
         font-size: 30px;
-        margin-bottom: 10p  x;
+        margin-bottom: 10px;
       }
-      p {
+        p {
         font-weight: 300;
         line-height: 1.6;
       }
-      button {
+        button {
         float: right;
         border: 1px solid #000;
         background: #000;
@@ -354,6 +354,7 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
         color: #fff;
         padding: 5px 10px;
         cursor: pointer;
+        margin-top: 10px;
       }
     }
   }
@@ -397,6 +398,7 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
 	100% {transform: scale(0)}
 }
 
+
 // code-view
 .code-view {
   width: 60vw;
@@ -431,7 +433,7 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
       border-bottom: 1px solid #f2f2f2;
       padding: 0 11px;
 
-      li {
+      li { 
         display: inline;
         list-style: none;
 
@@ -455,12 +457,13 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
       overflow-y: scroll;
   
       > div {
+        display: none;
+      }
      
   
       > div:nth-child(1) {
-        display: inline;
+        display: block;
         }
-      }
     }
 }
 

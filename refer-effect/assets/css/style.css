@@ -417,7 +417,7 @@ figcaption {
 #modal .modal-bg .modal-cont h2 {
   font-weight: 400;
   font-size: 30px;
-  margin-bottom: 10p  x;
+  margin-bottom: 10px;
 }
 
 #modal .modal-bg .modal-cont p {
@@ -433,6 +433,7 @@ figcaption {
   color: #fff;
   padding: 5px 10px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 #modal.show {
@@ -628,6 +629,10 @@ figcaption {
   overflow-y: scroll;
 }
 
-.code-view .view-cont > div > div:nth-child(1) {
-  display: inline;
+.code-view .view-cont > div {
+  display: none;
+}
+
+.code-view .view-cont > div:nth-child(1) {
+  display: block;
 }
