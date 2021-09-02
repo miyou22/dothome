@@ -294,20 +294,24 @@ figcaption {
 }
 
 @media (max-width: 800px) {
-  #nav {
-    left: 50%;
-    top: 85%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+  #contents h1 {
+    font-size: 20vw;
   }
-  #nav li {
-    font-size: 10px;
-    width: 150px;
-    height: 30px;
-    text-align: center;
+  #nav {
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+  }
+  #nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #nav a {
-    display: inline;
+    font-size: 9px;
+    width: 60px;
+    height: 30px;
+    line-height: 31px;
   }
 }
 
