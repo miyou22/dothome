@@ -1,0 +1,201 @@
+body {
+    background-color: #f3f3f3;
+}
+
+.testType {
+    margin: 150px 0;
+    background-color: #fff;
+    box-shadow: 0 0 50px rgba(0,0,0,0.1); 
+}
+
+.header  {
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    height: 100px;
+}
+.header .intro {
+    margin-right: 40px;
+}
+.header > div {
+    color: #fff;
+    display: inline-block;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.header .box{
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 7px 10px;
+    text-align: right;
+    margin-left: 150px;
+}
+.swiper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.swiper-wrapper {}
+.swiper-wrapper .swiper-slide:nth-child(1){
+    background-image: url(/site/img/01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(2){
+    background-image: url(/site/img/02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(3){
+    background-image: url(/site/img/03.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(4){
+    background-image: url(/site/img/04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(5){
+    background-image: url(/site/img/05.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-wrapper .swiper-slide:nth-child(6){
+    background-image: url(/site/img/06.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+.swiper-slide .slider-inner{
+    width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+.swiper-slide .slider-inner em{
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 100px ;/*마진이 안먹히면 display 구조를 확인 em태그는 인라인구조 */
+    display: block;
+}
+.swiper-slide .slider-inner h3{
+    font-family: 'GmarketSans';
+    font-size: 100px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-indent: -8px;
+}
+.swiper-slide .slider-inner p{
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 20px;
+    font-weight: 300;
+}
+.swiper-slide .slider-inner .btn{
+    display: block;
+    padding-bottom: 100px;
+    margin-top: 260px;
+}
+.swiper-slide .slider-inner .btn a{
+    width: 200px; height: 50px;
+    display: inline-block;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    margin-right: 7px;
+}   
+.swiper-slide .slider-inner .btn a.white{
+    background: #fff;
+    color: #000;
+}
+.swiper-slide .slider-inner .btn a.black{
+    background: #000;
+    color: #fff;
+}
+.swiper-pagination
+{
+    position: absolute;
+    left: 50% !important;
+    bottom: 35px;
+    transform: translateX(-50%);
+}
+.swiper-pagination .swiper-pagination-bullet{
+    width: 15px; height: 15px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    box-sizing: border-box;
+    opacity: 1;
+    background-color: transparent;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+.swiper-button-prev{
+    width: 21px; height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+
+}
+.swiper-button-next{
+    width: 21px; height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+.swiper-button-prev{
+    width: 21px; height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+
+}
+.swiper-button-next{
+    width: 21px; height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.swiper-button-prev{
+    width: 21px; height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+
+}
+.swiper-button-next{
+    width: 21px; height: 41px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
