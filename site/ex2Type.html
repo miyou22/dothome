@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 나눔스퀘어 웹 폰트 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+   <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+      font-family: nanumsquare;
+    }
+
+    #wrap {}
+    #header {
+        position: fixed;
+        left: 0; top: 0;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: #000;
+        background-color: #fff;
+      }
+    #header h1 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #000;
+            line-height: .9;
+            margin-left: -125px;
+        }
+    #header img {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+    }
+    #header nav li{
+        display: inline-block;
+        padding: 0 20px;
+    }
+    #header nav a {
+        color: #000;
+        text-decoration: none;
+    }
+    #header .login {
+        color: #000;
+        text-decoration: none;
+        border: 1px solid #000;
+        border-radius: 30px;
+        padding: 10px;
+    }
+    #banner {
+        padding: 134px 0 114px;
+        background-size: cover;
+        text-align: center;
+        word-break: keep-all;
+        background: url(https://ncreatorsnext.pstatic.net/img/membership_cover_p@3x.ff13dac3e93281497ca1ac5144ad5476.jpg) no-repeat;
+
+    }
+    #banner .banner-1 {
+        color: #fff;
+        text-align: center;
+        padding-top: 155px;
+        font-size: 24px;
+    }
+    #banner .banner-fir {
+        color: #fff;
+        text-align: center;
+        padding-top: 30px;
+        font-size: 36px;
+        font-weight: bold;
+    }
+    #banner .banner-sec {
+        color: #fff;
+        text-align: center;
+        padding-top: 20px;
+        font-size: 17px;
+    }
+    #contents {}
+    #contents #cont1 {
+        background: #f0faf7;
+    }
+    #contents #cont2 {
+        background: #fff;
+    }
+    #contents #cont3 {
+        background: #f0faf7;
+    }
+    #contents #cont1 .container2{
+        width: 1000px;
+        margin: 0 auto;
+    }
+    #contents #cont2 .container2{
+        width: 1000px;
+        margin: 0 auto;
+    }
+    #contents #cont3 .container2{
+        width: 1000px;
+        margin: 0 auto;
+    }
+    #contents #cont1 .container2 .cont1{
+        overflow: hidden;
+        padding: 100px 0;
+    }
+    #contents #cont1 .container2 .cont1 .box1{
+        float: left;
+        width: 45%;
+    }
+    #contents #cont1 .container2 .cont1 .box1 h2{
+        font-size: 42px;
+        padding-bottom: 20px;
+    }
+    #contents #cont1 .container2 .cont1 .box1 p{
+        color: rgba(38,38,46,.5);
+        margin-bottom: 70px;
+    }
+    #contents #cont1 .container2 .cont1 .box1 a{
+        width: 322px;
+        height: 62px;
+        border-radius: 30px;
+        background: #0cd796;
+        box-shadow: 0 10px 30px 0 rgb(40 221 111 / 30%);
+        font-size: 20px;
+        font-weight: 700;
+        padding: 10px 40px;
+        color: #fff;
+        text-decoration: none;;
+
+    }
+    #contents #cont1 .container2 .cont1 .box2{
+        float: right;
+        width: 50%;
+    }
+    #contents #cont1 .container2 .cont1 .box2 img{width: 100%;}
+    #contents #cont1 .container2 .cont1 .box3{
+        margin-top: 350px;
+        background: #fff;
+        padding: 30px;
+    }
+    #contents #cont1 .container2 .cont1 .box3 dl {padding-bottom: 10px;}
+    #contents #cont1 .container2 .cont1 .box3 dt {
+        display: inline;
+        color: #12ca8f;
+        padding-right: 10px;
+    }
+    #contents #cont1 .container2 .cont1 .box3 dd {display: inline;}
+
+/*cont2*/
+    #contents #cont2 .container2 .cont2{
+        overflow: hidden;
+        padding: 100px 0;
+    }
+    #contents #cont2 .container2 .cont2 .box1{
+        float: left;
+        width: 50%;
+    }
+    #contents #cont2 .container2 .cont2 .box1 img{width: 100%;}
+    #contents #cont2 .container2 .cont2 .box2{
+        float: right;
+        width: 45%;
+    }
+    #contents #cont2 .container2 .cont2 .box2 h2{
+        font-size: 42px;
+        padding-bottom: 20px;
+    }
+    #contents #cont2 .container2 .cont2 .box2 p{
+        color: rgba(38,38,46,.5);
+        margin-bottom: 70px;
+    }
+    #contents #cont2 .container2 .cont2 .box2 a{
+        width: 322px;
+        height: 62px;
+        border-radius: 30px;
+        background: #0cd796;
+        box-shadow: 0 10px 30px 0 rgb(40 221 111 / 30%);
+        font-size: 20px;
+        font-weight: 700;
+        padding: 10px 40px;
+        color: #fff;
+        text-decoration: none;;
+    }
+    #contents #cont2 .container2 .cont2 .box3{
+        margin-top: 350px;
+        background: #eee;
+        padding: 30px;
+    }
+    #contents #cont2 .container2 .cont2 .box3 dl {padding-bottom: 0px;}
+    #contents #cont2 .container2 .cont2 .box3 dt {
+        display: inline-block;
+        color: #12ca8f;
+        padding-right: 10px;
+        line-height: 1;
+    }
+    #contents #cont2 .container2 .cont2 .box3 dd {
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    #contents #cont3 .container2 .cont3{
+        overflow: hidden;
+        padding: 100px 0;
+    }
+    #contents #cont3 .container2 .cont3 .box1{
+        float: left;
+        width: 45%;
+    }
+    #contents #cont3 .container2 .cont3 .box1 h2{
+        font-size: 42px;
+        padding-bottom: 20px;
+    }
+    #contents #cont3 .container2 .cont3 .box1 p{
+        color: rgba(38,38,46,.5);
+        margin-bottom: 70px;
+    }
+    #contents #cont3 .container2 .cont3 .box1 a.a1{
+        width: 222px;
+        height: 62px;
+        border-radius: 30px;
+        background: #0cd796;
+        box-shadow: 0 10px 30px 0 rgb(40 221 111 / 30%);
+        font-size: 20px;
+        font-weight: 700;
+        padding: 15px 25px;
+        color: #fff;
+        text-decoration: none;;
+    }
+    #contents #cont3 .container2 .cont3 .box1 a.a2{
+        width: 222px;
+        height: 62px;
+        border-radius: 30px;
+        background: rgb(75, 130, 247);
+        box-shadow: 0 10px 30px 0 rgb(40 221 111 / 30%);
+        font-size: 20px;
+        font-weight: 700;
+        padding: 15px 25px;
+        color: #fff;
+        text-decoration: none;;
+
+    }
+    #contents #cont3 .container2 .cont3 .box2{
+        float: right;
+        width: 50%;
+    }
+    #contents #cont3 .container2 .cont3 .box2 img{width: 100%;}
+    #contents #cont3 .container2 .cont3 .box3{
+        margin-top: 350px;
+        background: #fff;
+        padding: 30px;
+    }
+    #contents #cont3 .container2 .cont3 .box3 dl {padding-bottom: 10px;}
+    #contents #cont3 .container2 .cont3 .box3 dt {
+        display: inline;
+        color: #12ca8f;
+        padding-right: 10px;
+    }
+    #contents #cont3 .container2 .cont3 .box3 dd {display: inline;}
+
+
+     /* footer */
+    #footer {
+      background-color: #000;
+      text-align: center;
+    }
+
+    #footer .topbtn {
+      width: 100%;
+      height: 54px;
+      background: #000;
+      border-bottom: 1px solid #414141;
+    }
+
+    #footer .topbtn a {
+      display: block;
+      width: 100%;
+      background: #000;
+      font-size: 15px;
+      line-height: 54px;
+      font-weight: 700;
+      color: #666;
+      text-transform: uppercase;
+    }
+
+    #footer .footerCont {
+      padding-bottom: 50px;
+    }
+
+    #footer .footerCont .footerLogin {
+      margin: 30px 0;
+      width: 75px;
+      border-radius: 4px;
+      background: #323232;
+      font-size: 13px;
+      color: #999;
+      line-height: 30px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    #footer .footerCont .footerCopy {
+      font-size: 13px;
+      line-height: 18px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    #footer .footerCont .naverLink {
+      display: block;
+      fill: #363636;
+    }
+
+
+
+
+
+
+
+
+    </style>
+    <body>
+        <div id="wrap">
+            <div id="header">
+                <img src="https://ncreatorsnext.pstatic.net/img/logo.a61f5142308413b313275c691aa13c9a.gif" alt="로고입니다.">
+                <h1>NAVER <br>INFLUNCER CENTER</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">인플루언서 안내</a></li>
+                        <li><a href="#">광고 수익 혜택</a></li>
+                        <li><a href="#">성장 지원 프로그램</a></li>
+                        <li><a href="#">브랜드 커넥트</a></li>
+                        <li><a href="#">공지</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="login">인플루언서로 로그린</a>
+            </div>
+
+            <div id="banner">
+                <div class="container">
+                    <div class="banner-1">맴버십 혜택</div>
+                    <p class="banner-fir">"인플루언서 활동에 꼭 필요한"
+                        <br>
+                        "네이버의 다양한 맴버십 혜택을 제공합니다."
+                    </p>
+                    <p class="banner-sec">
+                        "전국 파트너스퀘어의 스튜디어, 편집실 이용부터 네이버플러스 맴버십 이용권 1년 무료혜택까지"
+                        <br>
+                        "네이버인플루언서라면 네이버의 다양한 맴버십 혜택들을 누릴수 있습니다."
+                    </p>
+                </div>
+            </div>
+            <div id="contents">
+                <div id="cont1">
+                    <div class="container2">
+                        <div class="cont1">
+                            <div class="box1">
+                                <h2>어디에서든 나를 빛내줄 <br> 온라인 네임카드</h2>
+                                <p>
+                                    네이버 인플루언서라면 누구나 나만의 네임카드 다운받고
+                                    <br>
+                                    홈을 알릴수 있습니다. 나를 더 예쁘고 멋지게 소개할 수
+                                    <br>
+                                    있도록 온라인 네임카드를 만들어보세요
+                                </p>
+                                <a href="#">온라인 네임카드 만들기</a>
+                            </div>
+                            <div class="box2">
+                               <img src="https://ncreatorsnext.pstatic.net/img/namecard_p@3x.3720063b76d145202e89d74d9fca7ded.png" alt="예제">
+                            </div>
+                            <div class="box3">
+                                <dl>
+                                    <dt>신청 자격</dt>
+                                    <dd>홈을 개설한 네이버 인플루언서라면 누구나</dd>
+                                </dl>
+                                <dl>
+                                    <dt>혜택 상세</dt>
+                                    <dd>운영중인 다른 채널에 내 인플루언서 홈을 홍보할 수 있는 네임카드 이미지 소스를 제공합니다.</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cont2">
+                    <div class="container2">
+                        <div class="cont2">
+                            <div class="box1">
+                                <img src="https://ncreatorsnext.pstatic.net/img/place_p@3x.7ac91c0cb38ae987c18c8f99329fe555.png" alt="예제">
+                            </div>
+                            <div class="box2">
+                                <h2>"전국 파트너스퀘어<br>스튜디오, 편집실 제공</h2>
+                                <p>파트너스퀘어는 사진/동영상 컨텐츠를 보다 잘 만들 수<br>
+                                    있는 지원을 받는 곳입니다. 크리에이터를 위한 다양한<br>
+                                    스튜디오를 경험해보세요.</p>
+                                <a href="#">파트너스퀘어 이용하기</a>
+                            </div>
+                            <div class="box3">
+                                <dl>
+                                    <dt>신청 자격</dt>
+                                    <dd>홈을 개설한 네이버 인플루언서라면 누구나</dd>
+                                </dl>
+                                <dl>
+                                    <dt>혜택 상세</dt>
+                                    <dd>서울(역삼, 종로, 홍대, 상수), 부산, 광주에 위치한 파트너스퀘어 내 다양한 스튜디오 및 편집실을 이용할 수 있습니다.<br>
+                                        (단, 홍대점은 전월 기준 팬수 1,000 이상인 경우에만 이용 가능합니다.)</dd>
+                                <dl>
+                                    <dt>이용 방법</dt>
+                                    <dd>네이버 파트너스퀘어에서 창작자 인증을 해야합니다.
+                                        <br>
+                                        (단, 홍대점 경우 당월 인플루언서 승인 시 익월 15일에 이용 권한이 부여됩니다.)</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cont3">
+                    <div class="container2">
+                        <div class="cont3">
+                            <div class="box1">
+                                <h2>네이버플러스 멤버십<br>1년 무료 제공</h2>
+                                <p>
+                                    키워드 챌린지에 참여한 인플루언서들에게 네이버플러스<br>
+                                    멤버십을 선물로 드려요. 오디오클립, 웹툰, 클라우드,<br>
+                                    바이브 등 다양한 서비스를 이용해보세요.
+                                </p>
+                                <a href="#" class="a1">내 맴버십 확인하기</a>
+                                <a href="#" class="a2">지급조건 상세보기</a>
+                            </div>
+                            <div class="box2">
+                               <img src="https://ncreatorsnext.pstatic.net/img/membership_plus_p@3x.c31add5014195dbe09ff19b81914be5d.png" alt="예제">
+                            </div>
+                            <div class="box3">
+                                <dl>
+                                    <dt>신청 자격</dt>
+                                    <dd>키워드 챌린지에 참여한 네이버 인플루언서</dd>
+                                </dl>
+                                <dl>
+                                    <dt>혜택 상세</dt>
+                                    <dd>쇼핑할 때마다 네이버페이 포인트 최대 5% 적립 가능한 네이버플러스 멤버십 12개월 무료 이용권을 드립니다.
+                                        (1인당 최초 1회 지급)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>제공 방법</dt>
+                                    <dd>매월 1일자에 개별 이메일을 통해 이용권 지급이 안내됩니다.
+                                        (이번 달에 자격 요건을 달성한 분들은 다음 달 1일자에 이용권이 지급됩니다.)</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div id="footer">
+            <button class="topbtn"><a href="#">top &#129045;</a></button>
+            <div class="footerCont">
+              <a class="footerLogin" href="#">로그인</a>
+              <div class="footerCopy">NAVER Copyright © NAVER Corp. All Rights Reserved.</div>
+              <a class="naverLink" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74 16" aria-hidden="true" width="74" height="16">
+                  <path
+                    d="M21.897 1l-5.464 14h4.644l.66-1.853h5.237l.66 1.853h4.643L26.814 1h-4.917zm2.459 4.411l1.557 4.373h-3.115l1.558-4.373zM47.165 1v14H58.16v-3.431h-6.556V9.682h6.35V6.319h-6.35V4.43h6.419V1zm-6.078 0l-3.278 9.205L34.53 1h-4.643l5.463 14h4.917L45.73 1zM10.492 1v7.493L5.302 1H1v14h4.507V7.507L10.697 15h4.302V1zm56.545 6.52h-2.39V4.568h2.39c.81 0 1.468.661 1.468 1.476s-.657 1.476-1.468 1.476zm3.034 2.677l.422-.178c1.62-.68 2.443-2.154 2.443-4.024 0-1.769-.642-3.077-1.908-3.889C69.851 1.351 68.325 1 66.226 1h-5.882v14h4.371v-3.912h1.57L68.95 15h4.644l-3.522-4.803z">
+                  </path>
+                </svg>
+              </a>
+            </div>
+        </div>
+    </body>
+</div>
+</body>
+</html>
