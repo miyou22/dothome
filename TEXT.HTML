@@ -7,32 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+     #banner {
+        width: 100%;
+        height: 390px;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
+    #banner .box1 {
+        width: 100%;
+        display: block;
+        height: 390px;
+        background: url(../site/img/box01.png);
+        pointer-events: none;
+        background-size: cover;
+        background-position: 50% 50%;
+        transition: all 2s;
+    }
+    #banner .box1:hover {
+        background-image: url(../site/img/box02.png);
+    }
+</style>
 
 <body>
-    <h2>UI/UX 콘셉트 도출</h2>
-    <p class="well">
-        도출된 아이디에이션(Ideation)의 프로토타입 검증 결과에 따라서 확정된 UI/UX콘셉트를 결정할 수 있다.
-        도출된 UI/UX 콘셉트를 반영하여 목표 고객인 페르소나(PERSONA)를 추출할 수 있다.
-        UI설계를 위해서UI/UX 콘셉트에 적합한 시나리오(scenario)를 작성할 수 있다.
-        <h3>페르소나(persona)</h3>
-        <p>
-            페르소나는 사용자의 목적(goals)과 행동(behaviors)을 대표하는 
-            실제 타깃 사용자 그룹을 가상의 캐릭터(artificial person and archetypical users)로
-            형상화하는 목적 지향적인(goal-directed) 인터랙션 디자인의 방법이다. 
-            핵심적인 캐릭터의 구성요소는 니즈(motivations and needs)
-            목적, 환경(contexts), 행동패턴, 숙련수준(skill), 태도(attitudes)
-            문제점(pain points)등이다. 이러한 구성요소는 사용자 리서치의 데이터를 기반으로 기술한다.
-            또한 인터렉션 디자인, 인포메이션 아키텍처 디자인(IA), 비주얼 디자인 등을 수행할 때
-            주요한 의사결정의 준거점으로 활용하는 전략 산출물이다. 
-        </p>
-
-        <h3>시나리오 디자인(scenario)</h3>
-        <p>
-            시나리오 디자인은 일련의 사건에서 언제, 어디서, 어떻게 페르소나가 행동하는지 묘사하는 이야기이다. 이 이야기는 특정한 환경(particular contexts)에서
-            페르소나의 목적을 달성하기 위해서 미디어와의 인터랙션을 어떻게 하는지 묘사한다. 또한 이야기는 페르소나의 관점에서 기술하며, 미래에 발생할 사용용례(activities)를 
-            서술한다.
-        </p>
-    </div>
+    <banner id="banner">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </banner>
 </body>
 
 </html>

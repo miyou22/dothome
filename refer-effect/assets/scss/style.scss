@@ -136,6 +136,11 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
     background: rgba(255,255,255,0.6);
     z-index: -1;
   }
+  &.blue {
+      &::before {
+          background-color: rgba(176, 167, 252, 0.6);
+      }
+  }
 }
 
 @for $i from 1 through 20 {
@@ -263,76 +268,95 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
 
 
 // info
+// info
 .info {
-  color: #000;
-  font-family: $font-NEXON1;
+  color: #fff;
+  font-family: $font-Nexon1;
   padding: 20px;
   position: absolute;
   left: 0;
   top: 0;
-
   &.right {
-    left: auto;
-    right: 0px;
+      left: auto;
+      right: 0px;
   }
   &.bottom {
-    top: auto;
-    left: auto;
-    bottom: 0;
-    right: 0;
+      top: auto;
+      left: auto;
+      bottom: 0; 
+      right: 0;
   }
-  h1{
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 1.6;
-    border-bottom: 1px dashed #000;
-    display: inline-block;
-    margin-bottom: 10px;
+  &.left {
+      top: auto;
+      left: 0;
+      bottom: 0;
+  }
+  h1 {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 1.6;
+      border-bottom: 1px dashed #fff;
+      display: inline-block;
+      margin-bottom: 10px;
+      a {
+          color: #fff;
+          text-decoration: none;
+      }
   }
   p {
-    font-weight: 30px;
+      font-weight: 300;
+      font-size: 16px;
   }
   li {
-    list-style: none;
-    display: inline;
-  
-  a {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px dashed #000;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    font-size: 12px;
-    margin-bottom: 5px;
+      list-style: none;
+      display: inline;
+      a {
+          display: inline-block;
+          text-decoration: none;
+          color: #fff;
+          border: 1px dashed #fff;
+          border-radius: 50%;
+          width: 20px; 
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          font-size: 12px;
+          margin-bottom: 5px;
+      }
+      &.active {
+          a {
+              background: #fff;
+              color: #000;
+          }
+      }
   }
-  &.active {
-    a {
-      background: #000;
+  &.list {
+      background: rgba(0,0,0,.4);
       color: #fff;
-    }
+      padding: 20px;
+      font-size: 12px;
+      line-height: 1.8;
+      border-radius: 10px;
+      margin: 20px;
+      li {
+          display: block;
+      }
   }
-}
   button {
-    background: transparent;
-    border: 1px solid #000;
-    padding: 5px 20px;
-    color: #000;
-    border-radius: 50px;
-    box-shadow: 0 0 0 #000 inset;
-    transition: all 0.4s;
-    cursor: pointer;
-    margin-top: 10px;
-
-
-    &:hover {
-      box-shadow: 0 -50px 0 #000 inset;
+      background: transparent;
+      border: 1px solid #fff;
+      padding: 5px 20px;
       color: #fff;
-    }
-  } 
+      border-radius: 50px;
+      box-shadow: 0 0 0 #fff inset;
+      transition: all 0.4s;
+      cursor: pointer;
+      
+      &:hover {
+          box-shadow: 0 -50px 0 #fff inset;
+          color: #000;
+      }
+  }
 }
 // modal
 #modal {
@@ -720,4 +744,5 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
     }
   }
 }
+
 

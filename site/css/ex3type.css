@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: auto;
+}
+#head{
+    background: #222;
+    height: 100px;
+}
+#head p{}
+#head h2{}
+#head ul{}
+#head ul li{}
+#head a{}
+#head a.btn{}

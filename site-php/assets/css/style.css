@@ -1,0 +1,111 @@
+/* skip */
+#skip {
+    position: relative;
+    z-index: 10000;
+}
+#skip a{
+    position: absolute;
+    left: 0; top: -100px;
+    background: #000;
+    color: #fff;
+    padding: 20px 30px;
+    display: inline-block;
+}
+#skip a:active,
+#skip a:focus{
+    top: 0;
+}
+
+/* layout */
+#content {}
+#mainCont {
+    padding-top: 80px;
+}
+#mainCont.gray {
+    background-color: #f4f4f4;
+}
+/* container */
+.content-article {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+    /* background: rgba(0,0,0,0.3); */
+}
+
+
+/* header */
+#header { 
+    position: fixed;   /*이건 왜 준거지?*/
+    z-index: 9999;
+    top: 0;             /*이건 왜 준거지?*/
+    left: 0;            /*이건 왜 준거지?*/
+    width: 100%;
+    display: flex;      /*이건 왜 준거지?*/
+    align-items: center;
+    justify-content: space-between; /*3등분으로 나누어짐 */
+    box-sizing: border-box;
+    border-bottom: 1px bottom #f2f2f2;
+    background-color: #fff;
+}
+#header h1 {
+    text-transform: uppercase;
+
+}
+#header h1 a {
+    padding: 10px;
+    margin: 10px;
+}
+#header h1 em{
+    font-size: 16px;
+}
+#header nav li{
+    display: inline;
+}
+#header nav li a {
+    padding: 10px 20px;
+    margin: 15px;
+    display: inline-block;
+    font-size: 16px
+}
+#header .member {
+    padding: 20px;
+
+}
+#header .member a {
+    border: 1px solid #000;
+    padding: 7px 20px 5px;
+    border-radius: 50px;
+    transition: background 0.3s, color 0.3s;
+}
+#header .member a:hover{
+    background: #000;
+    color: #fff;
+}
+
+/* member-form */
+.member-form {
+    width: 600px;
+    margin: 0 auto; /*가운데 오게 함 */
+    border: 1px solid #dfdfdf;
+    height: 1000px;
+    background: #fff;
+    padding: 60px 40px; /* padding 값이 커지면 width값이 커짐 */
+    box-sizing: border-box; /*width값을 커지지 않게 할려면 box-sizing을 넣으면 된다 */
+}
+.member-form h3{
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.member-form .join-info{
+    margin-bottom: 20px;
+}
+.member-form .join-info li{
+   
+}
+.member-form .join-info li:before {
+ 
+}
+.member-form .join-privacy{}
+

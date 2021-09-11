@@ -103,6 +103,10 @@ figcaption {
   z-index: -1;
 }
 
+.bg.blue::before {
+  background-color: rgba(176, 167, 252, 0.6);
+}
+
 .bg1 {
   background-image: url(../img/bg1.jpg);
 }
@@ -344,6 +348,12 @@ figcaption {
   right: 0;
 }
 
+.info.left {
+  top: auto;
+  left: 0;
+  bottom: 0;
+}
+
 .info h1 {
   font-weight: 300;
   font-size: 20px;
@@ -379,6 +389,24 @@ figcaption {
 .info li.active a {
   background: #000;
   color: #fff;
+}
+
+.info.list {
+  position: fixed;
+  left: 20px;
+  bottom: 70px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 1.8;
+  border-radius: 10px;
+  margin: 20px 20px -40px 20px;
+}
+
+.info.list li {
+  display: block;
 }
 
 .info button {
@@ -940,4 +968,46 @@ figcaption {
 #paraFooter .footerInfo li.active a {
   background: #fff;
   color: #000;
+}
+
+/* mouseCont */
+.mouseCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* 이거와 같이 써야하는건 height 왜냐하면 기준점이 없기 때문에 height가 없으면 적용이 안된다 */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* 줄바꿈 */
+  color: #000;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.mouseCont p {
+  font-size: 2.5vw;
+  line-height: 2.3;
+  font-weight: 300;
+}
+
+.mouseCont h2 {
+  font-size: 3vw;
+  font-weight: normal;
+  font-weight: 400;
+}
+
+.mouseCont em {
+  font-style: normal;
+  border-bottom: 0.2vw dashed #000;
+  color: #ff4c0e;
 }
