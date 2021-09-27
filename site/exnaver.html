@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naver Whale</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- 나눔스퀘어 폰트 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <style>
+        
+        *{
+            vertical-align: middle;
+            font-family: 'NanumSquare' !important;
+            letter-spacing: -0.8px;
+        }
+        /* 레이아웃 */
+        header {
+            height: 90px;
+            max-width: 1920px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #tab {
+
+        }
+        #banner {
+            background: url(./img/top_tasking_bg.jpg) no-repeat top center/ cover;
+        }
+        /* 헤더 */
+        .header-inner {
+            
+            width: 100%;
+            position: fixed;
+            background-color: #fff;
+            z-index: 5;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+        }
+        .container {
+            position: relative;
+            margin: 0 auto;
+            width: 1280px;
+        }
+        .logo {
+            position: absolute;
+            top: 23px;
+            left: 6%;
+            width: 200px;
+            height: 40px;
+            background: url(img/logo_whale.svg) no-repeat center;
+        }
+        .header-right {
+            position: absolute;
+            top: 20px;
+            right: 4%;
+            width: 125px;
+            height: 50px;
+            color: #15c5aa;
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #15c5aa;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .list {
+            text-align: center;
+            height: 90px;
+        }
+        .list li {
+            width: 154px;
+            display: inline-block;
+            text-align: center;
+        }
+        .list li a {
+            color: #2d1d1d;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 90px;
+        }
+        /* 탭 */
+        .banner-tab {
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner-tab li {
+            display: inline-block;
+            width: 32%;
+            text-align: center;
+            max-width: 330px;
+            height: 70px;
+            
+        }
+        .banner-tab li:nth-child(2){
+            border-right: 1px solid #838383;
+            border-left: 1px solid #838383;
+        }
+
+        .banner-tab li div{
+            box-sizing: border-box;
+            display: inline-block;
+            color: #838383;
+            font-size: 18px;
+            padding: 20px 30px;
+            cursor: pointer;
+
+            background-size: 20px auto;
+            background-repeat: no-repeat;
+            height: inherit;
+
+        }
+        .banner-tab li:nth-child(1) div{
+            background-image: url(./img/whale/top_check.png);
+            background-position: top 23px left;
+            color: #05d6b4;
+        }
+        .banner-tab li:nth-child(2) div{
+            background-image: url(./img/whale/top_check_2.png);
+            background-position: bottom 32px left;
+
+        }
+        .banner-tab li:nth-child(3) div{
+            background-image: url(./img/whale/top_check_2.png);
+            background-position: bottom 32px left;
+        }
+        .banner-tab li:nth-child(4) div{
+            background-image: url(./img/whale/icon_why_tab1_04.png);
+            background-position: bottom 32px left;
+        }
+        /* 배너 */
+        .banner{
+            height: 670px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+        .banner h3 {
+            font-size: 50px;
+            color: #fff;
+            font-weight: bold;
+            line-height: 1.2em;
+        }
+        .banner p {
+            font-size: 30px;
+            color: #fff;
+            padding: 30px 0 50px;
+        }
+        .banner span {
+            display: inline-block;
+            width: 250px;
+            text-align: center;
+            
+            border-radius: 45px;
+            height: 77px;
+            line-height: 77px;
+            position: relative;
+            background: #05d6b4;
+        }
+        .banner span a{
+            font-size: 30px;
+            color: #fff;
+        }
+        .banner span::after{
+            content: "";
+            display: inline-block;
+            width: 30px;
+            height: 77px;
+            background: url(img/whale/icon_btn_arrow.png) 50% 50% no-repeat;
+            background-size: 100%;
+            margin-left: 18px;
+            vertical-align: top;
+        }
+
+        /* 메인 아티클 */
+        #main article:nth-child(odd) {
+            background-color: #ecedf1;
+        }
+        #main article .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #main article:nth-child(even) .article-inner{
+            flex:auto;
+            padding-left: 5%;
+        }
+        #main article .container .article-inner2 {
+            height: 670px;
+            display: flex;
+            align-items: center;
+        }
+        #main article .container .article-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 326px;
+        }
+        #main .article-inner .title {
+            font-size: 50px;
+            color: #000;
+            position: relative;
+            padding-left: 80px;
+            height: 70px;
+            line-height: 70px;
+        }
+        #main .article-inner .title::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            content: "";
+            clear: both;
+            width: 70px;
+            height: 70px;
+            background-size: 100%;
+        }
+        #main article:nth-child(1) .title::before {
+            background: url(./img/whale/icon_why_tab1_05.png) no-repeat top center;
+        }
+        #main article:nth-child(2) .title::before {
+            background: url(./img/whale/icon_why_tab1_01.png) no-repeat top center;
+        }
+        #main article:nth-child(3) .title::before {
+            background: url(./img/whale/icon_why_tab1_02.png) no-repeat top center;
+        }
+        #main article:nth-child(4) .title::before {
+            background: url(./img/whale/icon_why_tab1_03.png) no-repeat top center;
+        }
+        #main article:nth-child(5) .title::before {
+            background: url(./img/whale/icon_why_tab1_04.png) no-repeat top center;
+        }
+        #main .article-inner .contents {
+            color: #333130;
+            font-size: 26px;
+        }
+        #main .article-inner .how {
+            position: relative;
+            padding-left: 20px;
+            display: inline-block;
+            color: #2d68d2;
+            line-height: 20px;
+            font-size: 18px;
+            margin-left: 5px;
+        }
+        #main .article-inner .how::before {
+            position: absolute;
+            left: -6px;
+            display: inline-block;
+            content: "";
+            background: url(./img/whale/icon_function_detailgo.png);
+            width: 20px;
+            height: 20px;
+        }
+        #main .article-inner > .tx {
+            line-height: 1em;
+            font-size: 16px;
+            color: #919191;
+        }
+        #main .article-inner .pc {
+            display: inline-block;
+            background: url(./img/whale/icon_pc.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 118px;
+            height: 76px;
+        }
+        #main .article-inner .mobile {
+            display: inline-block;
+            background: url(./img/whale/icon_m.png) no-repeat bottom center;
+            background-size: 100%;
+            width: 118px;
+            height: 76px;
+        }  
+        #main article img {
+            height: 320px;
+            width: 640px;
+        }
+        /* www */
+        .www .banner{
+            padding: 10% 0;
+            height: 220px;
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 100%;
+            align-items: center;
+        }
+        .www img {
+            display: inline-block;
+            margin-bottom: 3%;
+            max-width: 560px;
+        }
+        footer { 
+            padding: 50px 0;
+            width: 100%;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        /* 푸터 */
+        footer span  {
+            display: inline-block;
+            margin: 0 0 20px;
+            max-width: 141px;
+        }
+        footer ul {
+            text-align: center;
+        }
+        footer ul li {
+            margin: 10px 20px 0;
+            position: relative;
+            display: inline-block;
+            color: #c0c0c0;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        footer ul li:last-child::before {
+            display: none;
+        }
+        footer ul li::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 3px;
+            right: -21px;
+            width: 1px;
+            height: 18px;
+            background: #dadada;
+        }
+
+        footer p {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            text-align: center;
+            border: 1px solid #c0c0c0;
+            border-radius: 5px;
+        }
+        footer p a::before{
+            position: absolute;
+            content: "";
+            top: 0px;
+            left: 15px;
+            background-image: url(./img/whale/beta.svg);
+            width: 20px;
+            height: 20px;
+        }
+        footer p a {
+            position: relative;
+            padding: 0 15px 0 45px;
+            height: 43px;
+            color: #c0c0c0;
+            font-size: 16px;
+            line-height: 43px;
+        }
+        /* mobile */
+        @media (max-width:830px) {
+            .container {
+                width: 90%;
+            }
+            header {
+                height: 60px;
+            }
+            .header-inner {
+                height: 60px;
+            }
+            .header-right {
+                position: absolute;
+                top: 25px;
+                width: 28px;
+                height: 2px;
+                background-color: #333;
+                color: transparent;
+                border: none;
+            }
+            .list {
+                display: none;
+            }
+            .header-right::before {
+                content: "";
+                top: -9.09090909px;
+                position: absolute;
+                right: 0;
+                width: 28px;
+                height: 2px;
+                background-color: #333;
+            }
+            .header-right::after {
+                content: "";
+                top: 9.09090909px;
+                position: absolute;
+                right: 0;
+                width: 28px;
+                height: 2px;
+                background-color: #333;
+            }
+            .logo {
+                width: 140px;
+                height: 40px;
+                top: 5px;
+            }
+            .banner {
+                box-sizing: border-box;
+                padding: 0 5%;
+                display: block;
+            }
+            .banner h3{
+                padding-top: 80px;
+                font-size: 40px;
+            }
+            .banner p {
+                font-size: 18px;
+            }
+            #main .article-inner .title {
+                font-size: 25px;
+            }
+            #main .article-inner .contents {
+                font-size: 20px
+            }
+            #main .article-inner .how {
+                font-size: 14px;
+            }
+            #main .article-inner2 img {
+                width: 400px;
+                height: 200px;
+            }
+            .www .banner {
+                text-align: center;
+                padding:10% 0;
+                height: auto;
+            }
+            .www img {
+                display: block;
+                margin:0 auto;
+                height: auto !important;
+            }
+            footer div p {
+                position: static;
+                margin: 30px 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo"></a>
+            <a class="header-right" href="#">
+                다운로드
+            </a>
+            <div class="container">
+                <ul class="list">
+                    <li><a href="#">Why We Whale</a></li>
+                    <li><a href="#">가이드</a></li>
+                    <li><a href="#">스토어</a></li>
+                    <li><a href="#">연구소</a></li>
+                    <li><a href="#">웨일 스페이스</a></li>
+                    <li><a href="#">웨일북</a></li>
+                </ul>
+                <!-- list -->
+            </div>
+            <!-- container -->
+        </div>
+    </header>
+    <!-- header -->
+    <section id="tab">
+        <ul class="banner-tab">
+            <li>
+                <div>옴니태스킹</div>
+            </li>
+            <li>
+                <div>강력한 보안</div>
+            </li>
+            <li>
+                <div>커스터마이징</div>
+            </li>
+        </ul>
+    </section>
+    <section id="banner">
+        <div class="container">
+            <div class="banner">
+                <h3>하고 싶은 일들, 해야 할 일들<br>
+                네이버 웨일로 한 번에!</h3>
+                <p>네이버 웨일의 다양한 기능을 만나보세요!</p>
+                <span> <a href="#">다운로드</a> </span>
+            </div>        
+        </div>
+    </section>
+    <!-- banner -->
+    <section id="main">
+        <article>
+            <div class="container">
+                <div class="article-inner">
+                    <h3 class="title">웨일온(Whale ON)</h3>
+                    <div class="contents">시간제한없는 무료 화상회의!</div>
+                    <div class="how">웨일온,어떻게사용하나요?</div>
+                    <div>
+                        <span class="pc"></span>
+                        <span class="mobile"></span>
+                    </div>
+                </div>
+                <div class="article-inner2">
+                    <img src="./img/whale/ww_01_on.gif" alt="이미지">
+                </div>
+            </div>
+        </article>
+        <!-- article -->
+        <article>
+            <div class="container">
+                <div class="article-inner2">
+                    <img src="./img/whale/ww_01_quick.gif" alt="이미지">
+                </div>
+                <div class="article-inner">
+                    <h3 class="title">사이드바</h3>
+                    <div class="contents">휴대폰 열지 말고 웨일에서 보세요!</div>
+                    <div class="how">사이드바, 어떻게 사용하나요?</div>
+                    <div class="how">어떤 확장앱이 있는지 궁금하다면?</div>
+                    <div>
+                        <span class="pc"></span>
+                        <span class="mobile"></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- article -->
+        <article>
+            <div class="container">
+                <div class="article-inner">
+                    <h3 class="title">쿽서치 & 번역</h3>
+                    <div class="contents">궁금한 부분? 드래그해서 바로 확인!</div>
+                    <div class="how">퀵서치, 어떤 기능까지 지원하나요?</div>
+                    <div class="how">번역의 자세한 기능이 궁금하다면?</div>
+                    <div>
+                        <span class="pc"></span>
+                        <span class="mobile"></span>
+                    </div>
+                </div>
+                <div class="article-inner2">
+                    <img src="./img/whale/ww_01_sidebar.gif" alt="이미지">
+                </div>
+            </div>
+        </article>
+        <!-- article -->
+        <article>
+            <div class="container">
+                <div class="article-inner2">
+                    <img src="./img/whale/ww_02_duletab.gif" alt="이미지">
+                </div>
+                <div class="article-inner">
+                    <h3 class="title">듀얼 탭 & 한글뷰어</h3>
+                    <div class="contents">뒤로 가기는 이제 그만!</div>
+                    <div class="how">듀얼 탭의 자세한 기능이 궁금하다면?</div>
+                    <div class="how">한글 문서, 웨일에서 어떻게 볼 수 있나요?</div>
+                    <div class="tx">
+                        <span class="pc">듀얼탭</span>
+                        <span class="pc">한글뷰어</span>
+                        <span class="mobile"></span>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- article -->
+        <article>
+            <div class="container">
+                <div class="article-inner">
+                    <h3 class="title">편리한 캡처</h3>
+                    <div class="contents">클릭 한 번으로 원하는 영역을 깔끔하게!</div>
+                    <div class="how">캡처의 자세한 기능이 궁금하다면?</div>
+                    <div>
+                        <span class="pc"></span>
+                        <span class="mobile"></span>
+                    </div>
+                </div>
+                <div class="article-inner2">
+                    <img src="./img/whale/ww_01_capture.gif" alt="이미지">
+                </div>
+            </div>
+        </article>
+        <!-- article -->
+        <article class="www">
+            <div class="banner">
+                <img src="./img/whale/whywewhale.gif" alt="whywewhale">
+                <span> <a href="#">다운로드</a> </span>
+            </div>
+        </article>
+    </section>
+    <!-- main -->
+    <footer>
+        <div class="container">
+            <span>
+                <img src="./img/whale/logo_whale_gray.svg" alt="Naver whale">
+            </span>
+            <ul>
+                <li>이용약관</li>
+                <li>개인정보 처리방침</li>
+                <li>Naver Whale 개인정보 보호를 위한 백서</li>
+                <li>제휴 제안</li>
+                <li>고객센터</li>
+                <li>© NAVER Corp.</li>
+            </ul>
+            <p> <a href="#">베타 다운로드</a> </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -141,6 +141,11 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
           background-color: rgba(176, 167, 252, 0.6);
       }
   }
+  &.brown {
+    &::before {
+        background-color: rgba(196, 236, 14, 0.6);
+    }
+  }
 }
 
 @for $i from 1 through 20 {

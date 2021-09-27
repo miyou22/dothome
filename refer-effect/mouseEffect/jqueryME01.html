@@ -202,68 +202,31 @@
         });
         //마우스 움직이기
         $(window).mousemove(function(e){
-            // $(".cursor").css("left","100px");
-            // $(".cursor").css("top","100px");
-            // $(".cursor").css({"left":"100px", "top":"100px"});
-            // $(".cursor").css({left:"100px", top:"100px"});
-            // $(".cursor").css({left:100, "background-color":100});
-            // $(".cursor").css({left:100, backgroundColor:100});
-            
             $(".cursor").css({ left: e.clientX - 25, top: e.clientY - 25});
         });
-        // $(".mouseCont .style1").hover(function(){
-        //     $(".cursor").addClass("style1");
-        // }, function(){
-        //     $(".cursor").removeClass("style1");
-        // });
-        // $(".mouseCont .style2").hover(function(){
-        //     $(".cursor").addClass("style2");
-        // }, function(){
-        //     $(".cursor").removeClass("style2");
-        // });
-        // $(".mouseCont .style3").hover(function(){
-        //     $(".cursor").addClass("style3");
-        // }, function(){
-        //     $(".cursor").removeClass("style3");
-        // });
-        // $(".mouseCont .style4").hover(function(){
-        //     $(".cursor").addClass("style4");
-        // }, function(){
-        //     $(".cursor").removeClass("style4");
-        // });
-        // $(".mouseCont .style5").hover(function(){
-        //     $(".cursor").addClass("style5");
-        // }, function(){
-        //     $(".cursor").removeClass("style5");
-        // });
-        // $(".mouseCont .style6").hover(function(){
-        //     $(".cursor").addClass("style6");
-        // }, function(){
-        //     $(".cursor").removeClass("style6");
-        // });
-        //for문
-        // for( let i=1; i<=6; i++ ){
-        //     $(".mouseCont .style"+i).hover(function(){
-        //         $(".cursor").addClass("style"+i);
-        //     }, function(){
-        //         $(".cursor").removeClass("style"+i);
-        //     });
-        // }
-        //each()
-        // $(".mouseCont span").each((index, element) => {
-        //     $(element).hover(function(){
-        //         $(".cursor").addClass("style"+ (index+1));
-        //     }, function(){
-        //         $(".cursor").removeClass("style"+(index+1));
-        //     });
-        // });
-        //attr()
+            $(".mouseCont .style1").hover(function(){
+                $(".cursor").addClass("style1");
+            }, function(){
+                $(".cursor").removeClass("style1");
+            });
+            $(".mouseCont .style2").hover(function(){
+                $(".cursor").addClass("style2");
+            }, function(){
+                $(".cursor").removeClass("style2");
+            });
         $(".mouseCont span").hover(function(){
             $(".cursor").addClass($(this).attr("class"));
         }, function(){
             $(".cursor").removeClass($(this).attr("class"));
         });
 
+        
+        window.onload = function() {
+         //init();
+        //animate();
+        agentCheak();
+        modal();
+    }
 </script>
   
 <!--//script-->

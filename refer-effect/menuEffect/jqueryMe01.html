@@ -238,12 +238,12 @@
    const tabBtn = $(".tab-btn ul li");   //5개의 버튼을 변수에 할당
    const tabCont = $(".tab-cont > div");  //5개의 컨텐츠를 변수에 할당
 
-   //1. 버튼을 클릭하면 클릭한 버튼한테 active 추가
-   //2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
-   //3. 버튼 인덱스 설정
-   //4. 1번째 버튼은 1번째 컨텐츠 연결
-   //5. 모든 컨텐츠를 안보이게 설정
-   //6. 클릭한 버튼의 해당 컨텐츠만 보이게 설정
+    //1. 버튼을 클릭하면 클릭한 버튼한테 active 추가
+    //2. 버튼을 클릭하지 않은 다른 버튼은 active 제거
+    //3. 버튼 인덱스 설정
+    //4. 1번째 버튼은 1번째 컨텐츠 연결
+    //5. 모든 컨텐츠를 안보이게 설정
+    //6. 클릭한 버튼의 해당 컨텐츠만 보이게 설정
 
    tabBtn.click(function(){
        let target = $(this);
@@ -254,6 +254,13 @@
        tabCont.css("display", "none");
        tabCont.eq(index).css("display", "block");
    });
+
+   window.onload = function() {
+         //init();
+        //animate();
+        agentCheak();
+        modal();
+    }
 </script>
   
 <!--//script-->
