@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        @font-face {
+            font-family: 'DungGeunMo';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *, *:before, *:after {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        body {
+            font-family: 'DungGeunMo';
+            background-color: #f6f6f6;
+            background-image:
+            linear-gradient(90deg, #cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(#cdcccc 0px, #cdcccc 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(#e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px,  transparent 100px),
+            linear-gradient(transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
+            linear-gradient(90deg, #e0e0e0 0px, #e0e0e0 1px, transparent 1px, transparent 99px, #e0e0e0 99px, #e0e0e0 100px),
+            linear-gradient(90deg, transparent 0px, transparent 5px, #f6f6f6 5px, #f6f6f6 95px, transparent 95px, transparent 100px),
+            linear-gradient(transparent 0px, transparent 1px, #f6f6f6 1px, #f6f6f6 99px, transparent 99px, transparent 100px),
+            linear-gradient(#cdcccc, #cdcccc);
+            background-size:100px 100%, 100% 100px, 100% 10px, 10px 100%, 100% 100px, 100px 100%, 100px 100%, 100px 100px, 100px 100px;
+            padding: 100px 0;
+        }
+        header {
+            position: fixed;
+            left: 0; top: 0;
+            width: 100%;
+            background: #262626;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            z-index: 10;
+        }
+        header::before {
+            content: '';
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            border: 4px ridge #a3a3a3;
+            position: absolute;
+            left: 5px; top: 5px;
+            z-index: -1;
+        }
+        header h1 {
+            padding: 5px 30px 5px 20px;
+        }
+        nav ul {
+            display: flex;
+        }
+        nav li {
+            margin-right: 30px;
+        }
+        nav li a {
+            color: rgb(171, 171, 171);
+        }
+        nav li a:hover {
+            border-bottom: 1px solid rgb(171, 171, 171);
+        }
+        nav li.active a {
+            color: #fff;
+        }
+        nav li.active:hover a {
+            border-bottom: 1px solid #fff;
+        }
+        .ham {
+            position: absolute;
+            right: 20px; top: 16px;
+            cursor: pointer;
+            width: 30px; height: 30px;
+            display: none;
+        }
+        .ham span {
+            width: 20px; height: 3px;
+            background: #fff;
+            display: block;
+            position: absolute;
+            left: 5px; top: 13px;
+        }
+        .ham span::before {
+            content: '';
+            width: 20px; height: 3px;
+            background: #fff;
+            position: absolute;
+            left: 0; top: 7px;
+        }
+        .ham span::after {
+            content: '';
+            width: 20px; height: 3px;
+            background: #fff;
+            position: absolute;
+            left: 0; bottom: 7px;
+        }
+
+        .quizWrap {
+            max-width: 500px;
+            width: 100%;
+            background: #fff;
+            margin: 30px auto;
+            border: 8px ridge #cacaca;
+        }
+        .quizWrap h2 {
+            font-size: 14px;
+            text-align: center;
+            background: #cacaca;
+            color: #3b3b3b;
+            border: 3px ridge #cacaca;
+            padding: 3px;
+            position: relative;
+        }
+        .quizWrap h2::before {
+            content: '';
+            position: absolute;
+            left: 2px; top: 3px;
+            width: 15px; height: 15px;
+            background: url(dot.jpg) no-repeat;
+            background-size: cover;
+        }
+        .quizWrap h2::after {
+            content: '';
+            position: absolute;
+            right: 2px; top: 2px;
+            width: 35px; height: 15px;
+            background: url(dot.jpg) no-repeat -14px;
+            background-size: cover;
+        }
+        .quizConfirm {
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .question__quiz {
+            border: 4px ridge #cacaca;
+        }
+        .question__title {
+            padding: 20px;
+            font-size: 34px;
+            border-bottom: 6px ridge #cacaca;
+        }
+        .question__title__num {
+            color: #A5E151;
+            font-size: 34px;
+            text-shadow: 1px 1px 1px #000;
+        }
+        .question__title__num::after {
+            content: '.';
+        }
+        .question__title__ask {
+            font-size: 24px;
+            line-height: 1.4;
+        }
+        .question__answer {
+            background: #E8E7E8;
+            padding: 20px;
+        }
+        .question__answer__confirm {
+            background: #cacaca;
+            text-align: center;
+            padding: 13px 20px;
+            border: 6px groove #fff;
+            font-size: 22px;
+            text-shadow: 1px 1px 1px #fff;
+            width: 100%;
+            font-family: 'DungGeunMo';
+        }
+        .question__answer__confirm:active {
+            background: #a3a3a3;
+        }
+        .question__answer__view {
+            text-align: center;
+            border: 6px groove #fff;
+            padding: 13px 20px;
+            font-size: 22px;
+            text-shadow: 1px 1px 1px #fff;
+        }
+        .question__answer__ex {
+            padding: 20px;
+            line-height: 1.4;
+        }
+        .question__answer__selects {
+            padding-bottom: 10px;
+        }
+        .question__answer__selects label {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        .question__answer__selects label span {
+            font-size: 20px;
+            line-height: 1;
+            padding: 11px 35px 11px 50px;
+            border-radius: 50px;
+            position: relative;
+            min-height: 40px;
+        }
+        .question__answer__selects label span:hover {
+            background-color: #d6ecb6;
+        }
+        .question__answer__selects label span::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 3px #000;
+            position: absolute;
+            left: 7px; top: 6px;
+            transition: 0.25s ease;
+        }
+        .question__answer__selects label input {
+            position: absolute;
+            left: -9999px;
+        }
+        .question__answer__selects input:checked + span {
+            background-color: #d6ecb6;   
+        }
+        .question__answer__selects input:checked + span:before {
+            box-shadow: inset 0 0 0 10px #A5E151;
+        }
+        .question__answer__selects p {
+            line-height: 1.4;
+            font-size: 16px;
+        }
+
+        @media (max-width: 1200px){
+            .ham {display: block;}
+            nav {
+                position: absolute;
+                top: 60px; left: 0;
+                background: #262626;
+                width: 100%;
+                display: none;
+            }
+            nav.show {
+                display: block;
+            }
+            nav ul {
+                display: block;
+                position: relative;
+                padding: 20px;
+                z-index: 1;
+            }
+            nav ul::before {
+                content: '';
+                width: calc(100% - 10px);
+                height: calc(100% - 10px);
+                border: 4px ridge #a3a3a3;
+                position: absolute;
+                left: 5px; top: 5px;
+                z-index: -1;
+            }
+            nav li {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Quiz</h1>
+        <nav>
+            <ul>
+                <li><a href="quiz01.html">주관식 한 문제</a></li>
+                <li><a href="quiz02.html">주관식 여러 문제</a></li>
+                <li class="active"><a href="quiz03.html">객관식 한 문제</a></li>
+                <li><a href="quiz04.html">객관식 여러 문제</a></li>
+                <li><a href="quiz05.html">객관식 여러 문제 : 이미지 슬라이드</a></li>
+            </ul>
+        </nav>
+        <div class="ham">
+            <span></span>
+        </div>
+    </header>
+
+    <main id="quiz">
+        <!-- <div class="quizWrap">
+            <h2>넌센스 퀴즈</h2>
+            <div class="question__quiz">
+                <h3 class="question__title">
+                    <span class="question__title__num"></span>
+                    <span class="question__title__ask"></span>
+                </h3>
+                <div class="question__answer">
+                    <div class="question__answer__selects">
+                        <label for="select1">
+                            <input class="select" type="radio" name="select" id="select1" value="1">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select2">
+                            <input class="select" type="radio" name="select" id="select2" value="2">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select3">
+                            <input class="select" type="radio" name="select" id="select3" value="3">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select4">
+                            <input class="select" type="radio" name="select" id="select4" value="4">
+                            <span class="choice"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </main>
+
+    <footer class="quizConfirm">
+        <button class="question__answer__confirm">정답 확인하기</button>
+        <div class="question__answer__view"></div>
+        <div class="question__answer__ex"></div>
+    </footer>
+
+    <script>
+        //선택자
+        const quiz = document.querySelector("#quiz");
+        const quizWrap = document.querySelector(".quizWrap");
+        const questionQuiz = document.querySelector(".question__quiz");
+        const questionAnswerConfirm = document.querySelector(".question__answer__confirm");
+        const questionAnswerView = document.querySelector(".question__answer__view");
+        const questionAnswerEx = document.querySelector(".question__answer__ex");
+        
+        //문제 정보
+        const quizInfo = [
+            {
+                quizNum : 1,
+                quizAsk : "눈이 부시지 않고 조도가 균일하며, 그림자가 없는 부드러운 침실이나 병실 등 휴식공간에 사용되는 조명방법은?",
+                quizChoice : {
+                    1: "전반확산조명", 
+                    2: "간접조명", 
+                    3: "직접조명", 
+                    4: "반간접조명"
+                },
+                quizAnswer : 2,
+                quizEx : "간접조명- 광원에서 나온 빛을 천장이나 벽에 부딪혀 확산된 반사광으로 비추는 조명 방식. 효율은 떨어지지만 그늘짐이나 눈부심이 없고 조도분포가 균일하여 차분한 분위기를 연출할 수 있다."
+            },
+            {
+                quizNum : 2,
+                quizAsk : "다음 중 빛의 혼합에 대한 결과로 맞는 것은?",
+                quizChoice : {
+                    1: "Green + Cyan = Black", 
+                    2: "Green + Blue = Magenta", 
+                    3: "Red + Green = Yellow", 
+                    4: "Red + Blue = Cyan"
+                },
+                quizAnswer : 3,
+                quizEx : "1. Black는 감산혼합으로 Cyan, Magenta, Yellow를 모두 혼합한 색입니다.<br>2. Magenta : Red + Blue<br>4. Cyan : Green + Blue"
+            },
+            {
+                quizNum : 3,
+                quizAsk : "다음 형태(form) 중 반드시 수학적 법칙과 함께 생기며, 가장 뚜렷한 질서를 갖는 것은?",
+                quizChoice : {
+                    1: "유기적 형태", 
+                    2: "기하학적 형태", 
+                    3: "내부적 형태	", 
+                    4: "자연적 형태"
+                },
+                quizAnswer : 2,
+                quizEx : "수학, 산술은 무조건 기하학적 형태이다."
+            },
+            {
+                quizNum : 4,
+                quizAsk : "부분과 부분 또는 부분과 전체 사이 안정된 관련성을 지니며, 서로 함께 속해있는 것처럼 보이는 디자인의 원리는?",
+                quizChoice : {
+                    1: "비례", 
+                    2: "조화", 
+                    3: "균형", 
+                    4: "강조"
+                },
+                quizAnswer : 2,
+                quizEx : "안정 및 속하다는 조화라고 외워라!"
+            },
+            {
+                quizNum : 5,
+                quizAsk : "다음 중 색채에 대한 설명으로 틀린 것은?",
+                quizChoice : {
+                    1: "색채는 물체의 지각을 수반하고, 심리적 성질을 갖는다.", 
+                    2: "물체가 발광하지 않고 받아서 반사되는 색이다.", 
+                    3: "색채의 분류는 무채색, 유채색, 중성색 3가지가 있다.", 
+                    4: "리가 일상생활에서 보는 색을 색채라고 한다."
+                },
+                quizAnswer : 3,
+                quizEx : "색채의 분류에는무채색,유채색 2가지가 있다"
+            },
+            {
+                quizNum : 6,
+                quizAsk : "다음 중 커뮤니케이션 디자인의 설명으로 틀린 것은?",
+                quizChoice : {
+                    1: "라틴어 ‘Communicare'를 어원으로 한다.", 
+                    2: "두 개 이상의 개체가 기호를 매개로 무언가를 공유하는 것이다.", 
+                    3: "운동과 시선을 중시하는 디자인이다.", 
+                    4: "사람과 사람 사이에 기호에 의해서 의미를 전달하는 과정이다."
+                },
+                quizAnswer : 3,
+                quizEx : "3. 이런디자인은 기능적 디자인이라고 한다."
+            },
+            {
+                quizNum : 7,
+                quizAsk : "먼셀의 색입체에 대한 설명으로 틀린 것은?",
+                quizChoice : {
+                    1: "색상, 명도, 채도의 3속성 2차원 좌표에서 색 감각으로 보는데 용이하다.", 
+                    2: "CIE의 색표와 연관성이 용이하다.", 
+                    3: "실제로 사용하고 있는 모든 물체색이 색입체에 포함되어 있다.", 
+                    4: "모든 색상의 채도 위치가 달라 배색 체계를 응용하기 용이하다."
+                },
+                quizAnswer : 4,
+                quizEx : "4. 모든 색상의 채도 위치가 달라 배색 체계를 응용하기 어렵다"
+            },
+            {
+                quizNum : 8,
+                quizAsk : "다음 중 디자인의 의미에 관한 설명으로 틀린 것은?",
+                quizChoice : {
+                    1: "디자인이란 일반적으로 하나의 그림 또는 모형으로써 그것을 전개시키는 계획 및 설계라고 할 수 있다.", 
+                    2: "디자인 해위란 인간이 좀 더 사용하기 쉽고, 아름답고 쾌적한 생활환경을 창조하는 조형 행위를 말한다.", 
+                    3: "프랑스어의 데생(dessin)과 같은 어원으로 르네상스시대 이후 오랫동안 데생과 같이 가벼운 의미로 사용되었다.", 
+                    4: "1940년대 당시 근대 사상에 입각하여 바우하우스에서 디자인 이념을 세우고 디자인(design)이라는 용어를 처음 사용하였다."
+                },
+                quizAnswer : 4,
+                quizEx : "4. 디자인의 유래는 라틴어에서 유래되었다. 즉 겁나 오래됨"
+            },
+            {
+                quizNum : 9,
+                quizAsk : "바우하우스의 설립자이며, 근대 건축과 디자인 운동의 대표적지도자는?",
+                quizChoice : {
+                    1: "모리스(MORRIS, WILLIAM)", 
+                    2: "그로피우스(GROPIUS, WALTER)", 
+                    3: "로위(ROWEY, RAYMOND)", 
+                    4: "팹스너(PEVSNER, NIKOLAUS)"
+                },
+                quizAnswer : 2,
+                quizEx : "2. 그로피우스가 대표적 지도자이다."
+            },
+            {
+                quizNum : 10,
+                quizAsk : "시각적으로 안정감을 느끼게 하는 디자인의 원리는?",
+                quizChoice : {
+                    1: "균형", 
+                    2: "불규칙", 
+                    3: "변화", 
+                    4: "비대칭"
+                },
+                quizAnswer : 1,
+                quizEx : "1. 안정감은 변하지 않고 규칙적이며 대칭이다."
+            },
+            {
+                quizNum : 11,
+                quizAsk : "디자인의 원리에 대한 설명 중 옳지 않는 것은?",
+                quizChoice : {
+                    1: "통일은 조화로운 형, 색, 질감이 공통된 특징을 갖고 있다.", 
+                    2: "대칭은 균형의 전형적인 구성형식이며 좌우대칭, 방사대칭이 있다.", 
+                    3: "반복은 동일한 요소나 대상 등을 두 개 이상 나열시켜 율동감을 표현하는 것으로 시각적으로 힘의 강약효과가 있다.", 
+                    4: "점이는 일정한 방향을 유지하나 크기와 형태가 다른 경우를 의미한다."
+                },
+                quizAnswer : 4,
+                quizEx : "점이(漸移)'란 '차차 자리를 옮아가다'라는 뜻으로 '점진적인 변화'를 뜻하며, 흔히 '그라데이션(Gradation)'이라고 합니다."
+            },
+            {
+                quizNum : 12,
+                quizAsk : "디자인을 할 때 목적에 합당한 수단을 썼는지에 대한 디자인의 조건은?",
+                quizChoice : {
+                    1: "합목적성", 
+                    2: "독창성", 
+                    3: "심미성", 
+                    4: "경제성"
+                },
+                quizAnswer : 1,
+                quizEx : "1. 합목적성이란 목적에 합당한 수단을 썻는지를 말한다."
+            },
+            {
+                quizNum : 13,
+                quizAsk : "신비함, 우아함, 고귀함, 신성함, 예술, 창조 등이 연상되는 색은?",
+                quizChoice : {
+                    1: "빨강(赤)", 
+                    2: "자(紫)", 
+                    3: "청(靑", 
+                    4: "검정(黑)"
+                },
+                quizAnswer : 2,
+                quizEx : "자색은 신비함, 우아함, 고귀함등이 연상되는 색이다."
+            },
+            {
+                quizNum : 14,
+                quizAsk : "윌리암 모리스를 중심으로 일어난 미술공예운동의 배경으로 옳은 것은?",
+                quizChoice : {
+                    1: "기계화와 대량생산으로 인한 생활용품의 품질저하", 
+                    2: "기계화에 의한 장비설치로 생활용품의 가격 폭등", 
+                    3: "기계화로 생활용품에 화려하고 복잡한 장식을 사용할 수 없게 됨", 
+                    4: "대량생산으로 생활용품의 가격 폭락"
+                },
+                quizAnswer : 1,
+                quizEx : "미술공예운동이 일어난 원인은 기계화와 대량생산으로 인한 생활용품의 품질저하로 윌리엄 모리스에 의하여 이런 운동이 창시되었습니다."
+            },
+            {
+                quizNum : 15,
+                quizAsk : "배색에 대한 설명으로 틀린 것은?",
+                quizChoice : {
+                    1: "사물의 성능이나 기능에 부합되는 배색을 하여 주변과 어울릴 수 있도록 한다.", 
+                    2: "사용자 성별, 연령을 고려하여 편안한 느낌을 가질 수 있도록 한다.", 
+                    3: "색의 이미지를 통해서 전달하려는 목적이나 기능을 기준으로 배색한다.", 
+                    4: "목적에 관계없이 아름다움을 우선으로 하고 타 제품에 비해 눈에 띄는 색으로 배색하여야 한다."
+                },
+                quizAnswer : 4,
+                quizEx : "배색(配色)은 두 가지 이상의 색상을 잘 어울리도록 배치하는 일이다"
+            },
+            {
+                quizNum : 16,
+                quizAsk : "다음 중 동화현상이 일어날 수 있는 상황으로 맞는 것은?",
+                quizChoice : {
+                    1: "주위를 둘러싼 면적이 클 때", 
+                    2: "좁은 시야에 복잡한 색채 무늬들로 구성되었을 때", 
+                    3: "서로 인접한 색의 색상차가 클 때", 
+                    4: "빨강과 보라를 나란히 붙여 놓았을 때"
+                },
+                quizAnswer : 2,
+                quizEx : "좁은 시야에 복잡한 색채 무늬들로 구성되었을때 동화현상이 일어난다."
+            },
+            {
+                quizNum : 17,
+                quizAsk : "그래픽의 표현 요소 중 회화나 사진을 비롯하여 도형, 도표등 문자 이외의 시각화된 것을 무엇이라 하는가?",
+                quizChoice : {
+                    1: "일러스트레이션", 
+                    2: "포스터", 
+                    3: "신문광고", 
+                    4: "표지"
+                },
+                quizAnswer : 1,
+                quizEx : "그래픽의 표현 요소 중 회화나 사진을 비롯하여 도형, 도표등 문자 이외의 시각화된 것을 일러스트레이션이라고 한다."
+            },
+            {
+                quizNum : 18,
+                quizAsk : "디자인의 형식적 요소에 포함되지 않는 것은?",
+                quizChoice : {
+                    1: "형", 
+                    2: "색", 
+                    3: "질감", 
+                    4: "용도"
+                },
+                quizAnswer : 4,
+                quizEx : "4. 용도는 디자인의 형식적 요소가 아니다."
+            },
+            {
+                quizNum : 19,
+                quizAsk : "다음이 설명하고 있는 색의 혼합은?<br>[혼합된 색의 명도가 혼합 이전의 평균 명도보다 더 높아지는 경우를 말하며, 플러스(plus)혼합이라고도 한다.",
+                quizChoice : {
+                    1: "감산 혼합", 
+                    2: "가산 혼합", 
+                    3: "병치 혼합", 
+                    4: "중간 혼합"
+                },
+                quizAnswer : 2,
+                quizEx : "플러스는 더하기 더하기를 한문으로 하면 가산이다."
+            },
+            {
+                quizNum : 20,
+                quizAsk : "배색의 조건에 대한 설명으로 틀린 것은?",
+                quizChoice : {
+                    1: "사물의 용도나 기능에 부합되는 배색을 해야 한다.", 
+                    2: "색이 주는 심리적 효과를 고려해야 한다.", 
+                    3: "인간적인 요인으로 계획자의 개인적 특성에 맞추어 배색 한다.", 
+                    4: "환경적 요인을 충분히 고려하여 배색 한다."
+                },
+                quizAnswer : 3,
+                quizEx : "배색(配色)은 두 가지 이상의 색상을 잘 어울리도록 배치하는 일이다"
+            },
+            {
+                quizNum : 21,
+                quizAsk : "소스 코드가 HTML 문서 내에 포함되어 사용자의 브라우저에서 직접 번역되어 수행되는 것은?",
+                quizChoice : {
+                    1: "자바 애플리케이션", 
+                    2: "자바 스크립트", 
+                    3: "자바 시크리트", 
+                    4: "자바 빈즈"
+                },
+                quizAnswer : 2,
+                quizEx : "1,3,4는 이세상에 없다."
+            },
+            {
+                quizNum : 22,
+                quizAsk : "자바스크립트의 Document 객체에 포함되어 있는 객체가 아닌 것은?",
+                quizChoice : {
+                    1: "Anchor 객체", 
+                    2: "Area 객체", 
+                    3: "Link 객체", 
+                    4: "Location 객체"
+                },
+                quizAnswer : 4,
+                quizEx : "4. window객체이다."
+            },
+            {
+                quizNum : 23,
+                quizAsk : "HTML의 태그(tag)에 관한 설명으로 옳은 것은?",
+                quizChoice : {
+                    1: "태그는 시작 태그만 필요하다.", 
+                    2: "태그의 이름은 대소문자를 구분하지 않는다.", 
+                    3: "태그를 중첩하여 사용할 수 없다.", 
+                    4: "여러 개의 공백 문자들은 각기 달리 인식된다."
+                },
+                quizAnswer : 2,
+                quizEx : "1.닫는태그가 필요한 태그도 있다. 3. 중첩if문 생각하셈. 4.공백문자는 한개만"
+            },
+            {
+                quizNum : 24,
+                quizAsk : "다음 중 웹브라우저의 기능이 아닌 것은?",
+                quizChoice : {
+                    1: "웹페이지 저장 및 인쇄", 
+                    2: "전자우편 및 뉴스그룹 이용", 
+                    3: "텍스트, 이미지 및 멀티미디어 지원 기능", 
+                    4: "인터넷 응용프로그램 제작 기능"
+                },
+                quizAnswer : 4,
+                quizEx : "4. 웹브라우저로 응용프로그램 제작이 가능하면 vs코드는 필요없겠지?"
+            },
+            {
+                quizNum : 25,
+                quizAsk : "국제기구를 나타내는 최상위 도메인은?",
+                quizChoice : {
+                    1: "mil", 
+                    2: "org", 
+                    3: "net", 
+                    4: "int"
+                },
+                quizAnswer : 4,
+                quizEx : "mil : 미국 연방군사기관 <br> org : 비영리단체 <br> net : 네트워크 관리기관<br>int : un처럼 국제적인특성을 갖는 기구나 연구소"
+            },
+            {
+                quizNum : 26,
+                quizAsk : "다음 중 LAN이 물리적 통신망 구조가 아닌 것은?",
+                quizChoice : {
+                    1: "성(star)형", 
+                    2: "버스(bus)형", 
+                    3: "십자(cross)형", 
+                    4: "링(ring)형"
+                },
+                quizAnswer : 3,
+                quizEx : "십자형은 교회에서나 사용할것이다."
+            },
+            {
+                quizNum : 27,
+                quizAsk : "전자우편 서비스 헤더 중 숨은 참조자를 나타내는 것은?",
+                quizChoice : {
+                    1: "Rcc", 
+                    2: "Bcc", 
+                    3: "Bc", 
+                    4: "Cc"
+                },
+                quizAnswer : 2,
+                quizEx : "전자우편 서비스 헤더는 Bcc 외워라."
+            },
+            {
+                quizNum : 28,
+                quizAsk : "IP 주소는 숫자로 구성되어 있기 때문에 실제로 사용자가 이용하기에는 불편하다. 이를 대신하여 쉽게 기억할 수 있고, 이용하기 편리하도록 만든 것은?",
+                quizChoice : {
+                    1: "파일 이름", 
+                    2: "도메인 이름", 
+                    3: "주소 클래스", 
+                    4: "패킷"
+                },
+                quizAnswer : 2,
+                quizEx : "ip주소(숫자)->글자 무조건 도메인에 관한 설명"
+            },
+            {
+                quizNum : 29,
+                quizAsk : "Anonymous FTP 사이트를 대상으로 해서 원하는 파일의 위치를 알려 주는 인터넷 서비스는?",
+                quizChoice : {
+                    1: "Archie", 
+                    2: "Whois", 
+                    3: "Finger", 
+                    4: "Veronica"
+                },
+                quizAnswer : 1,
+                quizEx : "Archie(아치 혹은 아키 서비스); 익명 파일 전송 서버를 대상으로 파일을 검색할 수 있도록 지원해주는 서비스.<br>Anonymous FTP; FTP서버의 계정이 없어도 아무나 접근하여 파일 전송을 지원받을 수 있는 서비스이다.<br>사용계정명은 anonymous이며, 공개파일들은 일반적으로 pub라는 디렉터리내에 저장한다."
+            },
+            {
+                quizNum : 30,
+                quizAsk : "검색엔진과 그에 해당된 서비스가 틀리게 연결된 것은?",
+                quizChoice : {
+                    1: "야후 - 거기", 
+                    2: "옥션 - 메일 및 메신저", 
+                    3: "네이버 - 지식검색", 
+                    4: "네이트 - 보는 검색 체험하기"
+                },
+                quizAnswer : 2,
+                quizEx : "이제 이문제는 안나온다. 왜냐하면 야후가 망했기 때문이다."
+            },
+            {
+                quizNum : 31,
+                quizAsk : "범위가 넓지 않은 일정 지역 내에서 다수의 컴퓨터나 OA기기 등을 속도가 빠른 통신선로로 연결하여 기기 간에 통신이 가능하도록 하는 근거리 통신망을 무엇이라 하는가?",
+                quizChoice : {
+                    1: "LAN", 
+                    2: "MAN", 
+                    3: "WAN", 
+                    4: "VAN"
+                },
+                quizAnswer : 1,
+                quizEx : "근거리 통신망은 무조건LAN이 답이다."
+            },
+            {
+                quizNum : 32,
+                quizAsk : "다음이 설명하고 있는 웹페이지 검색 엔진은?<br>-여러 검색 엔진을 한 곳에 모아두고 마음에 드는 것을 선택하여 검색 할 수 있게 해 주는 검색엔진<br>-각 분야별로 전문 검색 엔진들을 제공<br>보다 자세한 검색 기능",
+                quizChoice : {
+                    1: "통합형 검색 방식", 
+                    2: "웹 디렉터리 방식", 
+                    3: "웹 인덱스 방식", 
+                    4: "메타형 검색 방식"
+                },
+                quizAnswer : 4,
+                quizEx : "메타검색은 1개의 키워드 입력으로 여러 검색 서비스를 통해 검색을 대행하는 일종의 횡단 검색 서비스입니다."
+            },
+            {
+                quizNum : 33,
+                quizAsk : "웹 페이지 디자인 시 시각적 요소 중 색상 및 패턴에 관한 설명으로 가장 거리가 먼 것은?",
+                quizChoice : {
+                    1: "주변 상황과 대비되는 색채를 사용함으로써 특정 정보를 강조한다.", 
+                    2: "서로 상이한 정보 간에는 동일한 색상을 사용하여 정보의 성격과 내용에 따라 체계적인 색채 계획을 적용한다.", 
+                    3: "명도와 채도를 갖게 함으로써 다른 색상을 사용하더라도 상호 간에 조화를 이룰 수 있어야 한다.", 
+                    4: "공간과 문화를 초월해 공통점을 갖는 색채의 상징성을 이용하여 전달력을 상승시킬 수 있다."
+                },
+                quizAnswer : 2,
+                quizEx : "사로 다른 정보는 다른 색상을 써야지!"
+            },
+            {
+                quizNum : 34,
+                quizAsk : "인터넷상에 산재해 있는 제반 정보를 미리 수집하고 이를 체계적으로 저장한 후, 사용자가 원하는 정보를 수시로 찾을 수 있도록 해주는 일종의 데이터베이스 관리시스템을 무엇이라 하는가?",
+                quizChoice : {
+                    1: "웹브라우저", 
+                    2: "메일링리스트", 
+                    3: "무료계정", 
+                    4: "검색엔진"
+                },
+                quizAnswer : 4,
+                quizEx : "db와 관련된 건 보기중 4번밖이 없음"
+            },
+            {
+                quizNum : 35,
+                quizAsk : "인터넷상의 WWW(월드와이드웹) 콘텐츠를 작성하도록 해주는 언어는?",
+                quizChoice : {
+                    1: "IP", 
+                    2: "HTTP", 
+                    3: "HTML", 
+                    4: "URL"
+                },
+                quizAnswer : 3,
+                quizEx : "ip,url은 주소, http는 통신규약 html은 언어"
+            },
+            {
+                quizNum : 36,
+                quizAsk : "다음 중 자바스크립트의 변수에 대한 설명으로 틀린 것은?",
+                quizChoice : {
+                    1: "데이터의 형을 구분하여 선언하여야 한다.", 
+                    2: "변수명의 첫 문자는 영문자 또는 _로 시작한다.", 
+                    3: "변수명은 영문자의 대문자와 소문자를 구분한다.", 
+                    4: "예약어는 변수명으로 사용할 수 없다."
+                },
+                quizAnswer : 1,
+                quizEx : "자바스크립트에서 형을 구분해서 썻니? var, let을 생각해라"
+            },
+            {
+                quizNum : 37,
+                quizAsk : "인터넷 익스플로러 6.0 인터넷 옵션의 “내용 관리자”부분에 대한 설명으로 옳지 않은 것은?",
+                quizChoice : {
+                    1: "인증서 : 범주에 따른 등급을 조정할 수 있으며 그 등급에 해당하는 홈페이지로 이동할 수 있도록 추가 정보를 제공한다.", 
+                    2: "승인된 사이트 : 등급 지정에 관계없이 항상 볼 수 있거나 볼 수 없는 사이트를 지정할 수 있다.", 
+                    3: "일반 : 사용자 옵션과 감독자 암호를 지정할 수 있는 곳으로, 기본적으로 사용자가 제한된 내용만 보도록 표시되어 있다.", 
+                    4: "고급 : 사용자가 다른 등급 시스템을 적용하려고 할 때 이용된다."
+                },
+                quizAnswer : 1,
+                quizEx : "인증서는 본인인증과 비슷하다."
+            },
+            {
+                quizNum : 38,
+                quizAsk : "HTML의 문단 구성과 관련된 Tag와 그 용도에 대한 설명으로 옳지 않은 것은?",
+                quizChoice : {
+                    1: "&lt;BR&gt; : 줄을 바꿀 때 사용한다.", 
+                    2: "&lt;P&gt; : 문단을 바꿀 때 사용한다.", 
+                    3: "&lt;MID&gt;...&lt;/MID&gt; : 태그 사이에 있는 문단을 가운데로 정렬할 때 사용한다.", 
+                    4: "&lt;DIV&gt;...&lt;/DIV&gt; : 문서를 구분하여 문단별로 정렬할 때 사용한다."
+                },
+                quizAnswer : 3,
+                quizEx : "문단을 가운데로 정렬하는 태그는 &lt;center&gt;입니다"
+            },
+            {
+                quizNum : 39,
+                quizAsk : "자바스크립트의 장점으로 볼 수 없는 것은?",
+                quizChoice : {
+                    1: "컴파일 과정을 거치지 않기 때문에 신속한 개발을 할 수 있다.", 
+                    2: "웹상에서 인터렉티브한 웹페이지를 만드는데 많이 사용된다.", 
+                    3: "어떤 운영체제와 하드웨어에서도 작동하는 이식성이 높은 언어이다.", 
+                    4: "자바스크립트를 이용한 응용 프로그램은 브라우저가 제한하는 기능적 한계를 벗어날 수 있다."
+                },
+                quizAnswer : 4,
+                quizEx : "4. 기능적 한계를 벗어날수 없음."
+            },
+            {
+                quizNum : 40,
+                quizAsk : "웹페이지의 외형을 제어하기 위한 언어인 스타일시트(Style Sheet)에 대한 설명 중 적합하지 않은 것은?",
+                quizChoice : {
+                    1: "하나의 문서만 수정해도 한꺼번에 여러 페이지의 외형과 형식을 수정할 수 있다.", 
+                    2: "스타일시트에서 글꼴, 색상, 크기, 정렬 방식 등을 미리 지정하여 필요한 곳에 적용할 수 있다.", 
+                    3: "같은 스타일시트를 사용하는 문서에는 문서들의 일관성을 쉽게 유지할 수 있다.", 
+                    4: "웹페이지의 레이아웃 편집을 강화하여 브라우저나 플랫폼의 종류에 많은 제한이 따른다."
+                },
+                quizAnswer : 4,
+                quizEx : "css에관한 설명이다."
+            },
+            {
+                quizNum : 41,
+                quizAsk : "애니메이션에서 사용되는 정지화면 하나하나를 무엇이라 하는가?",
+                quizChoice : {
+                    1: "Frame", 
+                    2: "Key Frame", 
+                    3: "Tweening", 
+                    4: "Onion Skin"
+                },
+                quizAnswer : 1,
+                quizEx : "애니메이션은 3d그래픽이다. 정지화면 하나하나를 프레임이라고 한다."
+            },
+            {
+                quizNum : 42,
+                quizAsk : "웹(Web)상에서 애니메이션 사용을 저해하는 요소가 아닌 것은?",
+                quizChoice : {
+                    1: "데이터 스트리밍", 
+                    2: "대역폭의 한계", 
+                    3: "브라우저가 지원하지 못하는 낮은 사양의 컴퓨터", 
+                    4: "인터넷의 비동기성"
+                },
+                quizAnswer : 1,
+                quizEx : "데이터 스트리밍중에 너는 애니메이션을 사용하니?"
+            },
+            {
+                quizNum : 43,
+                quizAsk : "비트맵이미지에서 사용되는 픽셀(Pixel)에 대한 설명으로 옳지 않은 것은?",
+                quizChoice : {
+                    1: "디지털 이미지의 기본단위이다.", 
+                    2: "이미지는 여러 개의 픽셀들로 구성된다.", 
+                    3: "픽셀들은 프레임버퍼(frame buffer)에 저장된다.", 
+                    4: "픽셀 하나의 크기는 0.3514mm이다."
+                },
+                quizAnswer : 4,
+                quizEx : "픽셀 하나의 크기는 0.024cm 뭐 이딴 문제가 다있어..."
+            },
+            {
+                quizNum : 44,
+                quizAsk : "플래시와 관련된 파일 확장자가 아닌 것은?",
+                quizChoice : {
+                    1: ".fla", 
+                    2: ".swf", 
+                    3: ".spa", 
+                    4: ".pdf"
+                },
+                quizAnswer : 4,
+                quizEx : "pdf는 문서 확장자이다."
+            },
+            {
+                quizNum : 45,
+                quizAsk : "웹 디자인에 대한 설명 중 옳지 않은 것은?",
+                quizChoice : {
+                    1: "레이아웃(Lay-Out) 설계가 매우 중요하다.", 
+                    2: "사용자 인터페이스(Interface)를 고려해야 한다.", 
+                    3: "Text 중심의 디자인이 시각적 효과를 높여 준다.", 
+                    4: "멀티미디어 요소는 정보 전달의 효과를 극대화하기도 한다."
+                },
+                quizAnswer : 3,
+                quizEx : "디자인에서 text가 나오면 정답!"
+            },
+            {
+                quizNum : 46,
+                quizAsk : "다음 중 HTML에 대한 설명으로 옳지 않은 것은?",
+                quizChoice : {
+                    1: "HTML언어는 W3C를 기반으로 한다.", 
+                    2: "HTML은 Hyper Text Marking Language의 약자이다.", 
+                    3: "확장자는 html 또는 htm 이다.", 
+                    4: "HTML은 태그(Tag)로 구성되어 있다."
+                },
+                quizAnswer : 2,
+                quizEx : "HTML은 Hyper Text Markup Language의 약자이다"
+            },
+            {
+                quizNum : 47,
+                quizAsk : "컴퓨터 그래픽스(Computer Graphics)에 대한 정의로 틀린 것은?",
+                quizChoice : {
+                    1: "컴퓨터의 하드웨어와 소프트웨어를 이용하여 도형, 그림, 사진 이미지 등의 시각적 이미지를 만들어 내고 디지털화(Digitalize) 시키는 것이다.", 
+                    2: "컴퓨터 그래픽스는 크게 2D 그래픽스와 3D 그래픽스로 나눌 수 있다.", 
+                    3: "활용 범위가 매우 넓으며, 특히 영화나 영상물 등 의 멀티미디어 분야에서 가장 효과적으로 활용되고 있다.", 
+                    4: "전통적인 회화 방식을 응용하여 결과물을 디지털화 시킨 것은 제외한다."
+                },
+                quizAnswer : 4,
+                quizEx : "디지털화를 왜 제외함? 디지털화 무시함?"
+            },
+            {
+                quizNum : 48,
+                quizAsk : "축소형으로 입체 모델을 만들고 여기에 다른 기법을 병합하여 환상적인 장면을 만드는 애니메이션 특수 효과는?",
+                quizChoice : {
+                    1: "모핑 효과", 
+                    2: "로토스코핑 효과", 
+                    3: "미니어처 효과", 
+                    4: "페인팅 효과"
+                },
+                quizAnswer : 3,
+                quizEx : "축소는 작게 만드는것 보기중 축소, 작게 만드는것과 연관있는건 3번뿐이다."
+            },
+            {
+                quizNum : 49,
+                quizAsk : "웹의 구조적 측면에서 제작된 웹 사이트의 전형적인 웹 탐색구조 설명이 잘못된 것은?",
+                quizChoice : {
+                    1: "선형적 구조는 하나의 홈페이지에서 다음 홈페이지로 또 다음 홈페이지로 연결된 구조로 주제별 검색에 많이 사용된다.", 
+                    2: "계층적 구조는 하나의 홈페이지가 있고 그 홈페이지의 메인(Main)에 다양한 메뉴가 있어 주제어 검색에 많이 활용 된다.", 
+                    3: "복합적 구조는 선형적 구조와 계층적 구조를 혼합한 것으로 단어별 검색에 많이 사용된다.", 
+                    4: "그물형 연결 구조는 단순하고, 개별적인 간결한 구조로 대(큰)주제 검색에 많이 활용된다."
+                },
+                quizAnswer : 4,
+                quizEx : "그물형 연결구조는 겁나 복잡한 구조임."
+            },
+            {
+                quizNum : 50,
+                quizAsk : "캠코더에서 얻은 동영상클립을 편집하여 결과물을 얻기에 적합한 소프트웨어가 아닌 것은?",
+                quizChoice : {
+                    1: "Premiere", 
+                    2: "Movie Maker", 
+                    3: "Vegas", 
+                    4: "Media Player"
+                },
+                quizAnswer : 4,
+                quizEx : "Media Player는 재생 소프트웨어 입니다."
+            },
+            {
+                quizNum : 51,
+                quizAsk : "투명 효과를 줄 수 있는 파일 포맷끼리 짝지어진 것은?",
+                quizChoice : {
+                    1: "JPG, PNG", 
+                    2: "PNG, GIF", 
+                    3: "GIF, BMP", 
+                    4: "PNG, TIFF"
+                },
+                quizAnswer : 2,
+                quizEx : "jpg,bmp,tiff는 그림파일"
+            },
+            {
+                quizNum : 52,
+                quizAsk : "다음 중 컬러모드에 대한 설명으로 잘못된 것은?",
+                quizChoice : {
+                    1: "RGB Color는 화면용 이미지, 홈페이지, CD-ROM 타이틀, 게임 등에 사용한다.", 
+                    2: "Index Color는 색의 3속성인 색상, 채도, 명도를 바탕으로 색을 표현하는 방식이다.", 
+                    3: "CMYK Color는 인쇄를 통해 제작되는 출판물에 사용한다.", 
+                    4: "Gray scale은 흑백 이미지나 원고에 사용된다."
+                },
+                quizAnswer : 2,
+                quizEx : "인덱스 색상은 컴퓨터 메모리와 파일 저장 공간을 절약하고 디스플레이 새로 고침 및 파일 전송 속도를 높이기 위해 디지털 이미지의 색상을 제한된 방식으로 관리하는 기술입니다."
+            },
+            {
+                quizNum : 53,
+                quizAsk : "다음 설명에 해당하는 것은?<br>-검은 종이를 접거나 오려서 캐릭터와 배경의 형태를 만든 후 이것을 변화에 따라 순서대로 배열해 놓고 촬영하는 기법<br>캐릭터와 배경을 두꺼운 종이로 오려 제작하고, 그 뒤에서 조명을 비추어 그림자를 만든 후 촬영<br>-흑백의 강한 콘트라스트로 구성",
+                quizChoice : {
+                    1: "퍼펫 애니메이션", 
+                    2: "클레이메이션", 
+                    3: "로토스코핑 애니메이션", 
+                    4: "실루엣 애니메이션"
+                },
+                quizAnswer : 4,
+                quizEx : "그림자 나오면 무조건 실루엣"
+            },
+            {
+                quizNum : 54,
+                quizAsk : "웹에서 사용되는 타이포크래피의 특징에 대한 설명으로 옳지 않은 것은?",
+                quizChoice : {
+                    1: "타이포그래피는 문자의 모양과 배열을 의미하는 것으로 웹과 접목되면 다양한 표현이 가능해진다.", 
+                    2: "웹에서는 서체 사용에 제한이 없다.", 
+                    3: "웹의 타이포를 이용한 인터랙티브한 구성이 가능해 진다.", 
+                    4: "웹의 타이포는 동적이다."
+                },
+                quizAnswer : 2,
+                quizEx : "웹이라고 만능 아니다. 당연히 제한 있지."
+            },
+            {
+                quizNum : 55,
+                quizAsk : "웹페이지 제작을 도와주는 위지위그(WYSIWYG)프로그램이 아닌 것은?",
+                quizChoice : {
+                    1: "프론트페이지(FrontPage)", 
+                    2: "드림위버(Dreamweaver)", 
+                    3: "나모(Namo Web Editor)", 
+                    4: "피디에프(PDF : Portable Document Format)"
+                },
+                quizAnswer : 4,
+                quizEx : "피디에프는 문서파일이다."
+            },
+            {
+                quizNum : 56,
+                quizAsk : "웹디자인 프로세스 중 Pre-Production 단계에 해당되지 않는 것은?",
+                quizChoice : {
+                    1: "이미지 제작", 
+                    2: "디자인 계획 수립", 
+                    3: "콘셉트 구상", 
+                    4: "디자인 구체화"
+                },
+                quizAnswer : 1,
+                quizEx : "pre-producition은 준비 및 기획단계이다. 기획단계에서는 제작은 안한다."
+            },
+            {
+                quizNum : 57,
+                quizAsk : "웹 사이트를 제작하기 위한 이미지 소스를 얻는 과정으로 적절하지 않은 것은?",
+                quizChoice : {
+                    1: "사이트의 콘셉트에 맞추어 디지털 카메라로 사진을 찍는다.", 
+                    2: "타 사이트의 이미지를 복사하여 활용한다.", 
+                    3: "적절한 이미지가 없으면 이미지 판매 사이트에서 구입할 수 있다.", 
+                    4: "이미지 편집 프로그램을 사용하여 직접 이미지를 제작한다."
+                },
+                quizAnswer : 2,
+                quizEx : "2. 타 사이트의 이미지를 복사하여 무단으로 활용하게 된다면 저작권법에 걸리기 때문에"
+            },
+            {
+                quizNum : 58,
+                quizAsk : "컴퓨터그래픽스 시스템에 사용되는 입력장치에 해당 되지 않는 것은?",
+                quizChoice : {
+                    1: "트랙볼(track ball)", 
+                    2: "터치스크린(touch screen)", 
+                    3: "라이트펜(light pen)", 
+                    4: "빔 프로젝터(beam projector)"
+                },
+                quizAnswer : 4,
+                quizEx : "빔프로젝터는 출력장치이다."
+            },
+            {
+                quizNum : 59,
+                quizAsk : "로고(Logo)를 제작하기에 적합한 소프트웨어는?",
+                quizChoice : {
+                    1: "Flash", 
+                    2: "3D MAX", 
+                    3: "DreamWeaver", 
+                    4: "Illustrator"
+                },
+                quizAnswer : 4,
+                quizEx : "플래쉬,3d max는 애니메이션 및 입체 도형에 적합하고 드림위버는 홈페이지 만드는 툴"
+            },
+            {
+                quizNum : 60,
+                quizAsk : "웹사이트에서 효과적인 배너를 제작할 때 고려사항과 가장 거리가 먼 것은?",
+                quizChoice : {
+                    1: "위치가 상단일수록 광고 효과가 크다.", 
+                    2: "가능한 밝고 선명한 색을 일관되게 활용한다.", 
+                    3: "화려하게 파일 용량을 최대한 크게 할수록 좋다.", 
+                    4: "움직임이 있는 경우가 고정형에 비해 클릭율이 높다."
+                },
+                quizAnswer : 3,
+                quizEx : "웹사이트 제작시 용량은 최대한 작게 하는게 조음..."
+            },
+        ]
+
+        //문제 만들기
+        function updateQuiz(){
+            const output = [];
+
+            quizInfo.forEach((currentQuestion, questioinNumber) => {
+                output.push(`
+                    <div class="quizWrap">
+                        <h2>웹디자인 기능사 16년도 03회</h2>
+                        <div class="question__quiz">
+                            <h3 class="question__title">
+                                <span class="question__title__num">${currentQuestion.quizNum}</span>
+                                <span class="question__title__ask">${currentQuestion.quizAsk}</span>
+                            </h3>
+                            <div class="question__answer">
+                                <div class="question__answer__selects">
+                                    <label>
+                                        <input class="select" type="radio" name="select${questioinNumber}" value="1">
+                                        <span class="choice">${currentQuestion.quizChoice[1]}</span>
+                                    </label>
+                                    <label>
+                                        <input class="select" type="radio" name="select${questioinNumber}" value="2">
+                                        <span class="choice">${currentQuestion.quizChoice[2]}</span>
+                                    </label>
+                                    <label>
+                                        <input class="select" type="radio" name="select${questioinNumber}" value="3">
+                                        <span class="choice">${currentQuestion.quizChoice[3]}</span>
+                                    </label>
+                                    <label>
+                                        <input class="select" type="radio" name="select${questioinNumber}" value="4">
+                                        <span class="choice">${currentQuestion.quizChoice[4]}</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `)
+            });
+            quiz.innerHTML = output.join(' ');
+        }
+        updateQuiz();
+
+        
+
+        //결과 확인하기
+        function showResults(){
+            const questionAnswerSelects = document.querySelectorAll(".question__answer__selects");
+            let nowScore = 0;
+
+            quizInfo.forEach((currentQuestion, questioinNumber) => {
+                const selectContainer = questionAnswerSelects[questioinNumber];
+                const selectChecked = `input[name=select${questioinNumber}]:checked`;
+                const selectResult = (selectContainer.querySelector(selectChecked) || {}).value;
+
+                if(selectResult == currentQuestion.quizAnswer ){
+                    //alert("정답입니다.");
+                    nowScore++;
+                    selectContainer.style.color = "red";
+                } else {
+                    //alert("틀렸습니다.")
+                    selectContainer.style.color = "blue";
+                    const p = document.createElement("p");
+                    selectContainer.appendChild(p).innerHTML = currentQuestion.quizEx;
+                }
+            });
+            questionAnswerView.innerHTML = `${quizInfo.length} 문제 중에 ${nowScore} 문제를 맞추었습니다.`;
+            questionAnswerConfirm.style.display = "none";
+        }
+
+        questionAnswerConfirm.addEventListener("click", showResults);
+
+        //메뉴
+        document.querySelector(".ham").addEventListener("click", () => {
+            document.querySelector("nav").classList.toggle("show");
+        });
+    </script>
+
+</body>
+</html>

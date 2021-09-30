@@ -10,34 +10,40 @@
     <link rel="stylesheet" href="../assets/css/highlight.css">
 ​
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        .paraNav {
+            top: 20px;
+            transition: top 0.4 ease;
+        }
+        .paraNav.hide{
+            top: -200px;
+        } 
+        .paraNav li a {
+            width: auto;
+            padding: 5px;
+            width: 30px; height: 30px;
+        }
+        .paraNav li.active a{
+            border-radius: 30px;
+        }
+    </style>
+
 </head>
 <body class="parallax">
 ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect01 - jQuery</a></h1>
-        <p>패랠랙스 스크로링 효과 - 메뉴 이동</p>
+        <h1><a href="index.html">Parallax Effect06 - javascript</a></h1>
+        <p>패랠랙스 스크로링 효과 - 이질감</p>
     </header>
     <!-- //header -->
 ​
     <!-- main -->
     <main>
 
-        <div class="paraScroll">scrollTop() : <span>0</span></div> <!--scroll-->
-        <div class="paraInfo2">
-            <ul>
-
-                <li>section1 offset() <span class="offset1">0</span></li>
-                <li>section2 offset() <span class="offset2">0</span></li>
-                <li>section3 offset() <span class="offset3">0</span></li>
-                <li>section4 offset() <span class="offset4">0</span></li>
-                <li>section5 offset() <span class="offset5">0</span></li>
-                <li>section6 offset() <span class="offset6">0</span></li>
-                <li>section7 offset() <span class="offset7">0</span></li>
-                <li>section8 offset() <span class="offset8">0</span></li>
-                <li>section9 offset() <span class="offset9">0</span></li>
-            </ul>
-        </div>
+        <div class="paraScroll">scrollTop() : <span>px</span></div> <!--scroll-->
+        
 
         <nav class="paraNav">
             <ul>
@@ -155,14 +161,14 @@
         <div class="footerInfo">
             <h2>제이쿼리</h2>
             <ul>
-                <li class="active"><a href="jqueryPE01.html">1</a></li>
+                <li><a href="jqueryPE01.html">1</a></li>
                 <li><a href="jqueryPE02.html">2</a></li>
                 <li><a href="jqueryPE03.html">3</a></li>
                 <li><a href="jqueryPE04.html">4</a></li>
                 <li><a href="jqueryPE05.html">5</a></li>
-                <li><a href="jqueryPE06.html">5</a></li>
-                <li><a href="jqueryPE07.html">5</a></li>
-                <li><a href="jqueryPE08.html">5</a></li>
+                <li><a href="jqueryPE06.html">6</a></li>
+                <li><a href="jqueryPE07.html">7</a></li>
+                <li><a href="jqueryPE08.html">8</a></li>
               
             </ul>
         </div>
@@ -174,9 +180,9 @@
                 <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
-                <li><a href="javascriptPE06.html">5</a></li>
-                <li><a href="javascriptPE07.html">5</a></li>
-                <li><a href="javascriptPE08.html">5</a></li>
+                <li class="active"><a href="javascriptPE06.html">6</a></li>
+                <li><a href="javascriptPE07.html">7</a></li>
+                <li><a href="javascriptPE08.html">8</a></li>
                
             </ul>
         </div>
@@ -235,69 +241,70 @@
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-           $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop();
-
-           
-
-            if( scrollTop >= $(".paraCont > section").eq(0).offset().top -2 ){ //-2는 오차값대비
-                $(".paraNav ul li").eq(0).addClass("active").siblings().removeClass("active");
-            }
-            if( scrollTop >= $(".paraCont > section").eq(1).offset().top -2 ){
-                $(".paraNav ul li").eq(1).addClass("active").siblings().removeClass("active");;
-            }
-            if( scrollTop >= $(".paraCont > section").eq(2).offset().top -2 ){
-                $(".paraNav ul li").eq(2).addClass("active").siblings().removeClass("active");;
-            }
-            if( scrollTop >= $(".paraCont > section").eq(3).offset().top -2 ){
-                $(".paraNav ul li").eq(3).addClass("active").siblings().removeClass("active");;
-            }
-            if( scrollTop >= $(".paraCont > section").eq(4).offset().top -2 ){
-                $(".paraNav ul li").eq(4).addClass("active").siblings().removeClass("active");;
-            }
-            if( scrollTop >= $(".paraCont > section").eq(5).offset().top -2 ){
-                $(".paraNav ul li").eq(5).addClass("active").siblings().removeClass("active");;
-            }
-            if( scrollTop >= $(".paraCont > section").eq(6).offset().top -2 ){
-                $(".paraNav ul li").eq(6).addClass("active").siblings().removeClass("active");;
-            }
-            if( scrollTop >= $(".paraCont > section").eq(7).offset().top -2 ){
-                $(".paraNav ul li").eq(7).addClass("active").siblings().removeClass("active");;
-            }
-            if( scrollTop >= $(".paraCont > section").eq(8).offset().top -2 ){
-                $(".paraNav ul li").eq(8).addClass("active").siblings().removeClass("active");;
-            }
+        //클릭
+        const scrollMenu = function(){
+            document.querySelectorAll(".paraNav ul li a").forEach(li => {
+                li.addEventListener("click", e => {
+                    e.preventDefault();
+                    document.querySelector(li.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    })
+                })
+            });
+        }
 
 
+        const scrollProgress = function(){   //익명함수
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+            
+            // let offset1 = scrollTop - document.getElementById("section1").offsetTop;
+            // let offset2 = scrollTop - document.getElementById("section2").offsetTop;
+            // let offset3 = scrollTop - document.getElementById("section3").offsetTop;
+            // let offset4 = scrollTop - document.getElementById("section4").offsetTop;
+            // let offset5 = scrollTop - document.getElementById("section5").offsetTop;
+            // let offset6 = scrollTop - document.getElementById("section6").offsetTop;
+            // let offset7 = scrollTop - document.getElementById("section7").offsetTop;
+            // let offset8 = scrollTop - document.getElementById("section8").offsetTop;
+            // let offset9 = scrollTop - document.getElementById("section9").offsetTop;
 
+            // document.getElementById("section1").style.transform = "translateX("+offset1+"px)";
+            // document.getElementById("section2").style.transform = "translateX("+offset2+"px)";
+            // document.getElementById("section3").style.transform = "translateX("+offset3+"px)";
+            // document.getElementById("section4").style.transform = "translateX("+offset4+"px)";
+            // document.getElementById("section5").style.transform = "translateX("+offset5+"px)";
+            // document.getElementById("section6").style.transform = "translateX("+offset6+"px)";
+            // document.getElementById("section7").style.transform = "translateX("+offset7+"px)";
+            // document.getElementById("section8").style.transform = "translateX("+offset8+"px)";
+            // document.getElementById("section9").style.transform = "translateX("+offset9+"px)";
 
-            //섹션별 offset값-info
-           $(".paraScroll span").text(parseInt(scrollTop));
+            //forEach
+            document.querySelectorAll(".content-item").forEach(item=>{
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                let offset2 = (scrollTop - item.offsetTop) * 0.2;
 
-           //for문
-           for(i=1; i<=9; i++){
-            $(".offset" +i).text(parseInt($("#section"+i).offset().top) + "px");
-           }
-        //    $(".offset1").text(parseInt($("#section1").offset().top) + "px");
-        //    $(".offset2").text(parseInt($("#section2").offset().top) + "px");
-        //    $(".offset3").text(parseInt($("#section3").offset().top) + "px");
-        //    $(".offset4").text(parseInt($("#section4").offset().top) + "px");
-        //    $(".offset5").text(parseInt($("#section5").offset().top) + "px");
-        //    $(".offset6").text(parseInt($("#section6").offset().top) + "px");
-        //    $(".offset7").text(parseInt($("#section7").offset().top) + "px");
-        //    $(".offset8").text(parseInt($("#section8").offset().top) + "px");
-        //    $(".offset9").text(parseInt($("#section9").offset().top) + "px");
-        });
-           $(".paraNav ul li").click(function(e){
-                e.preventDefault();
-                let target = $(this);
-                let index = target.index();
-                let section = $(".paraCont > section").eq(index)
-                let offset = section.offset().top;
-                $("html, body").animate({ scrollTop : offset }, 600);
-           });
+                item.querySelector(".img").style.transform = "translateX("+offset1+"px)";
+                item.querySelector(".desc").style.transform = "translateX("+-offset2+"px)";
+            })
 
-      
+            //출력
+            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+        
+            //메뉴
+            document.querySelectorAll(".content-item").forEach((item, index)=> {
+                if(scrollTop >= item.offsetTop -2 ) {
+                    document.querySelectorAll(".paraNav ul li").forEach(li => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+                }
+            })
+            
+            
+        }  
+        
+        
+        window.addEventListener("scroll", scrollProgress)
     </script>
 </body>
 </html>
+
