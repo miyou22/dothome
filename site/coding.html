@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+        }
+        .container{
+            width: 775px;
+            height: 2000px;
+        }
+        header{
+            width: 100%;
+            height: 120px;
+        }
+        .logo{
+            float: left;
+        }
+        .logo img{
+            margin-top: 30px;
+        }
+        .list{
+            margin-top: 70px;
+            float: right;
+        }
+        .list ul{
+            overflow: hidden;
+            list-style: none;
+        }
+        .list ul li{
+            display: inline-block;
+            color: #fff;
+            padding-right: 30px;
+        }
+        .list ul li:last-child{
+            padding-right: 0px;
+        }
+        .list ul,li,a {
+            list-style: none;
+            text-decoration: none;
+            color: #000;
+        }
+        /* //header */
+        .banner{
+            width: 100px;
+            height: 480px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .mira{
+            width: 100%;
+            height: 290px;
+            margin-bottom: 20px;
+            background-image: url(/site/img/Coding_img1.jpg);
+            background-size: cover;
+        }
+        .news{
+            width: 370px;
+            height: 150px;
+            float: left;
+            border: 2px solid #eee;
+            background: #fff;
+            padding: 10px;
+        }
+        .news-title {
+            overflow: hidden;
+        }
+        .news-title h3 {
+            width: 35%;
+            font-size: 20px;
+            float: left;
+            margin-bottom: 20px;
+        }
+        .news-title .title-w {
+            line-height: 20px;
+            border-right: 2px solid #000;
+            color: #9b9b9b;
+        }
+        .news-title .title-w.show {
+            color: #000;
+        }
+        .news-title .title-n {
+            margin-left: 10px;
+            line-height: 20px;
+            color: #9b9b9b;
+        }
+        .news-title .tite-n.show {
+            color: #9b9b9b;
+        }
+        .news-title span {
+            font-size: 15px;
+            line-height: 20px;
+            float: right;
+            color: #9b9b9b;
+        }
+        .news-title img {
+            width: 13px;
+            height: 13px;
+        }
+
+        .news-txt {
+            font-size: 14px;
+            font-weight: 100;
+        }
+        .news-txt ul {
+            list-style:none;
+        }
+        .news-txt ul li {
+            margin-bottom: 10px;
+        }
+        .news-txt ul span {
+            float: right;
+            color: #888;
+        }
+
+        
+        .lOn{
+            width: 380px;
+            height: 170px;
+            background-image: url(/site/img/Coding_img2.jpg);
+            background-size: cover;
+            float: right;
+
+        }
+        /* //banner */
+        main{}
+        main h2{
+            display: block;
+            margin-top: 250px;
+            margin-bottom: 15px;
+        }
+        .neguri{
+            display: inline-block;
+            margin-right: 13px;
+            margin-bottom: 15px;
+        }
+        .monster{
+            display: inline-block;
+            margin-right: 13px;
+            margin-bottom: 15px;
+        }
+        .princese{
+            display: inline-block;
+            margin-right: 12px;
+            margin-bottom: 15px;
+        }
+        .tower{
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .neguriImg{
+            display: inline-block;
+            width: 180px;
+            height: 180px;
+            background-image: url(/site/img/gell_img01.jpg);
+            background-size: cover;
+        }
+     
+        .monsterImg{
+            display: inline-block;
+            width: 180px;
+            height: 180px;
+            background-image: url(/site/img/gell_img02.jpg);
+            background-size: cover;
+        }
+        .princeseImg{
+            display: inline-block;
+            width: 180px;
+            height: 180px;
+            background-image: url(/site/img/gell_img03.jpg);
+            background-size: cover;
+
+        }
+        .towerImg{
+            display: inline-block;
+            width: 180px;
+            height: 180px;
+            background-image: url(/site/img/gell_img04.jpg);
+            background-size: cover;
+        }
+        footer {
+            height: 100px;
+            margin-top: 40px;
+            border-top: 1px solid #7b7b7b;
+        }
+        footer .address p {
+            font-size: 12px;
+            font-weight: 100;
+            margin: 30px auto;
+            color: #6b6b6b;
+        }
+        footer .copyright p {
+            font-size: 12px;
+            font-weight: 100;
+            color: #7b7b7b;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <img src="../site/img/co-logo.jpg" alt="로고">
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="#">즐길거리</a></li>
+                        <li><a href="#">요금/우대정책</a></li>
+                        <li><a href="#">참여프로그램</a></li>
+                        <li><a href="#">이용가이드</a></li>
+                        <li><a href="#">소통서비스</a></li>
+                    </ul>
+                </div>
+            </header>
+            <banner class="banner">
+                <div class="mira">
+                </div>
+                <div class="news">
+                    <div class="news-title">
+                        <h3 class="title-w">롯데월드 소식</h3>
+                        <h3 class="title-n">뉴스ㆍ공지</h3>
+                        <span>더보기
+                        <img src="/site/img/Coding_img1 2plus.jpg" alt="더보기">
+                        </span>
+                    </div>
+                    <div class="news-txt">
+                        <ul>
+                            <span>2018.11.19</span>
+                            <li>그럴싸진관 미라클</li>
+                            <span>2018.11.20</span>
+                            <li>드림스테이지 '힘내 소중한 너'</li>
+                            <span>2018.11.13</span>
+                            <li>'힘내 소중한 너' 음원 발매</li>
+                            <span>2018.11.12</span>
+                            <li>이용 요금 조정 안내</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lOn"></div>
+            </banner>
+            <main>
+                <h2>특별한 경험</h2>
+                <div class="neguri">
+                    <div class="neguriImg"></div>
+                    <p>연간회원안내</p>
+                </div>
+                <div class="monster">
+                    <div class="monsterImg"></div>
+                    <p>프리미엄 투어</p>
+                </div>
+                <div class="princese">
+                    <div class="princeseImg"></div>
+                    <p>공연참여 안내</p>
+                </div>
+                <div class="tower">
+                    <div class="towerImg"></div>
+                    <p>단체 프로그램</p>
+                </div>
+            </main>
+            <footer>
+                <div class="address">
+                    <p>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드 | 데표자:박동기<br>사업자등록번호:219-85-00014 | 통신판매업신고번호:송파 제 5513호 | 전화:1661-2000</p>
+                </div>
+                <div class="copyright">
+                    <p>COPYRIGHT 2018 LOTTEWORLD.ALL RIGHTS RESERVED.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+   
+</body>
+</html>

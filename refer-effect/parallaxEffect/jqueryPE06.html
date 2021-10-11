@@ -259,6 +259,7 @@
         $(".content-item").each(function(index){
             let offset1 = (scrollTop - $(this).offset().top) * 0.1;
             let offset2 = (scrollTop - $(this).offset().top) * 0.2;
+            console.log(offset1);
 
             $(this).find(".img").css({transform: "translateY("+offset2+"px)"}); //img-Wrap만 적으면 어떤걸 지정하는지 몰라서 실행이 안된다. this와 find를 사용해서 정확히 어떤걸 원하는지 지정해야 한다.
             $(this).find(".desc").css({transform: "translateY("+offset1+"px)"}); //img-Wrap만 적으면 어떤걸 지정하는지 몰라서 실행이 안된다. this와 find를 사용해서 정확히 어떤걸 원하는지 지정해야 한다.
