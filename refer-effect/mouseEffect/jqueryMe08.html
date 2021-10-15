@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/highlight.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+         .textWrap{
+             position: absolute;
+             left: 50%; top: 50%;
+             transform: translate(-50%, -20%);
+             font-size: 3vw;
+             line-height: 1.5;
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         }
+         .textWrap .line{
+             width: 100%;
+             display: flex;
+            
+         }
+         .textWrap .line .left{
+             width: 50vw;
+             color: yellow;
+             overflow: hidden;
+             transform: skew(0deg, -15deg);
+
+         }
+         .textWrap .line .left .spanWrap{
+             width: 100vw;
+             text-align: center;
+         }
+         .textWrap .line .right{
+             width: 50vw;
+             color: white;
+             overflow: hidden;
+             transform: skew(0deg, 15deg);
+
+         }
+         .textWrap .line .right .spanWrap{
+             width: 100vw;
+             text-align: center;
+             transform: translateX(-50vw);
+         }
+         .imgWrap{
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            width: 50%;
+         }
+         .imgWrap img{
+             width: 100%;
+         }
+         .spanWrap .spanSlow{
+             display: inline-block;
+         }
+         .spanWrap .spanFast{
+             display: inline-block;
+         }
+
+</style>
+</head>
+<body class="bg bg3 blue">
+   
+
+        <!--contents-->
+        <main>
+            <div class="cursor">  </div>
+                <div class="contents">
+                    <div class="moveImg">
+                        <div class="imgWrap">
+                            <img src="../assets/img/bg3.jpg" alt="이미지">
+                        </div>
+                        <div class="textWrap">
+                            <div class="line">
+                                <div class="left">
+                                    <div class="spanWrap">
+                                        <span class="spanSlow">Pain Past</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="spanWrap">
+                                        <span class="spanSlow">Pain Past</span>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="line">
+                                <div class="left">
+                                    <div class="spanWrap">
+                                        <span class="spanFast">is pleasure</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="spanWrap">
+                                        <span class="spanFast">is pleasure</span>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="line">
+                                <div class="left">
+                                    <div class="spanWrap">
+                                        <span class="spanSlow">지나간 고통은</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="spanWrap">
+                                        <span class="spanSlow">지나간 고통은</span>
+                                    </div>
+                                 </div>
+                            </div>
+                            <div class="line">
+                                <div class="left">
+                                    <div class="spanWrap">
+                                        <span class="spanFast">쾌락이다</span>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    <div class="spanWrap">
+                                        <span class="spanFast">쾌락이다</span>
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+        <!--//contents-->
+
+
+            <!-- info -->
+        <div class="info">
+            <h1>jquery mouse Effect08 - jquery</h1>
+            <p>마우스 이펙트 - 텍스트 효과</p>
+        </div>
+
+        <div class="info right">
+            <ul>
+                <li><a href="javascriptME01.html">1</a></li>
+                <li><a href="javascriptME02.html">2</a></li>
+                <li><a href="javascriptME03.html">3</a></li>
+                <li><a href="javascriptME04.html">4</a></li>
+                <li><a href="javascriptME05.html">5</a></li>
+                <li><a href="javascriptME06.html">6</a></li>
+                <li><a href="javascriptME07.html">7</a></li>
+                <li><a href="javascriptME08.html">8</a></li>
+            </ul>
+            <ul>
+                <li><a href="jqueryMe01.html">1</a></li>
+                <li><a href="jqueryMe02.html">2</a></li>
+                <li><a href="jqueryMe03.html">3</a></li>
+                <li><a href="jqueryMe04.html">4</a></li>
+                <li><a href="jqueryMe05.html">5</a></li>
+                <li><a href="jqueryMe06.html">6</a></li>
+                <li><a href="jqueryMe07.html">7</a></li>
+                <li class="active"><a href="jqueryMe08.html">8</a></li>
+            </ul>
+        </div>
+
+     <!--scroll-->
+        <div class="info left list">
+            <ul>
+                <li>pageX : <span class="pageX">0</span></li>
+                <li>pageY <span class="pageY">0</span></li>
+            </ul>
+        </div>
+
+
+        <div class="info bottom">
+            <button>소스보기</button>
+        </div>
+        <!-- //info -->
+
+        <!--modal-->
+        <div id="modal">
+            <div class="modal-bg">
+            <div class="modal-cont">
+                <div class="code-view">
+                    <div class="view-header">
+                        <div class="dot" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="view-title">
+                        <ul>
+                            <li class="active"><a href="#">html</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">Javascript</a></li>
+                        </ul>
+                    </div>
+                    <div class="view-cont">
+                        <div class="html">
+<pre><code class="language-html"> 
+</code></pre>
+                        </div>
+                        <div class="css">
+        <pre><code class="language-html">
+        </code></pre>
+                        </div>
+        <div class="javascript"><pre><code class="language-html">
+            
+        </code></pre>
+                        </div>
+                    </div>
+            </div>
+            <button>닫기</button>
+        </div>
+        
+<!--//modal--> 
+<!--script-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/custom.js"></script>
+<script src="../assets/js/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<script>
+
+
+        window.onload = function() {
+         //init();
+        //animate();
+        agentCheak();
+        modal();
+      }
+</script>
+  
+<!--//script-->
+
+</body>
+</html>

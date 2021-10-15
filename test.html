@@ -1,24 +1,48 @@
-&ltdiv class="tab-cont"&gt
-    &ltdiv&gt
-        &lth2&gt1.내 체중을 정확히 파악하자&lt/h2&gt
-        &ltp&gt다이어트의 시작은 체중을 아는 것부터 시작합니다. 체중은 아침, 점심, 저녁 각 식사 후에 마지막으로 잠자기 직전 이렇게 4번 재는 것이 좋습니다.&lt/p&gt
-    &lt/div&gt
-    &ltdiv&gt
-        &lth2&gt2.물을 자주 마시자&lt/h2&gt
-        &ltp&gt아침에 일어나면 우선 생수를 한잔 마십니다. 잠드렁 있는 동안 부족해진 수분을 보충해 줄 뿐 아니라 잠 들었떤 장기들을 깨워주는 효과도 있습니다. &lt/p&gt
-    &lt/div&gt
-    &ltdiv&gt
-        &lth2&gt3.저칼로리만 고집하지 말고 영양성분을 체크하자&lt/h2&gt
-        &ltp&gt다이어트를 할 때도 칼로이메나 집착할 것이 아니라 탄수화물과 지방의 섭취는 줄이고 단밸직, 비타민, 무기질 등의 섭취를 늘릴 수 있도록 음식을 선택 해야 합니다.&lt/p&gt
-    &lt/div&gt
-    &ltdiv&gt
-        &lth2&gt4.끼니마다 칼로리를 분배하자&lt/h2&gt
-        &ltp&gt너무 허기지다 보면 폭식을 불러올 수 있으므로 한끼만 먹는 것은 절대 금해야 합니다. &lt/p&gt
-    &lt/div&gt
-    &ltdiv&gt
-        &lth2&gt5.과식과 단음식은 피하자&lt/h2&gt
-        &ltp&gt과식은 피하지방으로 축적되어 비만의 원인이 됩니다. 단은ㅁ식은 열량만 높을 뿐 영양소는 부족하기 때문에 마찬가지로 다이어트와 건강에 해롭습니다. &lt/p&gt
-    &lt/div&gt
-&lt/div&gt
-&lt/div&gt
-&lt/main&gt
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       label {
+display: inline-block;
+padding: 5px;
+position: relative;
+padding-left: 20px;
+}
+
+label input {
+display: none;
+}
+
+label span {
+border: 1px solid #ccc;
+width: 15px;
+height: 15px;
+position: absolute;
+overflow: hidden;
+line-height: 1;
+text-align: center;
+border-radius: 100%;
+font-size: 10pt;
+left: 0;
+top: 50%;
+margin-top: -7.5px;
+}
+
+input:checked+span {
+background: #ccf;
+border-color: #ccf;
+}
+    </style>
+</head>
+<body>
+<h3>Select One</h3>
+<label><input type="radio" name="select"/><span>Y</span> Item
+1</label>
+<label><input type="radio" name="select" /><span>N</span> Item
+2</label>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+          margin: 0 auto;
+      }
+      .container{
+          width: 1200px;
+      }
+      #header{
+        height: 150px;
+      }
+      .ulWrap{
+
+      }
+      .ulWrap img{
+        margin-top: 50px;
+
+      }
+      .ulWrap ul{
+          display: inline-block;
+          float: right;
+          margin-top: 80px;
+      }
+      .ulWrap ul li{
+          list-style: none;
+          display: inline-block;
+
+      }
+      .ulWrap ul li a{
+          font-size: 27px;
+          margin-left: 30px;
+          text-decoration: none;
+          color: #000;
+      }
+  /* slider */
+  .slider-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slider-img {
+        width: 1200px;
+        height: 480px;
+        position: relative;
+        margin-bottom: 25px;
+    }
+    .slider-img img{
+        width: 100%;
+    }
+    .slider {
+        position: absolute;
+        left: 0; top: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    .slider:nth-child(1){z-index:5;}
+    .slider:nth-child(2){z-index:4;}
+    .slider:nth-child(3){z-index:3;}
+    .slider:nth-child(4){z-index:2;}
+    .slider:nth-child(5){z-index:1;}
+    
+    .cookit1{
+        display: inline-block;
+        width: 48%;
+        margin-bottom: 35px;
+        background: #F2F2F2;
+    }
+    .cookit1 h2{
+        margin: 20px 0 0 20px;
+        display: inline-block;
+    }
+    .cookit1 p{
+        margin: 20px 0 40px 20px;
+        display: inline-block;
+    }
+    .cookit1 .search{
+        display:block ;
+        margin-left: 20px;
+   
+    }
+    .cookit1 .search p{
+        display: inline-block;
+    }
+    .cookit1 .moga{
+        margin-top: 40px;
+        float: right;
+    }
+    .cookit2{
+        display: inline-block;
+        float: right;
+        width: 48%;
+        background: #F2F2F2;
+
+    }
+    .cookit2 h2{
+        margin: 20px 0 0 20px;
+    }
+    .cookit2 p{
+        margin: 20px 0 40px 20px;
+    }
+    .cookit2 .search{
+        display:inline-block ;
+        margin-left: 20px;
+        margin-bottom: -6px;
+    }
+    .cookit2 .search h3{
+        display: inline-block;
+    }
+    .cookit2 .search p{
+        display: inline-block;
+    }
+    .cookit2 .mogaya{
+        margin-top: 40px;
+        float: right;
+    }
+    /* //nav */
+
+    .alljob{}
+    .best{
+        margin-bottom: 35px;
+    }
+    .best h2{
+        display: inline-block;
+    }
+    .best p{
+        display: inline-block;
+    }
+    .foodBest{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+    }
+    .picFood{
+        margin-bottom: 45px;
+    }
+    .picFood img{
+        width: 385px;
+        height: 385px;
+    }
+    .picFood h4{}
+    .picFood p{
+        margin-top: 20px;
+        display: inline-block;
+    }
+    .picFood .picIcon{
+        width: 40px;
+        height: 40px;
+        float: right;
+    }
+    /* //MAIN */
+    #footStrat{
+        background: #202020;
+
+    }
+    .footAll{
+        margin-top: 30px;
+        background: #202020;
+        display: flex;
+        justify-content: space-between;
+    }
+    .foot{
+       
+    }
+    .foot img{}
+    .footText ul{
+        margin-top: 50px;
+    }
+    .footText ul li{
+        
+        display: inline-block;
+        color: #fff;
+        margin-left: 70px;
+        font-size: 20px;
+        font-weight: 600;
+
+    }
+    .footText .address{
+        color: #fff;
+        margin-left: 110px;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+    .footText .address p{
+        color: #6B6B6B;
+        margin-top: 20px;
+
+    }
+
+
+
+
+    </style>
+</head>
+<body>
+   <header id="header">
+       <div class="container">
+           <div class="ulWrap">
+                <img src="../test/assete/img/logo.jpg" alt="이미지" class="logo">
+                <ul>
+                    <li><a href="#">COOKIT소개</a></li>
+                    <li><a href="#">COOKIT메뉴</a></li>
+                    <li><a href="#">리뷰</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">MY쿡킷</a></li>
+                </ul>
+           </div>
+       </div>
+   </header>
+   <nav>
+        <div class="container">
+            <div class="slider-wrap">
+                <div class="slider-img">
+                    <div class="slider" data-name="이미지1"><img src="../test/assete/img/test1.jpg" alt="이미지1"></div>
+                    <div class="slider" data-name="이미지1"><img src="../test/assete/img/test1.jpg" alt="이미지1"></div>
+                    <div class="slider" data-name="이미지1"><img src="../test/assete/img/test1.jpg" alt="이미지1"></div>
+                    <div class="slider" data-name="이미지1"><img src="../test/assete/img/test1.jpg" alt="이미지1"></div>
+                    <div class="slider" data-name="이미지1"><img src="../test/assete/img/test1.jpg" alt="이미지1"></div>
+                </div>
+            </div>
+            <div class="cookit1">
+                <img src="../test/assete/img/icon1.jpg" alt="돌대가리" class="moga">
+                <h2>우리집도 COOKIT배송이 되나요?</h2>
+                <p>배송이 가능한지 알려드려요</p>
+                <div class="search">
+                    <img src="../test/assete/img/icon4.jpg" alt="뭐?">
+                    <p>배송지검색</p>
+                </div>
+            </div> 
+            <div class="cookit2">
+                <img src="../test/assete/img/icon2.jpg" alt="돌대가리" class="mogaya">
+                <h2>7월 30일(화)에 받을 수 있어요</h2>
+                <p>오전 7시까지 주문하시면 다음날 배송됩니다</p>
+                <div class="search">
+                    <img src="../test/assete/img/icon5.jpg" alt="뭐?">
+                    <h3>63:28:32</h3>
+                    <p>남은시간</p>
+                </div>
+            </div> 
+        </div>
+   </nav>
+   <main>
+       <div class="container">
+           <div class="alljob">
+                <div class="best">
+                    <h2>실시간 베스트 |</h2>
+                    <p> 생생한 리뷰</p>
+                </div>
+           </div>
+           <div class="foodBest">
+                <div class="picFood">
+                    <img src="../test/assete/img/test2.jpg" alt="냥면">
+                    <h4>평양식 어복쟁반</h4>
+                    <p>33,800원 <em>/3인분</em></p>
+                    <img src="../test/assete/img/icon3.jpg" alt="아이콘" class="picIcon">
+                </div>
+                <div class="picFood">
+                    <img src="../test/assete/img/test2.jpg" alt="쭈꾸미">
+                    <h4>새우쭈꾸미삼겹살</h4>
+                    <p>33,800원 <em>/3인분</em></p>
+                    <img src="../test/assete/img/icon3.jpg" alt="아이콘" class="picIcon">
+                </div>
+                <div class="picFood">
+                    <img src="../test/assete/img/test3.jpg" alt="몰라">
+                    <h4>평양식 어복쟁반</h4>
+                    <p>33,800원 <em>/3인분</em></p>
+                    <img src="../test/assete/img/icon3.jpg" alt="아이콘" class="picIcon">
+                </div>
+            </div>
+       </div>
+   </main>
+   <footer id="footStrat">
+        <div class="container">
+            <div class="footAll">
+                <div class="foot">
+                    <img src="../test/assete/img/바닥.jpg" alt="footlogo">
+                </div>
+                <div class="footText">
+                    <ul>
+                        <li>이용약관</li>
+                        <li>개인정보처리 방침</li>
+                        <li>법력고지</li>
+                        <li>사업자정보 확인</li>
+                    </ul>
+                    <div class="address">
+                        <p>씨제이제일제당(주) | 대표자: 신현재</p>
+                        <p>주소: 서울 중구 동호로 330 CJ제일제당 센터(우)04560 | 사업자등록번호: 104-86-09535</p>
+                        <p>통신판매업신고 중구 제 07767호 | 개인정보보호책임자:류화정</p>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+   </footer>
+
+   <script>
+    const sliderWrap = document.querySelector(".slider-wrap");
+    const sliderImg = document.querySelector(".slider-img");
+    const slider = document.querySelectorAll(".slider");
+   
+    let currentIndex = 0; 
+    let sliderCount = slider.length; 
+    setInterval(()=>{
+        let nextIndex = (currentIndex + 1) % sliderCount; 
+
+        
+        slider[currentIndex].style.opacity="0"
+        slider[nextIndex].style.opacity="1"
+
+        currentIndex = nextIndex;
+    }, 1000);
+</script>
+
+</body>
+</html>
