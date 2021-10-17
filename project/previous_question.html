@@ -41,10 +41,10 @@
         </div>
     </banner>
     <main class="preMain">
-        <!-- <div class="container">
+       <div class="container">
             <div class="preLeft">
-                <div class="preQuizWrap">
-                    <div class="preQuestion__quiz">
+              <div class="preQuizWrap">
+                    <!-- <div class="preQuestion__quiz">
                         <h3 class="preQuestion__title">
                             <span class="preQuestion__title__num">1</span>
                             <span class="preQuestion__title__ask">병행제어 기법 중 로킹(Locking) 기법에 대한 설명으로 옳지 않은 것은?</span>
@@ -71,37 +71,34 @@
                             </div>
                         </div>
                     </div>
-                </div> 
-            </div>
-            <div class="preRight">
-                <div class="preQuizWrap">
                     <div class="preQuestion__quiz">
                         <h3 class="preQuestion__title">
-                            <span class="preQuestion__title__num">2</span>
-                            <span class="preQuestion__title__ask">465억의 주인은?</span>
+                            <span class="preQuestion__title__num">1</span>
+                            <span class="preQuestion__title__ask">병행제어 기법 중 로킹(Locking) 기법에 대한 설명으로 옳지 않은 것은?</span>
                         </h3>
                         <div class="preQuestion__answer">
                             <div class="preQuestion__answer__selects">
                                 <label for="select1">
                                     <input class="select" type="radio" name="select" id="select1" value="1"/>
-                                    <span class="choice">이정재</span>
+                                    <span class="choice">로킹의 대상이 되는 객체의 크기를 로킹 단위라고 한다.</span>
                                 </label>
                                 <label for="select2">
                                     <input class="select" type="radio" name="select" id="select2" value="2">
-                                    <span class="choice">시라소니</span>
+                                    <span class="choice">로킹 단위가 작아지면 병행성 수준이 높아진다.</span>
                                 </label>
                                 <label for="select3">
                                     <input class="select" type="radio" name="select" id="select3" value="3">
-                                    <span class="choice">공유</span>
+                                    <span class="choice">로킹 단위가 커지면 로킹 오버헤드가 증가한다.</span>
                                 </label>
                                 <label for="select4">
                                     <input class="select" type="radio" name="select" id="select4" value="4">
-                                    <span class="choice">김두환</span>
+                                    <span class="choice">데이터베이스도 로킹 단위가 될 수 있다.
+                                    </span>
                                 </label>
                             </div>
-                        </div>
-                    </div>
-                </div> 
+                        </div> 
+                    </div> -->
+                </div>  
             </div>
             <div class="preAnswer">
                <div class="answer__box">
@@ -120,17 +117,15 @@
                    <div class="preQuestion__number">4.</div>
                    <div class="preQuestion__number_answer">4</div>
                </div> 
+               <div class="preAnswerSend">답안지 제출</div>
             </div>
-        </div> -->
+        </div> 
     </main>
-    <footer></footer>
+    <footer>풋터영역</footer>
     <script>
-         //선택자
-        const quiz = document.querySelector(".preMain");
-        const quizContainer = document.querySelector(".container");
-        const quizLeft = document.querySelector(".preLeft");
-        const quizWrap = document.querySelector(".preQuizWrap");
-        const quizQuestion = document.querySelector(".preQuestion__quiz");
+        //선택자
+        const preQuizWrap = document.querySelector(".preQuizWrap");
+       
         
         //문제 정보
         const quizInfo = [
@@ -176,91 +171,40 @@
         function updateQuiz(){
             const output = [];
 
-            //let quizkey=quizInfo[0].quizNum;
-            // for(let i=0; i<quizInfo.length; i++){
-            //     const quizKey = quizInfo[i].quizNum;
-            // }
-            // console.log(quizKey);
-
             quizInfo.forEach((currentQuestion, questioinNumber) => {
-                if(currentQuestion.quizNum%2 == 1){
                 output.push(`
-                <main class="preMain">
-                    <div class="container">
-                        <div class="preLeft">
-                            <div class="preQuizWrap">
-                                <div class="preQuestion__quiz">
-                                    <h3 class="preQuestion__title">
-                                        <span class="preQuestion__title__num">${currentQuestion.quizNum}</span>
-                                        <span class="preQuestion__title__ask">${currentQuestion.quizAsk}</span>
-                                    </h3>
-                                    <div class="preQuestion__answer">
-                                        <div class="preQuestion__answer__selects">
-                                            <label for="select1">
-                                                <input class="select" type="radio" name="select${questioinNumber}" id="select1" value="1"/>
-                                                <span class="choice">${currentQuestion.quizChoice[1]}</span>
-                                            </label>
-                                            <label for="select2">
-                                                <input class="select" type="radio" name="select${questioinNumber}" id="select2" value="2">
-                                                <span class="choice">${currentQuestion.quizChoice[2]}</span>
-                                            </label>
-                                            <label for="select3">
-                                                <input class="select" type="radio" name="select${questioinNumber}" id="select3" value="3">
-                                                <span class="choice">${currentQuestion.quizChoice[3]}</span>
-                                            </label>
-                                            <label for="select4">
-                                                <input class="select" type="radio" name="select${questioinNumber}" id="select4" value="4">
-                                                <span class="choice">${currentQuestion.quizChoice[4]}</span>
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
+                        <div class="preQuestion__quiz">
+                            <h3 class="preQuestion__title">
+                                <span class="preQuestion__title__num">${currentQuestion.quizNum}</span>
+                                <span class="preQuestion__title__ask">${currentQuestion.quizAsk}</span>
+                            </h3>
+                            <div class="preQuestion__answer">
+                                <div class="preQuestion__answer__selects">
+                                    <label>
+                                        <input class="select" type="radio" name="select${questioinNumber}" value="1"/>
+                                        <span class="choice">${currentQuestion.quizChoice[1]}</span>
+                                    </label>
+                                    <label>
+                                        <input class="select" type="radio" name="select${questioinNumber}" value="2">
+                                        <span class="choice">${currentQuestion.quizChoice[2]}</span>
+                                    </label>
+                                    <label>
+                                        <input class="select" type="radio" name="select${questioinNumber}" value="3">
+                                        <span class="choice">${currentQuestion.quizChoice[3]}</span>
+                                    </label>
+                                    <label>
+                                        <input class="select" type="radio" name="select${questioinNumber}" value="4">
+                                        <span class="choice">${currentQuestion.quizChoice[4]}</span>
+                                    </label>
                                 </div>
-                            </div> 
-                        </div>
-                    </div>
-                `)} else { output.push(`
-                    <main class="preMain">
-                        <div class="container">
-                            <div class="preRight">
-                                <div class="preQuizWrap">
-                                    <div class="preQuestion__quiz">
-                                        <h3 class="preQuestion__title">
-                                            <span class="preQuestion__title__num">${currentQuestion.quizNum}</span>
-                                            <span class="preQuestion__title__ask">${currentQuestion.quizNum}</span>
-                                        </h3>
-                                        <div class="preQuestion__answer">
-                                            <div class="preQuestion__answer__selects">
-                                                <label for="select1">
-                                                    <input class="select" type="radio" name="select${questioinNumber}" id="select1" value="1"/>
-                                                    <span class="choice">${currentQuestion.quizChoice[1]}</span>
-                                                </label>
-                                                <label for="select2">
-                                                    <input class="select" type="radio" name="select${questioinNumber}" id="select2" value="2">
-                                                    <span class="choice">${currentQuestion.quizChoice[2]}</span>
-                                                </label>
-                                                <label for="select3">
-                                                    <input class="select" type="radio" name="select${questioinNumber}" id="select3" value="3">
-                                                    <span class="choice">${currentQuestion.quizChoice[3]}</span>
-                                                </label>
-                                                <label for="select4">
-                                                    <input class="select" type="radio" name="select${questioinNumber}" id="select4" value="4">
-                                                    <span class="choice">${currentQuestion.quizChoice[4]}</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
                             </div>
                         </div>
-                    </div>
-                `)};
+                `)
             });
-            quiz.innerHTML = output.join(' ');
+            preQuizWrap.innerHTML = output.join(' ');
         }
         updateQuiz();
-
-        
     </script>
+     
 </body>
 </html>

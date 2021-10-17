@@ -154,7 +154,7 @@
 }
 
 .main_banner .quiz {
-    padding: 40px;
+    padding-left: 40px;
     background-color: rgba(255, 255, 255, 0.7);
     width: 40%;
     position: relative;
@@ -821,6 +821,9 @@
 * 수정자 : 임지현
 * 수정일 : 2021-10-11
 * 수정내용 : 게시판 css 수정
+* 작성자 : 전대섭
+* 작성일 : 2021-10-17
+* 수정내용: 게시판 css 수정
 */
 
 /* review */
@@ -1089,19 +1092,20 @@ fieldset {
 }
 
 .preLeft{
-    width: 39%;
+    width: 78%;
     box-sizing: border-box;
-    border: 1px solid #eee;
-}
-
-.blog-post{
-    border: 1px solid #000;
+    margin-top: -80px;
 }
 .preQuizWrap {
-    max-width: 500px;
     width: 100%;
     background: #fff;
     margin: 30px auto;
+}
+.preQuestion__quiz{
+    margin-top: 30px;
+    margin-left: 8px;
+    width: 450px;
+    display: inline-grid;
 }
 .preQuestion__title {
     padding: 20px ;
@@ -1170,26 +1174,20 @@ fieldset {
     background-color: #9FC3AF;
 }
 
-.preRight{
-    width: 39%;
-    height: 100%;
-    box-sizing: border-box;
-    border: 1px solid #eee;
-    word-break:break-all;
-
-}
 .preAnswer{
     width: 20%;
-    height: 100%;
     box-sizing: border-box;
     background: #fff;
     border: 1px solid #eee;
+    padding-top: 35px;
+    display: block;
+    position: relative;
 }
 .answer__box{
     width: 30%;
-    height: 39px;
     float: left;
-    margin-top: 35px;    
+    margin-left: 5px;
+    margin-top: 5px;
 }
 .preQuestion__number{
     display: inline-block;
@@ -1200,6 +1198,17 @@ fieldset {
     display: inline-block;
     width: 22%;
     margin-left: 10px;
+}
+.preAnswerSend{
+    width: 100%;
+    border: 1px solid #000;
+    position: absolute;
+    bottom: -70px; right: -1px;
+    background-color: #A7C4B5;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
 }
 
 
