@@ -1209,6 +1209,12 @@ fieldset {
     text-align: center;
     font-size: 18px;
     padding: 20px 0;
+} 
+.preQuizBox{
+    margin-top: 10px;
+    float: right;
+    border: 1px solid #eee;
+
 }
 
 
