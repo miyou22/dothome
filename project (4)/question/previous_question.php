@@ -1,36 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-     <!-- style -->
-     <link rel="stylesheet" href="../project/assets/css/font.css">
-     <link rel="stylesheet" href="../project/assets/css/common.css">
-     <link rel="stylesheet" href="../project/assets/css/reset.css">
-     <link rel="stylesheet" href="../project/assets/css/style.css">
+    <!-- style -->
+    <link rel="stylesheet" href="../assets/css/font.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
+
 <body>
     <header id="header">
-        <div class="container">
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">문제풀기</a></li>
-                    <li><a href="#">기출문제</a></li>
-                    <li><a href="review/review.html">시험후기</a></li>
-                    <li><a href="notice/qna.html">Q&A</a></li>
-                    <li><a href="notice/notice.html">공지사항</a></li>
-                </ul>
-            </nav>
-            <div class="member">
-                <ul>
-                    <li><a href="login/login.html">로그인</a></li>
-                    <li><a href="login/join.html">회원가입</a></li>
-                </ul>
-            </div>
-        </div>
+        <?php
+          include "../include/header.php";
+        ?>
     </header>
     <banner class="prebanner">
         <div class="container">
@@ -41,9 +29,9 @@
         </div>
     </banner>
     <main class="preMain">
-       <div class="container">
+        <div class="container">
             <div class="preLeft">
-              <div class="preQuizWrap">
+                <div class="preQuizWrap">
                     <!-- <div class="preQuestion__quiz">
                         <h3 class="preQuestion__title">
                             <span class="preQuestion__title__num">1</span>
@@ -98,77 +86,81 @@
                             </div>
                         </div> 
                     </div> -->
-                </div>  
+                </div>
             </div>
             <div class="preAnswer">
-               <div class="answer__box">
-                   <div class="preQuestion__number">1.</div>
-                   <div class="preQuestion__number_answer">1</div>
-               </div> 
-               <div class="answer__box">
-                   <div class="preQuestion__number">2.</div>
-                   <div class="preQuestion__number_answer">2</div>
-               </div> 
-               <div class="answer__box">
-                   <div class="preQuestion__number">3.</div>
-                   <div class="preQuestion__number_answer">3</div>
-               </div> 
-               <div class="answer__box">
-                   <div class="preQuestion__number">4.</div>
-                   <div class="preQuestion__number_answer">4</div>
-               </div> 
-               <div class="preAnswerSend">답안지 제출</div>
+                <div class="answer__box">
+                    <div class="preQuestion__number">1.</div>
+                    <div class="preQuestion__number_answer">1</div>
+                </div>
+                <div class="answer__box">
+                    <div class="preQuestion__number">2.</div>
+                    <div class="preQuestion__number_answer">2</div>
+                </div>
+                <div class="answer__box">
+                    <div class="preQuestion__number">3.</div>
+                    <div class="preQuestion__number_answer">3</div>
+                </div>
+                <div class="answer__box">
+                    <div class="preQuestion__number">4.</div>
+                    <div class="preQuestion__number_answer">4</div>
+                </div>
+                <div class="preAnswerSend">답안지 제출</div>
             </div>
-        </div> 
+        </div>
     </main>
-    <footer>풋터영역</footer>
+    <footer>
+      <?php
+        include "../include/footer.php";
+      ?>
+    </footer>
     <script>
         //선택자
         const preQuizWrap = document.querySelector(".preQuizWrap");
-       
-        
+
+
         //문제 정보
         const quizInfo = [
             {
-                quizNum : 1,
-                quizAsk : "다음 중 디자인의 기본 요소들로 옳은 것은?",
-                quizChoice : {
-                    1: "선, 색체, 공간, 수량", 
-                    2: "점, 선, 면, 질감", 
-                    3: "시간, 수량, 구조, 공간", 
+                quizNum: 1,
+                quizAsk: "다음 중 디자인의 기본 요소들로 옳은 것은?",
+                quizChoice: {
+                    1: "선, 색체, 공간, 수량",
+                    2: "점, 선, 면, 질감",
+                    3: "시간, 수량, 구조, 공간",
                     4: "면, 구조, 공간, 수량"
                 },
-                quizAnswer : 2,
-                quizEx : "디자인의 기본 요소는 점, 선, 면, 질감으로 이루어져 있습니다."
+                quizAnswer: 2,
+                quizEx: "디자인의 기본 요소는 점, 선, 면, 질감으로 이루어져 있습니다."
             },
             {
-                quizNum : 2,
-                quizAsk : "다음 중 시각 디자인의 4대 매체가 아닌 것은?",
-                quizChoice : {
-                    1: "포스터 디자인", 
-                    2: "신문 광고 디자인", 
-                    3: "TV 광고 디자인", 
+                quizNum: 2,
+                quizAsk: "다음 중 시각 디자인의 4대 매체가 아닌 것은?",
+                quizChoice: {
+                    1: "포스터 디자인",
+                    2: "신문 광고 디자인",
+                    3: "TV 광고 디자인",
                     4: "텍스타일 디자인"
                 },
-                quizAnswer : 4,
-                quizEx : "시각 디자인의 4대 매체는 포스터 디자인, 신문 광고 디자인, TV 광고 디자인, 잡지 광고 디자인입니다."
+                quizAnswer: 4,
+                quizEx: "시각 디자인의 4대 매체는 포스터 디자인, 신문 광고 디자인, TV 광고 디자인, 잡지 광고 디자인입니다."
             },
             {
-                quizNum : 3,
-                quizAsk : "다음과 가장 관계 있는 디자인 원리는? [바다 위의 빨깐 등대, 무성한 나뭇잎들 사이에서 핀 꽃, 별이 총총한 밤하늘에 뜬 달, 평평한 벽에 생긴 갈라진 틈 등]",
-                quizChoice : {
-                    1: "조화", 
-                    2: "통일", 
-                    3: "점증", 
+                quizNum: 3,
+                quizAsk: "다음과 가장 관계 있는 디자인 원리는? [바다 위의 빨깐 등대, 무성한 나뭇잎들 사이에서 핀 꽃, 별이 총총한 밤하늘에 뜬 달, 평평한 벽에 생긴 갈라진 틈 등]",
+                quizChoice: {
+                    1: "조화",
+                    2: "통일",
+                    3: "점증",
                     4: "강조"
                 },
-                quizAnswer : 4,
-                quizEx : "시각 디자인의 4대 매체는 포스터 디자인, 신문 광고 디자인, TV 광고 디자인, 잡지 광고 디자인입니다."
+                quizAnswer: 4,
+                quizEx: "시각 디자인의 4대 매체는 포스터 디자인, 신문 광고 디자인, TV 광고 디자인, 잡지 광고 디자인입니다."
             }
         ]
 
         //문제 만들기
-        function updateQuiz(){
+        function updateQuiz() {
             const output = [];
 
             quizInfo.forEach((currentQuestion, questioinNumber) => {
@@ -198,7 +190,6 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="preQuizBox">문제보기</div>
                         </div>
                 `)
             });
@@ -206,6 +197,7 @@
         }
         updateQuiz();
     </script>
-     
+
 </body>
+
 </html>

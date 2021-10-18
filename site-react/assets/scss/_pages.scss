@@ -1,0 +1,72 @@
+//#mainCont
+//#aboutCont
+//#referCont
+//#scriptCont
+//#portCont
+
+
+//#mainCont
+#mainCont{
+    background-color: #000;
+    height: 100vh;
+    color: #fff;
+    font-family:  $font-main;
+    font-size: 8vw;
+    line-height: .9;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    
+    br{
+        display: none;
+    }
+}
+
+#mainCont2{
+    background-color: #000;
+    height: 90vh;
+    color: #fff;
+    font-family:  $font-main;
+    font-size: 8vw;
+    line-height: .9;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    .main__cont2{
+        margin: 50px 0;
+    }
+    .imgbox-container{
+        position: relative;
+        width: 94%;
+        height: 100%;
+        overflow: hidden;
+        .imgbox{
+            position: absolute;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    br{
+        display: none;
+    }
+}
+
+
+@media(max-width: 800px){
+    #footer{
+        br{
+            display: block;
+        }
+    }
+}
