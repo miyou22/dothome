@@ -1,0 +1,150 @@
+//#mainCont
+//#aboutCont
+//#referCont
+//#scriptCont
+//#portCont
+
+
+//#mainCont
+#mainCont{
+    background-color: #000;
+    height: 100vh;
+    color: #fff;
+    font-family:  $font-main; 
+    font-size: 8vw;
+    line-height: .9;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    
+    br{
+        display: none;
+    }
+}
+
+#mainCont2{
+    background-color: #000;
+    height: 90vh;
+    color: #fff;
+    font-family:  $font-main;
+    font-size: 8vw;
+    line-height: .9;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    .main__cont2{
+        margin: 50px 0;
+        float: left;
+    }
+    .imgbox-container{
+        position: relative;
+        width: 94%;
+        height: 100%;
+        overflow: hidden;
+        .imgbox{
+            position: absolute;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    br{
+        display: none;
+    }
+}
+
+
+@media(max-width: 800px){
+    #footer{
+        br{
+            display: block;
+        }
+    }
+}
+
+/* about 메인페이지 */
+#aboutMainCont{
+    background-color: #fff;
+    color: #000;
+    font-family:  $font-main;
+    font-size: 8vw;
+    line-height: .9;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    .aboutMain__cont2{
+        margin: 50px 0;
+        width: 80%;
+        text-align: left;
+    }
+    .imgTextWrap{
+        margin-top: 270px;
+        width: 100%;
+
+        .container{
+            width: 82%;
+            margin: 0 auto;
+            overflow: hidden;
+            .imgbox01{
+                float: center;
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+                max-height: 100%;
+            }
+            .imgbox02{
+                float: left;
+                display: block;
+                max-width: 100%;
+                max-height: 100%;
+            } 
+            .imgbox03{
+                float: right;
+                display: block;
+                max-width: 100%;
+                max-height: 100%;
+                margin-bottom: 200px;
+            }
+            .imgText01{
+                font-family: $font-kor2;
+                font-size: 18px;
+                text-align: left;      
+                line-height: 1.2;     
+            } 
+            .imgText02{
+                font-family: $font-kor2;
+                font-size: 18px;
+                text-align: right;           
+                line-height: 1.2;     
+
+            } 
+            .imgText03{
+                font-family: $font-kor2;
+                font-size: 18px;
+                text-align: left;           
+                line-height: 1.2;     
+ 
+            } 
+        }
+        
+       
+
+        
+       
+     }
+}
+

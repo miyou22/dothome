@@ -10,132 +10,161 @@
     <link rel="stylesheet" href="../assets/css/highlight.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <style>
-         .textWrap{
-             position: absolute;
-             left: 50%; top: 50%;
-             transform: translate(-50%, -20%);
-             font-size: 3vw;
-             line-height: 1.5;
-             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-         }
-         .textWrap .line{
-             width: 100%;
-             display: flex;
-            
-         }
-         .textWrap .line .left{
-             width: 50vw;
-             color: yellow;
-             overflow: hidden;
-             transform: skew(0deg, -15deg);
+    
+/* mouseCont */
+.mouseCont {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 이거와 같이 써야하는건 height 왜냐하면 기준점이 없기 때문에 height가 없으면 적용이 안된다 */
+    flex-direction: column; /* 줄바꿈 */
+    color: #000;
+    height: 100vh; 
+    width: 100%;
+    overflow: hidden;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    /* cursor: none; */
+    /* position: relative;
+    z-index: 10; */
+}
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
+    }
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    font-weight: 400; 
+    }
+.mouseCont em {
+    font-style: normal;
+    border-bottom: 0.2vw dashed #000;
+    color: red;
+    }
+.cursor {
+    position: absolute;
+    left: 0; top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    background-color: #fff;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s;
+    mix-blend-mode: difference;
+}
 
-         }
-         .textWrap .line .left .spanWrap{
-             width: 100vw;
-             text-align: center;
-         }
-         .textWrap .line .right{
-             width: 50vw;
-             color: white;
-             overflow: hidden;
-             transform: skew(0deg, 15deg);
-
-         }
-         .textWrap .line .right .spanWrap{
-             width: 100vw;
-             text-align: center;
-             transform: translateX(-50vw);
-         }
-         .imgWrap{
-            position: absolute;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            width: 50%;
-         }
-         .imgWrap img{
-             width: 100%;
-         }
-         .spanWrap .spanSlow{
-             display: inline-block;
-         }
-         .spanWrap .spanFast{
-             display: inline-block;
-         }
+.cursor.active {
+    transform: scale(20);
+}
+.info.left.list li.active{
+    text-decoration: underline;
+    color: red;
+}
+.box-item{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    padding: 0 20%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.box-item .item{
+    width: 50px; height: 50px;
+    margin: 20px;
+    background-color: rgba(255,255,255,.3);
+}
 
 </style>
 </head>
-<body class="bg bg3 blue">
-   
+<body class="bg bg9 blue">
+
 
         <!--contents-->
         <main>
-            <div class="cursor">  </div>
-                <div class="contents">
-                    <div class="moveImg">
-                        <div class="imgWrap">
-                            <img src="../assets/img/bg3.jpg" alt="이미지">
-                        </div>
-                        <div class="textWrap">
-                            <div class="line">
-                                <div class="left">
-                                    <div class="spanWrap">
-                                        <span class="spanSlow">Pain Past</span>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <div class="spanWrap">
-                                        <span class="spanSlow">Pain Past</span>
-                                    </div>
-                                 </div>
-                            </div>
-                            <div class="line">
-                                <div class="left">
-                                    <div class="spanWrap">
-                                        <span class="spanFast">is pleasure</span>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <div class="spanWrap">
-                                        <span class="spanFast">is pleasure</span>
-                                    </div>
-                                 </div>
-                            </div>
-                            <div class="line">
-                                <div class="left">
-                                    <div class="spanWrap">
-                                        <span class="spanSlow">지나간 고통은</span>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <div class="spanWrap">
-                                        <span class="spanSlow">지나간 고통은</span>
-                                    </div>
-                                 </div>
-                            </div>
-                            <div class="line">
-                                <div class="left">
-                                    <div class="spanWrap">
-                                        <span class="spanFast">쾌락이다</span>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <div class="spanWrap">
-                                        <span class="spanFast">쾌락이다</span>
-                                    </div>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="cursor"></div>
+            <div class="cursor-follower"></div>
+
+            <article class="mouseCont">
+                <p>I'm <em>lonely</em>, you are longing</p>
+                <h2>나는 <em>외로움</em> 그대는 그리움</h2>
+            </article>
+            <div class="box-item">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
         </main>
         <!--//contents-->
 
 
             <!-- info -->
         <div class="info">
-            <h1>jquery mouse Effect08 - jquery</h1>
-            <p>마우스 이펙트 - 텍스트 효과</p>
+            <h1>jquery mouse Effect03 - jquery</h1>
+            <p>마우스 이펙트 - 브렌딩 이펙트</p>
         </div>
 
         <div class="info right">
@@ -165,7 +194,11 @@
         <div class="info left list">
             <ul>
                 <li>pageX : <span class="pageX">0</span></li>
-                <li>pageY <span class="pageY">0</span></li>
+                <li>pageY : <span class="pageY">0</span></li>
+                <li>diffX : <span class="diffX">0</span></li>
+                <li>diffY : <span class="diffY">0</span></li>
+                <li>radians : <span class="radians">0</span></li>
+                <li>angle : <span class="angle">0</span></li>
             </ul>
         </div>
 
@@ -221,14 +254,40 @@
 <script src="../assets/js/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 <script>
+    $(window).mousemove(function(e){
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
 
+        $(".item").each(function(index, item){  //각 박스(item)의 offset 값을 구해야 함. 각 박스의 가운데 부분이 기준점. 즉 박스마다 기준점을 다 잡아야 함. 
+            const itemX = $(this).offset().left + 25;
+            const itemY = $(this).offset().top + 25;
+            const diffX = mouseX - itemX;
+            const diffY = mouseY - itemY;
+            const radians = Math.atan2(diffY, diffX);
+            const angle = radians * 180 / Math.PI //math.PI는 원주율이다.
+
+            $(this).css({"transform": "rotate("+ angle +"deg)"});
+            //기준점과 마우스위치를 이용해 박스를 ROTATE를 돌린다. 얼마만큼 돌릴지는 삼각함수를 이용하는데 math.atan()을 이용한다
+        });
+        //커서
+         gsap.to(".cursor", {duration: .3, X: e.clientX, y: e.clientY});
+
+        //출력
+        $(".pageX").text(parseInt(mouseX));
+        $(".pageY").text(parseInt(mouseY));
+        $(".diffX").text(parseInt(diffX));
+        $(".diffY").text(parseInt(diffY));
+        $(".radians").text(parseInt(radians));
+        $(".angle").text(parseInt(angle));
+    })
+    
 
         window.onload = function() {
          //init();
         //animate();
         agentCheak();
         modal();
-      }
+    }
 </script>
   
 <!--//script-->
