@@ -32,11 +32,15 @@
         <div class="container">
             <div class="preLeft">
                 <div class="preQuizWrap">
-                    <!-- <div class="preQuestion__quiz">
+                    <div class="preQuestion__quiz">
                         <h3 class="preQuestion__title">
                             <span class="preQuestion__title__num">1</span>
                             <span class="preQuestion__title__ask">병행제어 기법 중 로킹(Locking) 기법에 대한 설명으로 옳지 않은 것은?</span>
                         </h3>
+                        <div class="question_desc">
+                        <h4>&lt;보기&gt;</h4>
+                        <p></p>
+                        </div>
                         <div class="preQuestion__answer">
                             <div class="preQuestion__answer__selects">
                                 <label for="select1">
@@ -85,7 +89,7 @@
                                 </label>
                             </div>
                         </div> 
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="preAnswer">
@@ -114,6 +118,9 @@
         include "../include/footer.php";
       ?>
     </footer>
+
+    <script src="../assets/js/jquery.min_1.12.4.js"></script>
+    <script src="../assets/js/common.js"></script>
     <script>
         //선택자
         const preQuizWrap = document.querySelector(".preQuizWrap");
@@ -164,7 +171,7 @@
             const output = [];
 
             quizInfo.forEach((currentQuestion, questioinNumber) => {
-                output.push(`
+                output.push(` 
                         <div class="preQuestion__quiz">
                             <h3 class="preQuestion__title">
                                 <span class="preQuestion__title__num">${currentQuestion.quizNum}</span>

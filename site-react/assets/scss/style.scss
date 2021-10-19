@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
 //reset
-@import "./fonts";
-@import "./vars";
+@import "./fonts";  
+@import "./vars"; 
 @import "./reset";     
-@import "./mixins";
-       
-//loader    
+@import "./mixins";        
+          
+//loader       
 @import "./loader";        
-                        
+                            
 //layout       
-@import "./layout";
-  
+@import "./layout";         
+   
 //pages 
-@import "./pages";                                      
+@import "./pages";                                    

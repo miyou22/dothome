@@ -77,7 +77,7 @@
             <div class="share">
               <h4 class="ir_so">공유하기</h4>
               <span></span>
-            </div>
+            </div> 
             <div class="favorites">
               <h4 class="ir_so">즐겨찾기</h4>
               <span></span>
