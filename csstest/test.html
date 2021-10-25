@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css연습사이트</title>
+    <style> 
+    .testbox{width: 1000px; height: 1000px; background: yellow; position: relative;}
+    .testitem1{
+        width: 50px;
+        height: 50px;   
+        background: blue;
+        margin-bottom: 20px;
+    }
+    .testitem2{
+        width: 50px;
+        height: 50px;   
+        background: red;
+        position: absolute;
+        top: 20px; left: 10px;
+    }
+    .flexboxtest{
+        background: beige;
+        width: 800px;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap; /* nowrap->무조건 한줄에 배치, wrap->꽉차게 되면 다음줄에 배치, reversewrap-> 꽉차게 되면 마지막 줄부터 배치*/
+        /* flex-flow: row nowrap -> flex-direction과 flex-wrap의 합친 명령어*/ 
+        /* justify-content: center; space-around->일정한 간격의 여백을 주며 맨처음과 마지막은 상대적으로 적게 여백을 줌
+        space-evenly 모든 여백을 똑같이 줌, space-between은 맨처음과 마지막은 여백없이 아이템들의 간격을 일정하게 줌 */
+        /* align-content: center; justify-content의 반대축에서 설정(보통 justify-content는 가로, align-items는 세로) */
+        /* align-items: center; 수직적으로 아이템들을 배치될지를 정함 */
+    }
+    .item {
+        width: 10px; height: 10px;
+        /* flex-grow: 1; 부모박스가 커질때 아이템들의 크기를 설정
+        flex-shrink: 1;  부모박스가 작아질때 아이템들의 크기를 설정
+        flex-basis: 10%; 커질때, 작아질때 어느정도로 커질지를 설정
+        align-self: center; 특정 아이템들의 수직적인 위치를 잡아줄때 사용 */
+    }
+    .item1{background: #ef9a9a;}
+    .item2{background: #f48fb1;}
+    .item3{background:cyan}
+    .item4{background: blue;}
+    .item5{background: #000;}
+    .item6{background:darkcyan;}
+    .item7{background: darkblue;}
+    .item8{background: #eee;}
+    .item9{background:darkgoldenrod;}
+    .item10{background:darkorchid}
+    </style>
+</head>
+<body>
+   <div class="display">
+       <div>block형태-block는 가로의 줄의 너비를 전부 차지한다.</div>
+       <div>inline형태-inline은 내용이 있어야만 적용이 된다, span,div의 width,height값의 영향을 안받는다.</div>
+       <div>inline-block형태 - inline-block은 한줄에 여러 div,span이 들어갈수 있다.</div>
+   </div>
+   <div class="position">
+       <div>div박스에 top,left,right,bottom의 값을 줘서 위치를 변경하고 싶다는 position의 값을 relative로 바꿔주어야 한다</div>
+       <div>예를들어 top:20px, left: 20px를 주고 position: relative로 주면 원래 있던자리에서 위에서 20px, 왼쪽에서 20px만큼 움직인다.</div>
+       <div>position absolute는 absolute를 사용한 박스의 부모 상자의 position이 relative값을 가지면 그 상자의 기준으로 움직인다.</div>
+       <div>만약 부모상자의 relative가 없다면 시작점(브라우저의 맨왼쪽 맨위)가 된다.</div>
+       <div>fixed는 시작점(브라우저의 맨왼쪽 맨위)이 기준이다.</div>
+       <div>sticky는 원래 있던자리에 고정으로 있는다. 스크롤을 내려도 항상 그 위치에 있다.</div>
+   </div>
+   <div class="testbox">
+        <div class="testitem1"></div>
+        <div class="testitem2"></div>
+  </div>
+   <div class="flexbox">
+       <div>flexbox는 상자안에 아이템들의 크기 및 정렬상태를 설정할 수 있다. 플렉스박스는 display: flex; 이다.</div>
+       <div>부모박스는 display, flex-direction, flex-wrap, flex-flow, justify-content, align-item, align-content를 사용한다</div>
+       <div>자식박스는 order, flex-grow, flex-shrink, flex, align-self가 있다</div>
+   </div>
+   <div class="flexboxtest">
+       <div class="item item1">1</div>
+       <div class="item item2">2</div>
+       <div class="item item3">3</div>
+       <div class="item item4">4</div>
+       <div class="item item5">5</div>
+       <div class="item item6">6</div>
+       <div class="item item7">7</div>
+       <div class="item item8">8</div>
+       <div class="item item9">9</div>
+       <div class="item item10">10</div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,1263 @@
+/* 
+* 작성자 : 임지현
+* 작성일 : 2021-10-08
+* 수정일 : 2021-10-11
+* 수정내용 : 셀렉트 박스 버튼 수정
+*/
+
+/* HEADER */
+#header {
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+#header .menu ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#header .menu ul li a {
+    display: block;
+    padding: 10px 10px;
+    font-size: 14px;
+}
+
+#header .m_menu {
+    display: none;
+    cursor: pointer;
+    width: 25px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0);
+    padding: 15px 10px 10px 10px;
+}
+
+#header .m_menu span {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 4px;
+    background: #414141;
+}
+
+#header .m_menuList {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    border-top: 1px solid #ccc;
+}
+#header .m_menuList.show {
+    display: block;
+}
+
+#header .m_menuList ul li {
+    margin-bottom: 10px;
+}
+#header .m_menuList ul li a {
+    font-size: 14px;
+}
+
+#header .m_menu span::before {
+    content: '';
+    width: 25px;
+    height: 4px;
+    background: #414141;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+}
+#header .m_menu span::after {
+    content: '';
+    width: 25px;
+    height: 4px;
+    background: #414141;
+    position: absolute;
+    left: 0;
+    top: -7px;
+}
+
+#header .member ul li {
+    display: inline-block;
+}
+
+#header .menu ul li:hover a,
+#header .member ul li:hover a {
+    font-weight: 600;
+}
+
+#header .member ul li a {
+    display: block;
+    width: 90px;
+    padding: 10px 10px;
+    font-size: 14px;
+}
+
+#header .member ul li:last-child a {
+    background-color: #9FC3AF;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* //HEADER */
+
+
+/* MAIN페이지 */
+.main_banner {
+    width: 100%;
+    background-image: url("../img/main_banner01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+
+.main_banner .container {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_banner .container h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.main_banner .container p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.main_banner .random_quiz {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 40%;
+    position: relative;
+    border-radius: 5px;
+}
+
+.main_banner .quiz {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 40%;
+    position: relative;
+    border-radius: 5px;
+}
+
+.main_banner .quiz .selectYear {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    line-height: 31px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff url(../img/qna_icon.svg) no-repeat right 10px center;
+    background-size: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.quiz_btn {
+    display: inline-block;
+    background-color: #9FC3AF;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.main_section:nth-child(even) {
+    background-color: #F1F0EB;
+}
+
+#section1 .textarea {
+    padding-left: 60px;
+}
+
+
+.main_section .container {
+    display: flex;
+    padding: 50px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgarea {
+    width: 100%;
+}
+
+.imgarea img {
+    width: 100%;
+}
+
+.textarea {
+    width: 100%;
+}
+
+.textarea h1 {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.textarea p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.textarea a {
+    display: inline-block;
+    background-color: #9FC3AF;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#section3 .container {
+    justify-content: space-between;
+}
+
+.dday_box {
+    width: 47%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+}
+
+.dday_box img {
+    display: inline-block;
+    width: 177px;
+    height: 350px;
+}
+
+.dday_box .dday_container {
+    padding: 20px 0 0 20px;
+}
+
+.dday_container h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.dday_container p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.dday_container .dday {
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.review_board {
+    width: 47%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+}
+
+.review_board h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.review_board .review_btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px 30px;
+    color: #414141;
+    border-radius: 50px;
+    border: 1px solid #414141;
+}
+
+.review_board .review li {
+    border-bottom: 1px dashed #ccc;
+    padding: 10px 0;
+}
+
+.review_board .review li a {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.review_board .review li a span {
+    float: right;
+}
+
+/* //MAIN페이지 */
+
+
+/* FOOTER */
+#footer {
+    background-color: #414141;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px;
+}
+
+#footer p {
+    font-size: 80%;
+    display: inline-block;
+    line-height: 100%;
+}
+
+#footer p:first-child {
+    padding-right: 20px;
+}
+
+#footer p:last-child {
+    border-left: 1px solid #fff;
+    padding-left: 20px;
+}
+
+#footer p a {
+    color: #fff;
+}
+
+/* //FOOTER */
+
+
+/* 게시판 쓰기/수정하기 */
+#boardWriteMain {
+    margin: 70px 0;
+}
+
+#boardWriteMain .boardWriteTitle {
+    padding-bottom: 23px;
+    border-bottom: 1px solid #999;
+}
+
+#boardWriteMain .boardWriteContent {
+    margin-top: 82px;
+    overflow: hidden;
+}
+
+.boardWriteContent label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.boardWriteContent input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.boardWriteContent textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+    border-color: #ccc;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.boardWriteContent .board-btn {
+    display: block;
+    color: #fff;
+    background-color: #9FC3AF;
+    float: right;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* //게시판 쓰기/수정하기 */
+
+/* 공지사항 게시판 */
+.imgBanner.notice {
+    background-image: url(../img/noticeBanner.jpg);
+}
+
+.bMain .board-title::before {
+    background-color: #F0F0F0;
+}
+
+/* //공지사항 게시판 */
+
+/* 
+* 작성자 : 허아라
+* 작성일 : 2021-10-08
+* 수정자 : 임지현
+* 수정일 : 2021-10-11
+* 내용 : 회원가입 페이지 내 버튼 a태그 제거, 로그인 페이지 로그인버튼 type추가
+*/
+
+
+/* 로그인 페이지 */
+#login_main {
+    text-align: center;
+    background: #ececec;
+    background-image: url(../img/login_bg@2x.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#login_main .lg_form {
+    display: inline-block;
+    margin: 150px auto;
+    width: 600px;
+    border-radius: 5px;
+    background: #fff;
+    opacity: .9;
+    text-align: center;
+    padding-bottom: 85px;
+}
+
+#login_main .lg_form .lg_box {
+    width: 400px;
+    margin: 0 auto;
+}
+
+#login_main .lg_form .lg_box h2 {
+    font-size: 28px;
+    margin: 50px;
+    font-weight: 800;
+}
+
+#login_main .lg_form .lg_box form div {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 26px;
+}
+
+#login_main .lg_form .lg_box form input {
+    width: 100%;
+    padding: 10px;
+    border-style: none;
+    border-bottom: 1px solid #414141;
+}
+
+#login_main .lg_form .lg_box button {
+    margin-top: 50px;
+    font-size: 24px;
+    padding: 15px 165px;
+    border-radius: 5px;
+    border-style: none;
+    background: #414141;
+    color: #fff;
+    cursor: pointer;
+}
+
+#login_main .lg_form .lg_box .info {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* 회원가입 */
+#join_main {
+    text-align: center;
+    background: #f1f0eb;
+    background-size: cover;
+    background-position: center;
+}
+
+#join_main .jo_form .jo_box {
+    width: 510px;
+    margin: 0 auto;
+}
+
+#join_main .jo_form h2 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+#join_main .jo_form {
+    display: inline-block;
+    margin: 100px auto;
+    width: 600px;
+    border-radius: 5px;
+    background: #fff;
+    text-align: left;
+}
+
+#join_main .jo_form .join-info {
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+
+#join_main .jo_form .join-privacy {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#join_main .jo_form .join-privacy ul {
+    padding: 20px;
+    border: 1px solid #E3E3E3;
+    font-size: 12px;
+}
+
+#join_main .jo_form .join-privacy .join_check {
+    width: 96%;
+    margin: 0 auto;
+    display: block;
+    padding: 9px;
+    border: 1px solid #E3E3E3;
+    background: #F4F4F4;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+#join_main .jo_form .join-privacy .join_check input {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    vertical-align: -3px;
+}
+
+#join_main .jo_form .jo_box h4 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+
+#join_main .jo_form .jo_box form div {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+#join_main .jo_form .jo_box form label {
+    display: block;
+}
+
+#join_main .jo_form .jo_box form input {
+    width: 350px;
+    border-style: none;
+    border-bottom: 1px solid #414141;
+    padding: 10px;
+}
+
+#join_main .jo_form .jo_box form input.wp {
+    width: 500px;
+}
+
+#join_main .jo_form .jo_box .btn_submit {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    padding: 15px 195px;
+    border-radius: 5px;
+    border-style: none;
+    background: #414141;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+#join_main .jo_form .jo_box .btn_sb {
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 15px;
+    margin-left: 30px;
+    border-radius: 5px;
+    border-style: none;
+    background: #9FC3AF;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* 회원가입 완료 페이지 */
+#joinCk_main {
+    text-align: center;
+    background: #F1F0EB;
+    background-size: cover;
+    background-position: center;
+}
+
+#joinCk_main .joCk_form {
+    display: inline-block;
+    margin: 100px auto;
+    width: 1200px;
+    padding: 60px 0;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+}
+
+#joinCk_main .joCk_form .joCk_box {
+    margin: 0 auto;
+}
+
+#joinCk_main .joCk_form .joCk_box h2 {
+    color: #9FC3AF;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#joinCk_main .joCk_form .joCk_box h2 em {
+    font-weight: 600;
+}
+
+#joinCk_main .joCk_form .joCk_box p {
+    font-size: 24px;
+    color: #414141;
+    margin-bottom: 80px;
+}
+
+#joinCk_main .joCk_form .joCk_box img {
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+#joinCk_main .joCk_form button {
+    padding: 12px 240px;
+    border-radius: 5px;
+    font-size: 28px;
+    display: inline-block;
+    text-align: center;
+    background: #9FC3AF;
+    border-style: none;
+    cursor: pointer;
+}
+
+#joinCk_main .joCk_form button a {
+    color: #fff;
+}
+
+/* 큐엔에이 */
+
+#qna_wrap .qna_benner {
+    height: 200px;
+    background: #F1F0EB;
+    background-image: url(../img/qan_img.png);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: right 10vw top 1vw;
+}
+
+#qna_wrap .qna_benner .qna_bg {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+#qna_wrap .qna_benner .qna_bg h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+#qna_wrap .qna_benner .qna_bg p {
+    font-size: 18px;
+}
+
+/* 아코디언 */
+.qna_accordion {
+    background: #fff;
+}
+
+#accordion {
+
+    margin: 100px auto;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+#accordion h3 {
+    font-size: 18px;
+    font-weight: 400;
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+    cursor: pointer;
+}
+
+#accordion h3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 1px;
+    right: 3%;
+    bottom: 5px;
+    background-image: url(../img/qna_icon.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#accordion h3 span:nth-child(4) {
+    float: right;
+    margin-right: 15%;
+}
+
+#accordion h3 span:nth-child(3) {
+    position: absolute;
+    left: 280px;
+}
+
+#accordion h3 span:nth-child(2) {
+    float: left;
+    margin-left: 3%;
+}
+
+#accordion>div {
+    width: 100%;
+    background: #F1F0EB;
+}
+
+#accordion>div p {
+    padding: 30px 40px;
+    font-size: 18px;
+}
+
+/* 메일 영역 */
+#qna_wrap .mail_tell {
+    margin-bottom: 100px;
+}
+
+#qna_wrap .mail_tell h4 {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 30px;
+    padding-left: 10%;
+}
+
+.mail_tell h4::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 3%;
+    bottom: 6px;
+    padding-bottom: 10px;
+    background-image: url(../img/Mail_icon.svg);
+    background-repeat: no-repeat;
+}
+
+#qna_wrap .mail_tell .mail_form {
+    padding-top: 50px;
+    padding: 3%;
+    font-size: 18px;
+    border-top: 1px solid #414141;
+}
+
+#qna_wrap .mail_tell .mail_form label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#qna_wrap .mail_tell .mail_form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+#qna_wrap .mail_tell .mail_form #email_txt {
+    resize: none;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+#qna_wrap .mail_tell button {
+    float: right;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #9FC3AF;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* 
+* 작성자 : 전대섭
+* 작성일 : 2021-10-08
+* 수정자 : 임지현
+* 수정일 : 2021-10-08
+* 수정내용 : 게시판 css 수정
+* 수정자 : 임지현
+* 수정일 : 2021-10-11
+* 수정내용 : 게시판 css 수정
+*/
+
+/* review */
+/* 배너 */
+.imgBanner {
+    display: inline-block;
+    background-image: url(../img/mainreview.jpg);
+    width: 100%;
+    height: 426px;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+.imgBanner .container {
+    display: inline;
+}
+
+.container .rName {
+    display: inline;
+    text-align: center;
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+.rTitle {
+    color: #fff;
+    font-size: 24px;
+}
+
+.rSub {
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.bMain img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 35px;
+    left: 125px;
+}
+
+.bMain h2 {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.bMain h2::before {
+    content: '';
+    position: absolute;
+    left: -35px;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    background-color: #D3E9D7;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+/* 게시판,공지사항 글 보기 */
+.bvMainView .container {
+    overflow: hidden;
+}
+
+.bvMainView {
+    margin-bottom: 170px;
+}
+
+.bvTitle {
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 130px;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid #CDCDCD;
+    border-bottom: 2px solid #CDCDCD;
+}
+
+.bvEtc {
+    overflow: hidden;
+}
+
+.bvNick {
+    display: inline;
+    float: left;
+    font-size: 18px;
+}
+
+.bvCoday {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+
+.bvCoday span {
+    color: #CCCCCC;
+}
+
+.bvCont {
+    min-height: 395px;
+    border-bottom: 1px solid #CDCDCD;
+    font-size: 18px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bvCont p {
+    font-size: 18px;
+}
+
+.aWrapform {
+    float: right;
+}
+
+.form-write {
+    display: inline-block;
+    width: 82px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #9FC3AF;
+    border-radius: 5px;
+    background: #9FC3AF;
+    color: #fff;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-write:nth-last-child(3) {
+    margin-left: 20px;
+}
+
+/*게시판*/
+fieldset {
+    border: 0;
+}
+
+.board-search {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+}
+
+.board-search .form-search {
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 300px;
+}
+
+.board-search .form-select {
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+
+.board-search .form-btn {
+    border: 1px solid #9FC3AF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: #9FC3AF;
+    color: #fff;
+    width: 82px;
+}
+
+/* 게시판 테이블 */
+.board-table table {
+    width: 100%;
+    border-top: 3px solid #000;
+}
+
+.board-table table th,
+.board-table table td {
+    border-bottom: 1px dashed #D1D1D1;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.board-table table th {
+    border-bottom: 1px solid #D1D1D1;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+.board-table table .height {
+    height: 400px;
+    vertical-align: top;
+}
+
+.board-table table .left {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.board-table .btn {
+    float: right;
+}
+
+.board-table .btn a {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+/*게시판 페이지*/
+.board-page {
+    margin: 50px 0 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.board-page ul {
+    display: flex;
+    justify-content: center;
+}
+
+.board-page li a {
+    display: block;
+    border: 1px solid #eee;
+    padding: 13px 10px;
+    margin-right: -1px;
+}
+
+.board-page li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+.form-btn.black {
+    display: block;
+    border: 1px solid #9FC3AF;
+    background-color: #9FC3AF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+/*
+* 작성자 : 임지현
+* 작성일 : 2021.10.11
+* 내용 : 미디어 쿼리 영역 CSS 작성
+*/
+/* 미디어쿼리 영역 */
+@media (max-width: 1200px) {
+
+    /* HEADER */
+    #header .menu ul li a {
+        display: block;
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    #header .member ul li {
+        display: inline-block;
+    }
+
+    #header .member ul li a {
+        display: block;
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+    /* //HEADER */
+
+    .main_banner .container h1 {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .main_banner .container p {
+        font-size: 14px;
+    }
+
+    .main_banner .random_quiz,
+    .main_banner .quiz  {
+        padding: 30px;
+    }
+
+    .quiz_btn {
+        padding: 10px 21px;
+        font-size: 14px;
+        bottom: 31px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .main_banner .container p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    #header .menu {
+        display: none;
+    }
+    #header .m_menu {
+        display: block;
+    }
+
+    .main_banner .container {
+        padding: 80px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 15px;
+        overflow: hidden;
+    }
+    .main_banner .container > div {
+        width: 100%;
+    }
+
+    #section1 .textarea {
+        padding-left: 15px;
+    }
+
+    .textarea h1 {
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+
+    .textarea p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .textarea a {
+        padding: 5px 20px;
+        font-size: 12px;
+    }
+
+    .quiz_btn {
+        right: 90px;
+    }
+
+    #section3 .container {
+        display: block;
+    }
+
+    .dday_box {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    .dday_box img {
+        height: 290px;
+    }
+
+    .dday_container h1 {
+        font-size: 20px;
+    }
+
+    .dday_container p {
+        font-size: 12px;
+    }
+
+    .dday_container .dday {
+        font-size: 55px;
+    }
+
+    .review_board{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .review_board h1 {
+        font-size: 20px;
+    }
+
+    .review_board .review_btn {
+        font-size: 12px;
+        padding: 8px 25px;
+    }
+
+    .review_board .review li a {
+        font-size: 14px;
+    }
+    /* //main */
+
+    #login_main .lg_form {
+        width: 100%;
+    }
+
+    #join_main .jo_form {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    #join_main .jo_form .jo_box {
+        width: 100%;
+    }
+
+    #join_main .jo_form h2 {
+        font-size: 18px;
+    }
+
+    #join_main .jo_form .jo_box h4 {
+        font-size: 16px;
+    }
+
+    #join_main .jo_form .jo_box form label {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    #join_main .jo_form .jo_box form input {
+        width: 60%;
+        font-size: 12px;
+    }
+
+    #join_main .jo_form .jo_box .btn_sb {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    #join_main .jo_form .jo_box form input.wp {
+        width: 90%;
+    }
+
+    #join_main .jo_form .jo_box .btn_submit {
+        margin-top: 50px;
+        font-size: 14px;
+        padding: 15px 0;
+        width: 100%;
+    }
+    /* //login,join */
+
+}

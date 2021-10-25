@@ -1,0 +1,2215 @@
+@charset "UTF-8";
+/* 
+* 작성자 : 임지현
+* 작성일 : 2021-10-08
+* 수정일 : 2021-10-14
+* 수정내용 : 문제풀기 페이지 추가
+* 수정일 : 2021-10-19
+* 수정내용 : 문제풀기 페이지 css 추가 및 수정
+*/
+
+/* HEADER */
+#header {
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+#header .menu ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#header .menu ul li a {
+    display: block;
+    padding: 10px 10px;
+    font-size: 14px;
+}
+
+#header .menu ul li:first-child {
+    margin-left: 0;
+}
+
+#header .menu ul li a:first-child {
+    padding-left: 0;
+}
+
+#header .m_menu {
+    display: none;
+    cursor: pointer;
+    width: 25px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0);
+    padding: 15px 10px 10px 10px;
+}
+
+#header .m_menu span {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 4px;
+    background: #414141;
+}
+
+#header .m_menuList {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    border-top: 1px solid #ccc;
+}
+
+#header .m_menuList.show {
+    display: block;
+}
+
+#header .m_menuList ul li {
+    margin-bottom: 10px;
+}
+
+#header .m_menuList ul li a {
+    font-size: 14px;
+}
+
+#header .m_menu span::before {
+    content: '';
+    width: 25px;
+    height: 4px;
+    background: #414141;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+}
+
+#header .m_menu span::after {
+    content: '';
+    width: 25px;
+    height: 4px;
+    background: #414141;
+    position: absolute;
+    left: 0;
+    top: -7px;
+}
+
+#header .member ul li {
+    display: inline-block;
+}
+
+#header .menu ul li:hover a,
+#header .member ul li:hover a {
+    font-weight: 600;
+}
+
+#header .member ul li a {
+    display: block;
+    width: 90px;
+    padding: 10px 10px;
+    font-size: 14px;
+}
+
+#header .member ul li.login a {
+    width: auto;
+}
+
+#header .member ul li:last-child a {
+    background-color: #9FC3AF;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* //HEADER */
+
+
+/* MAIN페이지 */
+.main_banner {
+    width: 100%;
+    background-image: url("../img/main_banner01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+
+.main_banner .container {
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_banner .container h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.main_banner .container p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.main_banner .random_quiz {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 40%;
+    position: relative;
+    border-radius: 5px;
+}
+
+.main_banner .quiz {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 40%;
+    position: relative;
+    border-radius: 5px;
+}
+
+.main_banner .quiz .selectYear {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    line-height: 31px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff url(../img/qna_icon.svg) no-repeat right 10px center;
+    background-size: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.quiz_btn {
+    display: inline-block;
+    background-color: #9FC3AF;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.main_section:nth-child(even) {
+    background-color: #F1F0EB;
+}
+
+#section1 .textarea {
+    padding-left: 60px;
+}
+
+
+.main_section .container {
+    display: flex;
+    padding: 50px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgarea {
+    width: 100%;
+}
+
+.imgarea img {
+    width: 100%;
+}
+
+.textarea {
+    width: 100%;
+}
+
+.textarea h1 {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.textarea p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.textarea a {
+    display: inline-block;
+    background-color: #9FC3AF;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#section3 .container {
+    justify-content: space-between;
+}
+
+.dday_box {
+    width: 47%;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    display: flex;
+    overflow: hidden;
+}
+
+.dday_box img {
+    display: inline-block;
+    width: 177px;
+    height: 350px;
+}
+
+.dday_box .dday_container {
+    padding: 20px 0 0 20px;
+}
+
+.dday_container h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.dday_container p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.dday_container .dday {
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.review_board {
+    width: 47%;
+    min-height: 350px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.review_board h1 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.review_board .review_btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px 30px;
+    color: #414141;
+    border-radius: 50px;
+    border: 1px solid #414141;
+}
+
+.review_board .review li {
+    border-bottom: 1px dashed #ccc;
+    padding: 10px 0;
+}
+
+.review_board .review li a {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.review_board .review li a span {
+    float: right;
+}
+
+/* //MAIN페이지 */
+
+
+/* FOOTER */
+#footer {
+    background-color: #414141;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px;
+}
+
+#footer p {
+    font-size: 80%;
+    display: inline-block;
+    line-height: 100%;
+}
+
+#footer p:first-child {
+    padding-right: 20px;
+}
+
+#footer p:last-child {
+    border-left: 1px solid #fff;
+    padding-left: 20px;
+}
+
+#footer p a {
+    color: #fff;
+}
+
+/* //FOOTER */
+
+
+/* 게시판 쓰기/수정하기 */
+#boardWriteMain {
+    margin: 70px 0;
+}
+
+#boardWriteMain .boardWriteTitle {
+    padding-bottom: 23px;
+    border-bottom: 1px solid #999;
+}
+
+#boardWriteMain .boardWriteContent {
+    margin-top: 82px;
+    overflow: hidden;
+}
+
+.boardWriteContent label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.boardWriteContent input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+.boardWriteContent textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    resize: none;
+    border-color: #ccc;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.boardWriteContent .board-btn {
+    display: block;
+    color: #fff;
+    background-color: #9FC3AF;
+    float: right;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* //게시판 쓰기/수정하기 */
+
+/* 공지사항 게시판 */
+.imgBanner.notice {
+    background-image: url(../img/noticeBanner.jpg);
+}
+
+.bMain .board-title::before {
+    background-color: #F0F0F0;
+}
+
+/* //공지사항 게시판 */
+
+/* 2021-10-14 추가 */
+/* 2021-10-19 일부 수정 및 추가 */
+/* 문제풀기 */
+.random_head {
+    background-color: #F1F0EB;
+    padding: 50px 0;
+}
+
+.random_head #random_title {
+    display: inline-block;
+}
+
+.random_head #random_desc {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.random_head .select_subject {
+    overflow: hidden;
+    display: inline;
+}
+
+.random_head .select_subject .random_subject {
+    display: block;
+    float: right;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    line-height: 31px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background: #fff url(../img/qna_icon.svg) no-repeat right 10px center;
+    background-size: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.random_question {
+    margin: 70px 0 200px;
+}
+
+.random_question .question {
+    background-color: #F1F0EB;
+    padding: 55px;
+    overflow: hidden;
+}
+
+.random_question .question .question_area {
+    float: left;
+    width: 85%;
+    position: relative;
+}
+
+.random_question .question .question_title {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.random_question .question_title .question_title_num::after {
+    content: '.';
+}
+
+.random_question .result_img img:nth-child(1),
+.random_question .result_img img:nth-child(2) {
+    width: 70px;
+    position: absolute;
+    left: -30px;
+    top: -17px;
+    z-index: 10;
+    display: none;
+}
+
+
+.random_question .question_desc {
+    position: relative;
+    border: 1px solid #8f8f8f;
+    margin: 20px 0 35px;
+    padding: 18px;
+}
+
+.random_question .question_desc h4 {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #F1F0EB;
+}
+
+.random_question .question_answer_selects label {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.random_question .question_answer_selects label input {
+    position: absolute;
+    left: -9999px;
+}
+
+.random_question .question_answer_selects label span {
+    font-size: 16px;
+    padding: 8px 35px 8px 45px;
+    line-height: 1.8;
+    position: relative;
+    cursor: pointer;
+}
+
+.random_question .question_answer_selects label span::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: #D4D4D4;
+    border-radius: 50%;
+    position: absolute;
+    left: 7px;
+    top: 9px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+    transition: .25s ease;
+    color: #fff;
+}
+
+.random_question .question_answer_selects label:nth-child(1) span::before {
+    content: '1';
+}
+
+.random_question .question_answer_selects label:nth-child(2) span::before {
+    content: '2';
+}
+
+.random_question .question_answer_selects label:nth-child(3) span::before {
+    content: '3';
+}
+
+.random_question .question_answer_selects label:nth-child(4) span::before {
+    content: '4';
+}
+
+
+.random_question .question_answer_selects label span:hover:before {
+    background-color: #D3E9D7;
+}
+
+.random_question .question_answer_selects input:checked+span:before {
+    background-color: #9FC3AF;
+}
+
+.random_question .question_side_menu {
+    float: right;
+}
+
+.random_question .question_side_menu .share {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    background-color: #9FC3AF;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.random_question .question_side_menu .share span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/Share.svg");
+    background-position: center;
+    background-size: 100% 100%;
+    transition: all .3s;
+}
+
+.random_question .question_side_menu .share:hover span {
+    background-image: url("../img/Share_color.svg");
+}
+
+.random_question .question_side_menu .favorites {
+    width: 35px;
+    height: 35px;
+    background-color: #9FC3AF;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.random_question .question_side_menu .favorites span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/Star.svg");
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.random_question .question_side_menu .favorites.like span {
+  background-image: url("../img/Star_color.svg");
+}
+
+.question_btn_area {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.question_btn_area .left {
+    float: left;
+}
+
+.question_btn_area .right {
+    float: right;
+}
+
+.question_btn_area .question_btn {
+    background-color: #9FC3AF;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.commentary_area {
+    display: none;
+    border-top: 1px solid #9FC3AF;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.commentary_area.show {
+    display: block;
+}
+
+.commentary_area p {
+    border: 1px solid #9FC3AF;
+    padding: 30px;
+}
+
+
+
+
+
+/* 
+* 작성자 : 허아라
+* 작성일 : 2021-10-08
+* 수정자 : 임지현
+* 수정일 : 2021-10-11
+* 내용 : 회원가입 페이지 내 버튼 a태그 제거, 로그인 페이지 로그인버튼 type추가
+* 수정자 : 임지현
+* 수정일 : 2021-10-18
+* 내용 : 랜덤 문제 제작 페이지 수정
+*/
+
+
+/* 로그인 페이지 */
+#login_main {
+  text-align: center;
+  background: #ececec;
+  background-image: url(../img/login_bg@2x.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#login_main .lg_form {
+  display: inline-block;
+  margin: 150px auto;
+  width: 600px;
+  border-radius: 5px;
+  background: #fff;
+  opacity: .9;
+  text-align: center;
+  padding-bottom: 85px;
+}
+
+#login_main .lg_form .lg_box {
+  width: 400px;
+  margin: 0 auto;
+}
+
+#login_main .lg_form .lg_box h2 {
+  font-size: 28px;
+  margin: 50px;
+  font-weight: 800;
+}
+
+#login_main .lg_form .lg_box form div {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 26px;
+}
+
+#login_main .lg_form .lg_box form input {
+  width: 100%;
+  padding: 10px;
+  border-style: none;
+  border-bottom: 1px solid #414141;
+}
+
+#login_main .lg_form .lg_box button {
+  margin-top: 50px;
+  font-size: 24px;
+  padding: 15px 165px;
+  border-radius: 5px;
+  border-style: none;
+  background: #414141;
+  color: #fff;
+  cursor: pointer;
+}
+
+#login_main .lg_form .lg_box .info {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 14px;
+}
+
+#login_main .lg_form .lg_box .info>a {
+  position: relative;
+}
+
+#login_main .lg_form .lg_box .info>a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #414141;
+}
+
+/* 회원가입 */
+#join_main {
+  text-align: center;
+  background: #f1f0eb;
+  background-size: cover;
+  background-position: center;
+}
+
+#join_main .jo_form .jo_box {
+  width: 510px;
+  margin: 0 auto;
+}
+
+#join_main .jo_form h2 {
+  text-align: center;
+  margin: 30px 0;
+}
+
+#join_main .jo_form {
+  display: inline-block;
+  margin: 100px auto;
+  width: 600px;
+  border-radius: 5px;
+  background: #fff;
+  text-align: left;
+}
+
+#join_main .jo_form .join-info {
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+
+#join_main .jo_form .join-privacy {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#join_main .jo_form .join-privacy ul {
+  padding: 20px;
+  border: 1px solid #E3E3E3;
+  font-size: 12px;
+}
+
+#join_main .jo_form .join-privacy .join_check {
+  width: 96%;
+  margin: 0 auto;
+  display: block;
+  padding: 9px;
+  border: 1px solid #E3E3E3;
+  background: #F4F4F4;
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+#join_main .jo_form .join-privacy .join_check input {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  vertical-align: -3px;
+}
+
+#join_main .jo_form .jo_box h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+
+#join_main .jo_form .jo_box form div {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 18px;
+}
+
+#join_main .jo_form .jo_box form label {
+  display: block;
+}
+
+#join_main .jo_form .jo_box form input {
+  width: 350px;
+  border-style: none;
+  border-bottom: 1px solid #414141;
+  padding: 10px;
+}
+
+#join_main .jo_form .jo_box form input.wp {
+  width: 500px;
+}
+
+#join_main .jo_form .jo_box .btn_submit {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  padding: 15px 195px;
+  border-radius: 5px;
+  border-style: none;
+  background: #414141;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+#join_main .jo_form .jo_box .btn_sb {
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 15px;
+  margin-left: 30px;
+  border-radius: 5px;
+  border-style: none;
+  background: #9FC3AF;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* 회원가입 완료 페이지 */
+#joinCk_main {
+  text-align: center;
+  background: #F1F0EB;
+  background-size: cover;
+  background-position: center;
+}
+
+#joinCk_main .joCk_form {
+  display: inline-block;
+  margin: 100px auto;
+  width: 1200px;
+  padding: 60px 0;
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+}
+
+#joinCk_main .joCk_form .joCk_box {
+  margin: 0 auto;
+}
+
+#joinCk_main .joCk_form .joCk_box h2 {
+  color: #9FC3AF;
+  font-size: 42px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+#joinCk_main .joCk_form .joCk_box h2 em {
+  font-weight: 600;
+}
+
+#joinCk_main .joCk_form .joCk_box p {
+  font-size: 24px;
+  color: #414141;
+  margin-bottom: 80px;
+}
+
+#joinCk_main .joCk_form .joCk_box img {
+  width: 600px;
+  margin-bottom: 50px;
+}
+
+#joinCk_main .joCk_form button {
+  padding: 12px 240px;
+  border-radius: 5px;
+  font-size: 28px;
+  display: inline-block;
+  text-align: center;
+  background: #9FC3AF;
+  border-style: none;
+  cursor: pointer;
+}
+
+#joinCk_main .joCk_form button a {
+  color: #fff;
+}
+
+/* 큐엔에이 */
+
+#qna_wrap .qna_benner {
+  height: 200px;
+  background: #F1F0EB;
+  background-image: url(../img/qan_img.png);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: right 10vw top 1vw;
+}
+
+#qna_wrap .qna_benner .qna_bg {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+#qna_wrap .qna_benner .qna_bg h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+#qna_wrap .qna_benner .qna_bg p {
+  font-size: 18px;
+}
+
+/* 아코디언 */
+.qna_accordion {
+  background: #fff;
+}
+
+#accordion {
+
+  margin: 100px auto;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+#accordion h3 {
+  font-size: 18px;
+  font-weight: 400;
+  height: 70px;
+  line-height: 70px;
+  position: relative;
+  cursor: pointer;
+}
+
+#accordion h3::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 1px;
+  right: 3%;
+  bottom: 5px;
+  background-image: url(../img/qna_icon.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#accordion h3 span:nth-child(4) {
+  float: right;
+  margin-right: 15%;
+}
+
+#accordion h3 span:nth-child(3) {
+  position: absolute;
+  left: 280px;
+}
+
+#accordion h3 span:nth-child(2) {
+  float: left;
+  margin-left: 3%;
+}
+
+#accordion>div {
+  width: 100%;
+  background: #F1F0EB;
+}
+
+#accordion>div p {
+  padding: 30px 40px;
+  font-size: 18px;
+}
+
+/* 메일 영역 */
+#qna_wrap .mail_tell {
+  margin-bottom: 100px;
+}
+
+#qna_wrap .mail_tell h4 {
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 30px;
+  padding-left: 10%;
+}
+
+.mail_tell h4::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 3%;
+  bottom: 6px;
+  padding-bottom: 10px;
+  background-image: url(../img/Mail_icon.svg);
+  background-repeat: no-repeat;
+}
+
+#qna_wrap .mail_tell .mail_form {
+  padding-top: 50px;
+  padding: 3%;
+  font-size: 18px;
+  border-top: 1px solid #414141;
+}
+
+#qna_wrap .mail_tell .mail_form label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+#qna_wrap .mail_tell .mail_form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+#qna_wrap .mail_tell .mail_form #email_txt {
+  resize: none;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+
+#qna_wrap .mail_tell button {
+  float: right;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #9FC3AF;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 마이페이지 네비 */
+#user_nav {
+  width: 100%;
+  display: block;
+  text-align: right;
+  background: #F1F0EB;
+  border-bottom: 1px solid #ccc;
+}
+
+#user_nav .user {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#user_nav .user ul {
+  float: right;
+}
+
+#user_nav .user ul li {
+  float: left;
+  padding: 15px;
+}
+
+#user_nav .user ul li.active {
+  font-weight: 600;
+}
+
+#user_nav .user ul li:last-child {
+  padding-right: 0;
+}
+
+.user_form input::placeholder {
+  font-size: 18px;
+  color: #414141;
+}
+
+
+/* 마이페이지 폼 */
+.user_pages {
+  background: url(../img/user_bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.user_pages .user_box {
+  padding: 100px 0;
+}
+
+.user_box .user_form {
+  width: 600px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.user_box .user_form h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.user_box .user_form>div {}
+
+.user_box .user_form label {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.user_box .user_form input {
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #414141;
+  background: none;
+  box-sizing: border-box;
+}
+
+.user_box .user_form button {
+  border-style: none;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 26px;
+  width: 500px;
+  padding: 10px;
+  background: #414141;
+  border-radius: 5px;
+}
+
+.user_box .user_form button a {
+  color: #fff;
+}
+
+/* 문제만들기 */
+#questionWriteMain {
+  margin: 70px 0;
+}
+
+#questionWriteMain .questionWriteTitle {
+  padding-bottom: 23px;
+  border-bottom: 1px solid #999;
+  overflow: hidden;
+}
+
+#questionWriteMain .quesWrite_select {
+  float: right;
+  padding: 8px;
+  width: 300px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+#questionWriteMain .questionWriteContent {
+  margin-top: 82px;
+  overflow: hidden;
+}
+
+.questionWriteContent label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#questionWriteMain .question_choice {
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+#questionWriteMain .question_choice label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#questionWriteMain .question_choice .choie_radio {
+  opacity: 0;
+}
+
+#questionWriteMain .question_choice input:checked+span::after {
+  box-shadow: inset 0 0 0 15px #9FC3AF;
+}
+
+#questionWriteMain .question_choice label span {
+  position: relative;
+}
+
+#questionWriteMain .question_choice label span::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  left: -30px;
+  top: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#questionWriteMain .question_choice:checked+.choie_radio::after {
+  box-shadow: inset 0 0 0 20px #9FC3AF;
+}
+
+#questionWriteMain .question_choice span {
+  margin-left: 20px;
+  width: 100%;
+}
+
+#questionWriteMain .question_choice .choie-list {
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+
+.questionWriteContent textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  resize: none;
+  border: 1px solid #ccc;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.questionWriteContent .choie-list {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  resize: none;
+  border-color: #ccc;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.questionWriteContent p {
+  float: right;
+  font-size: 14px;
+}
+
+.questionWriteContent .board-btn {
+  display: block;
+  color: #fff;
+  background-color: #9FC3AF;
+  float: right;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 회원정보 수정 */
+.user_pages .userMD_box {
+  padding: 100px 0;
+}
+
+.userMD_box .userMD_form {
+  width: 600px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.userMD_box .userMD_form h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.userMD_box .userMD_form #youNickname {
+  width: 400px;
+}
+
+.userMD_box .userMD_form label {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.userMD_box .userMD_form .btn_sb {
+  float: right;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 15px;
+  margin-left: 30px;
+  border-radius: 5px;
+  border-style: none;
+  background: #9FC3AF;
+  color: #fff;
+  cursor: pointer;
+}
+
+.userMD_box .userMD_form input {
+  border: none;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #414141;
+  background: none;
+  box-sizing: border-box;
+}
+
+.userMD_box .userMD_form #user_Btn {
+  border-style: none;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 26px;
+  width: 500px;
+  padding: 10px;
+  background: #414141;
+  border-radius: 5px;
+}
+
+.userMD_box .userMD_form button {
+  color: #fff;
+}
+/* 내가만든 문제 */
+.user_question {
+  margin: 70px 0 200px;
+}
+
+.user_question .question {
+  background-color: #F1F0EB;
+  padding: 55px;
+  overflow: hidden;
+}
+
+.user_question .question .question_area {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.user_question .question .question_title {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.user_question .question_title .question_title_num::after {
+  content: '.';
+}
+
+.user_question .result_img img:nth-child(1),
+.user_question .result_img img:nth-child(2) {
+  width: 70px;
+  position: absolute;
+  left: -30px;
+  top: -17px;
+  z-index: 10;
+  display: none;
+}
+
+
+.user_question .question_desc {
+  position: relative;
+  border: 1px solid #8f8f8f;
+  margin: 20px 0 35px;
+  padding: 18px;
+}
+
+.user_question .question_desc h4 {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #F1F0EB;
+}
+
+.user_question .question_answer_selects label {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.user_question .question_answer_selects label input {
+  position: absolute;
+  left: -9999px;
+}
+
+.user_question .question_answer_selects label span {
+  font-size: 16px;
+  padding: 8px 35px 8px 45px;
+  line-height: 1.8;
+  position: relative;
+  cursor: pointer;
+}
+
+.user_question .question_answer_selects label span::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background: #D4D4D4;
+  border-radius: 50%;
+  position: absolute;
+  left: 7px;
+  top: 9px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+  transition: .25s ease;
+  color: #fff;
+}
+
+.user_question .question_answer_selects label:nth-child(1) span::before {
+  content: '1';
+}
+
+.user_question .question_answer_selects label:nth-child(2) span::before {
+  content: '2';
+}
+
+.user_question .question_answer_selects label:nth-child(3) span::before {
+  content: '3';
+}
+
+.user_question .question_answer_selects label:nth-child(4) span::before {
+  content: '4';
+}
+
+
+.user_question .question_answer_selects label span:hover:before {
+  background-color: #D3E9D7;
+}
+
+.user_question .question_answer_selects input:checked+span:before {
+  background-color: #9FC3AF;
+}
+
+.user_question .question_side_menu {
+  float: right;
+}
+
+.user_question .question_side_menu .share {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  background-color: #9FC3AF;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.user_question .question_side_menu .share span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/Share.svg");
+  background-position: center;
+  background-size: 100% 100%;
+  transition: all .3s;
+}
+
+.user_question .question_side_menu .share:hover span {
+  background-image: url("../img/Share_color.svg");
+}
+
+.user_question .question_side_menu .favorites {
+  width: 35px;
+  height: 35px;
+  background-color: #9FC3AF;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.user_question .question_side_menu .favorites span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/Star.svg");
+  background-position: center;
+  background-size: 100% 100%;
+}
+.commentary_area.view {
+  display: block;
+}
+
+
+
+/* 
+* 작성자 : 전대섭
+* 작성일 : 2021-10-08
+* 수정자 : 임지현
+* 수정일 : 2021-10-08
+* 수정내용 : 게시판 css 수정
+* 수정자 : 임지현
+* 수정일 : 2021-10-11
+* 수정내용 : 게시판 css 수정
+* 수정자 : 임지현
+* 수정일 : 2021-10-14
+* 수정내용 : 게시판 보기 부분 줄바꿈 추가
+* 작성자 : 전대섭
+* 작성일 : 2021-10-19
+* 수정내용: 보기 내용 추가 및 선택지 높이 수정 
+*/
+
+/* review */
+/* 배너 */
+.imgBanner {
+    display: inline-block;
+    background-image: url(../img/mainreview.jpg);
+    width: 100%;
+    height: 426px;
+    background-size: cover;
+    margin-bottom: 100px;
+}
+
+.imgBanner .container {
+    display: inline;
+}
+
+.container .rName {
+    display: inline;
+    text-align: center;
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+.rTitle {
+    color: #fff;
+    font-size: 24px;
+}
+
+.rSub {
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.bMain img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 35px;
+    left: 125px;
+}
+
+.bMain h2 {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.bMain h2::before {
+    content: '';
+    position: absolute;
+    left: -35px;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+    background-color: #D3E9D7;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+/* 게시판,공지사항 글 보기 */
+.bvMainView .container {
+    overflow: hidden;
+}
+
+.bvMainView {
+    margin-bottom: 170px;
+}
+
+.bvTitle {
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 130px;
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid #CDCDCD;
+    border-bottom: 2px solid #CDCDCD;
+}
+
+.bvEtc {
+    overflow: hidden;
+}
+
+.bvNick {
+    display: inline;
+    float: left;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.bvCoday {
+    display: inline;
+    float: right;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.bvCoday span {
+    color: #CCCCCC;
+}
+
+.bvCont {
+    min-height: 395px;
+    border-bottom: 1px solid #CDCDCD;
+    font-size: 18px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bvCont p {
+    font-size: 18px;
+    word-break: break-word;
+}
+
+.aWrapform {
+    float: right;
+}
+
+.form-write {
+    display: inline-block;
+    width: 82px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #9FC3AF;
+    border-radius: 5px;
+    background: #9FC3AF;
+    color: #fff;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-write:nth-last-child(3) {
+    margin-left: 20px;
+}
+
+/*게시판*/
+fieldset {
+    border: 0;
+}
+
+.board-search {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+}
+
+.board-search .form-search {
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 300px;
+}
+
+.board-search .form-select {
+    border: 1px solid #c6c6c6;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+
+.board-search .form-btn {
+    border: 1px solid #9FC3AF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: #9FC3AF;
+    color: #fff;
+    width: 82px;
+}
+
+/* 게시판 테이블 */
+.board-table table {
+    width: 100%;
+    border-top: 3px solid #000;
+}
+
+.board-table table th,
+.board-table table td {
+    border-bottom: 1px dashed #D1D1D1;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.board-table table th {
+    border-bottom: 1px solid #D1D1D1;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+.board-table table .height {
+    height: 400px;
+    vertical-align: top;
+}
+
+.board-table table .left {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.board-table .btn {
+    float: right;
+}
+
+.board-table .btn a {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+/*게시판 페이지*/
+.board-page {
+    margin: 50px 0 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.board-page ul {
+    display: flex;
+    justify-content: center;
+}
+
+.board-page li a {
+    display: block;
+    border: 1px solid #eee;
+    padding: 13px 10px;
+    margin-right: -1px;
+}
+
+.board-page li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+.form-btn.black {
+    display: block;
+    border: 1px solid #9FC3AF;
+    background-color: #9FC3AF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* 기출문제 */
+.preMain {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subject {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.preMain .container {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+.preLeft {
+  width: 78%;
+  box-sizing: border-box;
+  margin-top: -80px;
+}
+
+.preQuizWrap {
+  width: 100%;
+  background: #fff;
+  margin: 80px auto;
+}
+
+.preQuestion__quiz {
+  margin-top: 30px;
+  margin-left: 8px;
+  width: 450px;
+  display: inline-grid;
+  position: relative;
+}
+
+.preQuestion__title {
+  padding: 20px 20px 20px 0;
+  font-size: 20px;
+  margin-bottom: -20px;
+}
+
+.preQuestion__quiz .result_img img:nth-child(1), 
+.preQuestion__quiz .result_img img:nth-child(2) {
+  width: 70px;
+  position: absolute;
+  left: -30px;
+  top: -3px;
+  z-index: 10;
+  display: none;
+}
+
+.preQuestion__title__num::after {
+  content: '.';
+}
+
+.preQuestion__title__ask {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.preQuestion__answer {
+  padding: 20px 20px 20px 0;
+}
+
+.preQuestion__answer__selects {
+  padding-bottom: 10px;
+}
+
+.preQuestion__answer__selects label {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.preQuestion__answer__selects label span {
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 9px 35px 11px 50px;
+  border-radius: 50px;
+  position: relative;
+}
+
+.preQuestion__answer__selects label span::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background: #D4D4D4;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  transition: 0.25s ease;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+}
+
+.preQuestion__answer__selects label:hover span::before {
+  background: #D3E9D7;
+
+}
+
+.preQuestion__answer__selects label:nth-child(1) span::before {
+  content: '1';
+}
+
+.preQuestion__answer__selects label:nth-child(2) span::before {
+  content: '2';
+}
+
+.preQuestion__answer__selects label:nth-child(3) span::before {
+  content: '3';
+}
+
+.preQuestion__answer__selects label:nth-child(4) span::before {
+  content: '4';
+}
+
+.preQuestion__answer__selects label input {
+  position: absolute;
+  left: -9999px;
+}
+
+.preQuestion__answer__selects p {
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+.preQuestion__answer__selects label input:checked+span:before {
+  background-color: #9FC3AF;
+}
+
+.preAnswer {
+  width: 20%;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #eee;
+  padding-top: 35px;
+  display: block;
+  position: sticky;
+  z-index: 1000;
+  margin-top: 50px;
+  height: 1500px;
+  top: 0;
+  height: fit-content;
+}
+
+
+.answer__box {
+  width: 30%;
+  margin-left: 5px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.preQuestion__quiz .preQuestion_desc {
+  position: relative;
+  border: 1px solid #8f8f8f;
+  margin: 20px 20px 35px 0;
+  padding: 18px;
+}
+
+.preQuestion__quiz .preQuestion_desc img {
+  width: auto;
+}
+
+.preQuestion__quiz .preQuestion_desc h4 {
+  position: absolute;
+  left: 50%;
+  top: -12px;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+
+.preQuestion__number {
+  display: inline-block;
+  margin-left: 20px;
+  width: 22%;
+}
+
+.preQuestion__number_answer {
+  display: inline-block;
+  width: 22%;
+  margin-left: 10px;
+}
+
+.preAnswerSend {
+  width: 100%;
+  background-color: #A7C4B5;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+
+
+/*
+* 작성자 : 임지현
+* 작성일 : 2021.10.11
+* 내용 : 미디어 쿼리 영역 CSS 작성
+*/
+/* 미디어쿼리 영역 */
+@media (max-width: 1200px) {
+
+    /* HEADER */
+    #header .menu ul li a {
+        display: block;
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    #header .member ul li {
+        display: inline-block;
+    }
+
+    #header .member ul li a {
+        display: block;
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    /* //HEADER */
+
+    .main_banner .container h1 {
+        font-size: 25px;
+        margin-bottom: 18px;
+    }
+
+    .main_banner .container p {
+        font-size: 14px;
+    }
+
+    .main_banner .random_quiz,
+    .main_banner .quiz {
+        padding: 30px;
+    }
+
+    .quiz_btn {
+        padding: 10px 21px;
+        font-size: 14px;
+        bottom: 31px;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .main_banner .container p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    #header .menu {
+        display: none;
+    }
+
+    #header .m_menu {
+        display: block;
+    }
+
+    .main_banner .container {
+        padding: 80px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 15px;
+        overflow: hidden;
+    }
+
+    .main_banner .container>div {
+        width: 100%;
+    }
+
+    #section1 .textarea {
+        padding-left: 15px;
+    }
+
+    .textarea h1 {
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+
+    .textarea p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .textarea a {
+        padding: 5px 20px;
+        font-size: 12px;
+    }
+
+    .quiz_btn {
+        right: 90px;
+    }
+
+    #section3 .container {
+        display: block;
+    }
+
+    .dday_box {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    .dday_box img {
+        height: 290px;
+    }
+
+    .dday_container h1 {
+        font-size: 20px;
+    }
+
+    .dday_container p {
+        font-size: 12px;
+    }
+
+    .dday_container .dday {
+        font-size: 55px;
+    }
+
+    .review_board {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .review_board h1 {
+        font-size: 20px;
+    }
+
+    .review_board .review_btn {
+        font-size: 12px;
+        padding: 8px 25px;
+    }
+
+    .review_board .review li a {
+        font-size: 14px;
+    }
+
+    /* //main */
+
+    #login_main .lg_form {
+        width: 100%;
+    }
+
+    #join_main .jo_form {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    #join_main .jo_form .jo_box {
+        width: 100%;
+    }
+
+    #join_main .jo_form h2 {
+        font-size: 18px;
+    }
+
+    #join_main .jo_form .jo_box h4 {
+        font-size: 16px;
+    }
+
+    #join_main .jo_form .jo_box form label {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    #join_main .jo_form .jo_box form input {
+        width: 60%;
+        font-size: 12px;
+    }
+
+    #join_main .jo_form .jo_box .btn_sb {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    #join_main .jo_form .jo_box form input.wp {
+        width: 90%;
+    }
+
+    #join_main .jo_form .jo_box .btn_submit {
+        margin-top: 50px;
+        font-size: 14px;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    /* //login,join */
+
+}

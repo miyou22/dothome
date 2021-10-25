@@ -1,0 +1,37 @@
+body {
+    font-family: 'S-CoreDream';
+    font-weight: 400;
+    font-size: 16px;
+    color: #414141;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container.login {
+    width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
