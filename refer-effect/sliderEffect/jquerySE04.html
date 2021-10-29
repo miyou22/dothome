@@ -168,7 +168,6 @@
 <script src="../assets/js/highlight.min.js"></script>
 <script>
    const sliderWrap = $(".slider-wrap");
-
    const sliderImg = $(".slider-img1");
    const sliderInner = $(".slider-inner1");
    const slider = $(".slider1");
@@ -176,20 +175,17 @@
    let currentIndex = 0;
    let sliderHeight = slider.height();
    
-   //콜백함수?=> 함수안에 함수; 재귀함수?=>자기 자신의 함수를 다시한번 돌림
    setInterval(function(){
     sliderInner.animate({top: -sliderHeight}, 600, "easeOutExpo", function(){
-        $(".slider1:first-child").appendTo(sliderInner); //appendTo는 해당선택자를 마지막으로 보낸다. 즉 slider의 첫번째 그림을 마지막으로 보내 첫번째 화면으로 보낸다.
+        $(".slider1:first-child").appendTo(sliderInner); 
         sliderInner.css("top","");
     });
-   }, 2000);//3초마다 setInterval이 실행됨
-
+   }, 2000);
 
    const sliderImg2 = $(".slider-img2");
    const sliderInner2 = $(".slider-inner2");
    const slider2 = $(".slider2");
 
-   
    let currentIndex2 = 0;
    let sliderCount2 = slider2.length;
    let sliderHeight2 = slider2.height();

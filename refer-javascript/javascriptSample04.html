@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
+    <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NEXON Lv1 Gothic OTF';
+        }
+        body {
+            padding: 5%;
+            margin-bottom: 400px;
+        }
+        h1 {
+            padding-bottom: 20px;
+        }
+        hr {
+            margin: 5% 0;
+            border-style: dashed;
+            border-color: #e6e6e6;
+            border-width: 1px;
+        }
+        img {
+            vertical-align: top;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        .sample {
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+        }
+        .sample h2 {
+            position: relative;
+            font-size: 16px;
+            background-color: #f2f2f2;
+            padding: 15px;
+            border-bottom: 1px solid #e6e6e6;
+            border-radius: 5px 5px 0 0;
+        }
+        .sample h2 .dot {
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            right: 30px;
+            top: 20px;
+        }
+        .sample h2 .dot::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            border-radius: 50%;
+            position: absolute;
+            left: -15px;
+            top: 0;
+        }
+        .sample h2 .dot::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #989898;
+            position: absolute;
+            border-radius: 50%;
+            right: -15px; 
+            top: 0;
+        }
+        .sample .ex {
+            padding: 20px;
+        }
+        .sample .ex .text {
+            margin: 10px 0;
+        }
+        .sample .re {
+            padding: 20px;
+            border-top: 1px solid #e6e6e6;
+        }
+        .sample .re a {
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #333;
+            border-radius: 30px;
+            padding: 10px 30px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .sample .re a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+        .sample .problem {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+            line-height: 1.6;
+        }
+        .sample pre {margin: 0 !important; border-radius: 0;;}
+        .sample .desc {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .sample .desc dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        .sample .desc dd {
+            padding: 3px 0 16px 0;
+            line-height: 1.6;
+        }
+        .sample .sam {
+            padding: 25px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .sample .sam dt {
+            padding: 3px 0;
+            margin-bottom: 6px;
+        }
+        .sample .sam dd {
+            padding: 3px 0 16px 0;
+        }
+        ol {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        ol li {
+            border: 1px solid #000;
+            display: inline-block;
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+        }
+        ol li.active {
+            background: #000;
+        }
+        ol li.active a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JAVASCRIPT 알고리즘 공부하기</h1>
+    <ol>
+        <li><a href="javascriptSample01.html"></a>01</li>
+        <li><a href="javascriptSample02.html"></a>02</li>
+        <li><a href="javascriptSample03.html"></a>03</li>
+        <li class="active"><a href="javascriptSample04.html"></a>04</li>
+        <li><a href="javascriptSample05.html"></a>05</li>
+        <li><a href="javascriptSample06.html"></a>06</li>
+        <li><a href="javascriptSample07.html"></a>07</li>
+        <li><a href="javascriptSample08.html"></a>08</li>
+        <li><a href="javascriptSample09.html"></a>09</li>
+        <li><a href="javascriptSample10.html"></a>10</li>
+    </ol>
+    <div id="sample1" class="sample">
+        <h2>홀수<span class="dot"></span></h2>
+        <p class="ploblem">
+            Q: 7개의 수가 주어지면 그 숫자중 가장 작은 수를 출력하는 프로그램을 작성하시오.
+            예를들어 7개의 자연수 12,77,38,41,53,92,85 가 주어지면 이 중에 홀수는 
+            77,41,53,85이므로 그 합은 256이되고 최소값을 41이 된다.
+        </p>
+        <div class="desc">
+            <dl>
+                <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 입력 설명</dt>
+                <dd>자연수 7개가 주어지고 주어지는 자연수는 100보다 작고, 홀수는 한개 이상존재.</dd>
+                <dt><i class="fa fa-bullhorn" aria-hidden="true"></i> 출력 설명</dt>
+                <dd>홀수의 합을 출력하고, 홀수 중에 최소값을 출력</dd>
+            </dl>
+            <!-- ul: 목록형 태그(순서 상관없음)
+            ol: 목록형 태그(순서 상관있음)
+            dd: 정의형 목록형 태그 -->
+        </div>
+        <div class="sam">
+            <dl>
+                <dt><i class="fa fa-keyboard-o" aria-hidden="true"></i>입력예제</dt>
+                <dd>12,77,38,41,53,92,85</dd>
+                <dt><i class="fa fa-line-chart" aria-hidden="true"></i>출력예제</dt>
+                <dd>256 41</dd>
+            </dl>
+        </div>
+        <div class="code">
+<pre class="line-numbers"><code class="language-js">
+    
+</code></pre>
+    <script>
+        function about(arr){
+            let answer=[];
+            let sum = 0;
+            let min = Number.MAX_SAFE_INTEGER;
+            for(let x of arr){
+                if (x % 2 === 1){
+                    sum +=x;
+
+                    if(x<min){
+                        min = x
+                    }
+                }
+            }
+            answer.push(sum);
+            answer.push(min);
+
+            return answer;
+        }
+        let arr =[12,77,38,41,53,92,85]
+        console.log(about(arr));
+    </script>
+</pre>
+        </div>
+    </div>
+
+
+
+
+    <hr>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

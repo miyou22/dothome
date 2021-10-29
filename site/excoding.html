@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기</title>
+    <style>
+        *{
+            margin: 0 auto;
+            text-decoration: none;
+        }
+        .container{
+            width: 1000px;
+            overflow: hidden;
+        }
+        #main{
+            float: right;
+            width: 75%;
+        }
+        #aside{
+            float: left;
+            width: 25%;
+            list-style: none;            
+        }
+        #footer{
+            background: #eee;
+            width: 100%;
+            float: left;
+        }
+
+    /* slider */
+    .sliderWrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        margin-top: 50px;
+    }
+    .slider-img img{
+        width: 100%;
+    }
+    .slider-img {
+       width: 100%;
+       height: 360px;
+       overflow: hidden;
+       margin: 10px;
+    }
+    .slider-inner {
+       float: left;
+       width: 100%;
+       height: 800px;
+       position: relative;
+    }
+    .slider-inner .slider {
+       float: left;
+       width: 100%;
+       height: 800px;
+       position: relative;
+    }
+    .slider-inner .slider:nth-child(1){z-index:5;}
+    .slider-inner .slider:nth-child(2){z-index:4;}
+    .slider-inner .slider:nth-child(3){z-index:3;}
+
+    /* 메인 */
+    .service{
+        margin-top: 50px;
+    }
+    .service h2{
+        text-align: center;
+    }
+    .service h2 span{
+        color: rgba(0,0,0,.4);
+    }
+    .onceboxWrap{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    .oncebox{
+        width: 17%;
+    }
+    .oncebox img{
+        width: 100%;
+    }
+    .oncebox strong{
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+    .notice{
+        display: flex;
+        justify-content: space-between;
+        background: #eee;   
+        margin-top: 100px; 
+        margin-bottom: 100px;
+    }
+    .faq{
+        width: 30%;
+        border: 1px solid #000;
+        text-align: center;
+        background: #fff;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .faq .nyaa{
+        margin: 50px 0 -30px 0;
+    }
+    .faq .nyaa strong{
+        display: block;
+        font-size: 30px;
+        text-align: center;
+        margin-top: -30px;
+    }
+    .faq .nyaa .icon{
+        position: relative;
+        left: 40%; top: -55px;
+        width: 10%;
+    }
+    .faq .emoti{
+        width: 60%;
+        margin-top: 20px;
+    }
+    
+    .faq ul{
+        margin-top: 40px;
+    }
+    .faq ul li{
+        text-align: left;
+        margin: 10px 0;
+        font-size: 10px;
+    }
+    /* aside영역 */
+    #asideWrap{
+        margin-top: 65px;
+
+    }
+    .mainMenu{
+        display: block;
+        overflow: hidden;
+    }
+    .nav{
+        overflow: hidden;
+    }
+    .btn{
+        display: block;
+        padding: 15px 20px;
+        color: black;
+        position: relative;
+        font-size: 25px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .btn:hover{
+        color: blue;
+    }
+    .subMenu{
+        background: #fff;
+        overflow: hidden;
+        transition: max-height 0.7s;
+        max-height: 0;
+    }
+    .subMenu a{
+        display: block;
+        padding: 15px 20px;
+        color: #222;
+        font-size: 20px;
+        font-weight: 600;
+        border-bottom: 1px solid #eaeaea;
+        position: relative;
+        text-decoration: none;
+
+    }
+    .subMenu a:after{
+        content: '';
+        opacity: 0;
+        transition: opacity 0.3s;
+
+    }
+    .subMenu a:hover{
+        background: #fafafa;
+        transition: all 0.3s;
+        border-bottom: 1px solid #c8c8c8;
+    }
+ 
+    .nav:target .subMenu{
+        margin-left: 10px;
+        max-height: 100em;
+        margin-bottom: 20px;
+    }
+    .aImg{
+        margin-top: 60px;
+    }
+    /* 풋터 */
+    .logoWrap{
+        display: flex;
+        justify-content: space-between;
+        background: #EDF2F8;
+    }
+    .logo{}
+    .logo img{
+        padding-top: 20px;
+        width: 70px;
+    }
+    .desc{
+        font-size: 12px;
+        line-height: 1.9;
+        padding-top: 30px;
+        font-weight: 600;
+    }
+    .twitter{
+        
+    }
+    .twitter img{
+        width: 60%;
+        display: inline;
+        float: right;
+        padding-top: 30px;
+    }
+
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <main id="main">
+            <div class="sliderWrap">
+                <div class="slider-img">
+                    <div class="slider-inner">
+                        <div class="slider" data-name="이미지1"><img src="../site/img/images/cod1.jpg" alt="이미지1"></div>
+                        <div class="slider" data-name="이미지2"><img src="../site/img/images/cod1.jpg" alt="이미지2"></div>
+                        <div class="slider" data-name="이미지3"><img src="../site/img/images/cod1.jpg" alt="이미지3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="service">
+                <h2>자주 찾는 서비스 |<span> 키워드 서비스</span></h2>
+                <div class="onceboxWrap">
+                    <div class="oncebox">
+                        <a href="#"><img src="../site/img/images/Coding_img3_03.jpg" alt="이미지1"></a>
+                        <strong>주민등록등본<br>(초본)교부</strong>
+                    </div>
+                    <div class="oncebox"><a href="#">
+                        <a href=""><img src="../site/img/images/Coding_img3_05.jpg" alt="이미지"></a>
+                        <strong>토지임야대장<br> 열람/등본 발급신청</strong>
+                    </div></a>
+                    <div class="oncebox"><a href="#">
+                        <a href=""><img src="../site/img/images/Coding-img.jpg" alt="이미지1"></a>
+                        <strong>건축물대장 등/초본 발급(열람)신청</strong>
+                    </div></a>
+                    <div class="oncebox"><a href="#">
+                        <a href=""><img src="../site/img/images/Coding_img3_09.jpg" alt="이미지1"></a>
+                        <strong>지방세 납세 증명</strong>
+                    </div></a>
+                    <div class="oncebox"><a href="#">
+                        <a href=""><img src="../site/img/images/Coding_img3_11.jpg" alt="이미지1"></a>
+                        <strong>지적도(임야도) 등본 <br>발급 및 열람</strong>
+                    </div></a>
+                </div>
+            </div>
+            <div class="notice">
+                <div class="faq">
+                    <div class="nyaa">
+                        <strong>공지사항</strong>
+                        <img src="../site/img/images/Coding_img_23.jpg" alt="이미지23" class="icon">
+                    </div>
+                    <img src="../site/img/images/Coding_img_27.jpg" alt="이미지27" class="emoti">
+                    <ul>
+                        <li>[어디서나 대학 민원]호서 대학교 팩스...</li>
+                        <li>[전라북도 고창군]새올행정시스템D...</li>
+                        <li>교육부 행정전자서명인증센터 시스템...</li>
+                    </ul>
+                </div>
+                <div class="faq">
+                    <div class="nyaa">
+                        <strong>자료실</strong>
+                        <img src="../site/img/images/Coding_img_23.jpg" alt="이미지23" class="icon">
+                    </div>
+                    <img src="../site/img/images/Coding_img_30.jpg" alt="이미지27" class="emoti">
+                    <ul>
+                        <li>인터넷 민원발급 위한 프로그램(주민...</li>
+                        <li>정부24 발급물 등록 프로그램</li>
+                        <li>전자문서 관련 설치 프로그램</li>
+                    </ul>
+                </div>
+                <div class="faq">
+                    <div class="nyaa">
+                        <strong>FAQ</strong>
+                        <img src="../site/img/images/Coding_img_23.jpg" alt="이미지23" class="icon">
+                    </div>
+                    <img src="../site/img/images/Coding_img_33.jpg" alt="이미지27" class="emoti">
+                    <ul>
+                        <li>'민원발급불가' 또는 '발급불가' 프린터...</li>
+                        <li>가족관계증명서 프린터 발급이 가능...</li>
+                        <li>온라인 전입신고 시[세대주확인]은 어...</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <aside id="aside">
+            <div class="aImg">
+                <img src="../site/img/images/Coding_img_03.jpg" alt="">
+            </div>
+            <div id="asideWrap">
+                <ui class="mainMenu">
+                    <li class="nav" id="account">
+                        <a href="#account" class="btn">서비스</a>
+                        <div class="subMenu">
+                            <a href="">분야별 정책정보</a>
+                            <a href="">정책뉴스</a>
+                            <a href="">연구보고서</a>
+                            <a href="">간행물</a>
+                            <a href="">정책자료</a>
+                        </div>
+                    </li>
+                    <li class="nav" id="about">
+                        <a href="#about" class="btn">정책정보</a>
+                    </li>
+                    <li class="nav" id="support">
+                        <a href="#support" class="btn">기관정보</a>
+                    </li>
+                    <li class="nav">
+                        <a href="#" class="btn">고객센터</a>
+                    </li>
+                </ui>
+            </div>
+        </aside>
+        <footer id="footer">
+            <div class="logoWrap">
+                <div class="logo">
+                    <img src="../site/img/images/aa.jpg" alt="정부">
+                </div>
+                <div class="desc">
+                    <p>03171 서울특별시 세종대로 209 (세종로) 행정안전부<br>
+                    정부24 콜센터 1588-2188 정부민원안내콜센터 국번없이 110<br>
+                    Copyright Ministry of the Interior and Safety. All Rights reserved.</p>
+                </div>
+                <div class="twitter">
+                    <img src="../site/img/images/Coding_img_39.jpg" alt="트위터">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const sliderImg = document.querySelector(".slider-img");
+        const sliderInner = document.querySelector(".slider-inner");
+        const slider = document.querySelector(".slider");
+     
+        let currentIndex = 0;
+        let sliderHeight = slider.offsetHeight;
+        let sliderCount = document.querySelectorAll(".slider").length;
+     
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true); 
+        sliderInner.appendChild(sliderClone) 
+     
+        setInterval(()=>{
+            currentIndex++;
+            sliderInner.style.transition = "all 0.3s"
+            sliderInner.style.transform = "translateY("+ -sliderHeight * currentIndex +"px)"
+             
+                 if(currentIndex == sliderCount){
+                     setTimeout(()=>{
+                         sliderInner.style.transition = "0s";
+                         sliderInner.style.transform = "translateY(0)";
+                     }, 300);
+                     currentIndex = 0;
+                 }
+        }, 2000)
+     
+     
+         </script>
+   
+</body>
+</html>
