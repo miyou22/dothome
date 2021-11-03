@@ -361,7 +361,7 @@
            //메뉴
            document.querySelectorAll(".content-item").forEach((item, index)=> {
                if(scrollTop >= item.offsetTop ) {
-                   document.querySelectorAll(".paraNav ul li").forEach(li => {
+                   document.querySelectorAll(".paraNav ul li").forEach(li => { 
                        li.classList.remove("active");
                    });
                    document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");

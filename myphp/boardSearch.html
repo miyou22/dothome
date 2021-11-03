@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP class : 게시판</title>
+
+    <!-- SEO -->
+    <meta name="author" content="webstoryboy" />
+    <meta name="description" content="PHP 포트폴리오 사이트입니다." />
+    <meta name="keywords" content="PHP, 포트폴리오, 웹표준, 웹접근성, 사이트만들기, 포트폴리오, 웹스토리보이" />
+    <meta name="robots" content="all" />
+
+    <!-- 아이콘 -->
+    <link rel="icon" href="img/icon_256.png" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="256x256" href="img/icon_256.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icon_192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon_32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon_16.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="skip">
+        <a href="#main">컨텐츠 바로가기</a>
+        <a href="#footer">푸터 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <h1><a href="main.html">php <em>class</em></a></h1>
+        <nav>
+            <h2 class="ir_so">메인 메뉴</h2>
+            <ul>
+                <li><a href="comment.html">댓글</a></li>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="board.html">게시판</a></li>
+                <li><a href="contact.html">문의하기</a></li>
+            </ul>
+        </nav>
+        <div class="member">
+            <strong class="ir_so">회원 정보 영역</strong>
+            <a href="login.html">로그인</a>
+            <a href="join.html">회원가입</a>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="mainContent">
+            <h2 class="ir_so">메인 컨텐츠</h2>
+
+            <article class="content-article">
+                <h3>검색결과</h3>
+                <p>총 20건이 검색 되었습니다.</p>
+                <section class="section-board">
+                    <h4 class="ir_so">게시판 컨텐츠</h4>
+                    <div class="board-table">
+                        <table>
+                            <colgroup>
+                                <col style="width: 5%" />
+                                <col />
+                                <col style="width: 10%" />
+                                <col style="width: 12%" />
+                                <col style="width: 7%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>등록자</th>
+                                    <th>등록일</th>
+                                    <th>조회수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="left"><a href="boardView.html">웹 퍼블리셔 포트폴리오가 궁금합니다.</a></td>
+                                    <td>웹쓰</td>
+                                    <td>2021.10.01</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="left"><a href="boardView.html">프론트앤드 지원할 수 있나요?</a></td>
+                                    <td>웹쓰</td>
+                                    <td>2021.04.01</td>
+                                    <td>105</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="left"><a href="boardView.html">강의를 들을려면 무슨 영상을 봐야 하나요?</a></td>
+                                    <td>개발자</td>
+                                    <td>2021.03.01</td>
+                                    <td>45</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="left"><a href="boardView.html">알고리즘은 어떻게 공부해야 하나요?</a></td>
+                                    <td>퍼블남</td>
+                                    <td>2021.02.01</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td class="left"><a href="boardView.html">면접에서 많이 물어보는 질문입니다.</a></td>
+                                    <td>코딩남</td>
+                                    <td>2021.01.21</td>
+                                    <td>115</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td class="left"><a href="boardView.html">웹 디자인 필요한 스킬은 어떻게 공부하나요?</a></td>
+                                    <td>스윙스</td>
+                                    <td>2021.11.11</td>
+                                    <td>35</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td class="left"><a href="boardView.html">PHP 사이트 만들려면 무엇이 필요한가요?</a></td>
+                                    <td>꿀잠</td>
+                                    <td>2021.07.23</td>
+                                    <td>45</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td class="left"><a href="boardView.html">반응형 사이트 만들 때 궁금한 점이 있어요</a></td>
+                                    <td>어제잠</td>
+                                    <td>2021.07.13</td>
+                                    <td>45</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td class="left"><a href="boardView.html">스윙스 노래 추천해주세요!!!</a></td>
+                                    <td>자나감</td>
+                                    <td>2021.03.15</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td class="left"><a href="boardView.html">면접이 어려워요~ 면접 잘 보는 법 알려주세요!!</a></td>
+                                    <td>웹쓰</td>
+                                    <td>2021.09.01</td>
+                                    <td>55</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="board-page">
+                        <ul>
+                            <li><a href="#">처음으로</a></li>
+                            <li><a href="#">처음</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">다음</a></li>
+                            <li><a href="#">마직막으로</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </section>
+    </main>
+    <!-- //header -->
+
+    <footer id="footer">
+        <div class="container">
+            <section class="section_service">
+                <h2 class="ir_so">바로가기 링크</h2>
+                <div class="service">
+                    <strong>시작하기</strong>
+                    <ul>
+                        <li><a href="#">웹표준</a></li>
+                        <li><a href="#">반응형</a></li>
+                        <li><a href="#">패럴랙스</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">포트폴리오</a></li>
+                    </ul>
+                </div>
+                <div class="service">
+                    <strong>페이지</strong>
+                    <ul>
+                        <li><a href="#">main.html</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JAVASCRIPT</a></li>
+                        <li><a href="#">JQUERY</a></li>
+                        <li><a href="#">GSAP</a></li>
+                    </ul>
+                </div>
+                <div class="service">
+                    <strong>로그인</strong>
+                    <ul>
+                        <li><a href="join.html">join.html</a></li>
+                        <li><a href="login.html">login.html</a></li>
+                    </ul>
+                </div>
+                <div class="service">
+                    <strong>게시판</strong>
+                    <ul>
+                        <li><a href="board.html">board.html</a></li>
+                        <li><a href="boardView.html">boardView.html</a></li>
+                        <li><a href="boardModify.html">boardModify.html</a></li>
+                        <li><a href="boardSearch.html">boardSearch.html</a></li>
+                    </ul>
+                </div>
+                <div class="service">
+                    <strong>SNS</strong>
+                    <ul>
+                        <li><a href="#">인플러언서</a></li>
+                        <li><a href="#">인스타그램</a></li>
+                        <li><a href="#">트위터</a></li>
+                        <li><a href="#">페이스북</a></li>
+                        <li><a href="#">블로그</a></li>
+                    </ul>
+                </div>
+                <div class="service">
+                    <strong>연락처</strong>
+                    <ul>
+                        <li><a href="#">연락하기</a></li>
+                        <li><a href="#">스터디 신청</a></li>
+                        <li><a href="#">국비 신청</a></li>
+                        <li><a href="#">방명록</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section_info">
+                <h2 class="ir_so">서비스 이용정도</h2>
+                <address>&copy;webstoryboy. All rights reserved.</address>
+            </section>
+        </div>
+        <a href="#" class="link_top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" class="ico_top">
+                <g fill="none" fill-rule="evenodd">
+                    <circle cx="25" cy="25" r="25" fill="black"></circle> 
+                    <path stroke-width="1.5" class="stroke" stroke="white" d="M8.467 16.933L0 8.467 8.467 0M.085 8.467L19.918 8.534" transform="rotate(90 9.5 24)"></path>
+                </g>
+            </svg>
+        </a>
+    </footer>
+    <!-- //footer -->
+</body>
+</html>

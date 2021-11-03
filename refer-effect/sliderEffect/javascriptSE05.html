@@ -201,17 +201,18 @@
    let sliderCount = slider.length;
    let sliderWidth = document.querySelector(".slider").offsetWidth;
    let currentIndex = 0;
-
    
    function gotoSlider(num){
+       console.log(num)
         sliderInner.style.transition="all 300ms"
         sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
         currentIndex = num;
    }
 
    function movePrev(){
-        let prevIndex = (currentIndex -1) % sliderCount;
-        if(currentIndex == 0 ) prevIndex = sliderCount -1;
+        let prevIndex = (currentIndex -1) % sliderCount;  // (1).(0-1)%5 perv= -1
+        console.log(prevIndex);
+        if(currentIndex == 0 ) prevIndex = sliderCount -1; //(1).  perv =4
         gotoSlider(prevIndex);
    }
     

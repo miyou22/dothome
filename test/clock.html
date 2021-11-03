@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background: #222;
+            text-align: center;
+            position: relative;
+            top: 70px;
+        }
+        .time{
+            font-size: 100px;
+            font-weight: bold;
+            color: rgb(179,21,171);
+           
+        }
+        .date{
+            font-size: 45px;
+            color: white;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="time"></div>
+    <div class="date"></div>
+
+    <script>
+        function about(){
+            let dateInfo = new Date();
+
+            let hour = dateInfo.getHours();
+            let minu = dateInfo.getMinutes();
+            let secon = dateInfo.getSeconds();
+            document.getElementById("time").innerHTML = hour+":"+minu+":"+secon;
+
+            let year = dateInfo.getFullYear();
+            let Mont = dateInfo.getMonth()-1;
+            let Date = dateInfo.getDate();
+            let Day = dateInfo.getDay();
+        }
+
+    </script>
+</body>
+</html>
