@@ -287,7 +287,7 @@ figcaption {
 #nav a {
   color: #fff;
   text-decoration: none;
-  width: 80px;
+  width: 100px;
   height: 40px;
   line-height: 40px;
   border: 1px solid #fff;
@@ -329,6 +329,31 @@ figcaption {
     height: 30px;
     line-height: 31px;
   }
+}
+
+.source {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.source button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 0 #fff inset;
+          box-shadow: 0 0 0 #fff inset;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.source button:hover {
+  -webkit-box-shadow: 0 -50px 0 #fff inset;
+          box-shadow: 0 -50px 0 #fff inset;
+  color: #000;
 }
 
 .info {
@@ -446,7 +471,7 @@ figcaption {
 }
 
 #modal .modal-bg {
-  background: rgba(0, 115, 209, 0.4);
+  background: rgba(0, 0, 0, 0.4);
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -516,7 +541,7 @@ figcaption {
   }
 }
 
-#modal.show.hide {
+#modal.hide {
   -webkit-animation: unfoldOut 1s ease forwards;
           animation: unfoldOut 1s ease forwards;
 }
@@ -558,7 +583,7 @@ figcaption {
           animation: zoomIn 0.5s 0.8s ease forwards;
 }
 
-#modal.show.hide .modal-bg .modal-cont {
+#modal.hide .modal-bg .modal-cont {
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-animation: zoomOut 0.5s ease forwards;

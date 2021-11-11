@@ -118,7 +118,7 @@
 </div>
 
     
-<div class="info bottom">
+<div class="source">
     <button>소스보기</button>
 </div>
 <!-- //info -->
@@ -144,15 +144,342 @@
             </div>
             <div class="view-cont">
                 <div class="html">
-<pre><code class="language-html"> 
-</code></pre>
+<pre><code class="language-html">
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Parallax Effect&lt;/title&gt;
+    ​
+        &lt;link rel="stylesheet" href="../assets/css/style.css"&gt;
+        &lt;link rel="stylesheet" href="../assets/css/highlight.css"&gt;
+    ​
+        &lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet"&gt;
+    &lt;/head&gt;
+    &lt;body class="parallax"&gt;
+    ​
+        &lt;!-- header --&gt;
+        &lt;header class="paraInfo"&gt;
+            &lt;h1&gt;&lt;a href="index.html"&gt;Parallax Effect01 - jQuery&lt;/a&gt;&lt;/h1&gt;
+            &lt;p&gt;패랠랙스 스크로링 효과 - 메뉴 이동&lt;/p&gt;
+        &lt;/header&gt;
+        &lt;!-- //header --&gt;
+    ​
+        &lt;!-- main --&gt;
+        &lt;main&gt;
+    
+            &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt; &lt;!--scroll--&gt;
+            &lt;div class="paraInfo2"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;section1 offset() &lt;span class="offset1"&gt;0&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;section2 offset() &lt;span class="offset2"&gt;0&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;section3 offset() &lt;span class="offset3"&gt;0&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;section4 offset() &lt;span class="offset4"&gt;0&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;section5 offset() &lt;span class="offset5"&gt;0&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;section6 offset() &lt;span class="offset6"&gt;0&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;section7 offset() &lt;span class="offset7"&gt;0&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;section8 offset() &lt;span class="offset8"&gt;0&lt;/span&gt;&lt;/li&gt;
+                    &lt;li&gt;section9 offset() &lt;span class="offset9"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+    
+            &lt;nav class="paraNav"&gt;
+                &lt;ul&gt;
+                    &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+            &lt;!--nav--&gt;
+    
+            &lt;div class="paraCont"&gt;
+                &lt;section id="section1" class="content-item"&gt;
+                    &lt;span class="num"&gt;01&lt;/span&gt;
+                    &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+                    &lt;figure class="img-Wrap"&gt;
+                        &lt;div class="img"&gt;&lt;/div&gt;
+                    &lt;/figure&gt;
+                    &lt;p class="desc"&gt;한번 지나갈 길이라면 즐겁게 지나가자.&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;!-- //section1 --&gt;
+    ​
+                &lt;section id="section2" class="content-item"&gt;
+                    &lt;span class="num"&gt;02&lt;/span&gt;
+                    &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+                    &lt;figure class="img-Wrap"&gt;
+                        &lt;div class="img"&gt;&lt;/div&gt;
+                    &lt;/figure&gt;
+                    &lt;p class="desc"&gt;인생의 목적은 성숙하지 않기 위해 싸우는 것.&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;!-- //section2 --&gt;
+    ​
+                &lt;section id="section3" class="content-item"&gt;
+                    &lt;span class="num"&gt;03&lt;/span&gt;
+                    &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+                    &lt;figure class="img-Wrap"&gt;
+                        &lt;div class="img"&gt;&lt;/div&gt;
+                    &lt;/figure&gt;
+                    &lt;p class="desc"&gt;반성하지 않는 삶은 살 가치가 없다.&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;!-- //section3 --&gt;
+    ​
+                &lt;section id="section4" class="content-item"&gt;
+                    &lt;span class="num"&gt;04&lt;/span&gt;
+                    &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+                    &lt;figure class="img-Wrap"&gt;
+                        &lt;div class="img"&gt;&lt;/div&gt;
+                    &lt;/figure&gt;
+                    &lt;p class="desc"&gt;인생은 과감한 모험이던가 아니면 아무것도 아니다.&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;!-- //section4 --&gt;
+    ​
+                &lt;section id="section5" class="content-item"&gt;
+                    &lt;span class="num"&gt;05&lt;/span&gt;
+                    &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+                    &lt;figure class="img-Wrap"&gt;
+                        &lt;div class="img"&gt;&lt;/div&gt;
+                    &lt;/figure&gt;
+                    &lt;p class="desc"&gt;때로는 살아있는것조차 용기가 될때가 있다.&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;!-- //section5 --&gt;
+    ​
+                &lt;section id="section6" class="content-item"&gt;
+                    &lt;span class="num"&gt;06&lt;/span&gt;
+                    &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+                    &lt;figure class="img-Wrap"&gt;
+                        &lt;div class="img"&gt;&lt;/div&gt;
+                    &lt;/figure&gt;
+                    &lt;p class="desc"&gt;높은 목표를 세우고, 스스로 채찍질 한다.&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;!-- //section6 --&gt;
+    ​
+                &lt;section id="section7" class="content-item"&gt;
+                    &lt;span class="num"&gt;07&lt;/span&gt;
+                    &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+                    &lt;figure class="img-Wrap"&gt;
+                        &lt;div class="img"&gt;&lt;/div&gt;
+                    &lt;/figure&gt;
+                    &lt;p class="desc"&gt;자연과 조화롭게 살아가는 것이 삶의 목적이다.&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;!-- //section7 --&gt;
+    ​
+                &lt;section id="section8" class="content-item"&gt;
+                    &lt;span class="num"&gt;08&lt;/span&gt;
+                    &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+                    &lt;figure class="img-Wrap"&gt;
+                        &lt;div class="img"&gt;&lt;/div&gt;
+                    &lt;/figure&gt;
+                    &lt;p class="desc"&gt;태어나면서부터 현명한 이는 없다.&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;!-- //section8 --&gt;
+    ​
+                &lt;section id="section9" class="content-item"&gt;
+                    &lt;span class="num"&gt;09&lt;/span&gt;
+                    &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+                    &lt;figure class="img-Wrap"&gt;
+                        &lt;div class="img"&gt;&lt;/div&gt;
+                    &lt;/figure&gt;
+                    &lt;p class="desc"&gt;계획 없는 목표는 한낱 꿈에 불과하다.&lt;/p&gt;
+                &lt;/section&gt;
+                &lt;!-- //section9 --&gt;
+            &lt;/div&gt;
+            &lt;!-- //contents --&gt;
+        &lt;/main&gt;
+        &lt;!-- //main --&gt;
+    ​
+        &lt;!-- footer --&gt;
+        &lt;footer id="paraFooter"&gt;
+            &lt;h1&gt;Parallax &lt;em&gt;Scrolling&lt;/em&gt;&lt;/h1&gt;
+            &lt;div class="footerInfo"&gt;
+                &lt;h2&gt;제이쿼리&lt;/h2&gt;
+                &lt;ul&gt;
+                    &lt;li class="active"&gt;&lt;a href="jqueryPE01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="jqueryPE02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="jqueryPE03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="jqueryPE04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="jqueryPE05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="jqueryPE06.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="jqueryPE07.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="jqueryPE08.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+                    
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class="footerInfo"&gt;
+                &lt;h2&gt;자바스크립트&lt;/h2&gt;
+                &lt;ul&gt; 
+                    &lt;li&gt;&lt;a href="javascriptPE01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="javascriptPE02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="javascriptPE03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="javascriptPE04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="javascriptPE05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="javascriptPE06.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="javascriptPE07.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="javascriptPE08.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+                    
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+        &lt;!-- //footer --&gt;
+    ​
+        &lt;!-- source --&gt;
+        &lt;div class="source"&gt;
+            &lt;button&gt;소스 보기&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;!-- //source --&gt;
+    ​
+        &lt;!-- modal --&gt;
+        &lt;div id="modal"&gt;
+            &lt;div class="modal-bg"&gt;
+                &lt;div class="modal-cont"&gt;
+                    &lt;div class="code-view"&gt;
+                        &lt;div class="view-header"&gt;
+                            &lt;div class="dot" aria-hidden="true"&gt;
+                                &lt;span&gt;&lt;/span&gt;
+                                &lt;span&gt;&lt;/span&gt;
+                                &lt;span&gt;&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="view-title"&gt;
+                            &lt;ul&gt;
+                                &lt;li class="active"&gt;&lt;a href="#"&gt;Html&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;CSS&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a href="#"&gt;Javascript&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/div&gt;
+                        &lt;div class="view-cont"&gt;
+                            &lt;div class="html"&gt;
+    &lt;pre&gt;&lt;code class="language-html"&gt;&amp;lt;div id="tab-menu"&amp;gt;
+        
+    &lt;/code&gt;&lt;/pre&gt; 
+                            &lt;/div&gt;
+                            &lt;div class="css"&gt;
+    &lt;pre&gt;&lt;code class="language-css"&gt;&lt;/code&gt;&lt;/pre&gt; 
+                            &lt;/div&gt;
+                            &lt;div class="javascript"&gt;
+    &lt;pre&gt;&lt;code class="language-javascript"&gt;&lt;/code&gt;&lt;/pre&gt; 
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;button&gt;닫기&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- //modal --&gt;    
+</code></pre> 
                 </div>
                 <div class="css">
 <pre><code class="language-html">
+    .slider-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    .slider-img {
+        position: relative;
+        width: 800px;
+        height: 480px;
+    }
+    
+    .slider-img img {
+        width: 100%;
+    }
+    
+    .slider {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all .3s;
+    }
+    
+    .slider::before {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        background: rgba(0, 0, 0, .4);
+        color: #fff;
+        padding: 5px 10px 3px;
+        line-height: 1.3;
+        font-family: "NEXONLv1Gothic";
+        content: attr(data-name);
+    }
+    
+    .slider:nth-child(1) {
+        z-index: 5;
+    }
+    
+    .slider:nth-child(2) {
+        z-index: 4;
+    }
+    
+    .slider:nth-child(3) {
+        z-index: 3;
+    }
+    
+    .slider:nth-child(4) {
+        z-index: 2;
+    }
+    
+    .slider:nth-child(5) {
+        z-index: 1;
+    }
 </code></pre>
                 </div>
 <div class="javascript"><pre><code class="language-html">
-    
+    const sliderImg1 = document.querySelector(".slider-img1");
+    const sliderInner1 = document.querySelector(".slider-inner1");
+    const slider1 = document.querySelector(".slider1");
+ 
+    let currentIndex1 = 0;
+    let sliderHeight1 = slider1.offsetHeight;
+    let sliderCount1 = slider1.length;
+ 
+    sliderInner1.style.transition="all 0.3s";
+    sliderInner1.style.top = "0px"
+ 
+    setInterval (()=&gt;{
+         currentIndex1 &lt; 4 ? currentIndex1++ : currentIndex1=0;
+ 
+         let sliderPosition = currentIndex1 * -sliderHeight1 +"px"; 
+ 
+         sliderInner1.style.transition = "all 0.3s";
+         sliderInner1.style.top = sliderPosition;
+    }, 2000)
+ 
+    const sliderImg2 = document.querySelector(".slider-img2");
+    const sliderInner2 = document.querySelector(".slider-inner2");
+    const slider2 = document.querySelector(".slider2");
+ 
+    let currentIndex2 = 0;
+    let sliderHeight2 = slider2.offsetHeight;
+    let sliderCount2 = document.querySelectorAll(".slider2").length;
+ 
+    let sliderClone = sliderInner2.firstElementChild.cloneNode(true); //firstElementchild는 first-child와 같다
+    sliderInner2.appendChild(sliderClone) 
+ 
+    setInterval(()=&gt;{
+        currentIndex2++;
+        sliderInner2.style.transition = "all 0.3s"
+        sliderInner2.style.transform = "translateY("+ -sliderHeight2 * currentIndex2 +"px)"
+         
+             if(currentIndex2 == sliderCount2){
+                 setTimeout(()=&gt;{
+                     sliderInner2.style.transition = "0s";
+                     sliderInner2.style.transform = "translateY(0)";
+                 }, 300);
+                 currentIndex2 = 0;
+             }
+    }, 2000)
 </code></pre>
                 </div>
             </div>
@@ -167,7 +494,6 @@
 <script src="../assets/js/custom.js"></script>
 <script src="../assets/js/highlight.min.js"></script>
 <script>
-  
    const sliderImg1 = document.querySelector(".slider-img1");
    const sliderInner1 = document.querySelector(".slider-inner1");
    const slider1 = document.querySelector(".slider1");
@@ -187,8 +513,6 @@
         sliderInner1.style.transition = "all 0.3s";
         sliderInner1.style.top = sliderPosition;
    }, 2000)
-
-   
 
    const sliderImg2 = document.querySelector(".slider-img2");
    const sliderInner2 = document.querySelector(".slider-inner2");
@@ -214,16 +538,6 @@
                 currentIndex2 = 0;
             }
    }, 2000)
-
-
-
-
-   window.onload = function() {
-         //init();
-        //animate();
-        agentCheak();
-        modal();
-    }
 </script>
   
 <!--//script-->

@@ -270,7 +270,25 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
       }
   }
 }
-
+.source {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+.source button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 0 0 #fff inset;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.source button:hover {
+  box-shadow: 0 -50px 0 #fff inset;
+  color: #000;
+}
 
 // info
 // info
@@ -372,7 +390,7 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
   transform: scale(0);
   
   .modal-bg{
-    background: rgba(0, 115, 209, 0.4);
+    background: rgba(0, 0, 0, 0.4);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -412,7 +430,7 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
   100% {transform: scaley(1) scalex(1);}
 }
 
-#modal.show.hide{
+#modal.hide{
   animation: unfoldOut 1s ease forwards;
 } 
 
@@ -426,7 +444,7 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
 	transform: scale(0);
 	animation: zoomIn 0.5s 0.8s ease forwards;
 }
-#modal.show.hide .modal-bg .modal-cont {
+#modal.hide .modal-bg .modal-cont {
 	transform: scale(0);
 	animation: zoomOut 0.5s ease forwards;
 }
@@ -487,7 +505,7 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
           margin: 0 5px;
           display: inline-block;
         }
-
+ 
         &.active a{
           border-top: 2px solid #667eea;
           color: #4a5568;
