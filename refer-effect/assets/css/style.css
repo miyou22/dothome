@@ -309,10 +309,7 @@ figcaption {
   color: #6c4a70;
 }
 
-@media (max-width: 800px) {
-  #contents h1 {
-    font-size: 20vw;
-  }
+@media (max-width: 1600px) {
   #nav {
     -webkit-box-align: left;
         -ms-flex-align: left;
@@ -328,6 +325,12 @@ figcaption {
     width: 60px;
     height: 30px;
     line-height: 31px;
+  }
+}
+
+@media (max-width: 800px) {
+  #contents h1 {
+    font-size: 20vw;
   }
 }
 

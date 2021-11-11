@@ -253,22 +253,25 @@ $font-gradient6: linear-gradient(to bottom,  #0fd850 50%,#f9f047);
   
   }
 }
+@media (max-width: 1600px){
+  #nav {
+    align-items: left;
+  ul {
+    display: flex
+  }
+  a {
+    font-size: 9px;
+    width: 60px;
+    height: 30px;
+    line-height: 31px;
+  }
+}
+}
 @media (max-width: 800px){
   #contents h1 {
     font-size: 20vw;
   }
-  #nav {
-        align-items: left;
-      ul {
-        display: flex
-      }
-      a {
-        font-size: 9px;
-        width: 60px;
-        height: 30px;
-        line-height: 31px;
-      }
-  }
+
 }
 .source {
   position: fixed;
