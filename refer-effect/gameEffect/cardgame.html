@@ -126,8 +126,8 @@
             pointer-events: none;
         }
         .cardWrap .card {
-            width: 8vw;
-            height: 20vh;
+            width: 8vw;   /* 8 * 8.5 = 68px */
+            height: 20vh; /* 20*8.5 = 170px */
             transform-style: preserve-3d;
             transition: all 0.6s;
             cursor: pointer;
@@ -168,6 +168,7 @@
         /* card img */
         .cardWrap .card .front {
             background-image: url(../assets/img/premium-icon-spell-book-5980459.png);
+            background-size: 132%;
         }
         .card[data-type=img1] .back {
             background-image: url(../assets/img/premium-icon-bat-5980110.png);
