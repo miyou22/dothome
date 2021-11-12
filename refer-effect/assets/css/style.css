@@ -222,8 +222,8 @@ figcaption {
 }
 
 #main.mouse {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e9defa), to(#fbfcdb));
-  background: linear-gradient(to bottom, #e9defa 0%, #fbfcdb 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c095ff), to(#36befd));
+  background: linear-gradient(to bottom, #c095ff 0%, #36befd 100%);
 }
 
 #main.mouse #contents h1 {
@@ -247,8 +247,8 @@ figcaption {
 }
 
 #main.slider #contents h1 {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #e9defa), to(#fbfcdb));
-  background-image: linear-gradient(to bottom, #e9defa 50%, #fbfcdb);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #b184f5), to(#52cedf));
+  background-image: linear-gradient(to bottom, #b184f5 50%, #52cedf);
 }
 
 #contents h1 {
