@@ -33,7 +33,7 @@ body{}
     margin: 0 auto;
 }
 #section1{
-    height: 3500px;
+    height: 1800px;
 } 
 .menu{
     height: 80px;
@@ -173,7 +173,7 @@ body{}
 #section2 {
     width: 100%;
     margin-top: 100px;
-    height: 3960px;
+    height: 3360px;
 }
 .imgWrap2 {
     position: relative;
@@ -308,13 +308,15 @@ body{}
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 2720px;
+    top: 2220px;
     text-align: center;
     margin-top: 460px;
+    width: 100%;
 }
 
 .svgText p {
-    font-size: 50px;
+    font-size: 48px;
+    line-height: 1.5;
     font-family: 'ChosunilboNM';
     margin-top: 200px;
 }
@@ -331,7 +333,7 @@ body{}
     font-size: 400px;
     font-family: 'saoldisplay';
     text-align: center;
-    padding-top: 330px;
+    padding-top: 175px;
 }
 
 .iWrap {
