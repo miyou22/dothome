@@ -74,8 +74,12 @@
             this.smoothScroll.classList.add('smooth-scroll')
             this.imgWrap1 = document.querySelector(".imgWrap1")
             this.imgWrap5 = document.querySelector(".imgWrap5")
+            this.sec1H1 = document.querySelector(".sec1 h1")
             this.imgSite1 = document.querySelector(".imgSite1")
+            this.imgSite2 = document.querySelector(".imgSite2")
+            this.imgSite3 = document.querySelector(".imgSite3")
             this.imgSite4 = document.querySelector(".imgSite4")
+            this.sec2H1 = document.querySelector(".sec2 h1")
             this.events()
             this.update()
             this.animate()
@@ -110,8 +114,12 @@
             this.smoothScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
             this.imgWrap1.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
             this.imgWrap5.style.transform = `translate3d(0,${-this.scrollY}px,0)`
-            // this.imgSite1.style.transform = `translate3d(${this.scrollY/4}px,${this.scrollY/5}px,0)`
-            // this.imgSite4.style.transform = `translate3d(${-this.scrollY/4}px,${-this.scrollY/5}px,0)`
+            this.sec1H1.style.transfrom = `translate3d(0,${this.scrollY*5}px,0)`
+            this.sec2H1.style.transfrom = `translate3d(${this.scrollY*5}px,${this.scrollY*5}px,0)`
+            this.imgSite1.style.transform = `translate3d(0,${this.scrollY/10}px,0)`
+            this.imgSite2.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
+            this.imgSite3.style.transform = `translate3d(0,${this.scrollY/100}px,0)`
+            this.imgSite4.style.transform = `translate3d(0,${-this.scrollY/10}px,0)`
             this.raf = requestAnimationFrame(this.animate.bind(this))
         }
 
