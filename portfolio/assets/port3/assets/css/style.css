@@ -240,21 +240,21 @@
 .sec2 .imgSite1{
     position: absolute;
     top: 20vh;
-    right: 17vw;
+    right: 10vw;
     background-color: red;
-    width: 40vw;
-    height: 80vh;
-    background: url(../../img/about06.jpg);
+    width: 45vw;
+    height: 50vh;
+    background: url(../../img/about100.jpg);
     background-size: cover;
 }
 .sec2 .imgSite1 strong {
     position: absolute;
-    left: 50%;
+    left: 10vw;
     top: 10%;
     transform: translate(-50%, 0);
     font-family: 'MaruBuri';
     font-size: 30px;
-    color: #fff;
+    color: #000;
 }
 .sec2 .imgSite1 span {
       display: block;
@@ -262,36 +262,14 @@
       font-weight: 100;
       text-align: center;
 }
-.sec2 .imgSite1 .nyaa{
-    position: absolute;
-    top: 16vh; left: 10vw;
-}
-.nyaa a {
-    margin-right: 15px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    color: #333;
-    float: right;
-    -webkit-transition-delay: 0.2s;
-    -moz-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-    font-size: 13px;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 40px;
-}
-
 .sec2 .imgSite2{
     position: absolute;
     left: 0;
-    top:40%;
+    top:30%;
     background-color: blue;
     width: 45vw;
     height: 50vh;
-    background: url(../../img/about07.jpg);
+    background: url(../../img/about7.jpg);
     background-size: cover;
 }
 .sec2 .imgSite2 strong {
@@ -310,16 +288,10 @@
     font-weight: 100;
     text-align: center;
 }
-.sec2 .imgSite2 .nyaa {
-    position: absolute;
-    top: 0;
-    right: 1vw;
-}
-
 .sec2 .imgSite3{
     position: absolute;
-    right: 5%;
-    top:53%;
+    right: 0;
+    top: 48%;
     background-color: blue;
     width: 45vw;
     height: 50vh;
@@ -334,18 +306,19 @@
     font-size: 30px;
     color: #000;
 }
-.sec2 .imgSite3 .nyaa {
-    position: absolute;
-    top: -2.5vh;
-    right: 1vw;
+.sec2 .imgSite3 span{
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
 }
 
 .sec2 .imgSite4{
     position: absolute;
-    right: 30%;
-    bottom: 2%;
+    left: 10%;
+    bottom: 10%;
     background-color: blue;
-    width: 40vw;
+    width: 45vw;
     height: 50vh;
     background: url(../../img/imac-harman-kardon-speakers.jpg);
     background-size: cover;
@@ -364,8 +337,4 @@
     font-weight: 100;
     text-align: center;
 }
-.sec2 .imgSite4 .nyaa {
-    position: absolute;
-    top: -2.3vh;
-    right: 0;
-}
+

@@ -102,8 +102,8 @@ li {
 }
 
 body {
-    overscroll-behavior: none;
-    -webkit-overflow-scrolling: touch;
+    /* overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch; */
 }
 
 .container {

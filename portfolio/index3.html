@@ -27,36 +27,19 @@
                 <div class="imgWrap5"><strong>나만의 사이트 만들기<span>취미</span></strong></div>
             </div>
         </section>
+
         <!-- //section1 -->
         <section id="section2">
             <div class="sec2">
                 <h1>SITE</h1>
-                <div class="imgSite1"><strong>웹 표준 코딩 사이트<span>웹</span></strong>
-                    <div class="nyaa">
-                        <a href="http://www.naver.com">사이트 바로가기</a>
-                        <a href="http://www.naver.com">CODE 바로가기</a>
-                    </div>
-                </div>
-                <div class="imgSite2"><strong>웹 표준 코딩 사이트<span>반응형</span></strong>
-                    <div class="nyaa">
-                        <a href="http://www.naver.com">사이트 바로가기</a>
-                        <a href="http://www.naver.com">CODE 바로가기</a>
-                    </div>
-                </div>
-                <div class="imgSite3"><strong>MEGABOX 사이트<span></span></strong>
-                    <div class="nyaa">
-                        <a href="https://miyou22.github.io/dothome21/MEGA/mega.html">사이트 바로가기</a>
-                        <a href="http://www.naver.com">CODE 바로가기</a>
-                    </div>
-                </div>
-                <div class="imgSite4"><strong>조별작업 사이트<span>정신머리</span></strong>
-                    <div class="nyaa">
-                        <a href="http://miyou22.dothome.co.kr/project/pages/index.php">사이트 바로가기</a>
-                        <a href="https://github.com/miyou22/dothome21/tree/main/team/finalproject">CODE 바로가기</a>
-                    </div>
-                </div>
+                <div class="imgSite1"><strong>웹 표준 코딩 사이트<span>웹</span></strong></div>
+                <div class="imgSite2"><strong>웹 표준 코딩 사이트<span>반응형</span></strong></div>
+                <div class="imgSite3"><strong>MEGABOX 사이트<span>리뉴얼</span></strong></div>
+                <div class="imgSite4"><strong>조별작업 사이트<span>정신머리</span></strong></div>
             </div>
         </section>
+        <!-- //section2 -->
+
      </div>
 
     <script>
@@ -74,7 +57,7 @@
             this.smoothScroll.classList.add('smooth-scroll')
             this.imgWrap1 = document.querySelector(".imgWrap1")
             this.imgWrap5 = document.querySelector(".imgWrap5")
-            this.sec1H1 = document.querySelector(".sec1 h1")
+            this.sec1 = document.querySelector(".sec1 h1")
             this.imgSite1 = document.querySelector(".imgSite1")
             this.imgSite2 = document.querySelector(".imgSite2")
             this.imgSite3 = document.querySelector(".imgSite3")
@@ -114,12 +97,12 @@
             this.smoothScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
             this.imgWrap1.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
             this.imgWrap5.style.transform = `translate3d(0,${-this.scrollY}px,0)`
-            this.sec1H1.style.transfrom = `translate3d(0,${this.scrollY*5}px,0)`
-            this.sec2H1.style.transfrom = `translate3d(${this.scrollY*5}px,${this.scrollY*5}px,0)`
+            //this.sec1.style.transfrom = `translate3d(0,${this.scrollY*111}px,0)`
+            // this.sec2H1.style.transfrom = `translate3d(0,${this.scrollY*5}px,0)`
             this.imgSite1.style.transform = `translate3d(0,${this.scrollY/10}px,0)`
             this.imgSite2.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
-            this.imgSite3.style.transform = `translate3d(0,${this.scrollY/100}px,0)`
-            this.imgSite4.style.transform = `translate3d(0,${-this.scrollY/10}px,0)`
+            this.imgSite3.style.transform = `translate3d(0,${-this.scrollY/4}px,0)`
+            this.imgSite4.style.transform = `translate3d(0,${-this.scrollY/3}px,0)`
             this.raf = requestAnimationFrame(this.animate.bind(this))
         }
 
