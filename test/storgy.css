@@ -80,6 +80,10 @@
     position: absolute;
     top: 0; left: 0;right: 0; bottom: 0;
 }
+.sec1 .imgWrap1:hover{
+   filter: brightness(.5);
+}
+
 .sec1 .imgWrap1 strong {
     position: absolute;
     right: 30px;
