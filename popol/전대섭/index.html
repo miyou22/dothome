@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <h1>프론트에 도전하다. <strong>전대섭 포폴</strong></h1>
+    </header>
+    <!-- //header -->
+ 
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <h1>PORT</h1>
+                <div class="imgWrap1"><strong>개발자에 도전하다<span>전대섭</span></strong></div>
+                <div class="imgWrap2"><strong>프론트를 꿈꾸며<span>늦은 결심</span></strong></div>
+                <div class="imgWrap3"><strong>잘 할 수 있는 것<span>코딩</span></strong></div>
+                <div class="imgWrap4"><strong>높은 정상을 위해<span>목표</span></strong></div>
+                <div class="imgWrap5"><strong>나만의 사이트 만들기<span>취미</span></strong></div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2"></section><!-- //section2 -->
+        <section id="section3"></section><!-- //section3 -->
+        <section id="section4"></section><!-- //section4 -->
+        <section id="section5"></section><!-- //section5 -->
+        <section id="section6"></section><!-- //section6 -->
+    </div>
+    <!-- //contents -->
+
+
+    <script>
+        class SmoothScroll {
+            constructor(options) {
+            this.opt = options || {}
+            this.el = this.opt.el ? this.opt.el : '.smooth-scroll'
+            this.speed = this.opt.speed ? this.opt.speed : 0.1
+            this.init()
+        }
+
+        init() {
+            this.scrollY = 0
+            this.smoothScroll = document.querySelectorAll(this.el)[0]
+            this.smoothScroll.classList.add('smooth-scroll')
+            this.imgWrap1 = document.querySelector(".imgWrap1")
+            this.imgWrap5 = document.querySelector(".imgWrap5")
+            this.events()
+            this.update()
+            this.animate()
+        }
+
+        update() {
+            if (this.smoothScroll === null) return
+            document.body.style.height = `${this.smoothScroll.getBoundingClientRect().height}px`
+        }
+
+        pause() {
+            document.body.style.overflow = 'hidden'
+            cancelAnimationFrame(this.raf)
+        }
+
+        play() {
+            document.body.style.overflow = 'inherit'
+            this.raf = requestAnimationFrame(this.animate.bind(this))
+        }
+
+        destroy() {
+            this.smoothScroll.classList.remove('smooth-scroll')
+            this.smoothScroll.style.transform = 'none'
+            document.body.style.overflow = 'inherit'
+            window.removeEventListener('resize', this.update)
+            cancelAnimationFrame(this.raf)
+            delete this.smoothScroll
+        }
+
+        animate() {
+            this.scrollY += (window.scrollY - this.scrollY) * this.speed
+            this.smoothScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
+            this.imgWrap1.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
+            this.imgWrap5.style.transform = `translate3d(0,${-this.scrollY}px,0)`
+            this.raf = requestAnimationFrame(this.animate.bind(this))
+        }
+
+        scrollTo(y) {
+            window.scrollTo(0, y)
+        }
+
+        staticScrollTo(y) {
+            cancelAnimationFrame(this.raf)
+            this.scrollY = y
+            window.scrollTo(0, y)
+            this.smoothScroll.style.transform = `translate3d(0,${-y}px,0)`
+            this.play()
+        }
+
+        events() {
+            window.addEventListener('load', this.update.bind(this))
+            window.addEventListener('resize', this.update.bind(this))
+            }
+        }
+
+        const smoothScroll = new SmoothScroll({
+            el: '#contents',
+            speed: 0.05
+        })
+    </script>
+</body>
+</html>
+
+<!-- https://thecanvasagency.com/ -->

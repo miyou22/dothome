@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Miracle";
+    src: url(https://jinmopin.dothome.co.kr/port/assets/fonts/Miracle_Personal_use.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 100;
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/MaruBuri-ExtraLight.woff2) format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 300;
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/MaruBuri-Light.woff2) format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 400;
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/MaruBuri-Regular.woff2) format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 500;
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/MaruBuri-SemiBold.woff2) format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 700;
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/MaruBuri-Bold.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Saol Display Regular";
+    src: url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot");
+    src: url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.woff") format("woff"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/4c4c08af466e9ad071b6d69cf44093df.svg#Saol Display Regular") format("svg");
+}
+@font-face {
+    font-family: 'saoldisplay';
+    src: url('../fonts/SaolDisplay-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'EliceDigitalbaeum_Regular';
+    src: url('../fonts/EliceDigitalBaeum_Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'EliceDigitalbaeum_Bold';
+    src: url('../fonts/EliceDigitalBaeum_Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunilboNM';
+    src: url('../fonts/ChosunNm.ttf') format('truetype');
+}
