@@ -5,138 +5,598 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../portfolio/assets/port3/assets/css/style.css">
+    <link rel="stylesheet" href="../portfolio/assets/port3/assets/css/fonts.css">
+    <link rel="stylesheet" href="../portfolio/assets/port3/assets/css/reset.css">
+
     <style>
-        .snip1445 {
-  font-family: 'Raleway', Arial, sans-serif;
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-  min-width: 230px;
-  max-width: 315px;
-  width: 100%;
-  color: #ffffff;
-  text-align: center;
-  font-size: 16px;
-  background-color: #000000;
+        
+/* layout */
+#contents {}
+
+#section1 {
+    background: #F0EDEA;
 }
-.snip1445 *,
-.snip1445 *:before,
-.snip1445 *:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.55s ease;
-  transition: all 0.55s ease;
+
+#section2 {
+    background: #F0EDEA;
 }
-.snip1445 img {
-  max-width: 100%;
-  backface-visibility: hidden;
-  vertical-align: top;
+
+#section3 {
+    background: #EFBDAE;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
 }
-.snip1445 figcaption {
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
-  padding: 5px 10px 10px;
+
+#section4 {
+    background: #EFBDAE;
 }
-.snip1445 figcaption:before,
-.snip1445 figcaption:after {
-  height: 2px;
-  width: 400px;
-  position: absolute;
-  content: '';
-  background-color: #ffffff;
+
+#section5 {
+    background: #fff;
 }
-.snip1445 figcaption:before {
-  top: 0;
-  left: 0;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
+
+#section6 {
+    height: 100vh;
+    background: #888;
 }
-.snip1445 figcaption:after {
-  bottom: 0;
-  right: 0;
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
+
+/* header */
+#header {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 10000;
+    font-family: 'MaruBuri';
+    text-align: center;
 }
-.snip1445 figcaption div:before,
-.snip1445 figcaption div:after {
-  width: 2px;
-  height: 300px;
-  position: absolute;
-  content: '';
-  background-color: #ffffff;
+
+#header strong {
+    display: block;
+    font-size: 0.5em;
+    font-weight: normal;
 }
-.snip1445 figcaption div:before {
-  top: 0;
-  left: 0;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
+
+/* sec1 */
+.sec1 {
+    height: 170vh;
+    position: relative;
 }
-.snip1445 figcaption div:after {
-  bottom: 0;
-  right: 0;
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
+
+.sec1 h1 {
+    position: absolute;
+    bottom: 0;
+    left: 1.5vw;
+    font-size: 20vw;
+    line-height: 1;
+    z-index: 1000;
+    font-family: "Saol Display Regular";
+    font-weight: normal;
 }
-.snip1445 h2,
-.snip1445 h4 {
-  margin: 0;
-  text-transform: uppercase;
+
+.sec1 .imgWrap1 {
+    position: absolute;
+    left: 33vw;
+    top: 15vw;
+    width: 26vw;
+    height: 36vw;
+    position: relative;
+   
 }
-.snip1445 h2 {
-  font-weight: 400;
+.sec1 .imgWrap1::before{
+    content: '';
+    background: url(../../img/KakaoTalk_20211128_120100812.jpg);
+    background-position: center top;
+    background-size: cover;
+    transition: all 0.3s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;right: 0; bottom: 0;
 }
-.snip1445 h4 {
-  display: block;
-  font-weight: 700;
-  background-color: #ffffff;
-  padding: 5px 10px;
-  color: #000000;
+.sec1 .imgWrap1 strong {
+    position: absolute;
+    right: 30px;
+    top: 80%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
 }
-.snip1445 a {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+
+.sec1 .imgWrap1 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
 }
-.snip1445:hover img,
-.snip1445.hover img {
-  zoom: 1;
-  filter: alpha(opacity=50);
-  -webkit-opacity: 0.5;
-  opacity: 0.5;
+
+.sec1 .imgWrap2 {
+    position: absolute;
+    left: 4vw;
+    top: 5vw;
+    width: 15vw;
+    height: 20vw;
+    background: #ccc;
+    background: url(../../img/about02@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
 }
-.snip1445:hover figcaption:before,
-.snip1445.hover figcaption:before,
-.snip1445:hover figcaption:after,
-.snip1445.hover figcaption:after,
-.snip1445:hover figcaption div:before,
-.snip1445.hover figcaption div:before,
-.snip1445:hover figcaption div:after,
-.snip1445.hover figcaption div:after {
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
+
+.sec1 .imgWrap2 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
 }
-.snip1445:hover figcaption:before,
-.snip1445.hover figcaption:before,
-.snip1445:hover figcaption:after,
-.snip1445.hover figcaption:after {
-  -webkit-transition-delay: 0.15s;
-  transition-delay: 0.15s;
+
+.sec1 .imgWrap2 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.sec1 .imgWrap3 {
+    position: absolute;
+    right: 4vw;
+    top: 23vw;
+    width: 25vw;
+    height: 14vw;
+    background: url(../../img/about03@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.sec1 .imgWrap3 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.sec1 .imgWrap3 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.sec1 .imgWrap4 {
+    position: absolute;
+    left: 8vw;
+    top: 40vw;
+    width: 30vw;
+    height: 20vw;
+    background: url(../../img/about04@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.sec1 .imgWrap4 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.sec1 .imgWrap4 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.sec1 .imgWrap5 {
+    position: absolute;
+    right: 2vw;
+    top: 50vw;
+    width: 25vw;
+    height: 34vw;
+    background: url(../../img/about05@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.sec1 .imgWrap5 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.sec1 .imgWrap5 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+/* sec2 */
+.sec2{
+    position: relative;
+    height: 520vh;
+}
+.sec2 h1{
+    position: absolute;
+    left: 1.5vw; bottom: 0;
+    font-size: 20vw;
+    line-height: 1;
+    z-index: 1000;
+    font-family: "Saol Display Regular";
+    font-weight: normal;
+
+}
+.sec2 .imgSite1{
+    position: absolute;
+    top: 20vh;
+    right: 10vw;
+    background-color: red;
+    width: 45vw;
+    height: 50vh;
+    background: url(../../img/wrap1.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite1 strong {
+    position: absolute;
+    left: 10vw;
+    top: 10%;
+    transform: translate(-50%, 0);
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .imgSite1 span {
+      display: block;
+      font-size: 18px;
+      font-weight: 100;
+      text-align: center;
+}
+.sec2 .imgSite2{
+    position: absolute;
+    left: 22vw;
+    top: 80vh;
+    background-color: blue;
+    width: 45vw;
+    height: 50vh;
+    background: url(../../img/wrap2.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite2 strong {
+    position: absolute;
+    left: 20%;
+    top: 4%;
+    transform: translate(-50%, 0);
+    font-family: 'MaruBuri';
+    font-size: 1.875rem;
+    color: #000;
+}
+
+.sec2 .imgSite2 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+.sec2 .imgSite3{
+    position: absolute;
+    right: 0;
+    top: 140vh;
+    background-color: blue;
+    width: 45vw;
+    height: 50vh;
+    background: url(../../img/wrap3.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite3 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .imgSite3 span{
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.sec2 .imgSite4{
+    position: absolute;
+    left: 0;
+    top: 200vh;
+    background-color: blue;
+    width: 45vw;
+    height: 62vh;
+    background: url(../../img/wrap4.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite4 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #fff;
+}
+.sec2 .imgSite4 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+ .sec2 .imgSite5{
+    position: absolute;
+    right: 0;
+    top: 272vh;
+    background-color: blue;
+    width: 45vw;
+    height: 60vh;
+    background: url(../../img/wrap5.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite5 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .imgSite5 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+.sec2 .imgSite6{
+    position: absolute;
+    left: 0;
+    top: 342vh;
+    background-color: blue;
+    width: 45vw;
+    height: 61vh;
+    background: url(../../img/wrap6.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite6 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .imgSite6 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+.sec2 .imgSite7{
+    position: absolute;
+    right: 0;
+    top: 413vh;
+    background-color: blue;
+    width: 45vw;
+    height: 62vh;
+    background: url(../../img/wrap7.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite7 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .imgSite7 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}  
+/* sec3 */
+.sec3{
+    height: 300vh;
+    position: relative;
+}
+.sec3 h1{
+    position: absolute;
+    left: 1.5vw;
+    bottom: 0;
+    font-size: 20vw;
+    line-height: 1;
+    z-index: 1000;
+    font-family: "Saol Display Regular";
+    font-weight: normal;
+}
+.effect1{
+       position: absolute;
+       top: 50vh;
+       left: 0;
+       width: 70vw;
+       height: 70vh;
+}
+.effect1 iframe{
+        width: 100%;
+        height: 100%;
+}
+.effect2{
+       position: absolute;
+       top: 160vh;
+       right: 0;
+       width: 70vw;
+       height: 70vh;
+}
+.effect2 iframe{
+        width: 100%;
+        height: 100%;
 }
     </style>
 </head>
+
 <body>
-    <figure class="snip1445">
-        <img src="../portfolio/assets/port3/img/2.jpg" alt="sample84" />
-            <figcaption>
-                <div>
-                <h2>개발자을 꿈꾸다</h2>
-                <h4>전대섭</h4>
+     <header id="header">
+        <h1>프론트에 도전하다. <strong>전대섭 포폴</strong></h1>
+    </header>
+    <!-- //header -->
+
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <h1>ABOUT</h1>
+                <div class="imgWrap1"><strong>개발자에 도전하다<span>전대섭</span></strong></div>
+                <div class="imgWrap2"><strong>프론트를 꿈꾸며<span>늦은 결심</span></strong></div>
+                <div class="imgWrap3"><strong>잘 할 수 있는 것<span>코딩</span></strong></div>
+                <div class="imgWrap4"><strong>높은 정상을 위해<span>목표</span></strong></div>
+                <div class="imgWrap5"><strong>나만의 사이트 만들기<span>취미</span></strong></div>
+            </div>
+        </section>
+        <!-- //section1 -->
+        <section id="section2">
+            <div class="sec2">
+                <h1>SITE</h1>
+                <div class="imgSite1"><strong>웹 표준 코딩 사이트<span>웹</span></strong></div>
+                <div class="imgSite2"><strong>웹 표준 코딩 사이트<span>반응형</span></strong></div>
+                <div class="imgSite3"><strong>MEGABOX 사이트<span>리뉴얼</span></strong></div>
+                <div class="imgSite4"><strong>조별작업 사이트<span>정신머리</span></strong></div>
+                <div class="imgSite5"><strong>React 사이트<span>React.js</span></strong></div>
+                <div class="imgSite6"><strong>PHP 사이트<span>PHP</span></strong></div>
+                <div class="imgSite7"><strong>Vue 사이트<span>VUE</span></strong></div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <!-- <div id="section3">
+            <div class="sec3">
+                <h1>SCRIPT</h1>
+                <div class="effect1">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
                 </div>
-            </figcaption>
-        <a href="#"></a>
-    </figure>
+                <div class="effect2">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+                <div class="effect1">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+                <div class="effect2">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div> -->
+
+     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        class SmoothScroll {
+            constructor(options) {
+            this.opt = options || {}
+            this.el = this.opt.el ? this.opt.el : '.smooth-scroll'
+            this.speed = this.opt.speed ? this.opt.speed : 0.1
+            this.init()
+        }
+
+        init() {
+            this.scrollY = 0
+            this.smoothScroll = document.querySelectorAll(this.el)[0]
+            this.smoothScroll.classList.add('smooth-scroll')
+            this.imgWrap1 = document.querySelector(".imgWrap1")
+            this.imgWrap5 = document.querySelector(".imgWrap5")
+            this.imgSite1 = document.querySelector(".imgSite1")
+            this.imgSite2 = document.querySelector(".imgSite2")
+            this.imgSite3 = document.querySelector(".imgSite3")
+            this.imgSite4 = document.querySelector(".imgSite4")
+            this.section3 = document.querySelector("#section3")
+            this.events()
+            this.update()
+            this.animate()
+        }
+
+        update() {
+            if (this.smoothScroll === null) return
+            document.body.style.height = `${this.smoothScroll.getBoundingClientRect().height}px`
+        }
+
+        pause() {
+            document.body.style.overflow = 'hidden'
+            cancelAnimationFrame(this.raf)
+        }
+
+        play() {
+            document.body.style.overflow = 'inherit'
+            this.raf = requestAnimationFrame(this.animate.bind(this))
+        }
+
+        destroy() {
+            this.smoothScroll.classList.remove('smooth-scroll')
+            this.smoothScroll.style.transform = 'none'
+            document.body.style.overflow = 'inherit'
+            window.removeEventListener('resize', this.update)
+            cancelAnimationFrame(this.raf)
+            delete this.smoothScroll
+        }
+        
+        animate() {
+            this.scrollY += (window.scrollY - this.scrollY) * this.speed
+            this.smoothScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
+            this.imgWrap1.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
+            this.imgWrap5.style.transform = `translate3d(0,${-this.scrollY}px,0)`
+            // this.section3.style.transition = `background-color:#EFBDAE`
+            this.raf = requestAnimationFrame(this.animate.bind(this))
+        }
+
+        scrollTo(y) {
+            window.scrollTo(0, y)
+        }
+
+        staticScrollTo(y) {
+            cancelAnimationFrame(this.raf)
+            this.scrollY = y
+            window.scrollTo(0, y)
+            this.smoothScroll.style.transform = `translate3d(0,${-y}px,0)`
+            this.play()
+        }
+
+        events() {
+            window.addEventListener('load', this.update.bind(this))
+            window.addEventListener('resize', this.update.bind(this))
+            }
+        }
+
+        const smoothScroll = new SmoothScroll({
+            el: '#contents',
+            speed: 0.05
+        })
+     
+    </script>
 </body>
-</html>
+</html> 

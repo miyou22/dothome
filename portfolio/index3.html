@@ -27,21 +27,99 @@
                 <div class="imgWrap5"><strong>나만의 사이트 만들기<span>취미</span></strong></div>
             </div>
         </section>
-
         <!-- //section1 -->
         <section id="section2">
             <div class="sec2">
                 <h1>SITE</h1>
-                <div class="imgSite1"><strong>웹 표준 코딩 사이트<span>웹</span></strong></div>
-                <div class="imgSite2"><strong>웹 표준 코딩 사이트<span>반응형</span></strong></div>
-                <div class="imgSite3"><strong>MEGABOX 사이트<span>리뉴얼</span></strong></div>
-                <div class="imgSite4"><strong>조별작업 사이트<span>정신머리</span></strong></div>
+                <div class="s2Wrap Site1">
+                    <strong>웹 표준 코딩 사이트 <span>웹 </span></strong>
+                    <!-- <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="s2Wrap Site2"><strong>웹 표준 코딩 사이트<span>반응형</span></strong>
+                    <!-- <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="s2Wrap Site3"><strong>MEGABOX 사이트<span>리뉴얼</span></strong>
+                     <!-- <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="s2Wrap Site4"><strong>조별작업 사이트<span>정신머리</span></strong>
+                     <!-- <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="s2Wrap Site5"><strong>React 사이트<span>React.js</span></strong>
+                 <!-- <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="s2Wrap Site6"><strong>PHP 사이트<span>PHP</span></strong>
+                 <!-- <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="s2Wrap Site7"><strong>Vue 사이트<span>VUE</span></strong>
+                 <!-- <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
             </div>
         </section>
         <!-- //section2 -->
 
+        <!-- <div id="section3">
+            <div class="sec3">
+                <h1>SCRIPT</h1>
+                <div class="effect1">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+                <div class="effect2">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+                <div class="effect1">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+                <div class="effect2">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div> -->
+
      </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
         class SmoothScroll {
             constructor(options) {
@@ -57,12 +135,11 @@
             this.smoothScroll.classList.add('smooth-scroll')
             this.imgWrap1 = document.querySelector(".imgWrap1")
             this.imgWrap5 = document.querySelector(".imgWrap5")
-            this.sec1 = document.querySelector(".sec1 h1")
             this.imgSite1 = document.querySelector(".imgSite1")
             this.imgSite2 = document.querySelector(".imgSite2")
             this.imgSite3 = document.querySelector(".imgSite3")
             this.imgSite4 = document.querySelector(".imgSite4")
-            this.sec2H1 = document.querySelector(".sec2 h1")
+            this.section3 = document.querySelector("#section3")
             this.events()
             this.update()
             this.animate()
@@ -91,18 +168,13 @@
             cancelAnimationFrame(this.raf)
             delete this.smoothScroll
         }
-
+        
         animate() {
             this.scrollY += (window.scrollY - this.scrollY) * this.speed
             this.smoothScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
             this.imgWrap1.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
             this.imgWrap5.style.transform = `translate3d(0,${-this.scrollY}px,0)`
-            //this.sec1.style.transfrom = `translate3d(0,${this.scrollY*111}px,0)`
-            // this.sec2H1.style.transfrom = `translate3d(0,${this.scrollY*5}px,0)`
-            this.imgSite1.style.transform = `translate3d(0,${this.scrollY/10}px,0)`
-            this.imgSite2.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
-            this.imgSite3.style.transform = `translate3d(0,${-this.scrollY/4}px,0)`
-            this.imgSite4.style.transform = `translate3d(0,${-this.scrollY/3}px,0)`
+            // this.section3.style.transition = `background-color:#EFBDAE`
             this.raf = requestAnimationFrame(this.animate.bind(this))
         }
 
@@ -128,6 +200,7 @@
             el: '#contents',
             speed: 0.05
         })
+     
     </script>
 </body>
 </html> 

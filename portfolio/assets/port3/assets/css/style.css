@@ -11,7 +11,9 @@
 }
 
 #section3 {
-    background: #F0EDEA;
+    background: #EFBDAE;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
 }
 
 #section4 {
@@ -222,10 +224,11 @@
     font-size: 18px;
     font-weight: 100;
 }
+
 /* sec2 */
 .sec2{
     position: relative;
-    height: 250vh;
+    height: 520vh;
 }
 .sec2 h1{
     position: absolute;
@@ -237,42 +240,242 @@
     font-weight: normal;
 
 }
-.sec2 .imgSite1{
+/* .sec2 .s2Wrap strong {
     position: absolute;
-    top: 20vh;
-    right: 10vw;
-    background-color: red;
-    width: 45vw;
-    height: 50vh;
-    background: url(../../img/about100.jpg);
-    background-size: cover;
-}
-.sec2 .imgSite1 strong {
-    position: absolute;
-    left: 10vw;
-    top: 10%;
-    transform: translate(-50%, 0);
+    left: 3vw;
+    top: 5vh;
+    transform: translate(-10%, -10%);
+    margin-top: 5vh;
+    margin-left: 3vw;
     font-family: 'MaruBuri';
     font-size: 30px;
     color: #000;
 }
-.sec2 .imgSite1 span {
+.sec2 .s2Wrap span {
       display: block;
       font-size: 18px;
       font-weight: 100;
       text-align: center;
+      line-height: 4;
 }
-.sec2 .imgSite2{
+.sec2 .s2Wrap .sec2img {
     position: absolute;
+    bottom: 5vh; left: 3vw;
+    background-size: cover;
+    width: 24vw;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.sec2 .s2Wrap .sec2img .button .text2 a {
+    display: none;
+}
+.sec2 .s2Wrap:hover .sec2img .button {
+    position: relative;
+     width: 100%;
+     height: 100%;
+     background: rgba(39, 37, 37, 0.8);
+     opacity: 1;
+     transition: all 1s;
+}
+.sec2 .s2Wrap:hover .sec2img .button .text2 a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    font-size: 1vw;
+    border-radius: 50%;
+    background: #5a99d4;
+    width: 5vw;
+    height: 5vw;
+    line-height: 5vw;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(.9);
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 0 2vw rgba(90, 153, 212, 0.4);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(.9);
+        box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.4);
+    }
+} */
+/* 웹 표준 사이트 */
+/* .sec2 .Site1 {
+    position: absolute;
+    top: 35vh;
+    left: 3vw;
+    width: 30vw;
+    height: 40vh;
+}
+.sec2 .Site1 .sec2img {
+    position: absolute;
+    width: 100%; height: 100%;
+    background: url(../../img/wrap1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.sec2 .Site2 {
+    position: absolute;
+    top: 35vh;
+    right: 30vw;
+    width: 40vw;
+    height: 70vh;
+}
+.sec2 .Site2 .sec2img {
+    position: absolute;
+    width: 100%; height: 100%;
+    bottom: 0;
     left: 0;
-    top:30%;
-    background-color: blue;
-    width: 45vw;
+    background: url(../../img/wrap2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+} */
+/* 반응형 사이트 */
+/* .sec2 .Site2 {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    background-color: red;
+    width: 30vw;
+    height: 60vh;
+}
+
+.sec2 .Site2 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap2.jpg);
+    background-size: cover;
+    width: 24vw;
+    height: 30vh;
+    overflow: hidden;
+} */
+/* 메가박스 */
+/* .sec2 .Site3 {
+    position: absolute;
+    top: 40vh;
+    right: 0;
+    background-color: red;
+    width: 33vw;
+    height: 53vh;
+}
+
+.sec2 .Site3 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap3.jpg);
+    background-size: cover;
+    width: 20vw;
+    height: 30vh;
+    overflow: hidden;
+} */
+/* 조별작업 */
+/* .sec2 .Site4 {
+    position: absolute;
+    top: 120vh;
+    left: 10vw;
+    background-color: red;
+    width: 20vw;
+    height: 60vh;
+}
+
+.sec2 .Site4 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap4.jpg);
+    background-size: cover;
+    width: 14vw;
+    height: 20vh;
+    overflow: hidden;
+} */
+/* 리액트 */
+/* .sec2 .Site5 {
+    position: absolute;
+    top: 130vh;
+    left: 35vw;
+    background-color: red;
+    width: 40vw;
+    height: 60vh;
+}
+
+.sec2 .Site5 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap5.jpg);
+    background-size: cover;
+    width: 34vw;
+    height: 32vh;
+    overflow: hidden;
+} */
+/* php */
+/* .sec2 .Site6 {
+    position: absolute;
+    top: 130vh;
+    right: 0;
+    background-color: red;
+    width: 20vw;
     height: 50vh;
-    background: url(../../img/about7.jpg);
+}
+
+.sec2 .Site6 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap6.jpg);
+    background-size: cover;
+    width: 15vw;
+    height: 22vh;
+    overflow: hidden;
+} */
+/* vue */
+/* .sec2 .Site7 {
+    position: absolute;
+    top: 200vh;
+    right: 25vw;
+    background-color: red;
+    width: 50vw;
+    height: 60vh;
+}
+
+.sec2 .Site7 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap7.jpg);
+    background-size: cover;
+    width: 34vw;
+    height: 32vh;
+    overflow: hidden;
+}
+ */
+.sec2 .Site1 {
+    position: absolute;
+    left: 3vw;
+    top: 30vh;
+    background-color: blue;
+    width: 35vw;
+    height: 40vh;
+    background: url(../../img/wrap1.jpg);
     background-size: cover;
 }
-.sec2 .imgSite2 strong {
+
+.sec2 .Site1 strong {
     position: absolute;
     left: 20%;
     top: 4%;
@@ -282,23 +485,52 @@
     color: #000;
 }
 
-.sec2 .imgSite2 span {
+.sec2 .Site1 span {
     display: block;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
 }
-.sec2 .imgSite3{
+
+
+
+.sec2 .Site2{
+    position: absolute;
+    left: 22vw;
+    top: 80vh;
+    background-color: blue;
+    width: 30vw;
+    height: 40vh;
+    background: url(../../img/wrap2.jpg);
+    background-size: cover;
+}
+.sec2 .Site2 strong {
+    position: absolute;
+    left: 20%;
+    top: 4%;
+    transform: translate(-50%, 0);
+    font-family: 'MaruBuri';
+    font-size: 1.875rem;
+    color: #000;
+}
+
+.sec2 .Site2 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+.sec2 .Site3{
     position: absolute;
     right: 0;
-    top: 48%;
+    top: 140vh;
     background-color: blue;
     width: 45vw;
     height: 50vh;
-    background: url(../../img/about8.jpg);
+    background: url(../../img/wrap3.jpg);
     background-size: cover;
 }
-.sec2 .imgSite3 strong {
+.sec2 .Site3 strong {
     position: absolute;
     left: 4%;
     top: 4%;
@@ -306,24 +538,24 @@
     font-size: 30px;
     color: #000;
 }
-.sec2 .imgSite3 span{
+.sec2 .Site3 span{
     display: block;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
 }
 
-.sec2 .imgSite4{
+.sec2 .Site4{
     position: absolute;
-    left: 10%;
-    bottom: 10%;
+    left: 0;
+    top: 200vh;
     background-color: blue;
     width: 45vw;
-    height: 50vh;
-    background: url(../../img/imac-harman-kardon-speakers.jpg);
+    height: 62vh;
+    background: url(../../img/wrap4.jpg);
     background-size: cover;
 }
-.sec2 .imgSite4 strong {
+.sec2 .Site4 strong {
     position: absolute;
     left: 4%;
     top: 4%;
@@ -331,10 +563,118 @@
     font-size: 30px;
     color: #fff;
 }
-.sec2 .imgSite4 span {
+.sec2 .Site4 span {
     display: block;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
 }
-
+ .sec2 .Site5{
+    position: absolute;
+    right: 0;
+    top: 272vh;
+    background-color: blue;
+    width: 45vw;
+    height: 60vh;
+    background: url(../../img/wrap5.jpg);
+    background-size: cover;
+}
+.sec2 .Site5 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .Site5 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+.sec2 .Site6{
+    position: absolute;
+    left: 0;
+    top: 342vh;
+    background-color: blue;
+    width: 45vw;
+    height: 61vh;
+    background: url(../../img/wrap6.jpg);
+    background-size: cover;
+}
+.sec2 .Site6 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .Site6 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+.sec2 .Site7{
+    position: absolute;
+    right: 0;
+    top: 413vh;
+    background-color: blue;
+    width: 45vw;
+    height: 62vh;
+    background: url(../../img/wrap7.jpg);
+    background-size: cover;
+}
+.sec2 .Site7 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .Site7 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}  
+/* sec3 */
+/* .sec3{
+    height: 300vh;
+    position: relative;
+}
+.sec3 h1{
+    position: absolute;
+    left: 1.5vw;
+    bottom: 0;
+    font-size: 20vw;
+    line-height: 1;
+    z-index: 1000;
+    font-family: "Saol Display Regular";
+    font-weight: normal;
+}
+.effect1{
+       position: absolute;
+       top: 50vh;
+       left: 0;
+       width: 70vw;
+       height: 70vh;
+}
+.effect1 iframe{
+        width: 100%;
+        height: 100%;
+}
+.effect2{
+       position: absolute;
+       top: 160vh;
+       right: 0;
+       width: 70vw;
+       height: 70vh;
+}
+.effect2 iframe{
+        width: 100%;
+        height: 100%;
+} */
