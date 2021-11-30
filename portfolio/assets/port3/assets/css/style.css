@@ -464,7 +464,7 @@
     overflow: hidden;
 }
  */
-.sec2 .Site1 {
+.sec2 .imgSite1 {
     position: absolute;
     left: 3vw;
     top: 30vh;
@@ -475,7 +475,7 @@
     background-size: cover;
 }
 
-.sec2 .Site1 strong {
+.sec2 .imgSite1 strong {
     position: absolute;
     left: 20%;
     top: 4%;
@@ -485,7 +485,7 @@
     color: #000;
 }
 
-.sec2 .Site1 span {
+.sec2 .imgSite1 span {
     display: block;
     font-size: 18px;
     font-weight: 100;
@@ -494,7 +494,7 @@
 
 
 
-.sec2 .Site2{
+.sec2 .imgSite2{
     position: absolute;
     left: 22vw;
     top: 80vh;
@@ -504,7 +504,7 @@
     background: url(../../img/wrap2.jpg);
     background-size: cover;
 }
-.sec2 .Site2 strong {
+.sec2 .imgSite2 strong {
     position: absolute;
     left: 20%;
     top: 4%;
@@ -514,13 +514,13 @@
     color: #000;
 }
 
-.sec2 .Site2 span {
+.sec2 .imgSite2 span {
     display: block;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
 }
-.sec2 .Site3{
+.sec2 .imgSite3{
     position: absolute;
     right: 0;
     top: 140vh;
@@ -530,7 +530,7 @@
     background: url(../../img/wrap3.jpg);
     background-size: cover;
 }
-.sec2 .Site3 strong {
+.sec2 .imgSite3 strong {
     position: absolute;
     left: 4%;
     top: 4%;
@@ -538,14 +538,14 @@
     font-size: 30px;
     color: #000;
 }
-.sec2 .Site3 span{
+.sec2 .imgSite3 span {
     display: block;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
 }
 
-.sec2 .Site4{
+.sec2 .imgSite4{
     position: absolute;
     left: 0;
     top: 200vh;
@@ -555,7 +555,7 @@
     background: url(../../img/wrap4.jpg);
     background-size: cover;
 }
-.sec2 .Site4 strong {
+.sec2 .imgSite4 strong {
     position: absolute;
     left: 4%;
     top: 4%;
@@ -563,13 +563,13 @@
     font-size: 30px;
     color: #fff;
 }
-.sec2 .Site4 span {
+.sec2 .imgSite4 span {
     display: block;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
 }
- .sec2 .Site5{
+ .sec2 .imgSite5{
     position: absolute;
     right: 0;
     top: 272vh;
@@ -579,7 +579,7 @@
     background: url(../../img/wrap5.jpg);
     background-size: cover;
 }
-.sec2 .Site5 strong {
+.sec2 .imgSite5 strong {
     position: absolute;
     left: 4%;
     top: 4%;
@@ -587,13 +587,13 @@
     font-size: 30px;
     color: #000;
 }
-.sec2 .Site5 span {
+.sec2 .imgSite5 span {
     display: block;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
 }
-.sec2 .Site6{
+.sec2 .imgSite6{
     position: absolute;
     left: 0;
     top: 342vh;
@@ -603,7 +603,7 @@
     background: url(../../img/wrap6.jpg);
     background-size: cover;
 }
-.sec2 .Site6 strong {
+.sec2 .imgSite6 strong {
     position: absolute;
     left: 4%;
     top: 4%;
@@ -611,13 +611,13 @@
     font-size: 30px;
     color: #000;
 }
-.sec2 .Site6 span {
+.sec2 .imgSite6 span {
     display: block;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
 }
-.sec2 .Site7{
+.sec2 .imgSite7{
     position: absolute;
     right: 0;
     top: 413vh;
@@ -627,7 +627,7 @@
     background: url(../../img/wrap7.jpg);
     background-size: cover;
 }
-.sec2 .Site7 strong {
+.sec2 .imgSite7 strong {
     position: absolute;
     left: 4%;
     top: 4%;
@@ -635,7 +635,7 @@
     font-size: 30px;
     color: #000;
 }
-.sec2 .Site7 span {
+.sec2 .imgSite7 span {
     display: block;
     font-size: 18px;
     font-weight: 100;
