@@ -1,0 +1,397 @@
+@font-face {
+    font-family: "Miracle";
+    src: url(https://jinmopin.dothome.co.kr/port/assets/fonts/Miracle_Personal_use.woff) format('woff');
+}
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 100;
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/MaruBuri-ExtraLight.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 300;
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/MaruBuri-Light.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 400;
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/MaruBuri-Regular.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 500;
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/MaruBuri-SemiBold.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 700;
+    font-style: normal;
+    src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/MaruBuri-Bold.woff2) format('woff2');
+    font-display: swap;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+
+body {
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+}
+.scroll {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    will-change: transform;
+    overflow: hidden;
+}
+
+/* layout */
+#contents {}
+#section1 {
+    background: #F0EDEA;
+}
+#section2 {
+    background: #F0EDEA;
+}
+#section3 {
+    height: 100vh;
+    background: #555;
+}
+#section4 {
+    height: 100vh;
+    background: #666;
+}
+#section5 {
+    height: 100vh;
+    background: #777;
+}
+#section6 {
+    height: 100vh;
+    background: #888;
+}
+
+/* header */
+#header {
+    position: fixed;
+    right: 20px; top: 20px;
+    z-index: 10000;
+    font-family: 'MaruBuri';
+    text-align: center;
+}
+#header strong {
+    display: block;
+    font-size: 0.5em;
+    font-weight: normal;
+}
+/* sec1 */
+.sec1 {
+    height: 170vh;
+    position: relative;
+}
+.sec1 h1 {
+    position: absolute;
+    bottom: 0; left: 1.5vw;
+    font-size: 20vw;
+    line-height: 1;
+    z-index: 1000;
+    font-family: "Miracle";
+    font-weight: normal;
+}
+.sec1 .imgWrap1 {
+    position: absolute;
+    left: 33vw;
+    top: 15vw;
+    width: 26vw; 
+    height: 36vw;
+    background: red;
+    position: relative;
+    overflow: hidden;
+    background: url(https://miyou22.github.io/dothome21/portfolio/assets/port3/img/KakaoTalk_20211128_120100812.jpg);
+    background-position: center top;
+    background-size: cover;
+    transition: all 0.3s;
+}
+.sec1 .imgWrap1 strong {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+}
+.sec1 .imgWrap1 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+}
+.sec1 .imgWrap2 {
+    position: absolute;
+    left: 4vw;
+    top: 5vw;
+    width: 15vw;
+    height: 20vw;
+    background: #ccc;
+    background: url(../img/mainbg02@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+.sec1 .imgWrap2 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+.sec1 .imgWrap2 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+.sec1 .imgWrap3 {
+    position: absolute;
+    right: 4vw;
+    top: 23vw;
+    width: 25vw;
+    height: 14vw;
+    background: url(../img/mainbg03@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+.sec1 .imgWrap3 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+.sec1 .imgWrap3 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+.sec1 .imgWrap4 {
+    position: absolute;
+    left: 8vw;
+    top: 40vw;
+    width: 30vw;
+    height: 20vw;
+    background: url(../img/mainbg04@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+.sec1 .imgWrap4 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.sec1 .imgWrap4 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+.sec1 .imgWrap5 {
+    position: absolute;
+    right: 2vw;
+    top: 50vw;
+    width: 25vw;
+    height: 34vw;
+    background: url(../img/mainbg05@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+.sec1 .imgWrap5 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+.sec1 .imgWrap5 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+/* sec2 */
+.sec2 {
+    height: 200vh;
+    position: relative;
+}
+.sec2 h1 {
+    position: absolute;
+    bottom: 0;
+    left: 1.5vw;
+    font-size: 20vw;
+    line-height: 1;
+    z-index: 1000;
+    font-family: "Miracle";
+    font-weight: normal;
+}
+.sec2 .imgWrap1 {
+    width: 100%;
+    display: flex;
+    padding-top: 40vh;
+}
+.sec2 .imgWrap1 .img {
+    background: url(https://miyou22.github.io/dothome21/portfolio/assets/port3/img/wrap2.jpg);
+    background-position: center top;
+    background-size: cover;
+    width: 40vw;
+    height: 24vw;
+    position: relative;
+    z-index: 100;
+}
+.sec2 .imgWrap1 .textWrap {
+    font-family: 'MaruBuri';
+    padding: 1vw 1.5vw;
+    width: 30vw;
+}
+.sec2 .imgWrap1 .textWrap h2 {
+    margin-bottom: 0.6vw;
+    transform: translateX(-20vw);
+    transition: transform 0.33s ease;
+}
+.sec2 .imgWrap1 .textWrap h2 strong {
+    font-size: 2vw;
+    font-weight: normal;
+}
+.sec2 .imgWrap1 .textWrap p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    transform: translateX(-30vw);
+    transition: transform 0.33s ease 0.1s;
+}
+.sec2 .imgWrap1 .textWrap a {
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-bottom: 5px;
+    transform: translateX(-30vw);
+    transition: transform 0.33s ease 0.2s;
+}
+.sec2 .imgWrap1:hover .textWrap h2 {
+    transform: translateX(0);
+}
+.sec2 .imgWrap1:hover .textWrap p {
+    transform: translateX(0);
+}
+.sec2 .imgWrap1:hover .textWrap a {
+    transform: translateX(0);
+}
+.sec2 .imgWrap2 {
+    width: 100%;
+    display: flex;
+    padding-top: 10vh;
+    padding-left: 30vw;
+}
+.sec2 .imgWrap2 .img {
+    background: url(https://miyou22.github.io/dothome21/portfolio/assets/port3/img/wrap5.jpg);
+    background-position: center top;
+    background-size: cover;
+    width: 40vw;
+    height: 24vw;
+    position: relative;
+    z-index: 100;
+}
+.sec2 .imgWrap2 .textWrap {
+    font-family: 'MaruBuri';
+    padding: 1vw 1.5vw;
+    width: 30vw;
+}
+
+.sec2 .imgWrap2 .textWrap h2 {
+    margin-bottom: 0.6vw;
+    transform: translateX(-20vw);
+    transition: transform 0.33s ease;
+}
+
+.sec2 .imgWrap2 .textWrap h2 strong {
+    font-size: 2vw;
+    font-weight: normal;
+}
+
+.sec2 .imgWrap2 .textWrap p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    transform: translateX(-30vw);
+    transition: transform 0.33s ease 0.1s;
+}
+
+.sec2 .imgWrap2 .textWrap a {
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-bottom: 5px;
+    transform: translateX(-30vw);
+    transition: transform 0.33s ease 0.2s;
+}
+
+.sec2 .imgWrap2:hover .textWrap h2 {
+    transform: translateX(0);
+}
+
+.sec2 .imgWrap2:hover .textWrap p {
+    transform: translateX(0);
+}
+
+.sec2 .imgWrap2:hover .textWrap a {
+    transform: translateX(0);
+}

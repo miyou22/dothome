@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../portfolio/assets/port3/assets/css/style.css">
+    <link rel="stylesheet" href="../portfolio/assets/port3/assets/css/fonts.css">
+    <link rel="stylesheet" href="../portfolio/assets/port3/assets/css/reset.css">
+</head>
+
+<body>
+     <header id="header">
+        <h1>프론트에 도전하다. <strong>전대섭 포폴</strong></h1>
+    </header>
+    <!-- //header -->
+
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <h1>ABOUT</h1>
+                <div class="imgWrap1"><strong>개발자에 도전하다<span>전대섭</span></strong></div>
+                <div class="imgWrap2"><strong>프론트를 꿈꾸며<span>늦은 결심</span></strong></div>
+                <div class="imgWrap3"><strong>잘 할 수 있는 것<span>코딩</span></strong></div>
+                <div class="imgWrap4"><strong>높은 정상을 위해<span>목표</span></strong></div>
+                <div class="imgWrap5"><strong>나만의 사이트 만들기<span>취미</span></strong></div>
+            </div>
+        </section>
+        <!-- //section1 -->
+        <section id="section2">
+            <div class="sec2">
+                <h1>SITE</h1>
+                <div class="s2Wrap Site1">
+                    <strong>웹 표준 코딩 사이트 폰트수정 해야함<span>아 정말 배고프네 햄버거 콜라 피자 </span></strong>
+                    <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s2Wrap Site2">
+                    <strong>웹 표준 코딩 사이트<span>반응형</span></strong>
+                    <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s2Wrap Site3"><strong>MEGABOX 사이트<span>리뉴얼</span></strong>
+                     <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s2Wrap Site4"><strong>조별작업 사이트<span>정신머리</span></strong>
+                     <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s2Wrap Site5"><strong>React 사이트<span>React.js</span></strong>
+                 <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s2Wrap Site6"><strong>PHP 사이트<span>PHP</span></strong>
+                 <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s2Wrap Site7"><strong>Vue 사이트<span>VUE</span></strong>
+                 <div class="sec2img"> 
+                        <div class="button modal-btn01">
+                            <div class="text2">
+                                <a class="ss1" href="#">CLICK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <!-- <div id="section3">
+            <div class="sec3">
+                <h1>SCRIPT</h1>
+                <div class="effect1">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+                <div class="effect2">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+                <div class="effect1">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+                <div class="effect2">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div> -->
+
+     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        class SmoothScroll {
+            constructor(options) {
+            this.opt = options || {}
+            this.el = this.opt.el ? this.opt.el : '.smooth-scroll'
+            this.speed = this.opt.speed ? this.opt.speed : 0.1
+            this.init()
+        }
+
+        init() {
+            this.scrollY = 0
+            this.smoothScroll = document.querySelectorAll(this.el)[0]
+            this.smoothScroll.classList.add('smooth-scroll')
+            this.imgWrap1 = document.querySelector(".imgWrap1")
+            this.imgWrap5 = document.querySelector(".imgWrap5")
+            this.imgSite1 = document.querySelector(".imgSite1")
+            this.imgSite2 = document.querySelector(".imgSite2")
+            this.imgSite3 = document.querySelector(".imgSite3")
+            this.imgSite4 = document.querySelector(".imgSite4")
+            this.section3 = document.querySelector("#section3")
+            this.events()
+            this.update()
+            this.animate()
+        }
+
+        update() {
+            if (this.smoothScroll === null) return
+            document.body.style.height = `${this.smoothScroll.getBoundingClientRect().height}px`
+        }
+
+        pause() {
+            document.body.style.overflow = 'hidden'
+            cancelAnimationFrame(this.raf)
+        }
+
+        play() {
+            document.body.style.overflow = 'inherit'
+            this.raf = requestAnimationFrame(this.animate.bind(this))
+        }
+
+        destroy() {
+            this.smoothScroll.classList.remove('smooth-scroll')
+            this.smoothScroll.style.transform = 'none'
+            document.body.style.overflow = 'inherit'
+            window.removeEventListener('resize', this.update)
+            cancelAnimationFrame(this.raf)
+            delete this.smoothScroll
+        }
+        
+        animate() {
+            this.scrollY += (window.scrollY - this.scrollY) * this.speed
+            this.smoothScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
+            this.imgWrap1.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
+            this.imgWrap5.style.transform = `translate3d(0,${-this.scrollY}px,0)`
+            // this.section3.style.transition = `background-color:#EFBDAE`
+            this.raf = requestAnimationFrame(this.animate.bind(this))
+        }
+
+        scrollTo(y) {
+            window.scrollTo(0, y)
+        }
+
+        staticScrollTo(y) {
+            cancelAnimationFrame(this.raf)
+            this.scrollY = y
+            window.scrollTo(0, y)
+            this.smoothScroll.style.transform = `translate3d(0,${-y}px,0)`
+            this.play()
+        }
+
+        events() {
+            window.addEventListener('load', this.update.bind(this))
+            window.addEventListener('resize', this.update.bind(this))
+            }
+        }
+
+        const smoothScroll = new SmoothScroll({
+            el: '#contents',
+            speed: 0.05
+        })
+     
+    </script>
+</body>
+</html> 
+
+
+/* layout */
+#contents {}
+
+#section1 {
+    background: #F0EDEA;
+}
+
+#section2 {
+    background: #F0EDEA;
+}
+
+#section3 {
+    background: #EFBDAE;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+
+#section4 {
+    background: #EFBDAE;
+}
+
+#section5 {
+    background: #fff;
+}
+
+#section6 {
+    height: 100vh;
+    background: #888;
+}
+
+/* header */
+#header {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 10000;
+    font-family: 'MaruBuri';
+    text-align: center;
+}
+
+#header strong {
+    display: block;
+    font-size: 0.5em;
+    font-weight: normal;
+}
+
+/* sec1 */
+.sec1 {
+    height: 170vh;
+    position: relative;
+}
+
+.sec1 h1 {
+    position: absolute;
+    bottom: 0;
+    left: 1.5vw;
+    font-size: 20vw;
+    line-height: 1;
+    z-index: 1000;
+    font-family: "Saol Display Regular";
+    font-weight: normal;
+}
+
+.sec1 .imgWrap1 {
+    position: absolute;
+    left: 33vw;
+    top: 15vw;
+    width: 26vw;
+    height: 36vw;
+    position: relative;
+   
+}
+.sec1 .imgWrap1::before{
+    content: '';
+    background: url(../../img/KakaoTalk_20211128_120100812.jpg);
+    background-position: center top;
+    background-size: cover;
+    transition: all 0.3s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;right: 0; bottom: 0;
+}
+.sec1 .imgWrap1 strong {
+    position: absolute;
+    right: 30px;
+    top: 80%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.sec1 .imgWrap1 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.sec1 .imgWrap2 {
+    position: absolute;
+    left: 4vw;
+    top: 5vw;
+    width: 15vw;
+    height: 20vw;
+    background: #ccc;
+    background: url(../../img/about02@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.sec1 .imgWrap2 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.sec1 .imgWrap2 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.sec1 .imgWrap3 {
+    position: absolute;
+    right: 4vw;
+    top: 23vw;
+    width: 25vw;
+    height: 14vw;
+    background: url(../../img/about03@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.sec1 .imgWrap3 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.sec1 .imgWrap3 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.sec1 .imgWrap4 {
+    position: absolute;
+    left: 8vw;
+    top: 40vw;
+    width: 30vw;
+    height: 20vw;
+    background: url(../../img/about04@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.sec1 .imgWrap4 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.sec1 .imgWrap4 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.sec1 .imgWrap5 {
+    position: absolute;
+    right: 2vw;
+    top: 50vw;
+    width: 25vw;
+    height: 34vw;
+    background: url(../../img/about05@2x.jpg);
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.sec1 .imgWrap5 strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    text-align: center;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.sec1 .imgWrap5 strong span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+/* sec2 */
+.sec2{
+    position: relative;
+    height: 520vh;
+}
+.sec2 h1{
+    position: absolute;
+    left: 1.5vw; bottom: 0;
+    font-size: 20vw;
+    line-height: 1;
+    z-index: 1000;
+    font-family: "Saol Display Regular";
+    font-weight: normal;
+
+}
+.sec2 .s2Wrap strong {
+    position: absolute;
+    left: 3vw;
+    top: 5vh;
+    transform: translate(-10%, -10%);
+    margin-top: 5vh;
+    margin-left: 3vw;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .s2Wrap span {
+      display: block;
+      font-size: 18px;
+      font-weight: 100;
+      text-align: center;
+      line-height: 4;
+}
+.sec2 .s2Wrap .sec2img {
+    position: absolute;
+    bottom: 5vh; left: 3vw;
+    background-size: cover;
+    width: 24vw;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.sec2 .s2Wrap .sec2img .button .text2 a {
+    display: none;
+}
+.sec2 .s2Wrap:hover .sec2img .button {
+    position: relative;
+     width: 100%;
+     height: 100%;
+     background: rgba(39, 37, 37, 0.8);
+     opacity: 1;
+     transition: all 1s;
+}
+.sec2 .s2Wrap:hover .sec2img .button .text2 a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    font-size: 1vw;
+    border-radius: 50%;
+    background: #5a99d4;
+    width: 5vw;
+    height: 5vw;
+    line-height: 5vw;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(.9);
+    }
+
+    70% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 0 2vw rgba(90, 153, 212, 0.4);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(.9);
+        box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.4);
+    }
+} 
+/* 웹 표준 사이트 */
+.sec2 .Site1{
+     position: absolute;
+     top: 40vh;
+     left: 40vw;
+     background-color: red;
+     width: 30vw;
+     height: 64vh;
+}
+.sec2 .Site1 .sec2img {
+    position: absolute;
+    width: 24vw; height: 30vh;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* 반응형 사이트 */
+.sec2 .Site2 {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    background-color: red;
+    width: 25vw;
+    height: 60vh;
+}
+
+.sec2 .Site2 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap2.jpg);
+    background-size: cover;
+    width: 19vw;
+    height: 30vh;
+    overflow: hidden;
+}
+/* 메가박스 */
+.sec2 .Site3 {
+    position: absolute;
+    top: 45vh;
+    right: 1vw;
+    background-color: red;
+    width: 23vw;
+    height: 43vh;
+}
+
+.sec2 .Site3 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap3.jpg);
+    background-size: cover;
+    width: 18vw;
+    height: 20vh;
+    overflow: hidden;
+}
+/* 조별작업 */
+.sec2 .Site4 {
+    position: absolute;
+    top: 90vh;
+    left: 15vw;
+    background-color: red;
+    width: 20vw;
+    height: 40vh;
+}
+
+.sec2 .Site4 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap4.jpg);
+    background-size: cover;
+    width: 14vw;
+    height: 20vh;
+    overflow: hidden;
+}
+/* 리액트 */
+.sec2 .Site5 {
+    position: absolute;
+    top: 150vh;
+    left: 5vw;
+    background-color: red;
+    width: 30vw;
+    height: 50vh;
+}
+
+.sec2 .Site5 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap5.jpg);
+    background-size: cover;
+    width: 24vw;
+    height: 32vh;
+    overflow: hidden;
+}
+/* php */
+.sec2 .Site6 {
+    position: absolute;
+    top: 170vh;
+    right: 0;
+    background-color: red;
+    width: 20vw;
+    height: 50vh;
+}
+
+.sec2 .Site6 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap6.jpg);
+    background-size: cover;
+    width: 15vw;
+    height: 22vh;
+    overflow: hidden;
+}
+/* vue */
+ .sec2 .Site7 {
+    position: absolute;
+    top: 160vh;
+    right: 22vw;
+    background-color: red;
+    width: 40vw;
+    height: 70vh;
+}
+
+.sec2 .Site7 .sec2img {
+    position: absolute;
+    bottom: 5vh;
+    left: 3vw;
+    background: url(../../img/wrap7.jpg);
+    background-size: cover;
+    width: 34vw;
+    height: 32vh;
+    overflow: hidden;
+}
+
+/* .sec2 .imgSite1 {
+    position: absolute;
+    left: 3vw;
+    top: 30vh;
+    background-color: blue;
+    width: 35vw;
+    height: 40vh;
+    background: url(../../img/wrap1.jpg);
+    background-size: cover;
+}
+
+.sec2 .imgSite1 strong {
+    position: absolute;
+    left: 20%;
+    top: 4%;
+    transform: translate(-50%, 0);
+    font-family: 'MaruBuri';
+    font-size: 1.875rem;
+    color: #000;
+}
+
+.sec2 .imgSite1 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+
+
+
+.sec2 .imgSite2{
+    position: absolute;
+    left: 22vw;
+    top: 80vh;
+    background-color: blue;
+    width: 30vw;
+    height: 40vh;
+    background: url(../../img/wrap2.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite2 strong {
+    position: absolute;
+    left: 20%;
+    top: 4%;
+    transform: translate(-50%, 0);
+    font-family: 'MaruBuri';
+    font-size: 1.875rem;
+    color: #000;
+}
+
+.sec2 .imgSite2 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+.sec2 .imgSite3{
+    position: absolute;
+    right: 0;
+    top: 140vh;
+    background-color: blue;
+    width: 45vw;
+    height: 50vh;
+    background: url(../../img/wrap3.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite3 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .imgSite3 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.sec2 .imgSite4{
+    position: absolute;
+    left: 0;
+    top: 200vh;
+    background-color: blue;
+    width: 45vw;
+    height: 62vh;
+    background: url(../../img/wrap4.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite4 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #fff;
+}
+.sec2 .imgSite4 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+ .sec2 .imgSite5{
+    position: absolute;
+    right: 0;
+    top: 272vh;
+    background-color: blue;
+    width: 45vw;
+    height: 60vh;
+    background: url(../../img/wrap5.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite5 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .imgSite5 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+.sec2 .imgSite6{
+    position: absolute;
+    left: 0;
+    top: 342vh;
+    background-color: blue;
+    width: 45vw;
+    height: 61vh;
+    background: url(../../img/wrap6.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite6 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .imgSite6 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}
+.sec2 .imgSite7{
+    position: absolute;
+    right: 0;
+    top: 413vh;
+    background-color: blue;
+    width: 45vw;
+    height: 62vh;
+    background: url(../../img/wrap7.jpg);
+    background-size: cover;
+}
+.sec2 .imgSite7 strong {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    font-family: 'MaruBuri';
+    font-size: 30px;
+    color: #000;
+}
+.sec2 .imgSite7 span {
+    display: block;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+}   */
+/* sec3 */
+/* .sec3{
+    height: 300vh;
+    position: relative;
+}
+.sec3 h1{
+    position: absolute;
+    left: 1.5vw;
+    bottom: 0;
+    font-size: 20vw;
+    line-height: 1;
+    z-index: 1000;
+    font-family: "Saol Display Regular";
+    font-weight: normal;
+}
+.effect1{
+       position: absolute;
+       top: 50vh;
+       left: 0;
+       width: 70vw;
+       height: 70vh;
+}
+.effect1 iframe{
+        width: 100%;
+        height: 100%;
+}
+.effect2{
+       position: absolute;
+       top: 160vh;
+       right: 0;
+       width: 70vw;
+       height: 70vh;
+}
+.effect2 iframe{
+        width: 100%;
+        height: 100%;
+} */
