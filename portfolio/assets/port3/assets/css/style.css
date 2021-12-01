@@ -1,3 +1,12 @@
+/* scroll */
+.scroll {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 10000;
+    font-family: 'MaruBuri';
+
+}
 
 /* layout */
 #contents {}
@@ -12,8 +21,7 @@
 
 #section3 {
     background: #EFBDAE;
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
+
 }
 
 #section4 {
@@ -394,7 +402,7 @@
 
 .sec2 .site1 .textWrap {
     font-family: 'MaruBuri';
-    padding: 1vw 1.5vw;
+    padding: 0 1.5vw;
     width: 30vw;
 }
 
@@ -459,7 +467,7 @@
 
 .sec2 .site2 .textWrap {
     font-family: 'MaruBuri';
-    padding: 1vw 1.5vw;
+    padding: 0 1.5vw;
     width: 30vw;
 }
 
@@ -526,7 +534,7 @@
 
 .sec2 .site3 .textWrap {
     font-family: 'MaruBuri';
-    padding: 1vw 1.5vw;
+    padding: 0 1.5vw;
     width: 30vw;
     text-align: right;
 }
@@ -591,7 +599,7 @@
 
 .sec2 .site4 .textWrap {
     font-family: 'MaruBuri';
-    padding: 1vw 1.5vw;
+    padding: 0 1.5vw;
     width: 30vw;
 }
 
@@ -654,7 +662,7 @@
 
 .sec2 .site5 .textWrap {
     font-family: 'MaruBuri';
-    padding: 1vw 1.5vw;
+    padding: 0 1.5vw;
     width: 30vw;
 }
 
@@ -718,7 +726,7 @@
 
 .sec2 .site6 .textWrap {
     font-family: 'MaruBuri';
-    padding: 1vw 1.5vw;
+    padding: 0 1.5vw;
     width: 30vw;
 }
 
@@ -784,7 +792,7 @@
 
 .sec2 .site7 .textWrap {
     font-family: 'MaruBuri';
-    padding: 1vw 1.5vw;
+    padding: 0 1.5vw;
     width: 30vw;
     text-align: right;
 }
@@ -829,171 +837,174 @@
 .sec2 .site7:hover .textWrap a {
     transform: translateX(0);
 }
-/* sec4 */
-.sec4 {
+/* sec3 */
+.sec3 {
+    padding-top: 60vh;
     position: relative;
-    height: 600vh;
+    min-height: 600vh;
 }
 
-.sec4 h1 {
+.sec3 h1 {
     position: absolute;
-    top: 30vh;
-    left: 15vw;
+    bottom: 10vh;
+    left: 1.5vw;
     font-size: 20vw;
     line-height: 1;
     z-index: 1000;
     font-family: "Saol Display Regular";
     font-weight: normal;
-    text-align: center;
 }
-
-.sec4 .effect1 {
-    position: absolute;
-    top: 100vh;
-    left: 0;
+/* parraex effect */
+.sec3 .scriptWrap1 {
     width: 70vw;
     height: 70vh;
 }
 
-.sec4 iframe {
+.sec3 .scriptWrap1 .text {
+    text-align: right;
+    font-family: 'MaruBuri';
+}
+
+.sec3 .scriptWrap1 .text h2 strong {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.sec3 .scriptWrap1 .text p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-left: 37vw;
+    transition: transform 0.33s ease 0.1s;
+}
+
+.sec3 .scriptWrap1 .text a {
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline;
+    margin-bottom: 5px;
+    transition: transform 0.33s ease 0.2s;
+}
+
+.sec3 .scriptWrap1 iframe {
     width: 100%;
     height: 100%;
 }
 
-.sec4 .s4codeview1 {
-    display: inline-block;
-    position: absolute;
-    top: 159.5vh;
-    right: 4vw;
-    font-size: 40px;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 10px 50px;
-    cursor: pointer;
+/* mouse effect */
+.sec3 .scriptWrap2 {
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+    width: 70vw;
+    height: 70vh;
+    float: right;
 }
 
-.sec4 .s4desc1 {
-    position: absolute;
-    top: 170vh;
-    left: 10vw;
+.sec3 .scriptWrap2 .text {
+    text-align: left;
+    font-family: 'MaruBuri';
 }
 
-.sec4 .s4desc1 h2 {
-    font-size: 80px;
-    font-family: "Saol Display Regular";
+.sec3 .scriptWrap2 .text h2 strong {
+    font-size: 2vw;
+    font-weight: bold;
 }
 
-.sec4 .s4desc1 p {
-    font-size: 22px;
-    font-family: 'MaruBuri-Regular';
+.sec3 .scriptWrap2 .text p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-right: 37vw;
+    transition: transform 0.33s ease 0.1s;
 }
 
-.sec4 .effect2 {
-    background-color: red;
-    position: absolute;
-    top: 220vh;
-    right: 0;
+.sec3 .scriptWrap2 .text a {
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline;
+    margin-bottom: 5px;
+    transition: transform 0.33s ease 0.2s;
+}
+
+.sec3 .scriptWrap2 iframe {
+    width: 100%;
+    height: 100%;
+}
+/* slider effect */
+.sec3 .scriptWrap3 {
     width: 70vw;
     height: 70vh;
 }
 
-.sec4 .s4codeview2 {
-    display: inline-block;
-    position: absolute;
-    top: 278.9vh;
-    left: 5%;
-    font-size: 40px;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 10px 50px;
-}
-
-.sec4 .s4desc2 {
-    position: absolute;
-    top: 290vh;
-    right: 10vw;
-}
-
-.sec4 .s4desc2 h2 {
-    font-size: 80px;
-    font-family: "Saol Display Regular";
-}
-
-.sec4 .s4desc2 p {
-    font-size: 22px;
-    font-family: 'MaruBuri-Regular';
+.sec3 .scriptWrap3 .text {
     text-align: right;
+    font-family: 'MaruBuri';
 }
 
-.sec4 .effect3 {
-    position: absolute;
-    top: 340vh;
-    left: 0;
+.sec3 .scriptWrap3 .text h2 strong {
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+.sec3 .scriptWrap3 .text p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-left: 37vw;
+    transition: transform 0.33s ease 0.1s;
+}
+
+.sec3 .scriptWrap3 .text a {
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline;
+    margin-bottom: 5px;
+    transition: transform 0.33s ease 0.2s;
+}
+
+.sec3 .scriptWrap3 iframe {
+    width: 100%;
+    height: 100%;
+}
+/* mouse effect */
+.sec3 .scriptWrap4 {
+    margin-top: 120vh;
     width: 70vw;
     height: 70vh;
-    background: blue;
+    float: right;
 }
 
-.sec4 .s4codeview3 {
-    display: inline-block;
-    position: absolute;
-    top: 399vh;
-    right: 4vw;
-    font-size: 40px;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 10px 50px;
+.sec3 .scriptWrap4 .text {
+    text-align: left;
+    font-family: 'MaruBuri';
 }
 
-.sec4 .s4desc3 {
-    position: absolute;
-    top: 410vh;
-    left: 10vw;
+.sec3 .scriptWrap4 .text h2 strong {
+    font-size: 2vw;
+    font-weight: bold;
 }
 
-.sec4 .s4desc3 h2 {
-    font-size: 80px;
-    font-family: "Saol Display Regular";
+.sec3 .scriptWrap4 .text p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding-right: 35vw;
+    transition: transform 0.33s ease 0.1s;
 }
 
-.sec4 .s4desc3 p {
-    font-size: 22px;
-    font-family: 'MaruBuri-Regular';
+.sec3 .scriptWrap4 .text a {
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline;
+    margin-bottom: 5px;
+    transition: transform 0.33s ease 0.2s;
 }
 
-.sec4 .effect4 {
-    background-color: red;
-    position: absolute;
-    top: 460vh;
-    right: 0;
-    width: 70vw;
-    height: 70vh;
-}
-
-.sec4 .s4codeview4 {
-    display: inline-block;
-    position: absolute;
-    top: 519vh;
-    left: 5%;
-    font-size: 40px;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 10px 50px;
-}
-
-.sec4 .s4desc4 {
-    position: absolute;
-    top: 530vh;
-    right: 10vw;
-}
-
-.sec4 .s4desc4 h2 {
-    font-size: 80px;
-    font-family: "Saol Display Regular";
-}
-
-.sec4 .s4desc4 p {
-    font-size: 22px;
-    font-family: 'MaruBuri-Regular';
-    text-align: right;
+.sec3 .scriptWrap4 iframe {
+    width: 100%;
+    height: 100%;
 }
