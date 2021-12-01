@@ -533,7 +533,7 @@
 
 .sec2 .site3 .textWrap h2 {
     margin-bottom: 0.6vw;
-    transform: translateX(20vw);
+    transform: translateX(25vw);
     transition: transform 0.33s ease;
 }
 
@@ -828,4 +828,172 @@
 
 .sec2 .site7:hover .textWrap a {
     transform: translateX(0);
+}
+/* sec4 */
+.sec4 {
+    position: relative;
+    height: 600vh;
+}
+
+.sec4 h1 {
+    position: absolute;
+    top: 30vh;
+    left: 15vw;
+    font-size: 20vw;
+    line-height: 1;
+    z-index: 1000;
+    font-family: "Saol Display Regular";
+    font-weight: normal;
+    text-align: center;
+}
+
+.sec4 .effect1 {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 70vw;
+    height: 70vh;
+}
+
+.sec4 iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.sec4 .s4codeview1 {
+    display: inline-block;
+    position: absolute;
+    top: 159.5vh;
+    right: 4vw;
+    font-size: 40px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+
+.sec4 .s4desc1 {
+    position: absolute;
+    top: 170vh;
+    left: 10vw;
+}
+
+.sec4 .s4desc1 h2 {
+    font-size: 80px;
+    font-family: "Saol Display Regular";
+}
+
+.sec4 .s4desc1 p {
+    font-size: 22px;
+    font-family: 'MaruBuri-Regular';
+}
+
+.sec4 .effect2 {
+    background-color: red;
+    position: absolute;
+    top: 220vh;
+    right: 0;
+    width: 70vw;
+    height: 70vh;
+}
+
+.sec4 .s4codeview2 {
+    display: inline-block;
+    position: absolute;
+    top: 278.9vh;
+    left: 5%;
+    font-size: 40px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 50px;
+}
+
+.sec4 .s4desc2 {
+    position: absolute;
+    top: 290vh;
+    right: 10vw;
+}
+
+.sec4 .s4desc2 h2 {
+    font-size: 80px;
+    font-family: "Saol Display Regular";
+}
+
+.sec4 .s4desc2 p {
+    font-size: 22px;
+    font-family: 'MaruBuri-Regular';
+    text-align: right;
+}
+
+.sec4 .effect3 {
+    position: absolute;
+    top: 340vh;
+    left: 0;
+    width: 70vw;
+    height: 70vh;
+    background: blue;
+}
+
+.sec4 .s4codeview3 {
+    display: inline-block;
+    position: absolute;
+    top: 399vh;
+    right: 4vw;
+    font-size: 40px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 50px;
+}
+
+.sec4 .s4desc3 {
+    position: absolute;
+    top: 410vh;
+    left: 10vw;
+}
+
+.sec4 .s4desc3 h2 {
+    font-size: 80px;
+    font-family: "Saol Display Regular";
+}
+
+.sec4 .s4desc3 p {
+    font-size: 22px;
+    font-family: 'MaruBuri-Regular';
+}
+
+.sec4 .effect4 {
+    background-color: red;
+    position: absolute;
+    top: 460vh;
+    right: 0;
+    width: 70vw;
+    height: 70vh;
+}
+
+.sec4 .s4codeview4 {
+    display: inline-block;
+    position: absolute;
+    top: 519vh;
+    left: 5%;
+    font-size: 40px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 50px;
+}
+
+.sec4 .s4desc4 {
+    position: absolute;
+    top: 530vh;
+    right: 10vw;
+}
+
+.sec4 .s4desc4 h2 {
+    font-size: 80px;
+    font-family: "Saol Display Regular";
+}
+
+.sec4 .s4desc4 p {
+    font-size: 22px;
+    font-family: 'MaruBuri-Regular';
+    text-align: right;
 }
