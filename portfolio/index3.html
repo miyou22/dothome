@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../portfolio/assets/port3/assets/css/style.css">
     <link rel="stylesheet" href="../portfolio/assets/port3/assets/css/fonts.css">
     <link rel="stylesheet" href="../portfolio/assets/port3/assets/css/reset.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -16,10 +15,7 @@
     <div class="scroll">0</div>
 
     <header id="header">
-        <h1
-            data-4600="color: #eee"
-            data-4700="color: #fff"
-        >프론트에 도전하다. <strong>전대섭 포폴</strong></h1>
+        <h1>프론트에 도전하다. <strong>서비의 포트폴리오</strong></h1>
     </header>
     <!-- //header -->
 
@@ -148,9 +144,7 @@
         </section>
         <!-- //section2 -->
 
-        <section id="section3" 
-            data-2200 = "background: rgba(240, 237, 234)"
-            data-2700 = "background: rgba(248, 187, 171)">
+        <section id="section3">
             <div class="sec3">
                 <h1>SCRIPT</h1>
                 <div class="scriptWrap1">
@@ -195,29 +189,109 @@
 
         <section id="section4">
             <div class="sec4">
-                <div class='stars'></div>
-                    <div class='stars2'></div>
-                    <div class='stars3'></div>
-                    <div class='titleWrap'>
-                        <span>
-                            About Jeon Dae Seob
-                        </span>
-                        <br>
-                        <span>
-                            2021 portfolio
-                        </span>
+               <div class="s4img">
+                    <div class="title">
+                        <span>About Jeon Dae Seob</span>
+                        <p>2021 Portfolio</p>
                     </div>
-                </div>
+               </div> 
+              
             </div>
         </section>
- 
+        <!--section4-->
+
+        <section id="section5">
+            <div class="sec5">
+                <img src="../portfolio/assets/port3/img/Frame.svg" alt="svg">
+                <div class="s5textWrap">
+                    <h2>I am always open to work</h2>
+                    <p>제가 입력한 코드를 통하여 제가 원하는 것들을 만들면서 제가 원한 결과물이 나오면 너무 기분이 좋습니다. 물론 결과물이 나오지 않을때는 어려운 시간을 견뎌야 하지만 해결했을때의 기분은 날아갈거 같습니다. 이러한 성취감을 발판삼아 항상 공부하며 발전하는 프론트 엔드 개발자가 되겠습니다.</p>
+                </div>
+                <div class="s5join">
+                    <span class="spam">
+                        "I dont span, promise!"
+                    </span>
+                    <h2>어제보다 하나라도 더 배우고 팀에 도움이 되는 신입 개발자가 되도록 꾸준히 노력하겠습니다. 언제든지 연락주시길 바랍니다.</h2>
+                </div> 
+                <div class="contact">
+                    <div class="title">
+                        <h2>Contact ME</h2>
+                        <em>Jeon Dae Seob</em>
+                    </div>
+                    <div class="produce">
+                        <div class="emailWrap"><div class="emailImg"></div><div class="email">miyou22@naver.com</div></div>
+                        <div class="tell"><div class="tellImg"></div><div class="phone">010-4500-8153</div></div>
+                        <div class="introduce"><div class="monitor"></div><div class="myme">Seobi PORTFOLIO2021</div></div>
+                    </div>                      
+                </div>   
+            </div>
+        </section>
     </div>
 
 
-     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-    <script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+   <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+   <script>
+        // gsap.registerPlugin(ScrollTrigger);
+        
+        // /* SMOOTH SCROLL */
+        // const scroller = new LocomotiveScroll({
+        //     el: document.querySelector("#contents"),
+        //     smooth: true
+        // });
+
+        // scroller.on("scroll", ScrollTrigger.update);
+
+        // ScrollTrigger.scrollerProxy("#contents", {
+        //     scrollTop(value) {
+        //         return arguments.length ?
+        //             scroller.scrollTo(value, 0, 0) :
+        //             scroller.scroll.instance.scroll.y;
+        //     },
+        //     getBoundingClientRect() {
+        //         return {
+        //             left: 0,
+        //             top: 0,
+        //             width: window.innerWidth,
+        //             height: window.innerHeight
+        //         };
+        //     }
+        // });
+        //  ScrollTrigger.addEventListener("refresh", () => scroller.update());
+
+        // ScrollTrigger.refresh();
+
+        // /* COLOR CHANGER */
+        // window.addEventListener("load", function () {
+        //     const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+        //     scrollColorElems.forEach((colorSection, i) => {
+        //         const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
+        //         const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
+
+        //         ScrollTrigger.create({
+        //             trigger: colorSection,
+        //             scroller: "#contents",
+        //             start: "top 300%",
+        //             onEnter: () =>
+        //                 gsap.to("body", {
+        //                     backgroundColor: colorSection.dataset.bgcolor,
+        //                     color: colorSection.dataset.textcolor,
+        //                     overwrite: "auto"
+        //                 }),
+        //             onLeaveBack: () =>
+        //                 gsap.to("body", {
+        //                     backgroundColor: prevBg,
+        //                     color: prevText,
+        //                     overwrite: "auto"
+        //                 })
+        //         });
+        //     });
+        // });
+
+
         var s = skrollr.init();
 
         window.addEventListener("scroll", () => {
@@ -246,9 +320,13 @@
             this.imgSite3 = document.querySelector(".imgSite3")
             this.imgSite4 = document.querySelector(".imgSite4")
             this.sec1H1 = document.querySelector(".sec1 h1")
+            this.sec1 = document.querySelector("#section1")
+            this.sec2 = document.querySelector("#section2")
+            this.sec3 = document.querySelector("#section3")
             this.sec2H1 = document.querySelector(".sec2 h1")
             this.sec3H1 = document.querySelector(".sec3 h1")
-
+            this.sec5img = document.querySelector(".sec5 img")
+           
             this.events()
             this.update()
             this.animate()
@@ -286,7 +364,8 @@
             this.sec1H1.style.transform = `translate3d(0,${-this.scrollY/3}px,0)`
             this.sec1H1.style.transform = `translate3d(0,${-this.scrollY/3}px,0)`
             this.sec2H1.style.transform = `translate3d(0,${-this.scrollY/3}px,0)`
-            this.sec3H1.style.transform = `translate3d(0,${-this.scrollY/18}px,0)`
+            this.sec3H1.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
+            this.sec5img.style.transform = `rotate(${-this.scrollY}deg)`
             this.raf = requestAnimationFrame(this.animate.bind(this))
         }
 

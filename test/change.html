@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*--------------------
+Body
+--------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: calc(10px + 1vw);
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  background: #121f26;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: calc(10px + 4vw);
+  color: #fff;
+  line-height: 1.2;
+  margin: 2vw 0;
+}
+h1:first-child {
+  margin-top: 0;
+}
+
+main {
+  background: linear-gradient(to bottom, #f7455f, #f57a0c, #e6b30b);
+}
+
+/*---------------
+Supahscroll
+---------------*/
+.supah-scroll {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  will-change: transform;
+  overflow: hidden;
+}
+
+/*---------------
+Nav
+---------------*/
+.nav {
+  position: fixed;
+  z-index: 100;
+  padding: 30px 5vw;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none;
+  mix-blend-mode: color-dodge;
+}
+.nav__logo {
+  display: flex;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  pointer-events: all;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 1vw 5vw;
+  flex-direction: column;
+}
+
+.text {
+  padding: 4vw 0;
+}
+    </style>
+</head>
+<body>
+    <!--
+
+# SUPAHSCROLL
+by Fabio Ottaviani
+
+## Instancing
+const supahscroll = new SupahScroll({
+  el: 'main', // your element or classname or ID
+  speed: 0.1 // lower is slower, this value could go from 0.01 to 1
+})
+
+## Methods
+- .update() // update and resize
+- .pause() // pause, every scroll is stopped
+- .play() // play, back to normality after pause
+- .scrollTo(y) // go to your offsetY smoothly
+- .staticScrollTo(y) // go to your offsetY without animation
+- .destroy() // kaput, au revoir, kthxbye
+
+## CSS
+Include this part in your stylesheet
+`
+.supah-scroll {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  will-change: transform;
+  overflow: hidden;
+}
+`
+
+-->
+
+<div id="root">
+  <nav class="nav">
+    <a href="#" class="nav__logo">
+      LOGO
+    </a>
+  </nav>
+  <main>
+    <section>
+      <div class="container">
+        <h1 data-scroll>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, maxime?
+        </h1>
+        <div class="text">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora omnis quasi error pariatur vel numquam, beatae iusto ratione eveniet corporis voluptatum ipsam eos nihil dicta sapiente voluptas inventore placeat quia dignissimos est repudiandae
+            quas nostrum. Rerum eveniet mollitia debitis doloribus. Sapiente aspernatur quibusdam ab facilis nobis nulla maxime dolores voluptas? Provident, nostrum? Recusandae est sapiente adipisci itaque! Soluta, corrupti maxime ducimus voluptas minima
+            velit magni possimus aut ex provident hic molestias amet illum. Recusandae consequuntur voluptates optio saepe quasi eligendi quas, alias sed repellat omnis. Voluptas reiciendis doloribus libero quasi nihil ea aspernatur quia odio quas hic,
+            soluta veritatis saepe molestias quisquam praesentium maxime unde rerum in nobis. Inventore tempora magni nesciunt fugiat adipisci consectetur nisi similique quod temporibus? Eligendi vel, quia iste consequatur fuga rerum consequuntur aspernatur!
+            Facilis deleniti voluptatum commodi animi inventore aliquid quos, assumenda quaerat sapiente quidem ipsa. Exercitationem, beatae! Ea accusantium dignissimos ipsum sint iusto molestiae totam eum vel placeat, repellendus distinctio laborum
+            facere officia minus vero! Officia ducimus maxime quibusdam, quis nihil tenetur dicta accusamus totam commodi in dolor tempore debitis aliquid facere officiis expedita numquam error asperiores sequi cumque consequuntur dolorem nemo sed nam!
+            Autem quibusdam deserunt iure unde optio saepe repellat, provident perferendis?</p>
+
+          <p>Soluta necessitatibus quibusdam facilis velit ipsum placeat suscipit, maiores nulla, omnis corrupti aperiam laborum eum quis nam dicta, quas nihil! Aliquid mollitia quisquam ullam placeat delectus doloribus, sunt distinctio, amet id vero minus
+            recusandae laborum quas necessitatibus qui, harum eius dicta! Ab commodi beatae architecto odit delectus error, molestiae repellendus distinctio, ut autem repellat dicta quibusdam assumenda ducimus, corrupti dolor iste sed perspiciatis minima
+            eius voluptates fugit veniam optio enim. Voluptatibus sit quaerat quos dolorum corrupti vero? Animi, inventore, ut nostrum atque reiciendis incidunt earum quaerat ab cum molestias ipsam explicabo fugiat perspiciatis tempore facilis ea sint
+            rem mollitia, dignissimos ad tempora. Vero perspiciatis earum, quia, id ipsa cumque inventore quidem voluptatem reiciendis, nam ducimus eos iusto labore dicta? Sapiente voluptatum quia eum minima ipsam quasi aperiam, ratione nihil explicabo
+            ipsum quidem assumenda enim. Eaque atque nisi dignissimos? Iure iste nisi earum cum natus quia, sint incidunt modi numquam neque itaque quo aut beatae adipisci dolores autem est molestiae iusto omnis, velit ullam? Recusandae impedit eius
+            praesentium accusamus odio ad veniam totam quia quaerat maiores labore explicabo, inventore, ducimus qui minus ut deserunt illum at sit possimus dolores repellat, officia aliquam. Quibusdam accusantium neque ea quia temporibus suscipit totam
+            quidem.</p>
+          <h1 data-scroll>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, maxime?
+          </h1>
+          <p>Soluta necessitatibus quibusdam facilis velit ipsum placeat suscipit, maiores nulla, omnis corrupti aperiam laborum eum quis nam dicta, quas nihil! Aliquid mollitia quisquam ullam placeat delectus doloribus, sunt distinctio, amet id vero minus
+            recusandae laborum quas necessitatibus qui, harum eius dicta! Ab commodi beatae architecto odit delectus error, molestiae repellendus distinctio, ut autem repellat dicta quibusdam assumenda ducimus, corrupti dolor iste sed perspiciatis minima
+            eius voluptates fugit veniam optio enim. Voluptatibus sit quaerat quos dolorum corrupti vero? Animi, inventore, ut nostrum atque reiciendis incidunt earum quaerat ab cum molestias ipsam explicabo fugiat perspiciatis tempore facilis ea sint
+            rem mollitia, dignissimos ad tempora. Vero perspiciatis earum, quia, id ipsa cumque inventore quidem voluptatem reiciendis, nam ducimus eos iusto labore dicta? Sapiente voluptatum quia eum minima ipsam quasi aperiam, ratione nihil explicabo
+            ipsum quidem assumenda enim. Eaque atque nisi dignissimos? Iure iste nisi earum cum natus quia, sint incidunt modi numquam neque itaque quo aut beatae adipisci dolores autem est molestiae iusto omnis, velit ullam? Recusandae impedit eius
+            praesentium accusamus odio ad veniam totam quia quaerat maiores labore explicabo, inventore, ducimus qui minus ut deserunt illum at sit possimus dolores repellat, officia aliquam. Quibusdam accusantium neque ea quia temporibus suscipit totam
+            quidem.</p>
+        </div>
+        <h1>
+          Vecessitatibus esse expedita nemo itaque necessitatibus
+        </h1>
+        <div class="text">
+          <p>Blanditiis perferendis sed ipsum modi repellendus deleniti atque, reiciendis, nesciunt, fugiat a minima necessitatibus possimus vero totam aliquid repellat. Cum illum non itaque necessitatibus esse expedita nemo temporibus labore in amet beatae
+            consequatur sit hic qui, sequi dolore, similique quibusdam nostrum eos assumenda inventore. Repellendus ipsa obcaecati porro iusto reiciendis et labore mollitia pariatur quaerat? Nisi aut nam nesciunt veritatis recusandae nulla, veniam eius
+            molestias dignissimos repellat incidunt ratione perspiciatis? Nobis ab fugit ad optio ipsum quam voluptatibus porro consequatur quo. Ex beatae voluptate deserunt, animi quaerat dicta architecto voluptates, vitae assumenda consequuntur quas
+            fugit iure? Sunt facere aspernatur impedit magni sequi. Quisquam voluptatem exercitationem provident blanditiis atque amet corporis eveniet optio qui! Architecto inventore iste perspiciatis delectus omnis rem animi accusamus, totam voluptatum
+            sit labore. Ex itaque quaerat vitae, veniam eius atque recusandae reiciendis nemo fugiat. Nisi suscipit dolorem voluptates labore, expedita eligendi doloribus minus illum quas? Veniam temporibus libero laudantium numquam ad pariatur enim
+            incidunt error quibusdam consequatur voluptate reiciendis sunt ullam, est reprehenderit amet adipisci unde. Officia magni adipisci numquam unde deserunt, doloremque perferendis quasi distinctio consectetur consequuntur ea aperiam pariatur
+            ducimus qui suscipit accusantium dolore voluptatum fuga ipsam eaque delectus libero dolorum tempora. Tempore, quibusdam deleniti.</p>
+          <p>Sit, recusandae iure voluptatibus perferendis facere rerum vero debitis, aspernatur assumenda doloremque amet beatae. Voluptatibus eos impedit minima eum vero expedita veritatis iure dolor ducimus, praesentium consequuntur quisquam nisi hic
+            laudantium perferendis quos adipisci provident nesciunt id quidem ipsum, illum cumque dolorum? Nisi explicabo minus maiores numquam expedita temporibus pariatur rerum? Obcaecati excepturi eaque cum repellat veniam architecto, consectetur
+            unde iusto corrupti nihil nisi nulla aut doloribus iure dolor earum accusantium rem officia saepe! Provident, eius recusandae fugit, excepturi praesentium mollitia possimus officiis modi earum quis delectus deleniti sequi quaerat placeat!
+            Atque aspernatur repellendus corrupti, exercitationem cum minus commodi hic quia aperiam repudiandae et sed. Quo dicta aspernatur necessitatibus odio vero ea enim earum accusantium. Ea numquam mollitia accusantium incidunt, inventore dolorem
+            iste minima, laboriosam, quas voluptatem placeat illo necessitatibus cum. Vero iste sunt at repudiandae molestias corrupti quam rem ipsa eaque ipsum nemo maiores, sequi velit mollitia delectus non exercitationem necessitatibus, ducimus magnam
+            quasi consequatur. Libero nesciunt modi, facilis commodi dignissimos sequi nemo, molestiae velit quae illum nisi quam dicta provident voluptas cum ut pariatur vero sit enim atque eligendi iure officiis nostrum! Consequatur qui ea quaerat
+            neque, iusto animi fuga dolores rerum. Cupiditate accusamus quibusdam libero quidem assumenda.</p>
+          <p>Excepturi voluptas iste neque mollitia? Quasi iusto aliquam quod iure architecto incidunt pariatur repellendus, hic dicta quos labore, illo praesentium magni error officia quam dignissimos tempore dolore! Libero corporis magni voluptas facilis.
+            Quod hic iusto commodi maxime voluptates quidem dolorum laudantium est incidunt non blanditiis explicabo repellat aliquam maiores, expedita provident deserunt quam exercitationem modi repellendus culpa quas eos cupiditate ea! Itaque, harum.
+            Dicta nam ipsam voluptas corporis! Corrupti repudiandae porro facilis magnam earum impedit aspernatur id ad adipisci neque accusantium incidunt illum cupiditate a inventore officia exercitationem officiis, eos nobis ab nam. Cum voluptatem
+            consectetur nulla officia aspernatur porro alias sint eius numquam odio dolorum recusandae fuga repudiandae et impedit sunt, odit inventore voluptates modi error praesentium aperiam accusamus facilis. Aut pariatur, ad ex natus laboriosam
+            voluptatibus excepturi maiores, nam nobis ducimus, hic et voluptas! Et voluptas molestiae voluptates adipisci illum deleniti dolore magni velit. Quas ipsam illo, sit voluptate facilis atque adipisci, aspernatur sint neque error animi quae!
+            Ducimus quisquam enim veritatis quo! Tenetur mollitia dolore corrupti magni. Odit repellat animi harum tempore ad consectetur, minima nihil, hic quia cupiditate praesentium eligendi molestiae tempora porro itaque sint? Amet magni similique
+            ducimus nostrum maiores deleniti neque excepturi saepe cum.</p>
+          <p>Pariatur temporibus modi impedit totam, a obcaecati numquam reiciendis distinctio, aspernatur, omnis eaque ratione. Ullam repellendus quam reiciendis iusto deserunt, iure quidem numquam accusantium inventore libero autem labore! Error non
+            reiciendis voluptates voluptas similique iste, maiores deleniti minima aut veniam beatae consequuntur, fugiat eaque aliquam consectetur necessitatibus asperiores quisquam sit, a est quae. Temporibus cumque optio maiores, corrupti assumenda
+            ex architecto tenetur quo quibusdam culpa sit. Quasi, ipsam quibusdam laboriosam sint sunt officia totam deserunt praesentium nihil, fugit quod at porro iste eligendi necessitatibus esse quo minima aut in doloremque hic a. Sed vel expedita
+            nisi soluta illo! Modi debitis quas, temporibus neque veritatis incidunt quaerat, magnam nostrum ea minima, laudantium laborum reiciendis cumque autem sint facere ratione? Fuga quod ad vel nihil facere reprehenderit ducimus dicta sequi assumenda
+            a, eveniet delectus minus officia ea doloribus nemo repellendus nisi sapiente neque beatae voluptates consequatur. Numquam pariatur fugiat quas tempore, quam impedit excepturi laboriosam tenetur voluptatem reiciendis labore quia quae exercitationem?
+            Temporibus similique nulla soluta amet doloremque, quam cumque culpa exercitationem asperiores alias magni explicabo reprehenderit, nisi minus neque odit, placeat officiis suscipit ratione totam nesciunt. Reiciendis saepe sapiente est perferendis,
+            repellat, atque ut eum nostrum quasi iure esse consectetur tenetur!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<script>
+    /*------------------------------
+SupahScroll
+------------------------------*/
+class SupahScroll {
+  constructor(options) {
+    this.opt = options || {};
+    this.el = this.opt.el ? this.opt.el : ".supah-scroll";
+    this.speed = this.opt.speed ? this.opt.speed : 0.1;
+    this.init();
+  }
+
+  init() {
+    this.scrollY = 0;
+    this.supahScroll = document.querySelectorAll(this.el)[0];
+    this.supahScroll.classList.add("supah-scroll");
+    this.events();
+    this.update();
+    this.animate();
+  }
+
+  update() {
+    if (this.supahScroll === null) return;
+    document.body.style.height = `${
+      this.supahScroll.getBoundingClientRect().height
+    }px`;
+  }
+
+  pause() {
+    document.body.style.overflow = "hidden";
+    cancelAnimationFrame(this.raf);
+  }
+
+  play() {
+    document.body.style.overflow = "inherit";
+    this.raf = requestAnimationFrame(this.animate.bind(this));
+  }
+
+  destroy() {
+    this.supahScroll.classList.remove("supah-scroll");
+    this.supahScroll.style.transform = "none";
+    document.body.style.overflow = "inherit";
+    window.removeEventListener("resize", this.update);
+    cancelAnimationFrame(this.raf);
+    delete this.supahScroll;
+  }
+
+  animate() {
+    this.scrollY += (window.scrollY - this.scrollY) * this.speed;
+    this.supahScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`;
+    this.raf = requestAnimationFrame(this.animate.bind(this));
+  }
+
+  scrollTo(y) {
+    window.scrollTo(0, y);
+  }
+
+  staticScrollTo(y) {
+    cancelAnimationFrame(this.raf);
+    this.scrollY = y;
+    window.scrollTo(0, y);
+    this.supahScroll.style.transform = `translate3d(0,${-y}px,0)`;
+    this.play();
+  }
+
+  events() {
+    window.addEventListener("load", this.update.bind(this));
+    window.addEventListener("resize", this.update.bind(this));
+  }
+}
+
+/*------------------------------
+Initialize
+------------------------------*/
+const supahscroll = new SupahScroll({
+  el: "main",
+  speed: 0.1
+});
+
+</script>
+</body>
+</html>
