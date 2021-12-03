@@ -1,5 +1,4 @@
 
-
 /* scroll */
 .scroll {
     position: fixed;
@@ -11,8 +10,7 @@
 
 /* layout */
 #contents {
-      background: linear-gradient(to bottom, #F0EDEA, #F0EDEA, #EFBDAE, #EFBDAE, #EFBDAE);
-
+    background: linear-gradient(to bottom, #F0EDEA, #F0EDEA, #EFBDAE, #EFBDAE, #EFBDAE);
 }
 
 /* #section1 {
@@ -56,7 +54,7 @@
 
 /* sec1 */
 .sec1 {
-    height: 170vh;
+    height: 160vh;
     position: relative;
 }
 

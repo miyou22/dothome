@@ -225,10 +225,16 @@
                 </div>   
             </div>
         </section>
-        <!--section5-->
-
     </div>
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+
    <script>
+     
+        var s = skrollr.init();
+
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
@@ -271,7 +277,6 @@
         update() {
             if (this.smoothScroll === null) return
             document.body.style.height = `${this.smoothScroll.getBoundingClientRect().height}px`
-            // document.body.style.height = `${this.smoothScroll.clientHeight/2}px`
         }
 
         pause() {
@@ -292,11 +297,9 @@
             cancelAnimationFrame(this.raf)
             delete this.smoothScroll
         }
-            
+        
         animate() {
             this.scrollY += (window.scrollY - this.scrollY) * this.speed
-           
-
             this.smoothScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
             this.imgWrap1.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
             this.imgWrap5.style.transform = `translate3d(0,${-this.scrollY}px,0)`
@@ -305,7 +308,6 @@
             this.sec3H1.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
             this.sec5img.style.transform = `rotate(${-this.scrollY}deg)`
             this.raf = requestAnimationFrame(this.animate.bind(this))
-            // console.log(this.raf)
         }
 
         scrollTo(y) {
