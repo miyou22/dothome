@@ -2,11 +2,13 @@
 /* scroll */
 .scroll {
     position: fixed;
-    right: 20px;
+    z-index: 1;
     top: 20px;
-    z-index: 10000;
-    font-family: 'MaruBuri';
+    left: 20px;
+    will-change: transform;
+    overflow: hidden;
 }
+
 
 /* layout */
 #contents {
@@ -127,7 +129,7 @@
     transform: translate(-50%, -50%);
     color: #fff;
     font-family: 'MaruBuri';
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
     font-weight: normal;
     white-space: nowrap;
@@ -135,7 +137,7 @@
 
 .sec1 .imgWrap2 strong span {
     display: block;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 100;
 }
 
@@ -158,7 +160,7 @@
     transform: translate(-50%, -50%);
     color: #fff;
     font-family: 'MaruBuri';
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
     font-weight: normal;
     white-space: nowrap;
@@ -166,7 +168,7 @@
 
 .sec1 .imgWrap3 strong span {
     display: block;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 100;
 }
 
@@ -189,7 +191,7 @@
     transform: translate(-50%, -50%);
     color: #fff;
     font-family: 'MaruBuri';
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
     font-weight: normal;
     white-space: nowrap;
@@ -197,7 +199,7 @@
 
 .sec1 .imgWrap4 strong span {
     display: block;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 100;
 }
 
@@ -220,7 +222,7 @@
     transform: translate(-50%, -50%);
     color: #fff;
     font-family: 'MaruBuri';
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
     font-weight: normal;
     white-space: nowrap;
@@ -228,8 +230,17 @@
 
 .sec1 .imgWrap5 strong span {
     display: block;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 100;
+}
+@media(max-width: 1300px){
+    .sec1 > div > strong {
+        font-size: 0.4rem;
+    }
+    .sec1 > div > strong > span {
+        font-size: 0.3rem;
+
+    }
 }
 
 /* sec2 */
@@ -989,13 +1000,14 @@
 
 }
 .s5textWrap p{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-family: 'MaruBuri';
+    line-height: 1.8;
 }
 .s5join{
     position: absolute;
-    top: 90vh;
-    left: 8vw;
+    top: 80vh;
+    left: 9vw;
     width: 40vw;
     margin-top: 10vh;
     font-family: "Saol Display Regular";
@@ -1032,12 +1044,13 @@
     color: #fff;
     font-size: 2rem;
     font-family: 'MaruBuri';
+    line-height: 2;
 
 }
 .contact{
     position: absolute;
-    top: 65vh;
-    right: 8vw;
+    top: 60vh;
+    right: 11vw;
     color: #fff;
     margin-top: 15vh;
     font-family: "Saol Display Regular";

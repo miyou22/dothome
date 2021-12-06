@@ -152,7 +152,7 @@
                         <h2><strong>패럴랙스 <span>이펙트</span></strong></h2>
                         <p>스크롤값에 따라 이질감을 주는 효과를 스크립트를 활용하여 구현하였습니다.</p>
                         <a href="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/javascriptPE01.html">사이트 보기</a>
-                        <a href="#">코드 보기</a>
+                        <a href="https://github.com/miyou22/dothome21/blob/main/refer-effect/parallaxEffect/javascriptPE01.html">코드 보기</a>
                     </div>
                 </div>
                 <div class="scriptWrap2">
@@ -161,7 +161,7 @@
                         <h2><strong>마우스 <span>이펙트</span></strong></h2>
                         <p>마우스 커서의 움직임에 따라 글자 및 이미지에 대한 다양한 효과를 스크립트를 화용하여 구현하였습니다.</p>
                         <a href="https://miyou22.github.io/dothome21/refer-effect/mouseEffect/javascriptME01.html">사이트 보기</a>
-                        <a href="#">코드 보기</a>
+                        <a href="https://github.com/miyou22/dothome21/blob/main/refer-effect/mouseEffect/jqueryME01.html">코드 보기</a>
                     </div>
                 </div>
                 <div class="scriptWrap3">
@@ -170,7 +170,7 @@
                         <h2><strong>슬라이더 <span>이펙트</span></strong></h2>
                         <p>스크립트를 활용하여, 가로 슬라이드, 연속적 슬라이드 등 다양한 슬라이드 효과를 구현하였습니다.</p>
                         <a href="https://miyou22.github.io/dothome21/refer-effect/sliderEffect/javascriptSE01.html">사이트 보기</a>
-                        <a href="#">코드 보기</a>
+                        <a href="https://github.com/miyou22/dothome21/blob/main/refer-effect/sliderEffect/javascriptSE01.html">코드 보기</a>
                     </div>
                 </div>
                 <div class="scriptWrap4">
@@ -179,7 +179,7 @@
                         <h2><strong>게임 <span>이펙트</span></strong></h2>
                         <p>스크립트를 이용하여 같은 그림의 카드를 맞추는 게임 컨텐츠를 구현하였습니다.</p>
                         <a href="https://miyou22.github.io/dothome21/refer-effect/gameEffect/cardgame.html">사이트 보기</a>
-                        <a href="#">코드 보기</a>
+                        <a href="https://github.com/miyou22/dothome21/blob/main/refer-effect/gameEffect/cardgame.html">코드 보기</a>
                     </div>
                 </div>
             </div>
@@ -226,8 +226,8 @@
             </div>
         </section>
         <!--section5-->
-
     </div>
+    
    <script>
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
@@ -271,7 +271,9 @@
         update() {
             if (this.smoothScroll === null) return
             document.body.style.height = `${this.smoothScroll.getBoundingClientRect().height}px`
+            var about = document.body.style.height = `${this.smoothScroll.getBoundingClientRect().height}px`
             // document.body.style.height = `${this.smoothScroll.clientHeight/2}px`
+            console.log(about)
         }
 
         pause() {
@@ -330,6 +332,8 @@
             el: '#contents',
             speed: 0.1
         })
+
+ 
      
     </script>
 </body>
