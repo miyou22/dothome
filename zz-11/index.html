@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="scroll">0</div>
+
+    <header id="header">
+        <h1>프론트에 도전하다. <strong>전대섭 포폴</strong></h1>
+    </header>
+    <!-- //header -->
+
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <h1>About</h1>
+                <div class="imgWrap1"><strong>개발자에 도전하다<span>전대섭</span></strong></div>
+                <div class="imgWrap2"><strong>프론트를 꿈꾸며<span>늦은 결심</span></strong></div>
+                <div class="imgWrap3"><strong>잘 할 수 있는 것<span>코딩</span></strong></div>
+                <div class="imgWrap4"><strong>높은 정상을 위해<span>목표</span></strong></div>
+                <div class="imgWrap5"><strong>나만의 사이트 만들기<span>취미</span></strong></div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <div class="sec2">
+                <h1>work</h1>
+                <div class="imgWrap1">
+                    <div class="img"></div>
+                    <div class="textWrap">
+                        <h2><strong>웹 표준 사이트 <span>코딩</span></strong></h2>
+                        <p>웹 표준을 준수한 사이트입니다. 웹 접근성 지침서 2.1을 바탕으로 제작되었습니다. 표준을 준수한 사이트입니다. 웹 접근성 지침서 2.1을 바탕으로 제작되었습니다.</p>
+                        <a href="#">사이트 보기</a><br>
+                        <a href="#">코드 보기</a>
+                    </div>
+                </div>
+                <div class="imgWrap2">
+                    <div class="img"></div>
+                    <div class="textWrap">
+                        <h2><strong>반응형 사이트 <span>코딩</span></strong></h2>
+                        <p>웹 표준을 준수한 사이트입니다. 웹 접근성 지침서 2.1을 바탕으로 제작되었습니다. 표준을 준수한 사이트입니다. 웹 접근성 지침서 2.1을 바탕으로 제작되었습니다.</p>
+                        <a href="#">사이트 보기</a><br>
+                        <a href="#">코드 보기</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3" 
+            data-1500 = "background: rgba(240, 237, 234)"
+            data-2500 = "background: rgba(248, 187, 171)">
+            <div class="sec3">
+                <h1>script</h1>
+                <div class="scriptWrap1">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://miyou22.github.io/dothome21/refer-effect/parallaxEffect/index.html" allowfullscreen=""></iframe>
+                    <div class="text">
+                        <h2><strong>패럴랙스 <span>이펙트</span></strong></h2>
+                        <p>웹 표준을 준수한 사이트입니다. 웹 접근성 지침서 2.1을 바탕으로 제작되었습니다. 표준을 준수한 사이트입니다. 웹 접근성 지침서 2.1을 바탕으로 제작되었습니다.</p>
+                        <a href="#">사이트 보기</a>
+                        <a href="#">코드 보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+
+        <section id="section4">
+            <div class="sec4">
+                <h3>challenge the frontend<br>Developer</h3>
+            </div>
+        </section>
+        <!-- //section4 -->
+        <section id="section5">
+            <div class="container">
+                <div class="sec5">
+                    <div class="left"></div>
+                    <div class="right">
+                        <h3>
+                            I am always open to work<br>
+                            Pretty straightforward, right?<br>
+                            But what does that really mean?
+                        </h3>
+                        <p>
+                            제가 입력한 코드를 통하여 제가 원하는 것들을 만들면서 제가 원한 결과물이 나오면 너무 기분이 좋습니다. 물론 결과물이 나오지 않을때는 어려운 시간을 견뎌야 하지만 해결했을때의 기분은 날아갈거 같습니다. 이러한 성취감을 발판삼아 항상 공부하며 발전하는 프론트 엔드 개발자가 되겠습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section5 -->
+        <section id="section6"></section><!-- //section6 -->
+    </div>
+    <!-- //contents -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+
+            document.querySelector(".scroll").innerHTML = scrollTop;
+        })
+
+        class SmoothScroll {
+            constructor(options) {
+            this.opt = options || {}
+            this.el = this.opt.el ? this.opt.el : '.smooth-scroll'
+            this.speed = this.opt.speed ? this.opt.speed : 0.1
+            this.init()
+        }
+
+        init() {
+            this.scrollY = 0
+            this.smoothScroll = document.querySelectorAll(this.el)[0]
+            this.smoothScroll.classList.add('smooth-scroll')
+            this.imgWrap1 = document.querySelector(".imgWrap1")
+            this.imgWrap5 = document.querySelector(".imgWrap5")
+            this.sec1H1 = document.querySelector(".sec1 h1")
+            this.events()
+            this.update()
+            this.animate()
+        }
+
+        update() {
+            if (this.smoothScroll === null) return
+            document.body.style.height = `${this.smoothScroll.getBoundingClientRect().height}px`
+        }
+
+        pause() {
+            document.body.style.overflow = 'hidden'
+            cancelAnimationFrame(this.raf)
+        }
+
+        play() {
+            document.body.style.overflow = 'inherit'
+            this.raf = requestAnimationFrame(this.animate.bind(this))
+        }
+
+        destroy() {
+            this.smoothScroll.classList.remove('smooth-scroll')
+            this.smoothScroll.style.transform = 'none'
+            document.body.style.overflow = 'inherit'
+            window.removeEventListener('resize', this.update)
+            cancelAnimationFrame(this.raf)
+            delete this.smoothScroll
+        }
+
+        animate() {
+            this.scrollY += (window.scrollY - this.scrollY) * this.speed
+            this.smoothScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`
+            this.imgWrap1.style.transform = `translate3d(0,${-this.scrollY/5}px,0)`
+            this.imgWrap5.style.transform = `translate3d(0,${-this.scrollY}px,0)`
+            this.sec1H1.style.transform = `translate3d(0,${-this.scrollY/3}px,0)`
+            this.raf = requestAnimationFrame(this.animate.bind(this))
+        }
+
+        scrollTo(y) {
+            window.scrollTo(0, y)
+        }
+
+        staticScrollTo(y) {
+            cancelAnimationFrame(this.raf)
+            this.scrollY = y
+            window.scrollTo(0, y)
+            this.smoothScroll.style.transform = `translate3d(0,${-y}px,0)`
+            this.play()
+        }
+
+        events() {
+            window.addEventListener('load', this.update.bind(this))
+            window.addEventListener('resize', this.update.bind(this))
+            }
+        }
+
+        const smoothScroll = new SmoothScroll({
+            el: '#contents',
+            speed: 0.05
+        })
+    </script>
+</body>
+</html>
+
+<!-- https://thecanvasagency.com/ -->

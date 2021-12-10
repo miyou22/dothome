@@ -2,13 +2,21 @@
 /* scroll */
 .scroll {
     position: fixed;
+    left: 20px; top: 20px;
+    font-family: 'MaruBuri';
+    z-index: 10000;
+}
+
+.smooth-scroll {
+    position: fixed;
     z-index: 1;
-    top: 20px;
-    left: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
     will-change: transform;
     overflow: hidden;
 }
-
 
 /* layout */
 #contents {
@@ -56,7 +64,7 @@
 
 /* sec1 */
 .sec1 {
-    height: 160vh;
+    height: 80vw;
     position: relative;
 }
 
@@ -233,25 +241,16 @@
     font-size: 1.125em;
     font-weight: 100;
 }
-@media(max-width: 1300px){
-    .sec1 > div > strong {
-        font-size: 0.4rem;
-    }
-    .sec1 > div > strong > span {
-        font-size: 0.3rem;
-
-    }
-}
 
 /* sec2 */
 .sec2 {
-    height: 500vh;
+    height: 220vw;
     position: relative;
 }
 
 .sec2 h1 {
     position: absolute;
-    bottom: 0;
+    bottom: -120vh;
     left: 1.5vw;
     font-size: 20vw;
     line-height: 1;
@@ -766,12 +765,12 @@
 .sec3 {
     padding-top: 60vh;
     position: relative;
-    min-height: 700vh;
+    min-height: 600vh;
 }
 
 .sec3 h1 {
     position: absolute;
-    bottom: 10vh;
+    bottom: -210vh;
     left: 1.5vw;
     font-size: 20vw;
     line-height: 1;
@@ -1085,6 +1084,9 @@
     transform: scale(0.2);
     transform-origin: center;
 }
+.contact .title h2::before:hover{
+    filter: brightness(2);
+}
 .contact .title em {
     font-size: 2.5rem;
     text-align: right;
@@ -1142,4 +1144,55 @@
 }
 .produce .introduce .myme {
     font-size: 1rem;
+}
+@media (max-width: 1500px) {
+    #header h1 {
+        font-size: 2rem;
+    }
+
+    #section1 .sec1 strong {
+        font-size: 1.3rem;
+    }
+
+    #section2 .sec2 {
+        margin-top: -10vh;
+        margin-bottom: 30vh;
+    }
+
+    #section2 .sec2 h2 {
+        font-size: 5px;
+    }
+
+    #section2 .sec2 p {
+        font-size: 2px;
+    }
+
+    #section2 .sec2 .textWrap a {
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #header h1 {
+        font-size: 1.5rem;
+    }
+
+    #section1 .sec1 strong {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+      #section2 .sec2 .textWrap  h2{
+         transform: translateX(0);
+         font-size: 1rem;
+          
+      }
+      #section2 .sec2 .textWrap p,
+      #section2 .sec2 .textWrap a {
+          display: none;
+      }
+    #section3 .sec3 .s3 iframe {
+        width: 500px;
+    }
 }

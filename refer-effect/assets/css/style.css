@@ -232,8 +232,8 @@ figcaption {
 }
 
 #main.parallax {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f43b47), to(#453a94));
-  background: linear-gradient(to bottom, #f43b47 0%, #453a94 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff7d86), to(#453a94));
+  background: linear-gradient(to bottom, #ff7d86 0%, #453a94 100%);
 }
 
 #main.parallax #contents h1 {
