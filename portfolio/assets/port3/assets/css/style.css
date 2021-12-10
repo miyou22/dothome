@@ -1171,6 +1171,55 @@
         padding: 5px 10px;
     }
 }
+@media (max-width: 1200px){
+    #section5 .sec5 {
+        height: 200vh;
+    }
+
+    #section5 .sec5 img {
+        text-align: center;
+        top: 20vh;
+        left: 45%;
+    }
+
+    #section5 .sec5 .s5textWrap {
+        top: 25vh;
+        left: 10%;
+        text-align: center;
+        display: block;
+    }
+
+    #section5 .sec5 .s5textWrap p {
+        text-align: center;
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    #section5 .sec5 .s5join {
+        display: block;
+        top: 90vh;
+        width: 100%;
+    }
+
+    #section5 .sec5 .s5join h2 {
+        font-size: 1.4rem;
+        width: 80%;
+    }
+
+    #section5 .sec5 .contact {
+        display: block;
+        top: 110vh;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    #section5 .sec5 .contact .title h2::before {
+        top: -50vh;
+        left: -60vw;
+        width: 150vw;
+        height: 150vw;
+    }
+}
 
 @media (max-width: 1000px) {
     #header h1 {
@@ -1183,16 +1232,85 @@
 }
 
 @media (max-width: 500px) {
-      #section2 .sec2 .textWrap  h2{
+    /* sec2 */
+    #section2 .sec2 .textWrap  h2{
          transform: translateX(0);
          font-size: 1rem;
           
       }
-      #section2 .sec2 .textWrap p,
-      #section2 .sec2 .textWrap a {
+    #section2 .sec2 .textWrap p,
+    #section2 .sec2 .textWrap a {
           display: none;
       }
+    /* sec3 */
+    #section3 .sec3{
+        min-height: 350vh;
+    }
+    #section3 .sec3 h1{
+        bottom: -90vh;
+    }
+    #section3 .sec3 .s3{
+          height: 40vh;
+          float: none;
+          margin-top: 20vh;
+          margin-bottom: 0;
+      }
+ 
     #section3 .sec3 .s3 iframe {
         width: 500px;
+        text-align: center;
+    }
+    #section3 .sec3 .text{
+        width: 100%;
+        height: 100%;
+    }
+    #section3 .sec3 .text h2{
+        text-align: left;
+    }
+    #section3 .sec3 .text h2 strong{
+        font-size: 2rem;
+    }
+    #section3 .sec3 .text p{
+        display: none;
+    }
+ 
+    #section3 .sec3 .text a{
+        display: inline-block;
+    }
+
+    /* sec5 */
+    #section5 .sec5{
+        height: 200vh;
+    }
+    #section5 .sec5 img{
+        text-align: center;
+        top: 20vh; left: 45%;
+    }
+    #section5 .sec5 .s5textWrap{
+        top: 25vh; left: 10%;
+        text-align: center;
+        display: block;
+    } 
+    #section5 .sec5 .s5textWrap p{
+        text-align: center;
+        display: block;
+        font-size: 1rem;
+    } 
+    #section5 .sec5 .s5join{
+        display: block;
+        top: 80vh;
+        width: 100%;
+    }
+    #section5 .sec5 .s5join h2 {
+        font-size: 1.4rem;
+        width: 80%;
+    }
+    #section5 .sec5 .contact{
+        display: block;
+        top: 110vh;
+    }
+    #section5 .sec5 .contact .title h2::before {
+        top: -20vh; left: -50vw;
+        width: 150vw; height: 150vw;
     }
 }
